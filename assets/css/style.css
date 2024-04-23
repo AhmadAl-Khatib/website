@@ -45,8 +45,8 @@ a {
     height: 100%;
     overflow: hidden;
     transition: all 0.35s ease 0s;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 75px;
+    padding-bottom: 75px;
 }
 .header2 {
    background: rgba(0, 0, 0, 0) url("../img/header2.jpg") repeat fixed center bottom / cover  ;
