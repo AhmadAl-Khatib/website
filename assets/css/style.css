@@ -34,6 +34,11 @@ a {
 	padding-bottom: 70px;
 	position: relative;
 }
+.title0 {
+    text-align: center;
+	padding-bottom: 0px;
+	position: relative;
+}
 .header {
    background: rgba(0, 0, 0, 0) url("../img/header.jpg") repeat fixed center 0 / cover  ;
     color: #fff;
