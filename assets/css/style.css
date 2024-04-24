@@ -1173,14 +1173,14 @@ width:100%;
 @media (max-width:480px)
 {
     .header {  
-    height: 700px;    
+    height: 600px;    
 }
 .header-text {
     background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
     display: block;
     float: none;
     font-size: 12px;
-    margin: 350px auto auto;
+    margin: 300px auto auto;
     padding: 42px !important;
     text-align: center;
     width: 100%;
