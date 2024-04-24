@@ -562,7 +562,7 @@ padding:10px;
 }
 /*----------- gallery ------------*/
 #Gallery {
-    padding: 0px 0 100px;
+    padding: 100px 0 100px;
 	overflow:hidden;
 }
 #Gallery h2 {
