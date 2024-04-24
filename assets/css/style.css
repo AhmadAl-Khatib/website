@@ -174,7 +174,7 @@ transition: all 0.35s ease 0s;
     width: 100%;
 @media only screen and (max-width: 768px) {
     #about h2 {
-        padding: 20px 0 25px; /* Adjust the padding as needed */
+        padding: 0px 0 25px; /* Adjust the padding as needed */
     }
 }
 }
