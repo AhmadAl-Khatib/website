@@ -827,7 +827,7 @@ blockquote {
    background: #ffa100;
     color: #fff;
     overflow: hidden;
-	padding:0px 0 100px;
+	padding:100px 0 100px;
     transition: all 0.35s ease 0s;
 	position:relative;
 }
