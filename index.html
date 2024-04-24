@@ -317,20 +317,23 @@
 		    <style>
 #blog h2::before {
     background: #000 none repeat scroll 0 0;
-    bottom: -15px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     content: "";
     height: 2px;
     position: absolute;
     width: 100%;
-    left: 0;
 }
+
 #blog h2::after {
     background: #ffa100 none repeat scroll 0 0;
-    bottom: -15px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     content: "";
     height: 2px;
     position: absolute;
-    right: 0;
     width: 50%;
     z-index: 999;
 }
