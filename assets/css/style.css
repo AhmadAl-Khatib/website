@@ -172,11 +172,12 @@ transition: all 0.35s ease 0s;
     position: relative;
     text-align: center;
     width: 100%;
+}
+
 @media only screen and (max-width: 768px) {
     #about h2 {
         padding: 0px 0 25px; /* Adjust the padding as needed */
     }
-}
 }
 #about h2::before {
     background: #000 none repeat scroll 0 0;
