@@ -565,6 +565,31 @@ padding:10px;
     padding: 0px 0 100px;
 	overflow:hidden;
 }
+#Gallery h2 {
+    padding: 0px 0 25px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+#Gallery h2::before {
+    background: #000 none repeat scroll 0 0;
+    bottom: 9px;
+    content: "";
+    height: 2px;
+    position: absolute;
+    width: 100%;
+	left:0;
+}
+#Gallery h2::after {
+    background: #ffa100 none repeat scroll 0 0;
+    bottom: 9px;
+    content: "";
+    height: 2px;
+    position: absolute;
+    right: 0;
+    width: 50%;
+    z-index: 999;
+}
 #controls ul li {
     float:left;
     margin-right:20px;
