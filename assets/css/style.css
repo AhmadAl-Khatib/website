@@ -855,9 +855,6 @@ blockquote {
 	padding:100px 0 100px;
     transition: all 0.35s ease 0s;
 	position:relative;
-	#Services {
-    overflow: hidden;
-    padding: 100px 0 100px;
 }
 #blog::before {
    background: #333 none repeat scroll 0 0;
@@ -1376,7 +1373,6 @@ width:100%;
 }
 
 }
-
 
 
 
