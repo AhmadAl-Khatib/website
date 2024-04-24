@@ -258,7 +258,7 @@ margin:20px 0 0 0px;
     padding: 100px 0 100px;
 }
 #Services h2 {
-    padding: 50px 0 25px;
+    padding: 0px 0 25px;
     position: relative;
     text-align: center;
     width: 100%;
@@ -562,7 +562,7 @@ padding:10px;
 }
 /*----------- gallery ------------*/
 #Gallery {
-    padding: 0px 0 0;
+    padding: 110px 0 100px;
 	overflow:hidden;
 }
 #controls ul li {
