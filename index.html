@@ -295,6 +295,9 @@
 
  
 </div>
+
+
+</section>
 	<section id="blog" class="">
 		<!-- =============== container =============== -->
         <div class="container">            
@@ -312,6 +315,43 @@
 				</div>         
             </div>
         </div>
+		<style>
+        /*----------- services ------------*/
+        #blog {
+            overflow: hidden;
+            padding: 100px 0 100px;
+        }
+        #blog h2 {
+            padding: 0px 0 25px;
+            position: relative;
+            text-align: center;
+            width: 100%;
+        }
+        #blog h2::before {
+            background: #000 none repeat scroll 0 0;
+            bottom: -10px;
+            content: "";
+            height: 2px;
+            position: absolute;
+            width: 100%;
+            left:0;
+        }
+        #blog h2::after {
+            background: #ffa100 none repeat scroll 0 0;
+            bottom: -10px;
+            content: "";
+            height: 2px;
+            position: absolute;
+            right: 0;
+            width: 50%;
+            z-index: 999;
+        }
+        #blog p {
+            font-size: 16px;
+            padding: 10px 0;
+            text-align: right;
+        }
+    </style>
 		<!-- =============== container end =============== -->		
     </section>	
 	<section id="contact">
