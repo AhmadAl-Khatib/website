@@ -562,7 +562,7 @@ padding:10px;
 }
 /*----------- gallery ------------*/
 #Gallery {
-    padding: 110px 0 100px;
+    padding: 0px 0 100px;
 	overflow:hidden;
 }
 #controls ul li {
