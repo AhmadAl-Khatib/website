@@ -911,7 +911,7 @@ blockquote {
  background: url("../img/contact-bg.jpg") no-repeat scroll center center / cover  ;
     color: #fff;
     overflow: hidden;
-	padding:100px 0;
+	padding:100px 0 100px;
     transition: all 0.35s ease 0s;
 }
 #contact input[type="text"]{
