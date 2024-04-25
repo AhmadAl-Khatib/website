@@ -315,21 +315,25 @@
             </div>
         </div>   
 		<!-- =============== container end =============== -->		
-    </section>	
-	<section id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="title">
-                <h2>تواصل معي</h2>
+    </section>
+	    <title>Contact Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="title">
+                    <h2>تواصل معي</h2>
+                </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 wow bounceIn animated" data-wow-delay=".1s">
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="de295fe7-572f-4985-a155-6660698defd5">
-                    <div class="ajax-hidden">
-                        <div class="col-xs-12 col-sm-6 col-md-6 form-group wow fadeInUp animated">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 wow bounceIn animated" data-wow-delay=".1s">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="de295fe7-572f-4985-a155-6660698defd5">
+                        <div class="ajax-hidden">
+                            <div class="col-xs-12 col-sm-6 col-md-6 form-group wow fadeInUp animated">
                         <label for="c_name" class="sr-only">Name</label>
                         <input type="text" placeholder="Name" name="name" class="form-control" id="name" required="">
                     </div>
@@ -342,18 +346,38 @@
                     <div data-wow-delay=".2s" class="col-xs-12 col-sm-12 col-md-12 form-group wow fadeInUp animated">
                         <textarea placeholder="Message" rows="7" name="message" id="description" class="form-control" required=""></textarea>
                     </div>
-                        <button data-wow-delay=".3s" class="btn btn-sm btn-block wow fadeInUp animated" type="submit">أرسل</button>
-                    </div>
-                    <div class="ajax-response"></div>
-                </form>
+                            <button data-wow-delay=".3s" class="btn btn-sm btn-block wow fadeInUp animated" type="submit">أرسل</button>
+                        </div>
+                        <div class="ajax-response"></div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
+    <script>
+    $(document).ready(function() {
+        $('form').on('submit', function(e) {
+            e.preventDefault();
+            $.ajax({
+                url: $(this).attr('action'),
+                type: 'POST',
+                data: $(this).serialize(),
+                dataType: 'json',
+                success: function(data) {
+                    if (data.success) {
+                        $('.ajax-response').html('<p>Email sent successfully!</p>');
+                    } else {
+                        $('.ajax-response').html('<p>' + data.message + '</p>');
+                    }
+                },
+                error: function() {
+                    $('.ajax-response').html('<p>There was an error sending the email.</p>');
+                }
+            });
+        });
+    });
+    </script>
 $(document).ready(function() {
     $('form').on('submit', function(e) {
         e.preventDefault();
