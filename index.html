@@ -317,41 +317,48 @@
 		<!-- =============== container end =============== -->		
     </section>	
 	<section id="contact">
-	<!-- =============== container =============== -->
-	<div class="container">
-    <div class="row">
-        <div class="title">
-            <h2>تواصل معي</h2>
+    <div class="container">
+        <div class="row">
+            <div class="title">
+                <h2>تواصل معي</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 wow bounceIn animated" data-wow-delay=".1s">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="de295fe7-572f-4985-a155-6660698defd5">
+                    <div class="ajax-hidden">
+                        <!-- Rest of the form elements here -->
+                        <button data-wow-delay=".3s" class="btn btn-sm btn-block wow fadeInUp animated" type="submit">أرسل</button>
+                    </div>
+                    <div class="ajax-response"></div>
+                </form>
+            </div>
         </div>
     </div>
+</section>
 
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 wow bounceIn animated" data-wow-delay=".1s">
-            <form action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="de295fe7-572f-4985-a155-6660698defd5">
-                <!-- باقي عناصر النموذج هنا -->
-                <div class="ajax-hidden">
-                    <div class="col-xs-12 col-sm-6 col-md-6 form-group wow fadeInUp animated">
-                        <label for="c_name" class="sr-only">Name</label>
-                        <input type="text" placeholder="Name" name="name" class="form-control" id="name" required="">
-                    </div>
-
-                    <div data-wow-delay=".1s" class="col-xs-12 col-sm-6 col-md-6 form-group wow fadeInUp animated">
-                        <label for="c_email" class="sr-only">Email</label>
-                        <input type="email" placeholder="E-mail" name="email" class="form-control" id="email" required="">
-                    </div>
-
-                    <div data-wow-delay=".2s" class="col-xs-12 col-sm-12 col-md-12 form-group wow fadeInUp animated">
-                        <textarea placeholder="Message" rows="7" name="message" id="description" class="form-control" required=""></textarea>
-                    </div>
-
-                    <button data-wow-delay=".3s" class="btn btn-sm btn-block wow fadeInUp animated" type="submit">أرسل</button>
-                </div>
-                <div class="ajax-response"></div>
-            </form>
-        </div>
-    </div>
-</div><!-- =============== container end =============== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('form').on('submit', function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: $(this).attr('action'),
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function() {
+                $('.ajax-response').html('<p>Email sent successfully!</p>');
+            },
+            error: function() {
+                $('.ajax-response').html('<p>There was an error sending the email.</p>');
+            }
+        });
+    });
+});
+</script>
+<!-- =============== container end =============== -->
 
 	</section>
 	    	</section>
