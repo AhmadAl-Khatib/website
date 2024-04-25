@@ -352,6 +352,7 @@
 </section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
     $('form').on('submit', function(e) {
@@ -360,8 +361,13 @@ $(document).ready(function() {
             url: $(this).attr('action'),
             type: 'POST',
             data: $(this).serialize(),
-            success: function() {
-                $('.ajax-response').html('<p>Email sent successfully!</p>');
+            dataType: 'json',
+            success: function(data) {
+                if (data.success) {
+                    $('.ajax-response').html('<p>Email sent successfully!</p>');
+                } else {
+                    $('.ajax-response').html('<p>' + data.message + '</p>');
+                }
             },
             error: function() {
                 $('.ajax-response').html('<p>There was an error sending the email.</p>');
