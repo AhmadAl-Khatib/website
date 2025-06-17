@@ -436,5 +436,25 @@ window.onload = function() {
     });
 };
 </script>
+<script>
+  window.addEventListener('load', function () {
+    // Wait until Isotope is ready
+    var grid = document.querySelector('.grid');
+    if (grid && typeof Isotope !== 'undefined') {
+      var iso = new Isotope(grid, {
+        itemSelector: '.element-item',
+        layoutMode: 'fitRows',
+        filter: '.festival' // ← This line is the key!
+      });
+
+      // Mark the festival button as selected
+      document.querySelectorAll('.filter-button-group .button').forEach(btn => {
+        btn.classList.remove('is-checked');
+      });
+      document.querySelector('[data-filter=".festival"]').classList.add('is-checked');
+    }
+  });
+</script>
+
 </body>
 </html>
