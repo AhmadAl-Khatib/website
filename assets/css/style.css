@@ -1,7 +1,7 @@
 */
 @font-face {
   font-family: 'Cairo';
-  src: url('../font/fonts/cairo-v30-latin-regular.woff2') format('woff2');
+  src: url('cairo-v30-latin-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
