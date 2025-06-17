@@ -15,14 +15,6 @@ html, body {
     font-size: 14px;
 }
 
-html,
-body {
-    width: 100%;
-    height: 100%;
-    font-family: Cairo;
-    font-size:14px;
-}
-
 a {
     transition: all 0.35s ease 0s;
     -webkit-transition: all 0.35s ease 0s;
