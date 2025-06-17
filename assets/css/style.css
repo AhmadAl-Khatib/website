@@ -1,6 +1,6 @@
 */
 @font-face {
-  font-family: 'Cairo';
+  font-family: 'Cairo456';
   src: url('cairo-v30-latin-regular.woff2') format('woff2'),
        url('cairo-v30-latin-regular.woff') format('woff');
   font-weight: normal;
@@ -9,7 +9,7 @@
 }
 
 html, body {
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Cairo456', sans-serif;
     width: 100%;
     height: 100%;
     font-size: 14px;
