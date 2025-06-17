@@ -437,24 +437,33 @@ window.onload = function() {
 };
 </script>
 <script>
-  window.addEventListener('load', function () {
-    // Wait until Isotope is ready
+  document.addEventListener('DOMContentLoaded', function () {
     var grid = document.querySelector('.grid');
     if (grid && typeof Isotope !== 'undefined') {
-      var iso = new Isotope(grid, {
+      // Create Isotope instance globally
+      window.iso = new Isotope(grid, {
         itemSelector: '.element-item',
         layoutMode: 'fitRows',
-        filter: '.festival' // ← This line is the key!
+        filter: '.festival'
       });
 
-      // Mark the festival button as selected
-      document.querySelectorAll('.filter-button-group .button').forEach(btn => {
-        btn.classList.remove('is-checked');
+      // Handle filter button clicks
+      var filterButtons = document.querySelectorAll('.filter-button-group .button');
+
+      filterButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          var filterValue = this.getAttribute('data-filter');
+          window.iso.arrange({ filter: filterValue });
+
+          // Update button appearance
+          filterButtons.forEach(btn => btn.classList.remove('is-checked'));
+          this.classList.add('is-checked');
+        });
       });
-      document.querySelector('[data-filter=".festival"]').classList.add('is-checked');
     }
   });
 </script>
+
 
 </body>
 </html>
