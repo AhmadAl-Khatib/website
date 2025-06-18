@@ -435,5 +435,21 @@
             });
         };
     </script>
+    <script>
+    $(document).ready(function() {
+        // Initialize Isotope with festival filter as default
+        var $grid = $('.grid').isotope({
+            itemSelector: '.element-item',
+            layoutMode: 'fitRows',
+            filter: '.festival'  // Show only festival by default
+        });
+
+        // Bind filter button click
+        $('.filter-button-group').on('click', 'button', function() {
+            var filterValue = $(this).attr('data-filter');
+            $grid.isotope({ filter: filterValue });
+        });
+    });
+    </script>
 </body>
 </html>
