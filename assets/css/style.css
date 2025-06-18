@@ -554,44 +554,65 @@ transform: skewY(171.5deg);
 padding:10px;
 }
 /*----------- owl ------------*/
-#owl-demo .owl-item div{
-      padding:5px;
-    }
-#owl-demo .owl-item img{
-      display: block;
-      width: 100%;
-      height: auto;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
+#owl-demo .owl-item > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Fills the viewport height */
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Optional: center text */
+    padding: 5px;
 }
+
+#owl-demo .owl-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
 .owl-theme .owl-controls .owl-buttons div {
     background: rgba(255, 255, 255, 0.08) none repeat scroll 0 0 !important;
     color: #ffa100 !important;    
     font-size: 65px !important;
     opacity: 1 !important;
 }
+
 .owl-theme .owl-controls .owl-buttons div:hover {
     background: #ffa100 none repeat scroll 0 0 !important;
     color: #fff !important;    
     font-size: 65px !important;
     opacity: 1 !important;
 }
+
 .owl-buttons {
     position: absolute;
     top: 50%;
     width: 100%;
 }
+
 .owl-prev {
     left: 0;
     position: absolute;
 }
+
 .owl-next {
     right: 0;
     position: absolute;
 }
+
 .owl-pagination {
     visibility: hidden;
+}
+
+/* Optional: Make it adaptive for mobile */
+@media (max-width: 767px) {
+    #owl-demo .owl-item > div {
+        height: auto;
+        padding: 30px 10px;
+    }
 }
 /*----------- counter ------------*/
 .counter {
