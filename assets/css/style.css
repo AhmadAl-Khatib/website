@@ -243,6 +243,7 @@ transition: all 0.35s ease 0s;
 #about p {
     font-size: 16px;
     padding: 10px 0;
+    text-align: right;
 }
 /*----------- team ------------*/
 
@@ -326,6 +327,7 @@ margin:20px 0 0 0px;
 #Services p {
     font-size: 16px;
     padding: 10px 0;
+    text-align: right;
 }
 /*----------- for box ------------*/
 .for-box
@@ -1069,21 +1071,7 @@ blockquote {
     color: #000;
     text-decoration: none;
 }
-body, p, 
-#about p, #Services p, 
-.blog-header, .bs-blog-text,
-#blog .row > p,
-.text_cont, .comm_name,
-.text-author, .bs-blog-naz {
-  text-align: justify !important;
-  text-align-last: right !important;
-  -moz-text-align-last: right !important; /* Firefox support */
-}
 
-/* Remove conflicting right-align rules */
-#about p, #Services p {
-  text-align: inherit !important;
-}
 
 @media (min-width:768px) and (max-width:1024px)
 {
