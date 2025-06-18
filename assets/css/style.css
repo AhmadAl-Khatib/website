@@ -243,7 +243,6 @@ transition: all 0.35s ease 0s;
 #about p {
     font-size: 16px;
     padding: 10px 0;
-    text-align: right;
 }
 /*----------- team ------------*/
 
@@ -327,7 +326,6 @@ margin:20px 0 0 0px;
 #Services p {
     font-size: 16px;
     padding: 10px 0;
-    text-align: right;
 }
 /*----------- for box ------------*/
 .for-box
