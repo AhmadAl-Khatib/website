@@ -547,9 +547,6 @@ transform: skewY(171.5deg);
     padding: 20px 20px 60px;
     position: relative;
 	overflow: hidden;
-    text-align: justify !important;
-    text-align-last: right !important;
-    -moz-text-align-last: right !important;
 }
 .wbox  p
 {
