@@ -554,11 +554,17 @@ transform: skewY(171.5deg);
 padding:10px;
 }
 /*----------- owl ------------*/
+/* Ensure Owl Carousel container has relative positioning */
+#owl-demo {
+    position: relative;
+}
+
+/* Center content vertically */
 #owl-demo .owl-item > div {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; /* or your preferred height */
     flex-direction: column;
     text-align: center;
     padding: 5px;
@@ -568,39 +574,23 @@ padding:10px;
     display: block;
     width: 100%;
     height: auto;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
     border-radius: 3px;
 }
 
-.owl-buttons {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; /* Ensure full height of the slider */
-    pointer-events: none; /* So it doesn’t block content */
-    z-index: 1000;
-}
-
+/* Style & center arrow buttons */
 .owl-theme .owl-controls .owl-buttons div {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.08) none repeat scroll 0 0 !important;
+    background: rgba(255, 255, 255, 0.08) !important;
     color: #ffa100 !important;
     font-size: 65px !important;
     opacity: 1 !important;
-    pointer-events: auto; /* Re-enable click on arrows */
+    z-index: 1000;
+    pointer-events: auto;
 }
 
-.owl-theme .owl-controls .owl-buttons div:hover {
-    background: #ffa100 none repeat scroll 0 0 !important;
-    color: #fff !important;
-    font-size: 65px !important;
-    opacity: 1 !important;
-}
-
+/* Left & right positions */
 .owl-prev {
     left: 0;
 }
@@ -609,11 +599,18 @@ padding:10px;
     right: 0;
 }
 
+/* Hover effect */
+.owl-theme .owl-controls .owl-buttons div:hover {
+    background: #ffa100 !important;
+    color: #fff !important;
+}
+
+/* Hide pagination */
 .owl-pagination {
     visibility: hidden;
 }
 
-/* Mobile Responsive Adjustments */
+/* Responsive tweak */
 @media (max-width: 767px) {
     #owl-demo .owl-item > div {
         height: auto;
