@@ -2,42 +2,42 @@
 @font-face {
   font-family: 'Cairo';
   src: url('Cairo-Black.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: black;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Cairo';
   src: url('Cairo-Bold.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Cairo';
   src: url('Cairo-ExtraLight.ttf') format('truetype');
-  font-weight: 200;
+  font-weight: extralight;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Cairo';
   src: url('Cairo-Light.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: light;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Cairo';
   src: url('Cairo-Regular.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: regular;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Cairo';
   src: url('Cairo-SemiBold.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: semibold;
   font-style: normal;
 }
 
