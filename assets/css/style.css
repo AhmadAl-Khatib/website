@@ -554,22 +554,23 @@ transform: skewY(171.5deg);
 padding:10px;
 }
 /*----------- owl ------------*/
-/* Ensure Owl Carousel container has relative positioning */
+/* Make owl-demo relative so arrows can position inside */
 #owl-demo {
     position: relative;
 }
 
-/* Center content vertically */
+/* Center slide content vertically */
 #owl-demo .owl-item > div {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* or your preferred height */
+    height: 100vh; /* Ensure vertical height for consistent centering */
     flex-direction: column;
     text-align: center;
     padding: 5px;
 }
 
+/* Image style */
 #owl-demo .owl-item img {
     display: block;
     width: 100%;
@@ -577,7 +578,18 @@ padding:10px;
     border-radius: 3px;
 }
 
-/* Style & center arrow buttons */
+/* Arrows wrapper */
+.owl-buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+/* Arrows themselves */
 .owl-theme .owl-controls .owl-buttons div {
     position: absolute;
     top: 50%;
@@ -586,17 +598,17 @@ padding:10px;
     color: #ffa100 !important;
     font-size: 65px !important;
     opacity: 1 !important;
-    z-index: 1000;
     pointer-events: auto;
+    z-index: 1001;
 }
 
-/* Left & right positions */
+/* Left & Right buttons */
 .owl-prev {
-    left: 0;
+    left: 20px;
 }
 
 .owl-next {
-    right: 0;
+    right: 20px;
 }
 
 /* Hover effect */
@@ -605,16 +617,22 @@ padding:10px;
     color: #fff !important;
 }
 
-/* Hide pagination */
+/* Hide pagination dots */
 .owl-pagination {
     visibility: hidden;
 }
 
-/* Responsive tweak */
+/* ✅ FIX for mobile layout */
 @media (max-width: 767px) {
     #owl-demo .owl-item > div {
-        height: auto;
+        height: 80vh; /* slightly smaller to prevent overflow */
         padding: 30px 10px;
+    }
+
+    .owl-theme .owl-controls .owl-buttons div {
+        font-size: 45px !important; /* smaller arrows for mobile */
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
 /*----------- counter ------------*/
