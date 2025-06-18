@@ -559,8 +559,8 @@ padding:10px;
     justify-content: center;
     align-items: center;
     height: 100vh; /* Fills the viewport height */
-    flex-direction: column; /* Stack content vertically */
-    text-align: center; /* Optional: center text */
+    flex-direction: column;
+    text-align: center;
     padding: 5px;
 }
 
@@ -578,6 +578,10 @@ padding:10px;
     color: #ffa100 !important;    
     font-size: 65px !important;
     opacity: 1 !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* ✅ Vertically center the button */
+    z-index: 999; /* Optional: ensure they appear above other elements */
 }
 
 .owl-theme .owl-controls .owl-buttons div:hover {
@@ -589,25 +593,27 @@ padding:10px;
 
 .owl-buttons {
     position: absolute;
-    top: 50%;
+    top: 0; /* Reset, since individual buttons are positioned themselves */
     width: 100%;
+    height: 100%;
+    pointer-events: none; /* So only buttons receive clicks */
 }
 
 .owl-prev {
     left: 0;
-    position: absolute;
+    pointer-events: auto; /* Re-enable click on button */
 }
 
 .owl-next {
     right: 0;
-    position: absolute;
+    pointer-events: auto;
 }
 
 .owl-pagination {
     visibility: hidden;
 }
 
-/* Optional: Make it adaptive for mobile */
+/* Optional: Mobile responsiveness */
 @media (max-width: 767px) {
     #owl-demo .owl-item > div {
         height: auto;
