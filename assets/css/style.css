@@ -554,85 +554,64 @@ transform: skewY(171.5deg);
 padding:10px;
 }
 /*----------- owl ------------*/
-/* Make owl-demo relative so arrows can position inside */
-#owl-demo {
-    position: relative;
-}
-
-/* Center slide content vertically */
 #owl-demo .owl-item > div {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ensure vertical height for consistent centering */
-    flex-direction: column;
-    text-align: center;
+    height: 100vh; /* Fills the viewport height */
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Optional: center text */
     padding: 5px;
 }
 
-/* Image style */
 #owl-demo .owl-item img {
     display: block;
     width: 100%;
     height: auto;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
     border-radius: 3px;
 }
 
-/* Arrows wrapper */
-.owl-buttons {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1000;
-    pointer-events: none;
-}
-
-/* Arrows themselves */
 .owl-theme .owl-controls .owl-buttons div {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.08) !important;
-    color: #ffa100 !important;
+    background: rgba(255, 255, 255, 0.08) none repeat scroll 0 0 !important;
+    color: #ffa100 !important;    
     font-size: 65px !important;
     opacity: 1 !important;
-    pointer-events: auto;
-    z-index: 1001;
 }
 
-/* Left & Right buttons */
+.owl-theme .owl-controls .owl-buttons div:hover {
+    background: #ffa100 none repeat scroll 0 0 !important;
+    color: #fff !important;    
+    font-size: 65px !important;
+    opacity: 1 !important;
+}
+
+.owl-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
 .owl-prev {
-    left: 20px;
+    left: 0;
+    position: absolute;
 }
 
 .owl-next {
-    right: 20px;
+    right: 0;
+    position: absolute;
 }
 
-/* Hover effect */
-.owl-theme .owl-controls .owl-buttons div:hover {
-    background: #ffa100 !important;
-    color: #fff !important;
-}
-
-/* Hide pagination dots */
 .owl-pagination {
     visibility: hidden;
 }
 
-/* ✅ FIX for mobile layout */
+/* Optional: Make it adaptive for mobile */
 @media (max-width: 767px) {
     #owl-demo .owl-item > div {
-        height: 80vh; /* slightly smaller to prevent overflow */
+        height: auto;
         padding: 30px 10px;
-    }
-
-    .owl-theme .owl-controls .owl-buttons div {
-        font-size: 45px !important; /* smaller arrows for mobile */
-        top: 50%;
-        transform: translateY(-50%);
     }
 }
 /*----------- counter ------------*/
