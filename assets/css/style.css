@@ -243,7 +243,9 @@ transition: all 0.35s ease 0s;
 #about p {
     font-size: 16px;
     padding: 10px 0;
-    text-align: right;
+    text-align: justify !important;
+    text-align-last: right !important;
+    -moz-text-align-last: right !important;
 }
 /*----------- team ------------*/
 
@@ -259,7 +261,9 @@ transition: all 0.35s ease 0s;
     color: #000;
     float: left;
     padding: 10px 10px 22px;
-    text-align: center;
+    text-align: justify !important;
+    text-align-last: right !important;
+    -moz-text-align-last: right !important;
     width: 100%;
 }
 .timg > img {
