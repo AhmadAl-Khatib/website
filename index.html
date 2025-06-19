@@ -118,16 +118,30 @@
                     <p class="wow fadeInUp animated" data-wow-delay=".5s"><strong>الدراسة: </strong>تابعت دراستي الابتدائية في مدرسة بيت الحكمة، والثانوية في ثانوية عانوت الرسمية، ثم الجامعية في جامعة الفنون والعلوم والتكنولوجيا حيث حزت على شهادة البكالريوس في إدارة الأعمال، ثم دبلوم عالي بالبرمجيات من كلية المملكة المتحدة الدولية لندن، كما التحقت بعدد من الدورات التي تشارك بتنظيمها مجموعة من كبرى الجامعات العالمية وحزت على مجموعة من الشهادات في مجال القيادة والإدارة</p>
                     <!-- Trigger Link -->
                     <p class="wow fadeInUp animated" data-wow-delay=".6s">
-                        <a href="#" onclick="document.getElementById('cv-viewer').style.display='block'; this.style.display='none'; return false;"
+                        <a href="#" onclick="loadPDF(); this.style.display='none'; return false;" 
                             style="font-weight: bold; color: #ff884d; text-decoration: underline;">
                         📄 عرض السيرة الذاتية
                         </a>
                     </p>
 
-                    <!-- Hidden PDF Viewer -->
-                    <div id="cv-viewer" style="display: none; margin-top: 20px;" class="wow fadeInUp animated" data-wow-delay=".7s">
-                        <iframe src="Career.pdf" width="100%" height="800px" style="border: none;"></iframe>
+                    <!-- Placeholder for the iframe -->
+                    <div id="cv-container" style="display: none; margin-top: 20px;" class="wow fadeInUp animated" data-wow-delay=".7s">
+                    <!-- iframe will be injected here on click -->
                     </div>
+
+                    <!-- Script to inject the iframe dynamically -->
+                    <script>
+                        function loadPDF() {
+                            var container = document.getElementById('cv-container');
+                            var iframe = document.createElement('iframe');
+                            iframe.src = 'Career.pdf'; // 👈 Replace with actual path
+                            iframe.width = '100%';
+                            iframe.height = '800px';
+                            iframe.style.border = 'none';
+                            container.appendChild(iframe);
+                            container.style.display = 'block';
+                        }
+                    </script>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-6 wow fadeInRight animated" data-wow-delay=".5s">
                     <img src="assets/img/about.jpg" loading="lazy" alt="احمد الخطيب"/>
