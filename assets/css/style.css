@@ -1443,17 +1443,3 @@ width:100%;
 * {
   font-family: 'Cairo', sans-serif !important;
 }
-@media screen and (max-width: 1024px) {
-  #home {
-    background: url("../img/header.jpg") no-repeat center center / cover !important;
-    background-attachment: scroll !important;
-    height: auto;
-    min-height: 100vh;
-  }
-
-  .header-text {
-    width: 90%;
-    margin: 100px auto;
-    padding: 20px;
-  }
-}
