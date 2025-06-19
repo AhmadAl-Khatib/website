@@ -150,7 +150,7 @@ transition: all 0.35s ease 0s;
     color: #fff;
 }
 .header-text {
-    background: rgba(0, 0, 0, 1) none repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0.9) none repeat scroll 0 0;
     display: block;
     float: none;
     font-size: 18px;
