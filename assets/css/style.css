@@ -562,7 +562,7 @@ padding:10px;
     flex-direction: column; /* Stack content vertically */
     text-align: center; /* Optional: center text */
     padding: 5px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 #owl-demo .owl-item img {
