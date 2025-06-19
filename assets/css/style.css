@@ -136,7 +136,7 @@ color:#fff;
 }
 .affix
 {
- background: rgba(0, 0, 0, 0.9) none repeat scroll 0 0 !important;
+ background: rgba(0, 0, 0, 1) none repeat scroll 0 0 !important;
 transition: all 0.35s ease 0s;
 }
 .navbar-default .navbar-nav > li > a {
