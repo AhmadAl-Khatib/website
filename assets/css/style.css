@@ -941,7 +941,7 @@ blockquote {
 	position:absolute;
 }
 .data {
-    color: #383838;
+    color: #014641;
     float: left;
     font-size: 50px;
     padding-right: 20px;
@@ -957,7 +957,7 @@ blockquote {
     transform: skewX(-20deg);
 }
 .month {
-    color: #383838;
+    color: #014641;
     float: left;
     font-size: 18px;
     padding-left: 20px;
