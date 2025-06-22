@@ -1443,38 +1443,3 @@ width:100%;
 * {
   font-family: 'Cairo', sans-serif !important;
 }
-/* ———————— Center logo & link ———————— */
-.navbar-header {
-  float: none !important;       /* cancel Bootstrap’s float */
-  display: flex !important;     /* make it a flex‐box */
-  align-items: center !important;/* vertically center everything */
-}
-
-/* Optional breathing room between logo & text */
-.navbar-header > a[href="index-en.html"],
-.navbar-header > a[href="index.html"]:not(.navbar-brand) {
-  margin-left: 15px !important;
-}
-
-/* Ensure your text link uses the same color & hover you want */
-.navbar-header > a[href="index-en.html"] {
-  color: #fff !important;
-  text-decoration: none !important;
-  font-weight: bold !important;
-  transition: color 0.3s ease !important;
-}
-.navbar-header > a[href="index-en.html"]:hover {
-  color: #3ca2dc !important;
-}
-
-/* If mobile pushes your image up, flex will keep the text centered anyway */
-@media (max-width: 640px) {
-  .navbar-header {
-    /* if your mobile header is taller, you can bump the min-height */
-    min-height: 80px;
-  }
-  .navbar-header > a[href="index-en.html"] {
-    font-size: 14px;
-    margin-left: 10px !important;
-  }
-}
