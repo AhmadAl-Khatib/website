@@ -1443,3 +1443,48 @@ width:100%;
 * {
   font-family: 'Cairo', sans-serif !important;
 }
+/* 1) Make the header position relative so absolute children refer to it */
+.navbar-header {
+  position: relative !important;
+  float: none !important;          /* cancel Bootstrap’s float */
+  padding: 0 15px;                 /* restore horizontal padding */
+  height: auto;                    /* allow flexible height */
+  min-height: 60px;                /* match your nav’s height */
+}
+
+/* 2) Absolutely position the English link, centered beside the logo */
+.navbar-header .english-link {
+  position: absolute;
+  left: calc(100% + 10px);         /* 10px to the right of your logo */
+  top: 50%;                        /* middle of the header container */
+  transform: translateY(-50%);     /* adjust so text is truly centered */
+  display: inline-block;           /* needed for the transform to work */
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.navbar-header .english-link:hover {
+  color: #3ca2dc !important;
+}
+
+/* 3) Tweak for smaller screens */
+@media (max-width: 768px) {
+  .navbar-header {
+    min-height: 70px;              /* if your mobile header is taller */
+  }
+  .navbar-header .english-link {
+    left: calc(100% + 5px);
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-header {
+    min-height: 80px;
+  }
+  .navbar-header .english-link {
+    left: calc(100% + 5px);
+    font-size: 12px;
+  }
+}
