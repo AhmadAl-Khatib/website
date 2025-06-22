@@ -1443,5 +1443,24 @@ width:100%;
 * {
   font-family: 'Cairo', sans-serif !important;
 }
+/* 1) Make the header flex and center all items */
+.navbar-header {
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* 2) Give the “English” link some breathing room */
+.navbar-header > .english-link,
+.navbar-header > a[href$="index-en.html"] {
+  margin-left: 15px;
+  color: #ffffff;           /* ensure it’s white */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.navbar-header > .english-link:hover,
+.navbar-header > a[href$="index-en.html"]:hover {
+  color: #3ca2dc;
+}
 
 
