@@ -1444,26 +1444,5 @@ width:100%;
   font-family: 'Cairo', sans-serif !important;
 }
 
-.lang-switcher {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    z-index: 10000;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background: none;
-}
-
-.lang-switcher a {
-    color: #ffffff; /* White by default */
-    text-decoration: none;
-    margin: 0 5px;
-    transition: color 0.3s ease;
-}
-
-.lang-switcher a:hover {
-    color: #3ca2dc; /* Light blue on hover */
-}
 
 
