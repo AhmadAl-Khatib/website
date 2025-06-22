@@ -1443,17 +1443,4 @@ width:100%;
 * {
   font-family: 'Cairo', sans-serif !important;
 }
-/* ─────────────────────────────────────────────────────────
-   Utility class for visually hidden but screen-reader visible
-───────────────────────────────────────────────────────── */
-.visually-hidden {
-  position: absolute !important;
-  width: 1px; 
-  height: 1px; 
-  padding: 0; 
-  margin: -1px; 
-  overflow: hidden; 
-  clip: rect(0, 0, 0, 0); 
-  white-space: nowrap; /* prevent text wrapping */
-  border: 0;
-}
+
