@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="277.8728"
+   height="83.759026"
+   viewBox="0 0 277.8728 83.759027"
+   sodipodi:docname="logo.en.png"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <rect
+       x="127.64045"
+       y="8.5393257"
+       width="178.42697"
+       height="136.62921"
+       id="rect4" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1"
+     style="display:inline"
+     transform="translate(-1.3369663,-25.155065)">
+    <text
+       xml:space="preserve"
+       style="font-size:30px;fill:#ffa500;fill-opacity:1"
+       x="-1.5730337"
+       y="77.528084"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         x="-1.5730337"
+         y="77.528084"
+         style="font-size:30px;fill:#ffa500;fill-opacity:1">English</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text4"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:95px;font-family:Vivaldi;-inkscape-font-specification:Vivaldi;white-space:pre;shape-inside:url(#rect4);fill:#ffffff;fill-opacity:1"
+       transform="matrix(1,0,0,1.1918602,3.5955056,-9.9150983)"><tspan
+         x="127.64062"
+         y="99.700609"
+         id="tspan2"><tspan
+           style="font-family:'Old English Text MT';-inkscape-font-specification:'Old English Text MT'"
+           id="tspan1">AK</tspan></tspan></text>
+  </g>
+</svg>

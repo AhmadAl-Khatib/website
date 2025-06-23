@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="239.63171"
+   height="83.759026"
+   viewBox="0 0 239.63171 83.759027"
+   sodipodi:docname="logo.ar.png"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <rect
+       x="127.64045"
+       y="8.5393257"
+       width="178.42697"
+       height="136.62921"
+       id="rect4" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1"
+     transform="translate(-2.5332926,-25.127342)">
+    <text
+       xml:space="preserve"
+       id="text4"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:95px;font-family:Vivaldi;-inkscape-font-specification:Vivaldi;white-space:pre;shape-inside:url(#rect4);display:inline;fill:#ffffff;fill-opacity:1"
+       transform="matrix(1,0,0,1.1918602,-33.449245,-9.942823)"><tspan
+         x="127.64062"
+         y="99.700609"
+         id="tspan5"><tspan
+           style="font-family:'Old English Text MT';-inkscape-font-specification:'Old English Text MT'"
+           id="tspan4">AK</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:28.2705px;font-family:'Old English Text MT';-inkscape-font-specification:'Old English Text MT';fill:#ffffff;stroke-width:1.57059"
+       x="0.6957112"
+       y="70.327377"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         x="0.6957112"
+         y="70.327377"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Kufi Arabic';-inkscape-font-specification:'Noto Kufi Arabic';fill:#ffa500;fill-opacity:1;stroke-width:1.57059">عربي</tspan></text>
+  </g>
+</svg>
