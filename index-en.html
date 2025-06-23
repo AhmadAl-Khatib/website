@@ -23,14 +23,78 @@
     <meta name="twitter:image" content="https://ahmad-khatib.com/assets/img/about.jpg">
 
     <!-- CSS Files -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min-en.css" type="text/css">
-    <link rel="stylesheet" href="assets/font/css/font-awesome.min-en.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/animate.min-en.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/style-en.css" type="text/css">
-    <link href="assets/owl-carousel/owl.carousel-en.css" rel="stylesheet">
-    <link href="assets/owl-carousel/owl.theme-en.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/isotope-docs-en.css" media="screen">
-    <link rel="stylesheet" href="assets/css/baguetteBox-en.css">    
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/font/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link href="assets/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="assets/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/isotope-docs.css" media="screen">
+    <link rel="stylesheet" href="assets/css/baguetteBox.css">
+
+    <!-- Custom Styles -->
+    <style>
+        /* Fix for English text justification */
+        html[lang="en"] p {
+            text-align: justify;
+            text-align-last: left;
+            hyphens: auto;
+        }
+        
+        /* Existing visually-hidden styles */
+        .visually-hidden {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0 0 0 0) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+        }
+
+        /* CV Modal Styles */
+        .cv-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.7);
+        }
+        .cv-modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 900px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            animation: fadeIn 0.3s ease-in-out;
+            position: relative;
+        }
+        .cv-close {
+            color: #ff884d;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .cv-close:hover, .cv-close:focus {
+            color: #cc6a2e;
+            text-decoration: none;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 
     <script type="application/ld+json">
     {
@@ -48,6 +112,15 @@
       ]
     }
     </script>
+    <style>
+        html[lang="en"] #about p,
+        html[lang="en"] #Services p,
+        html[lang="en"] .t-box p {
+            text-align-last: left !important;
+            -moz-text-align-last: left !important;
+            direction: ltr !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -97,7 +170,7 @@
                     <div>
                         <div class="col-xs-12 col-sm-6 col-md-6 header-text">
                             <h2 class="wow bounceIn animated" data-wow-delay=".40s">Welcome to<br><span>My Personal Blog</span></h2>
-                            <p class="wow bounceIn animated" data-wow-delay=".60s">A personal blog to share my publications, opinions, and social initiatives</p>
+                            <p class="wow bounceIn animated" data-wow-delay=".60s" style="text-align: center;">A personal blog to share my publications, opinions, and social initiatives</p>
                             <p>
                                 <div class="wow bounceIn animated" data-wow-delay="1s"><a class="page-scroll" href="#blog">Click here to browse my articles</a></div>
                             </p>
@@ -106,7 +179,7 @@
                     <div>
                         <div class="col-xs-12 col-sm-6 col-md-6 header-text">
                             <h2 class="wow bounceIn animated" data-wow-delay=".40s">My book<br/><span>Learn Python In Less Than A Week!</span></h2>
-                            <p class="wow bounceIn animated" data-wow-delay=".60s">Click below to explore this book and my other publications</p>
+                            <p class="wow bounceIn animated" data-wow-delay=".60s" style="text-align: center;">Click below to explore this book and my other publications</p>
                             <p>
                                 <div class="wow bounceIn animated" data-wow-delay="1s"><a class="page-scroll" href="#Services">Click here to browse publications</a></div>
                             </p>
@@ -150,7 +223,7 @@
                         <img src="assets/img/team-img1.jpg" loading="lazy" alt="Lebanon waste crisis">
                     </div>
                     <div class="t-box">
-                        <h3 style="font-size: 25px;">2015 Waste Crisis</h3>
+                        <h3 style="font-size: 25px; text-align: left;">2015 Waste Crisis</h3>
                         <p>I joined national figures and civil society in the 2015 Lebanon protests triggered by the state’s negligence, which left streets flooded with waste. On a personal level, I presented a proposal to the Lebanese state (with German funding) to solve the waste crisis and turn it into a source of income for the treasury by converting it into a source of electrical energy according to environmental standards without costing the Lebanese state a single penny. However, sectarian quotas and widespread corruption once again prevented the project’s implementation.</p>
                     </div>
                 </div>
@@ -159,7 +232,7 @@
                         <img src="assets/img/team-img2.jpg" loading="lazy" alt="October 17 Lebanon revolution">
                     </div>
                     <div class="t-box">
-                        <h3 style="font-size: 25px;">October 17, 2019</h3>
+                        <h3 style="font-size: 25px; text-align: left;">October 17, 2019</h3>
                         <p>Whether called a revolution, uprising, or movement, we were among the earliest participants in these comprehensive national popular movements protesting against corruption since the beginning of October 17. When we noticed some saboteurs trying to hijack and divert this genuine popular movement, we established the October 17 Popular Bloc to preserve the movement’s integrity and confront attempts to divert it from the legitimate demands of the people, headed by Dr. Khaled Hanqir, and I served as the General Secretariat representative for the bloc.</p>
                     </div>
                 </div>
@@ -393,7 +466,7 @@
                     <section class="widget widget_text" id="text-15">
                         <h3 class="widget-title" style="text-align: center;">Al-Shouf, Lebanon</h3>
                         <div>
-                            <br><p>Mobile: <a href="tel:+96170559966">00961 70 55 99 66</a><br>E-mail: <a href="mailto:ahmad@ahmad-khatib.com">ahmad@ahmad-khatib.com</a></p>
+                            <br><p style="text-align: center;">Mobile: <a href="tel:+96170559966">00961 70 55 99 66</a><br>E-mail: <a href="mailto:ahmad@ahmad-khatib.com">ahmad@ahmad-khatib.com</a></p>
                         </div>
                     </section>
                 </div>
