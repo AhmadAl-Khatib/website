@@ -1,10 +1,3 @@
-/*!
- * baguetteBox.js
- * @author  feimosi
- * @version 1.5.0
- * @url https://github.com/feimosi/baguetteBox.js
- */
-
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         define(factory);
