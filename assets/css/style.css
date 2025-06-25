@@ -852,13 +852,8 @@ blockquote {
 	position:relative;
 }
 .data::before {
-    border-right: 1px solid;
-    content: "";
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: skewX(-20deg);
+    content: none;
+    border: none;
 }
 .month {
     color: #383838;
