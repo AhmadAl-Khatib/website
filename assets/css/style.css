@@ -867,6 +867,13 @@ blockquote {
     padding-left: 20px;
     padding-top: 23px;
 }
+.year {
+    color: #383838;
+    float: left;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-top: 23px;
+}
 .blog-img {
     border: 1px solid;
     height: 208px;
