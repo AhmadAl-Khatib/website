@@ -1413,6 +1413,45 @@ width:100%;
     }
 }
 
+.book-description {
+  padding: 10px 15px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+.book-details {
+  text-align: right;
+}
+
+.book-summary {
+  color: #ffa500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.book-summary:hover {
+  color: #3ca2dc;
+  text-decoration: underline;
+}
+ 
+.book-summary .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  margin-left: 6px;
+}
+
+/* Rotate arrow when <details> is open */
+.book-details[open] .book-summary .arrow {
+  transform: rotate(90deg);
+}
+
 
 
 
