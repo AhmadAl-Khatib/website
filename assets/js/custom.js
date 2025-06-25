@@ -27,14 +27,14 @@ window.addEventListener('click', function (event) {
 
 // Get today's date
 const today = new Date();
-// Extract parts
 const monthNumber = today.getMonth() + 1; // 1–12
 const dayNumber = today.getDate();        // 1–31
-const monthName = today.toLocaleString('default', { month: 'long' });
-// Update HTML elements
+const monthName = today.toLocaleString('default', { month: 'long' }); // e.g. "June"
+const year = today.getFullYear();         // e.g. 2025
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("month-num").innerText = monthNumber;
     document.getElementById("day-num").innerText = dayNumber;
     document.getElementById("month-name").innerText = monthName;
+    document.getElementById("year").innerText = year;
 });
 
