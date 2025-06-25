@@ -852,8 +852,13 @@ blockquote {
 	position:relative;
 }
 .data::before {
-    content: none;
-    border: none;
+    border-right: 1px solid;
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: skewX(-20deg);
 }
 .month {
     color: #383838;
@@ -865,7 +870,7 @@ blockquote {
 .blog-img {
     border: none;
     height: 208px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     padding: 9px;
     border-radius: 5px;
     position: relative;
@@ -1443,7 +1448,6 @@ width:100%;
 .book-details[open] .book-summary .arrow {
   transform: rotate(90deg);
 }
-
 
 
 
