@@ -844,14 +844,14 @@ blockquote {
 	  border-radius: 5px;
 	position:absolute;
 }
-.data {
+.date {
     color: #383838;
     float: left;
     font-size: 50px;
     padding-right: 20px;
 	position:relative;
 }
-.data::before {
+.date::before {
     border-right: 1px solid;
     content: "";
     height: 100%;
