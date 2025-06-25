@@ -46,14 +46,14 @@ a {
 	position: relative;
 }
 .header {
-   background: rgba(0, 0, 0, 0) url("../img/header.jpg") repeat fixed center 0 / cover  ;
+   background: rgba(0, 0, 0, 0) url("../img/about ahmad al khatib.webp") repeat fixed center 0 / cover  ;
     color: #fff;
     height: 100%;
     overflow: hidden;
     transition: all 0.35s ease 0s;
 }
 .header2 {
-   background: rgba(0, 0, 0, 0) url("../img/header2.jpg") repeat fixed center bottom / cover  ;
+   background: rgba(0, 0, 0, 0) url("../img/about ahmad al khatib.webp") repeat fixed center bottom / cover  ;
     color: #fff;
     height: 100%;
     overflow: hidden;
@@ -205,7 +205,7 @@ transition: all 0.35s ease 0s;
 /*----------- activities ------------*/
 
 #activities {
-   background: url("../img/team-bg.jpg") no-repeat scroll center bottom / cover ;
+   background: url("../img/ahmad al khatib activities.webp") no-repeat scroll center bottom / cover ;
     color: #fff;
     overflow: hidden;
 	padding:100px 0 220px;
@@ -906,7 +906,7 @@ blockquote {
 /*----------- contact ------------*/
 #contact
 {
- background: url("../img/contact-bg.JPG") no-repeat scroll center center / cover  ;
+ background: url("../img/contact ahmad al khatib.webp") no-repeat scroll center center / cover  ;
     color: #fff;
     overflow: hidden;
 	padding:100px 0;
@@ -957,7 +957,7 @@ blockquote {
 }
 
 #footer {
-    background: rgba(0, 0, 0, 0) url("../img/footer-bg.jpg") no-repeat scroll -554px -686px;
+    background: rgba(0, 0, 0, 0) url("../img/footer-bg.webp") no-repeat scroll -554px -686px;
     color: #fff;
     padding: 60px 0 120px;
     position: relative;
