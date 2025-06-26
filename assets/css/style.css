@@ -32,7 +32,6 @@ body {
 }
 :lang(ar), [lang="ar"] {
     font-family: 'Tajawal', Arial, sans-serif;
-    direction: rtl; /* Right-to-left for Arabic */
 }
 
 a {
