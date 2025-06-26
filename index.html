@@ -519,9 +519,9 @@
                 
                 <div data-wow-delay=".6s" class="col-xs-12 col-sm-6 col-md-6 wow bounceIn animated" style="visibility: visible; animation-delay: 0.6s; animation-name: bounceIn;">
                     <section class="widget widget_text" id="text-15">
-                        <h3 class="widget-title" style="text-align: center;">الشوف، لبنان</h3>
-                        <div>
-                            <br><p style="text-align: center;">Mobile: <a href="tel:+96170559966">00961 70 55 99 66</a><br>E-mail: <a href="mailto:ahmad@ahmad-khatib.com">ahmad@ahmad-khatib.com</a></p>
+                        <h3 class="widget-title">الشوف، لبنان</h3>
+                        <div class="textwidget">
+                            <br><p>Mobile: <a href="tel:+96170559966">00961 70 55 99 66</a><br>E-mail: <a href="mailto:ahmad@ahmad-khatib.com">ahmad@ahmad-khatib.com</a></p>
                         </div>
                     </section>
                 </div>
@@ -576,22 +576,6 @@
                 }
             });
         };
-    </script>
-    <script>
-    $(document).ready(function() {
-        // Initialize Isotope with festival filter as default
-        var $grid = $('.grid').isotope({
-            itemSelector: '.element-item',
-            layoutMode: 'fitRows',
-            filter: '.festival'  // Show only festival by default
-        });
-
-        // Bind filter button click
-        $('.filter-button-group').on('click', 'button', function() {
-            var filterValue = $(this).attr('data-filter');
-            $grid.isotope({ filter: filterValue });
-        });
-    });
     </script>
 </body>
 </html>
