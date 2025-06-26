@@ -861,6 +861,8 @@ blockquote {
   top: 0;
   left: 0;
   border-radius: 5px;
+  transform: translate(5px, 5px);
+  border-radius: 5px;
 }
 
 .date {
