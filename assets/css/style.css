@@ -209,7 +209,7 @@ transition: all 0.35s ease 0s;
    background: url("../img/ahmad al khatib activities.webp") no-repeat scroll center bottom / cover ;
     color: #fff;
     overflow: hidden;
-	padding:50px 0 50px;
+	padding:100px 0 100px;
     transition: all 0.35s ease 0s;
 }
 .t-box {
@@ -255,6 +255,7 @@ margin:20px 0 0 0px;
 
 #publications {
     overflow: hidden;
+    padding: 20px 0;
 }
 #publications h2 {
     padding: 50px 0 25px;
@@ -506,7 +507,7 @@ padding:10px;
 }
 /*----------- owl ------------*/
 #owl-demo .owl-item div{
-      padding:5px;
+      padding:100px;
     }
 #owl-demo .owl-item img{
       display: block;
@@ -561,7 +562,7 @@ padding:10px;
 }
 /*----------- gallery ------------*/
 #Gallery {
-    padding: 150px 0 0;
+    padding: 100px 0 100px;
 	overflow:hidden;
 }
 #controls ul li {
@@ -826,7 +827,7 @@ blockquote {
   background: #ffa100;
   color: #fff;
   overflow: hidden;
-  padding: 100px 0 220px;
+  padding: 100px 0 100px;
   transition: all 0.35s ease 0s;
   position: relative;
   text-align: center;
@@ -923,25 +924,6 @@ blockquote {
   font-size: 14px;
 }
 
-/* Responsive padding for mobile */
-@media (max-width: 600px) {
-  #blog {
-    padding: 60px 0 120px;
-  }
-
-  .date {
-    font-size: 36px;
-    padding-right: 10px;
-  }
-
-  .month,
-  .year {
-    font-size: 14px;
-    padding-left: 10px;
-    padding-top: 20px;
-  }
-}
-
 /*----------- contact ------------*/
 #contact
 {
@@ -998,7 +980,7 @@ blockquote {
 #footer {
     background: rgba(0, 0, 0, 0) url("../img/footer-bg.webp") no-repeat scroll -554px -686px;
     color: #fff;
-    padding: 60px 0 120px;
+    padding: 60px 0 60px;
     position: relative;
     text-align: center;
     width: 100%;
