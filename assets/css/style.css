@@ -828,6 +828,7 @@ blockquote {
   padding: 100px 0 220px;
   transition: all 0.35s ease 0s;
   position: relative;
+  text-align: center;
 }
 
 #blog::before {
