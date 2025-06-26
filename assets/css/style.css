@@ -859,7 +859,7 @@ blockquote {
   top: 0;
   left: 0;
   border-radius: 5px;
-  transform: translate(5px, 5px);
+  transform: translate(10px, 10px);
   border-radius: 5px;
 }
 
