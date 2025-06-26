@@ -914,6 +914,7 @@ blockquote {
 }
 
 #blog .row > p {
+  padding-right: 10px;
   color: #444444;
   font-size: 14px;
 }
