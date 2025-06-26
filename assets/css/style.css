@@ -866,7 +866,7 @@ blockquote {
 
 .date {
   color: #383838;
-  float: left;
+  display: inline-block;
   font-size: 50px;
   padding-right: 20px;
   position: relative;
@@ -886,7 +886,7 @@ blockquote {
 .month,
 .year {
   color: #383838;
-  float: left;
+  display: inline-block;
   font-size: 18px;
   padding-left: 20px;
   padding-top: 23px;
