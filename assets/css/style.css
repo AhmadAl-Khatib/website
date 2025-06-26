@@ -209,7 +209,7 @@ transition: all 0.35s ease 0s;
    background: url("../img/ahmad al khatib activities.webp") no-repeat scroll center bottom / cover ;
     color: #fff;
     overflow: hidden;
-	padding:100px 0 100px;
+    padding:50px 0 50px;
     transition: all 0.35s ease 0s;
 }
 .t-box {
@@ -255,7 +255,7 @@ margin:20px 0 0 0px;
 
 #publications {
     overflow: hidden;
-    padding: 20px 0 20px;
+    padding:50px 0 50px;
 }
 #publications h2 {
     padding: 50px 0 25px;
@@ -562,8 +562,8 @@ padding:10px;
 }
 /*----------- gallery ------------*/
 #Gallery {
-    padding: 20px 0 20px;
-	overflow:hidden;
+    padding:50px 0 50px;
+    overflow:hidden;
 }
 #controls ul li {
     float:left;
@@ -827,7 +827,7 @@ blockquote {
   background: #ffa100;
   color: #fff;
   overflow: hidden;
-  padding: 100px 0 100px;
+  padding:50px 0 50px;
   transition: all 0.35s ease 0s;
   position: relative;
   text-align: center;
@@ -930,7 +930,7 @@ blockquote {
  background: url("../img/contact ahmad al khatib.webp") no-repeat scroll center center / cover  ;
     color: #fff;
     overflow: hidden;
-	padding:100px 0 100px;
+    padding:50px 0 50px;
     transition: all 0.35s ease 0s;
 }
 #contact input[type="text"]{
