@@ -255,7 +255,7 @@ margin:20px 0 0 0px;
 
 #publications {
     overflow: hidden;
-    padding: 20px 0;
+    padding: 20px 0 20px;
 }
 #publications h2 {
     padding: 50px 0 25px;
@@ -507,7 +507,7 @@ padding:10px;
 }
 /*----------- owl ------------*/
 #owl-demo .owl-item div{
-      padding:100px;
+      padding:100px 0 100px;
     }
 #owl-demo .owl-item img{
       display: block;
@@ -562,7 +562,7 @@ padding:10px;
 }
 /*----------- gallery ------------*/
 #Gallery {
-    padding: 100px 0 100px;
+    padding: 20px 0 20px;
 	overflow:hidden;
 }
 #controls ul li {
@@ -930,7 +930,7 @@ blockquote {
  background: url("../img/contact ahmad al khatib.webp") no-repeat scroll center center / cover  ;
     color: #fff;
     overflow: hidden;
-	padding:100px 0;
+	padding:100px 0 100px;
     transition: all 0.35s ease 0s;
 }
 #contact input[type="text"]{
