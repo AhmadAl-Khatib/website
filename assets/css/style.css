@@ -864,7 +864,7 @@ blockquote {
   padding-bottom: 56.25%; /* 16:9 ratio */
   height: 0;
   overflow: visible;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .blog-img > img {
@@ -913,7 +913,6 @@ blockquote {
   color: #000;
   display: inline-table;
   font-size: 18px;
-  margin-top: 15px;
   padding: 10px 23px;
   text-decoration: none;
   background: #fff;
