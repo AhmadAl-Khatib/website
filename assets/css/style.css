@@ -845,7 +845,9 @@ blockquote {
   position: relative;
   text-align: center;
 }
-
+#blog h2 {
+  margin-bottom: 20px; /* Adjust this value as needed */
+}
 #blog::before {
   background: #333 none repeat scroll 0 0;
   content: "";
@@ -856,7 +858,6 @@ blockquote {
   transform: skewX(110deg);
   width: 100%;
 }
-
 .blog-img {
   border: 1px solid;
   border-radius: 5px;
@@ -866,7 +867,6 @@ blockquote {
   overflow: visible;
   margin-bottom: 30px;
 }
-
 .blog-img > img {
   width: 100%;
   height: 100%;
@@ -878,7 +878,6 @@ blockquote {
   transform: translate(10px, 10px);
   border-radius: 5px;
 }
-
 .date {
   color: #383838;
   display: inline-block;
@@ -887,7 +886,6 @@ blockquote {
   position: relative;
   text-align: center;
 }
-
 .date::before {
   border-right: 1px solid;
   content: "";
@@ -897,7 +895,6 @@ blockquote {
   top: 0;
   transform: skewX(-20deg);
 }
-
 .month,
 .year {
   color: #383838;
@@ -907,7 +904,6 @@ blockquote {
   padding-top: 23px;
   text-align: center;
 }
-
 #blog a {
   border: 1px solid #fff;
   color: #000;
@@ -918,20 +914,17 @@ blockquote {
   text-decoration: none;
   background: #fff;
 }
-
 #blog a:hover {
   border: 1px solid #ffc259;
   color: #fff;
   background: none;
 }
-
 #blog .row > h3 {
   color: #000000;
   margin-top: 15px;
   font-size: 20px;
   font-weight: bold;
 }
-
 #blog .row > p {
   padding-right: 10px;
   color: #444444;
