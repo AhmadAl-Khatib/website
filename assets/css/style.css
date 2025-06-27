@@ -33,9 +33,12 @@ body {
 
 /* === RTL and font adjustments for Arabic === */
 .rtl-arabic p {
-  direction: rtl;
-  text-align: right;
-  font-family: 'Tajawal', Arial, sans-serif;
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: 'Tajawal', Arial, sans-serif !important;
+}
+.rtl-arabic h1, h2, h3, h4, h5, h6 {
+  font-family: 'Tajawal', Arial, sans-serif !important;
 }
 
 a {
