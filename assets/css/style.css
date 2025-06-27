@@ -1486,85 +1486,92 @@ width:100%;
 /* ======================================== */
 /* ARABIC PAGE RTL STYLING WITH TAJAWAL FONT */
 /* ======================================== */
+
+/* Base font and text direction */
 html[lang="ar"] body {
     font-family: 'Tajawal', Arial, sans-serif;
+}
+
+/* Text elements with RTL direction */
+html[lang="ar"] p,
+html[lang="ar"] li,
+html[lang="ar"] span,
+html[lang="ar"] .book-summary {
     direction: rtl;
     text-align: right;
 }
 
-/* Header text alignment */
-html[lang="ar"] .header-text {
+/* Headings with centered alignment */
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4,
+html[lang="ar"] h5,
+html[lang="ar"] h6 {
     direction: rtl;
-}
-html[lang="ar"] .header-text h2,
-html[lang="ar"] .header-text h3 {
     text-align: center;
 }
 
-/* Navigation menu positioning */
-html[lang="ar"] .navbar-nav {
-    float: right !important;
+/* Fix owl carousel positioning */
+html[lang="ar"] .owl-carousel {
     direction: ltr;
 }
-
-/* Gallery filter buttons layout */
-html[lang="ar"] .filter-button-group {
+html[lang="ar"] .header-text {
     direction: rtl;
-    justify-content: flex-end;
-}
-html[lang="ar"] .filter-button-group .button {
-    margin: 0 0 0 10px;
+    text-align: center;
 }
 
-/* Form field alignment */
+/* About section fixes */
+html[lang="ar"] #about .row > div:first-child {
+    direction: rtl;
+    text-align: right;
+}
+html[lang="ar"] #about .row > div:last-child {
+    direction: ltr; /* Keep image on right */
+}
+
+/* Publications section fixes */
+html[lang="ar"] #publications .row > div:first-child {
+    direction: ltr; /* Keep image on left */
+}
+html[lang="ar"] #publications .row > div:last-child {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Contact form fixes */
 html[lang="ar"] #contact input,
-html[lang="ar"] #contact textarea,
+html[lang="ar"] #contact textarea {
+    text-align: right;
+    direction: rtl;
+    font-family: 'Tajawal', Arial, sans-serif;
+}
 html[lang="ar"] #contact button {
-    font-family: Arial, sans-serif;
-    text-align: left;
-    direction: ltr;
+    direction: rtl;
+    font-family: 'Tajawal', Arial, sans-serif;
 }
 
-/* Blog date display */
+/* Footer background and text */
+html[lang="ar"] #footer::before {
+    background: #ffa100; /* Original orange color */
+}
+html[lang="ar"] #footer {
+    direction: rtl;
+}
+html[lang="ar"] #footer .textwidget {
+    text-align: left;
+}
+
+/* Special elements */
 html[lang="ar"] .date,
 html[lang="ar"] .month,
 html[lang="ar"] .year {
-    font-family: Arial, sans-serif;
     direction: ltr;
-    text-align: center;
+    font-family: Arial, sans-serif;
 }
-
-/* Book summary styling */
-html[lang="ar"] .book-summary {
-    display: block;
-    margin-top: 15px;
-    text-align: right;
+html[lang="ar"] .navbar-nav {
+    direction: ltr;
 }
-
-/* Special centering preservation */
-html[lang="ar"] .header-text p,
-html[lang="ar"] .t-box p,
-html[lang="ar"] .title p,
-html[lang="ar"] .counter p,
-html[lang="ar"] .wbox p,
-html[lang="ar"] .blog-img + .row p {
-    text-align: center;
-}
-
-/* Fix for carousel content alignment */
-html[lang="ar"] .header1 .header-text {
-    margin: 150px auto;
-    float: none;
-}
-
-/* Responsive adjustments */
-@media (max-width: 767px) {
-    html[lang="ar"] .navbar-nav {
-        float: none !important;
-        background: #000;
-    }
-    html[lang="ar"] .filter-button-group {
-        flex-direction: column;
-        align-items: flex-end;
-    }
+html[lang="ar"] .filter-button-group {
+    direction: rtl;
 }
