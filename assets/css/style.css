@@ -913,6 +913,7 @@ blockquote {
   color: #000;
   display: inline-table;
   font-size: 18px;
+  margin-top: 15px;
   padding: 10px 23px;
   text-decoration: none;
   background: #fff;
