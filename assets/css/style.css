@@ -1491,22 +1491,57 @@ html[lang="ar"] body {
     direction: rtl;
     text-align: right;
 }
-/* Apply Tajawal to all text elements */
-html[lang="ar"] p,
-html[lang="ar"] li,
-html[lang="ar"] a,
-html[lang="ar"] span {
-    font-family: 'Tajawal', Arial, sans-serif;
+
+/* Header text alignment */
+html[lang="ar"] .header-text {
     direction: rtl;
+}
+html[lang="ar"] .header-text h2,
+html[lang="ar"] .header-text h3 {
+    text-align: center;
+}
+
+/* Navigation menu positioning */
+html[lang="ar"] .navbar-nav {
+    float: right !important;
+    direction: ltr;
+}
+
+/* Gallery filter buttons layout */
+html[lang="ar"] .filter-button-group {
+    direction: rtl;
+    justify-content: flex-end;
+}
+html[lang="ar"] .filter-button-group .button {
+    margin: 0 0 0 10px;
+}
+
+/* Form field alignment */
+html[lang="ar"] #contact input,
+html[lang="ar"] #contact textarea,
+html[lang="ar"] #contact button {
+    font-family: Arial, sans-serif;
+    text-align: left;
+    direction: ltr;
+}
+
+/* Blog date display */
+html[lang="ar"] .date,
+html[lang="ar"] .month,
+html[lang="ar"] .year {
+    font-family: Arial, sans-serif;
+    direction: ltr;
+    text-align: center;
+}
+
+/* Book summary styling */
+html[lang="ar"] .book-summary {
+    display: block;
+    margin-top: 15px;
     text-align: right;
 }
-/* Preserve centering for specific elements */
-html[lang="ar"] h1,
-html[lang="ar"] h2,
-html[lang="ar"] h3,
-html[lang="ar"] h4,
-html[lang="ar"] h5,
-html[lang="ar"] h6,
+
+/* Special centering preservation */
 html[lang="ar"] .header-text p,
 html[lang="ar"] .t-box p,
 html[lang="ar"] .title p,
@@ -1515,34 +1550,21 @@ html[lang="ar"] .wbox p,
 html[lang="ar"] .blog-img + .row p {
     text-align: center;
 }
-/* Form elements should remain LTR */
-html[lang="ar"] #contact input,
-html[lang="ar"] #contact textarea,
-html[lang="ar"] #contact button {
-    font-family: Arial, sans-serif;
-    text-align: left;
-    direction: ltr;
-}
-/* Special case for the book summary */
-html[lang="ar"] .book-summary {
-    display: block;
-    margin-top: 15px;
-}
-/* Ensure dates in blog section maintain their layout */
-html[lang="ar"] .date,
-html[lang="ar"] .month,
-html[lang="ar"] .year {
-    font-family: Arial, sans-serif;
-    direction: ltr;
-    text-align: center;
-}
-/* Preserve navigation alignment */
-html[lang="ar"] .navbar-nav {
-    direction: ltr;
-}
-/* Gallery filter buttons */
-html[lang="ar"] .filter-button-group {
-    direction: rtl;
+
+/* Fix for carousel content alignment */
+html[lang="ar"] .header1 .header-text {
+    margin: 150px auto;
+    float: none;
 }
 
-
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    html[lang="ar"] .navbar-nav {
+        float: none !important;
+        background: #000;
+    }
+    html[lang="ar"] .filter-button-group {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
