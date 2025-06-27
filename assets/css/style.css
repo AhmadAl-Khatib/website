@@ -845,9 +845,6 @@ blockquote {
   position: relative;
   text-align: center;
 }
-#blog h2 {
-  margin-bottom: 20px; /* Adjust this value as needed */
-}
 #blog::before {
   background: #333 none repeat scroll 0 0;
   content: "";
