@@ -55,6 +55,33 @@
         ]
     }
     </script>
+    <style>
+  /* Apply Tajawal to the whole site */
+  html, body {
+    font-family: 'Tajawal', sans-serif !important;
+  }
+
+  /* Exclude Font Awesome icons */
+  [class^="fa"],
+  [class*=" fa-"],
+  i {
+    font-family: inherit !important;
+  }
+
+  /* Exclude Owl Carousel buttons */
+  .owl-prev,
+  .owl-next,
+  .owl-nav button,
+  .owl-dot {
+    font-family: inherit !important;
+  }
+
+  /* ❌ Exclude social icons inside .social-links */
+  .social-links *,
+  .social-links i {
+    font-family: inherit !important;
+  }
+</style>
 </head>
 
 <body>
@@ -196,7 +223,7 @@
             <div class="row">
                 <div class="title">
                     <h2 class="wow fadeInRight animated" data-wow-delay=".3s">النشاطات</h2>
-                    <h3 class="wow fadeInLeft animated" data-wow-delay=".3s" style="font-size: 25px;">نشاطات اجتماعية-سياسية</h3>
+                    <h3 class="wow fadeInLeft animated" data-wow-delay=".3s" style="-size: 25px;">نشاطات اجتماعية-سياسية</h3>
                 </div>
                 
                 <div class="col-xs-12 col-sm-12 col-md-6 wow fadeInUp animated" data-wow-delay=".3s">
