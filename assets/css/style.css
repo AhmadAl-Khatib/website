@@ -1483,6 +1483,66 @@ width:100%;
   transform: rotate(90deg);
 }
 
-
+/* ======================================== */
+/* ARABIC PAGE RTL STYLING WITH TAJAWAL FONT */
+/* ======================================== */
+html[lang="ar"] body {
+    font-family: 'Tajawal', Arial, sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+/* Apply Tajawal to all text elements */
+html[lang="ar"] p,
+html[lang="ar"] li,
+html[lang="ar"] a,
+html[lang="ar"] span {
+    font-family: 'Tajawal', Arial, sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+/* Preserve centering for specific elements */
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4,
+html[lang="ar"] h5,
+html[lang="ar"] h6,
+html[lang="ar"] .header-text p,
+html[lang="ar"] .t-box p,
+html[lang="ar"] .title p,
+html[lang="ar"] .counter p,
+html[lang="ar"] .wbox p,
+html[lang="ar"] .blog-img + .row p {
+    text-align: center;
+}
+/* Form elements should remain LTR */
+html[lang="ar"] #contact input,
+html[lang="ar"] #contact textarea,
+html[lang="ar"] #contact button {
+    font-family: Arial, sans-serif;
+    text-align: left;
+    direction: ltr;
+}
+/* Special case for the book summary */
+html[lang="ar"] .book-summary {
+    display: block;
+    margin-top: 15px;
+}
+/* Ensure dates in blog section maintain their layout */
+html[lang="ar"] .date,
+html[lang="ar"] .month,
+html[lang="ar"] .year {
+    font-family: Arial, sans-serif;
+    direction: ltr;
+    text-align: center;
+}
+/* Preserve navigation alignment */
+html[lang="ar"] .navbar-nav {
+    direction: ltr;
+}
+/* Gallery filter buttons */
+html[lang="ar"] .filter-button-group {
+    direction: rtl;
+}
 
 
