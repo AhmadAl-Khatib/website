@@ -864,7 +864,7 @@ blockquote {
   padding-bottom: 56.25%; /* 16:9 ratio */
   height: 0;
   overflow: visible;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .blog-img > img {
