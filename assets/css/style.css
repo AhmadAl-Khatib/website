@@ -864,7 +864,7 @@ blockquote {
   padding-bottom: 56.25%; /* 16:9 ratio */
   height: 0;
   overflow: visible;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .blog-img > img {
@@ -1482,5 +1482,4 @@ width:100%;
 .book-details[open] .book-summary .arrow {
   transform: rotate(90deg);
 }
-
 
