@@ -30,21 +30,73 @@ body {
     font-family: arial;
     font-size:14px;
 }
-/*----------- font and alignment for arabic text ------------*/
-:lang(ar), [lang="ar"] {
-    font-family: 'Tajawal', Arial, sans-serif;
+
+/* === RTL adjustments ONLY when language is Arabic === */
+html[lang="ar"],
+body[lang="ar"],
+:lang(ar) {
+  direction: rtl;
+  unicode-bidi: embed;
 }
-:lang(ar) p,
-:lang(ar) h1,
-:lang(ar) h2,
-:lang(ar) h3,
-:lang(ar) h4,
-:lang(ar) h5,
-:lang(ar) h6,
-:lang(ar) li,
-:lang(ar) blockquote {
+/* Flip key layout sections while preserving design */
+:lang(ar) .navbar-nav {
+  float: right;
+}
+:lang(ar) .navbar-nav > li > a {
   text-align: right;
 }
+:lang(ar) .header-text,
+:lang(ar) .t-box,
+:lang(ar) .blog-img + .row,
+:lang(ar) .title,
+:lang(ar) #about h2,
+:lang(ar) #about p,
+:lang(ar) #publications p,
+:lang(ar) #blog .row > h3,
+:lang(ar) #blog .row > p,
+:lang(ar) .book-description {
+  text-align: right;
+}
+:lang(ar) .bs-blog-type {
+  float: right;
+  border-left: 1px solid #eee;
+  border-right: none;
+  padding-left: 10px;
+  padding-right: 0;
+}
+:lang(ar) .bs-blog-name,
+:lang(ar) .bs-blog-detail {
+  margin-left: 0;
+  margin-right: 75px;
+  text-align: right;
+}
+:lang(ar) .text-author,
+:lang(ar) .name-author {
+  margin-left: 0;
+  margin-right: 20px;
+  text-align: right;
+}
+:lang(ar) .comment-inner {
+  margin-left: 0;
+  margin-right: 130px;
+  text-align: right;
+}
+:lang(ar) .cv-link {
+  display: inline-block;
+  direction: rtl;
+  text-align: right;
+}
+/* Optional: input text alignment */
+:lang(ar) input,
+:lang(ar) textarea {
+  text-align: right;
+}
+/* Optional: flip icon/button margin if needed */
+:lang(ar) .fa {
+  margin-left: 0.4em;
+  margin-right: 0;
+}
+/* No need to touch default LTR styles */
 
 a {
     transition: all 0.35s ease 0s;
