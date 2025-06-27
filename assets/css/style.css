@@ -30,8 +30,20 @@ body {
     font-family: arial;
     font-size:14px;
 }
+/*----------- font and alignment for arabic text ------------*/
 :lang(ar), [lang="ar"] {
     font-family: 'Tajawal', Arial, sans-serif;
+}
+:lang(ar) p,
+:lang(ar) h1,
+:lang(ar) h2,
+:lang(ar) h3,
+:lang(ar) h4,
+:lang(ar) h5,
+:lang(ar) h6,
+:lang(ar) li,
+:lang(ar) blockquote {
+  text-align: right;
 }
 
 a {
