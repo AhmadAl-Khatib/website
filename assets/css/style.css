@@ -1371,11 +1371,11 @@ width:100%;
 }
 
 }
+
 .cv-spacer {
     display: block;
     height: 10px;
 }
-
 .cv-link {
     font-weight: bold;
     color: #ffa500;
@@ -1384,11 +1384,9 @@ width:100%;
     text-decoration: none;
     cursor: pointer;
 }
-
 .cv-link:hover {
     color: #3ca2dc;
 }
-
 .cv-modal {
     display: none;
     position: fixed;
@@ -1400,7 +1398,6 @@ width:100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.7);
 }
-
 .cv-modal-content {
     background-color: #fff;
     margin: 5% auto;
@@ -1411,8 +1408,11 @@ width:100%;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     animation: fadeIn 0.3s ease-in-out;
     position: relative;
+    /* Ensure full scrolling on mobile/iPad */
+    max-height: 90vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
-
 .cv-close {
     color: #ff884d;
     position: absolute;
@@ -1422,13 +1422,11 @@ width:100%;
     font-weight: bold;
     cursor: pointer;
 }
-
 .cv-close:hover,
 .cv-close:focus {
     color: #cc6a2e;
     text-decoration: none;
 }
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -1437,6 +1435,7 @@ width:100%;
         opacity: 1;
     }
 }
+
 
 .book-description {
   padding: 10px 15px;
