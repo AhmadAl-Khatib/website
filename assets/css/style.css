@@ -1375,7 +1375,6 @@ width:100%;
     display: block;
     height: 10px;
 }
-
 .cv-link {
     font-weight: bold;
     color: #ffa500;
@@ -1384,11 +1383,9 @@ width:100%;
     text-decoration: none;
     cursor: pointer;
 }
-
 .cv-link:hover {
     color: #3ca2dc;
 }
-
 .cv-modal {
     display: none;
     position: fixed;
@@ -1400,7 +1397,6 @@ width:100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.7);
 }
-
 .cv-modal-content {
     background-color: #fff;
     margin: 5% auto;
@@ -1412,7 +1408,6 @@ width:100%;
     animation: fadeIn 0.3s ease-in-out;
     position: relative;
 }
-
 .cv-close {
     color: #ff884d;
     position: absolute;
@@ -1422,13 +1417,11 @@ width:100%;
     font-weight: bold;
     cursor: pointer;
 }
-
 .cv-close:hover,
 .cv-close:focus {
     color: #cc6a2e;
     text-decoration: none;
 }
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -1448,7 +1441,6 @@ width:100%;
   margin-top: 10px;
   border-radius: 4px;
 }
-
 .book-summary {
   color: #ffa500;
   cursor: pointer;
@@ -1457,19 +1449,8 @@ width:100%;
   font-size: 18px;
   text-decoration: none;
 }
-
 .book-summary:hover {
   color: #3ca2dc;
   text-decoration: underline;
 }
- 
-.book-summary .arrow {
-  display: inline-block;
-  transition: transform 0.3s ease;
-  margin-left: 6px;
-}
 
-/* Rotate arrow when <details> is open */
-.book-details[open] .book-summary .arrow {
-  transform: rotate(90deg);
-}
