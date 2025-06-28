@@ -1372,6 +1372,13 @@ width:100%;
 
 }
 
+/* Prevent the background page from scrolling when the modal is open */
+html.modal-open,
+body.modal-open {
+  overflow: hidden;
+  height: 100%;
+}
+/* CV link styling */
 .cv-spacer {
     display: block;
     height: 10px;
@@ -1387,32 +1394,44 @@ width:100%;
 .cv-link:hover {
     color: #3ca2dc;
 }
+/* Modal backdrop: fills entire screen */
 .cv-modal {
-    display: none;
+    display: none;       /* toggle via JS */
     position: fixed;
     z-index: 9999;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: rgba(0, 0, 0, 0.7);
 }
+/* Modal content container */
 .cv-modal-content {
+    /* position centrally, with small top & bottom margins */
+    position: absolute;
+    top: 5vh;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 900px; 
     background-color: #fff;
-    margin: 5% auto;
-    padding: 0;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 900px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 0.3s ease-in-out;
-    position: relative;
-    /* Ensure full scrolling on mobile/iPad */
-    max-height: 90vh;
+    animation: fadeIn 0.3s ease-in-out;   
+    /* enable scrolling inside the modal */
     overflow-y: auto;
+    /* momentum scrolling on iOS and compatible WebKit browsers */
     -webkit-overflow-scrolling: touch;
+    /* allow panning on all touch devices */
+    touch-action: pan-y;
+    /* contain scroll within this element */
+    overscroll-behavior: contain;
+    
+    padding: 20px;  /* adjust as needed */
+    box-sizing: border-box;
 }
+/* Close button */
 .cv-close {
     color: #ff884d;
     position: absolute;
@@ -1427,14 +1446,12 @@ width:100%;
     color: #cc6a2e;
     text-decoration: none;
 }
+/* Fade‑in animation */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
+
 
 
 .book-description {
