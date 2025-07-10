@@ -848,12 +848,12 @@ blockquote {
 #blog::before {
   background: #333 none repeat scroll 0 0;
   content: "";
-  height: 40%;
+  height: 60%;
   left: -90px;
   position: absolute;
-  top: -278px;
+  top: -250px;
   transform: skewX(110deg);
-  width: 100%;
+  width: 120%;
 }
 .blog-img {
   border: 1px solid;
