@@ -6,14 +6,14 @@ const BLOG_FEED = "https://blog.ahmad-khatib.com/feeds/posts/default?alt=json";
 // Extract first image from post content HTML
 function extractFirstImage(html) {
   const match = html.match(/<img[^>]+src="([^">]+)"/i);
-  return match ? match[1] : null; // No fallback
+  return match ? match[1] : null;
 }
 
 // Format post date
 function extractDate(dateStr) {
   const date = new Date(dateStr);
   const day = date.getDate();
-  const month = date.toLocaleString("en-US", { month: "long" }); // e.g., July
+  const month = date.toLocaleString("en-US", { month: "long" });
   const year = date.getFullYear();
   return { day, month, year };
 }
@@ -35,14 +35,14 @@ function extractDate(dateStr) {
     }
 
     const plainText = content.replace(/<[^>]*>/g, '').trim();
-    const intro = plainText.substring(0, 440); // ~4 lines of readable content
+    const intro = plainText.substring(0, 440);
     const remainder = plainText.length > 440 ? plainText.substring(440).trim() : '';
 
     const { day, month, year } = extractDate(entry.published.$t);
 
     const newSection = `
 <!-- Dynamic BLOG-POST-START -->
-<div id="latest-blog-post" class="col-12 wow fadeInUp animated" data-wow-delay=".3s">
+<div id="latest-blog-post" class="col-12 wow fadeInUp animated" data-wow-delay=".3s" style="padding-bottom: 45px;">
   <div class="blog-img">
     <img src="${image}" loading="lazy" alt="${title}" />
   </div>
