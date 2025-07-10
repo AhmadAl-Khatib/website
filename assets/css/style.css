@@ -837,7 +837,7 @@ blockquote {
 /*----------- blog ------------*/
 
 #blog {
-  background: #ffa100;
+  background: #333;
   color: #fff;
   overflow: hidden;
   padding:50px 0 50px;
@@ -846,12 +846,12 @@ blockquote {
   text-align: center;
 }
 #blog::before {
-  background: #333 none repeat scroll 0 0;
+  background: #ffa100 none repeat scroll 0 0;
   content: "";
-  height: 300px;
-  left: -0px;
+  height: 40%;
+  left: -90px;
   position: absolute;
-  top: -80px;
+  top: -178px;
   transform: skewX(110deg);
   width: 100%;
 }
@@ -876,7 +876,7 @@ blockquote {
   border-radius: 5px;
 }
 .date {
-  color: #383838;
+  color: #777777;
   display: inline-block;
   font-size: 50px;
   padding-right: 20px;
@@ -894,7 +894,7 @@ blockquote {
 }
 .month,
 .year {
-  color: #383838;
+  color: #777777;
   display: inline-block;
   font-size: 18px;
   padding-left: 20px;
@@ -924,7 +924,7 @@ blockquote {
 }
 #blog .row > p {
   padding-right: 10px;
-  color: #444444;
+  color: #ffffff;
   font-size: 14px;
 }
 
