@@ -919,8 +919,7 @@ blockquote {
 }
 /* Add left and right padding to the blog post container */
 #latest-blog-post.col-12 {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px 0px 15px;
 }
 /* Make the blog post title bold */
 #latest-blog-post h3 {
