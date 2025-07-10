@@ -897,6 +897,7 @@ blockquote {
   display: inline-table;
   font-size: 18px;
   margin-top: 15px;
+  margin-bottom: 25px;
   padding: 10px 23px;
   text-decoration: none;
   background: #fff;
@@ -947,7 +948,7 @@ blockquote {
 #latest-blog-post details:not([open]) summary {
   cursor: pointer;
   font-weight: bold;
-  margin-bottom: 45px;
+  margin-bottom: 25px;
   padding: 0 10px;
   direction: rtl;
   text-align: justify;
@@ -962,7 +963,7 @@ blockquote {
   text-align: justify;
 }
 #latest-blog-post details[open] p:last-child {
-  padding-bottom: 45px;
+  padding-bottom: 25px;
 }
 
 /*----------- contact ------------*/
