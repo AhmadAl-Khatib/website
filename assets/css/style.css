@@ -837,7 +837,7 @@ blockquote {
 /*----------- blog ------------*/
 
 #blog {
-  background: #101017;
+  background: #ffa100;
   color: #fff;
   overflow: hidden;
   padding:50px 0 50px;
@@ -846,14 +846,14 @@ blockquote {
   text-align: center;
 }
 #blog::before {
+  background: #333 none repeat scroll 0 0;
   content: "";
-  background: #007b8c;
+  height: 40%;
+  left: -90px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -278px;
+  transform: skewX(110deg);
   width: 100%;
-  height: 10%;
-  z-index: 0;
 }
 .blog-img {
   border: 1px solid;
@@ -876,7 +876,7 @@ blockquote {
   border-radius: 5px;
 }
 .date {
-  color: #777777;
+  color: #383838;
   display: inline-block;
   font-size: 50px;
   padding-right: 20px;
@@ -894,7 +894,7 @@ blockquote {
 }
 .month,
 .year {
-  color: #777777;
+  color: #383838;
   display: inline-block;
   font-size: 18px;
   padding-left: 20px;
@@ -917,14 +917,14 @@ blockquote {
   background: none;
 }
 #blog .row > h3 {
-  color: #ffffff;
+  color: #000000;
   margin-top: 15px;
   font-size: 20px;
   font-weight: bold;
 }
 #blog .row > p {
   padding-right: 10px;
-  color: #ffffff;
+  color: #444444;
   font-size: 14px;
 }
 
@@ -1063,14 +1063,11 @@ width:50%;
     position: relative;
 }
     #blog::before {
-    content: "";
-    background: #007b8c;
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: 30%;
+    transform: rotate(175deg);
     width: 100%;
-    height: 25%;
-    z-index: 0;
+        left: 0px;
+        top: -100px;
 }
 }
 @media (max-width:800px)
@@ -1184,14 +1181,10 @@ width:100%;
     margin-top: 30px;
 }
     #blog::before {
-    content: "";
-    background: #007b8c;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 10%;
-    z-index: 0;
+    height: 60%;
+    top: -545px;
+    transform: rotate(83deg);
+    width: 87%;
 }
 
 .navbar-brand img {
@@ -1285,14 +1278,10 @@ width:100%;
     left: 30%;
 }
     #blog::before {
-    content: "";
-    background: #007b8c;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 10%;
-    z-index: 0;
+    height: 60%;
+    top: -600px;
+    transform: rotate(83deg);
+    width: 60%;
 }
 }
 @media (max-width:320px)
@@ -1375,14 +1364,10 @@ width:100%;
     top: 46%;
 }
     #blog::before {
-    content: "";
-    background: #007b8c;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 10%;
-    z-index: 0;
+    height: 60%;
+    top: -545px;
+    transform: rotate(83deg);
+    width: 87%;
 }
 
 }
@@ -1468,4 +1453,3 @@ width:100%;
   color: #3ca2dc;
   text-decoration: underline;
 }
-
