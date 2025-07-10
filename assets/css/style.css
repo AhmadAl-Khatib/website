@@ -1063,11 +1063,14 @@ width:50%;
     position: relative;
 }
     #blog::before {
-    height: 30%;
-    transform: rotate(175deg);
+    content: "";
+    background: #007b8c;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-        left: 0px;
-        top: -100px;
+    height: 25%;
+    z-index: 0;
 }
 }
 @media (max-width:800px)
@@ -1181,10 +1184,14 @@ width:100%;
     margin-top: 30px;
 }
     #blog::before {
-    height: 60%;
-    top: -545px;
-    transform: rotate(83deg);
-    width: 87%;
+    content: "";
+    background: #007b8c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    z-index: 0;
 }
 
 .navbar-brand img {
@@ -1278,10 +1285,14 @@ width:100%;
     left: 30%;
 }
     #blog::before {
-    height: 60%;
-    top: -600px;
-    transform: rotate(83deg);
-    width: 60%;
+    content: "";
+    background: #007b8c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    z-index: 0;
 }
 }
 @media (max-width:320px)
@@ -1364,10 +1375,14 @@ width:100%;
     top: 46%;
 }
     #blog::before {
-    height: 60%;
-    top: -545px;
-    transform: rotate(83deg);
-    width: 87%;
+    content: "";
+    background: #007b8c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    z-index: 0;
 }
 
 }
