@@ -37,7 +37,6 @@ function extractDate(dateStr) {
     const plainText = content.replace(/<[^>]*>/g, '').trim();
     const intro = plainText.substring(0, 440);
     const remainder = plainText.length > 440 ? plainText.substring(440).trim() : '';
-
     const { day, month, year } = extractDate(entry.published.$t);
 
     const newSection = `
@@ -58,7 +57,7 @@ function extractDate(dateStr) {
     </p>
     ${remainder ? `
     <details style="direction: rtl; text-align: justify; padding: 0 10px; margin-top: 10px;">
-      <summary style="cursor: pointer; font-weight: bold;">تابع قراءة المقال...</summary>
+      <summary style="cursor: pointer; font-weight: bold;">اقرأ المزيد</summary>
       <p>${remainder}</p>
     </details>` : ''}
   </div>
@@ -69,10 +68,19 @@ function extractDate(dateStr) {
     const filePath = "index.html";
     let html = fs.readFileSync(filePath, "utf8");
 
-    html = html.replace(
-      /<!-- Dynamic BLOG-POST-START -->([\s\S]*?)<!-- Dynamic BLOG-POST-END -->/,
-      `<!-- Dynamic BLOG-POST-START -->\n${newSection}\n<!-- Dynamic BLOG-POST-END -->`
-    );
+    const pattern = /<!-- Dynamic BLOG-POST-START -->([\s\S]*?)<!-- Dynamic BLOG-POST-END -->/;
+
+    if (pattern.test(html)) {
+      // Replace existing section
+      html = html.replace(pattern, newSection);
+    } else {
+      // Insert before </body> if marker not found
+      if (html.includes("</body>")) {
+        html = html.replace("</body>", `${newSection}\n</body>`);
+      } else {
+        html += `\n${newSection}`;
+      }
+    }
 
     fs.writeFileSync(filePath, html);
     console.log("✅ Blog section updated with the latest post.");
