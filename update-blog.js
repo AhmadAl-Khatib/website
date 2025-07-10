@@ -57,7 +57,7 @@ function extractDate(dateStr) {
     </p>
     ${remainder ? `
     <details style="direction: rtl; text-align: justify; padding: 0 10px; margin-top: 10px;">
-      <summary style="cursor: pointer; font-weight: bold;">اقرأ المزيد</summary>
+      <summary style="cursor: pointer; font-weight: bold;">تابع قراءة المقال...</summary>
       <p>${remainder}</p>
     </details>` : ''}
   </div>
