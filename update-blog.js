@@ -65,8 +65,8 @@ function extractDate(dateStr) {
     let html = fs.readFileSync(filePath, "utf8");
 
     html = html.replace(
-      /<!-- Dynamic BLOG-POST-START -->([\s\S]*?)<!-- BLOG-POST-END -->/,
-      `<!-- Dynamic BLOG-POST-START -->\n${newSection}\n<!-- BLOG-POST-END -->`
+      /<!-- Dynamic BLOG-POST-START -->([\s\S]*?)<!-- Dynamic BLOG-POST-END -->/,
+      `<!-- Dynamic BLOG-POST-START -->\n${newSection}\n<!-- Dynamic BLOG-POST-END -->`
     );
 
     fs.writeFileSync(filePath, html);
