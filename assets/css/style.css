@@ -846,7 +846,7 @@ blockquote {
   text-align: center;
 }
 #blog::before {
-  background: #3ccfcf none repeat scroll 0 0;
+  background: #007b8c none repeat scroll 0 0;
   content: "";
   height: 40%;
   left: -90px;
