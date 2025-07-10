@@ -846,8 +846,14 @@ blockquote {
   text-align: center;
 }
 #blog::before {
-  background: #007b8c none repeat scroll 0 0;
+  content: "";
+  background: #007b8c;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 50%;
+  z-index: 0;
 }
 .blog-img {
   border: 1px solid;
