@@ -851,7 +851,7 @@ blockquote {
   height: 60%;
   left: -90px;
   position: absolute;
-  top: -250px;
+  top: -1000px;
   transform: skewX(110deg);
   width: 120%;
 }
