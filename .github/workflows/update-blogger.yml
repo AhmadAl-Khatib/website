@@ -1,7 +1,7 @@
 name: Update Blogger Post
 
 on:
-  workflow_dispatch:  # 🟢 Allow manual trigger from n8n
+  workflow_dispatch:
 
 jobs:
   update-blog:
@@ -20,11 +20,9 @@ jobs:
         run: |
           echo '{}' > package.json
           npm install node-fetch@2
-        working-directory: website
 
       - name: Run update script
         run: node update-blog.js
-        working-directory: website
 
       - name: Commit and push changes
         run: |
@@ -33,4 +31,3 @@ jobs:
           git add index.html
           git commit -m "🔄 Update latest Blogger post" || echo "No changes to commit"
           git push
-        working-directory: website
