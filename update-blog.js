@@ -3,32 +3,42 @@ const fetch = require("node-fetch");
 
 const BLOG_FEED = "https://blog.ahmad-khatib.com/feeds/posts/default?alt=json";
 
-// Extract image from content HTML
+// Extract first image from post content HTML
 function extractFirstImage(html) {
   const match = html.match(/<img[^>]+src="([^">]+)"/i);
-  return match ? match[1] : "assets/img/ahmad al khatib blog.webp"; // fallback
+  return match ? match[1] : null; // No fallback
 }
 
-// Extract day, month, year
+// Format post date
 function extractDate(dateStr) {
   const date = new Date(dateStr);
   const day = date.getDate();
-  const month = date.toLocaleString("en-US", { month: "long" });
+  const month = date.toLocaleString("en-US", { month: "long" }); // e.g., July
   const year = date.getFullYear();
   return { day, month, year };
 }
 
+// Main async function
 (async () => {
   try {
     const res = await fetch(BLOG_FEED);
     const data = await res.json();
-    const entry = data.feed.entry[0];
 
+    const entry = data.feed.entry[0];
     const title = entry.title.$t;
     const url = entry.link.find(l => l.rel === "alternate").href;
     const content = entry.content.$t;
+
+    // Strip HTML and trim to ~2 lines (~220 characters)
     const snippet = content.replace(/<[^>]*>/g, '').trim().substring(0, 220) + '...';
+
+    // Get image
     const image = extractFirstImage(content);
+    if (!image) {
+      console.error("❌ No image found in the latest post.");
+      process.exit(1);
+    }
+
     const { day, month, year } = extractDate(entry.published.$t);
 
     const newSection = `
@@ -55,14 +65,14 @@ function extractDate(dateStr) {
     let html = fs.readFileSync(filePath, "utf8");
 
     html = html.replace(
-      /<!-- BLOG-POST-START -->([\s\S]*?)<!-- BLOG-POST-END -->/,
-      `<!-- BLOG-POST-START -->\n${newSection}\n<!-- BLOG-POST-END -->`
+      /<!-- Dynamic BLOG-POST-START -->([\s\S]*?)<!-- BLOG-POST-END -->/,
+      `<!-- Dynamic BLOG-POST-START -->\n${newSection}\n<!-- BLOG-POST-END -->`
     );
 
     fs.writeFileSync(filePath, html);
-    console.log("✅ Blog section updated with latest post.");
+    console.log("✅ Blog section updated with the latest post.");
   } catch (err) {
-    console.error("❌ Error updating blog section:", err);
+    console.error("❌ Error updating blog section:", err.message);
     process.exit(1);
   }
 })();
