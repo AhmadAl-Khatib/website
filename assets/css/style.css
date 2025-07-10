@@ -917,7 +917,6 @@ blockquote {
   color: #ffffff;
   font-size: 14px;
 }
-
 /* Add left and right padding to the blog post container */
 #latest-blog-post.col-12 {
   padding-left: 15px;
@@ -936,20 +935,29 @@ blockquote {
 #latest-blog-post .month,
 #latest-blog-post .year {
   margin-bottom: 0;
-  padding-bottom: 0;
+  padding-bottom: 0; /* was incorrect before (missing px unit) */
 }
-/* Paragraph styling: RTL, justified text, side padding 10px, bottom padding 45px */
+/* Paragraph styling: RTL, justified text, side padding 10px, bottom padding 10px */
 #latest-blog-post p {
   direction: rtl !important;
   text-align: justify !important;
   padding: 0 10px 10px 10px;
   margin-bottom: 10px;
 }
-/* Summary styling */
-#latest-blog-post details summary {
+/* Summary: when details is closed, add 45px margin below */
+#latest-blog-post details:not([open]) summary {
   cursor: pointer;
   font-weight: bold;
   margin-bottom: 45px;
+  padding: 0 10px;
+  direction: rtl;
+  text-align: justify;
+}
+/* Summary: when details is open, remove bottom margin */
+#latest-blog-post details[open] summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 0;
   padding: 0 10px;
   direction: rtl;
   text-align: justify;
