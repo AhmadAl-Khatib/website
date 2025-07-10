@@ -847,7 +847,6 @@ blockquote {
 }
 #blog::before {
   background: #007b8c none repeat scroll 0 0;
-  top: -250px;
   height: 50%;
 }
 .blog-img {
