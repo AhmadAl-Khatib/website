@@ -41,25 +41,27 @@ function extractDate(dateStr) {
 
     const newSection = `
 <!-- Dynamic BLOG-POST-START -->
-<div id="latest-blog-post" class="col-12 wow fadeInUp animated" data-wow-delay=".3s" style="padding-bottom: 45px;">
+<div id="latest-blog-post" class="col-12 wow fadeInUp animated" data-wow-delay=".3s">
   <div class="blog-img">
     <img src="${image}" loading="lazy" alt="${title}" />
   </div>
   <div class="row">
-    <div class="date"><p>${day}</p></div>
-    <div class="month"><p>${month}</p></div>
-    <div class="year"><p>${year}</p></div>
+    <div class="wow fadeInLeft animated" data-wow-delay=".3s">
+      <div class="date"><p>${day}</p></div>
+      <div class="month"><p>${month}</p></div>
+      <div class="year"><p>${year}</p></div>
+    </div>
   </div>
   <div class="row">
-    <h3>${title}</h3>
-    <p style="direction: rtl !important; text-align: justify !important; padding: 0 10px;">
-      ${intro}
-    </p>
-    ${remainder ? `
-    <details style="direction: rtl; text-align: justify; padding: 0 10px; margin-top: 10px;">
-      <summary style="cursor: pointer; font-weight: bold;">تابع قراءة المقال...</summary>
-      <p>${remainder}</p>
-    </details>` : ''}
+    <div class="wow fadeInRight animated" data-wow-delay=".3s">
+      <h3>${title}</h3>
+      <p>${intro}</p>
+      ${remainder ? `
+      <details>
+        <summary style="cursor: pointer; font-weight: bold;">تابع قراءة المقال...</summary>
+        <p>${remainder}</p>
+      </details>` : ''}
+    </div>
   </div>
 </div>
 <!-- Dynamic BLOG-POST-END -->
@@ -71,10 +73,8 @@ function extractDate(dateStr) {
     const pattern = /<!-- Dynamic BLOG-POST-START -->([\s\S]*?)<!-- Dynamic BLOG-POST-END -->/;
 
     if (pattern.test(html)) {
-      // Replace existing section
       html = html.replace(pattern, newSection);
     } else {
-      // Insert before </body> if marker not found
       if (html.includes("</body>")) {
         html = html.replace("</body>", `${newSection}\n</body>`);
       } else {
