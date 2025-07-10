@@ -942,7 +942,7 @@ blockquote {
 #latest-blog-post p {
   direction: rtl !important;
   text-align: justify !important;
-  padding: 0 10px 45px 10px;
+  padding: 0 10px 10px 10px;
   margin-bottom: 10px;
 }
 /* Summary styling */
