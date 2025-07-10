@@ -837,7 +837,7 @@ blockquote {
 /*----------- blog ------------*/
 
 #blog {
-  background: #333;
+  background: #17161d;
   color: #fff;
   overflow: hidden;
   padding:50px 0 50px;
@@ -846,7 +846,7 @@ blockquote {
   text-align: center;
 }
 #blog::before {
-  background: #ffa100 none repeat scroll 0 0;
+  background: #65e7de none repeat scroll 0 0;
   content: "";
   height: 40%;
   left: -90px;
