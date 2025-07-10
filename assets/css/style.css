@@ -962,6 +962,11 @@ blockquote {
   direction: rtl;
   text-align: justify;
 }
+/* Hover effect for summary */
+#latest-blog-post details summary:hover {
+  color: orange;
+}
+/* Padding after the last paragraph when open */
 #latest-blog-post details[open] p:last-child {
   padding-bottom: 25px;
 }
