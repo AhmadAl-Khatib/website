@@ -30,7 +30,7 @@ function extractDate(dateStr) {
     const content = entry.content.$t;
 
     // Strip HTML and trim to ~2 lines (~220 characters)
-    const snippet = content.replace(/<[^>]*>/g, '').trim().substring(0, 220) + '...';
+    const snippet = content.replace(/<[^>]*>/g, '').trim().substring(0, 440) + '...';
 
     // Get image
     const image = extractFirstImage(content);
