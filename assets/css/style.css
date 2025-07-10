@@ -928,7 +928,7 @@ blockquote {
 }
 /* Reduce space between the date row and the h3 heading */
 #latest-blog-post .row + .row h3 {
-  margin-top: 10px !important;
+  margin-top: 20px !important;
 }
 /* Tighten vertical spacing for date elements */
 #latest-blog-post .date,
