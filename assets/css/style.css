@@ -943,6 +943,16 @@ blockquote {
   direction: rtl !important;
   text-align: justify !important;
   padding: 0 10px 45px 10px;
+  margin-bottom: 10px;
+}
+/* Summary styling */
+#latest-blog-post details summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 45px;
+  padding: 0 10px;
+  direction: rtl;
+  text-align: justify;
 }
 
 /*----------- contact ------------*/
