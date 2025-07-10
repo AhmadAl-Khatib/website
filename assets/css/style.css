@@ -962,6 +962,9 @@ blockquote {
   direction: rtl;
   text-align: justify;
 }
+#latest-blog-post details[open] p:last-child {
+  padding-bottom: 45px;
+}
 
 /*----------- contact ------------*/
 #contact
