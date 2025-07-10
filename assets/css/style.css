@@ -918,6 +918,33 @@ blockquote {
   font-size: 14px;
 }
 
+/* Add left and right padding to the blog post container */
+#latest-blog-post.col-12 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* Make the blog post title bold */
+#latest-blog-post h3 {
+  font-weight: bold;
+}
+/* Reduce space between the date row and the h3 heading */
+#latest-blog-post .row + .row h3 {
+  margin-top: 10px !important;
+}
+/* Tighten vertical spacing for date elements */
+#latest-blog-post .date,
+#latest-blog-post .month,
+#latest-blog-post .year {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+/* Paragraph styling: RTL, justified text, side padding 10px, bottom padding 45px */
+#latest-blog-post p {
+  direction: rtl !important;
+  text-align: justify !important;
+  padding: 0 10px 45px 10px;
+}
+
 /*----------- contact ------------*/
 #contact
 {
