@@ -26,18 +26,17 @@ function extractDate(dateStr) {
 
     const entry = data.feed.entry[0];
     const title = entry.title.$t;
-    const url = entry.link.find(l => l.rel === "alternate").href;
     const content = entry.content.$t;
-
-    // Strip HTML and trim to ~2 lines (~220 characters)
-    const snippet = content.replace(/<[^>]*>/g, '').trim().substring(0, 440) + '...';
-
-    // Get image
     const image = extractFirstImage(content);
+
     if (!image) {
       console.error("❌ No image found in the latest post.");
       process.exit(1);
     }
+
+    const plainText = content.replace(/<[^>]*>/g, '').trim();
+    const intro = plainText.substring(0, 440); // ~4 lines of readable content
+    const remainder = plainText.length > 440 ? plainText.substring(440).trim() : '';
 
     const { day, month, year } = extractDate(entry.published.$t);
 
@@ -54,8 +53,14 @@ function extractDate(dateStr) {
   </div>
   <div class="row">
     <h3>${title}</h3>
-    <p style="direction: rtl !important; text-align: justify !important; padding: 0 10px;">${snippet}</p>
-    <a href="${url}" target="_blank" style="margin-bottom: 45px;">اقرأ المقال كاملًا</a>
+    <p style="direction: rtl !important; text-align: justify !important; padding: 0 10px;">
+      ${intro}
+    </p>
+    ${remainder ? `
+    <details style="direction: rtl; text-align: justify; padding: 0 10px; margin-top: 10px;">
+      <summary style="cursor: pointer; font-weight: bold;">تابع قراءة المقال...</summary>
+      <p>${remainder}</p>
+    </details>` : ''}
   </div>
 </div>
 <!-- Dynamic BLOG-POST-END -->
