@@ -945,6 +945,11 @@ blockquote {
   color: #ffffff;
   font-size: 14px;
 }
+html[lang="ar"] #blog .row > p {
+    direction: rtl !important;
+    text-align: justify !important;
+    padding: 0 10px !important;
+}
 /* Add left and right padding to the blog post container */
 #latest-blog-post.col-12 {
   padding: 0 15px 0px 15px;
