@@ -972,30 +972,6 @@ html[lang="ar"] #blog .row > p {
   padding: 0 10px 0px 10px;
   margin-bottom: 10px;
 }
-/* Summary: when details is closed, add 25px margin below */
-#latest-blog-post details:not([open]) summary {
-  cursor: pointer;
-  font-weight: bold;
-  margin-bottom: 25px;
-  padding: 0 10px;
-  direction: rtl;
-  text-align: justify;
-  transition: color 0.3s ease;
-}
-/* Summary: when details is open, remove bottom margin */
-#latest-blog-post details[open] summary {
-  cursor: pointer;
-  font-weight: bold;
-  margin-bottom: 0;
-  padding: 0 10px;
-  direction: rtl;
-  text-align: justify;
-  transition: color 0.3s ease;
-}
-/* Hover effect for summary */
-#latest-blog-post details summary:hover {
-  color: orange;
-}
 /* Padding after the last paragraph when open */
 #latest-blog-post details[open] p:last-child {
   padding-bottom: 25px;
