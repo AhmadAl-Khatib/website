@@ -304,12 +304,6 @@ html[lang="ar"] #activities h3 {
     width: 50%;
     z-index: 999;
 }
-html[lang="ar"] #publications h3 {
-    padding: 20px 0 25px;
-    direction: rtl !important;
-    position: relative;
-    text-align: right !important;
-    width: 100%;
 #publications p {
     font-size: 16px;
     padding: 10px 0;
