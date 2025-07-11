@@ -316,10 +316,6 @@ html[lang="ar"] #publications p {
     direction: rtl !important;
     text-align: justify !important;
 }
-html[lang="ar"] summary.book-summary {
-    direction: rtl !important;
-    text-align: right !important;
-}
 /*----------- for box ------------*/
 .for-box
 {
