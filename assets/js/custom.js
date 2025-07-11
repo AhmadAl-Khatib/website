@@ -12,3 +12,27 @@ document.addEventListener('DOMContentLoaded', () => {
     if (monthEl) monthEl.innerText = monthName;
     if (yearEl) yearEl.innerText = year;
 });
+
+document.querySelectorAll('details').forEach(details => {
+  const content = details.querySelector('.content');
+  content.style.height = '0px';
+  details.addEventListener('toggle', () => {
+    const inner = content.querySelector('.content-inner');
+    if (details.open) {
+      const height = inner.offsetHeight;
+      content.style.height = height + 'px';
+      details.classList.add('open');
+    } else {
+      content.style.height = content.offsetHeight + 'px';
+      requestAnimationFrame(() => {
+        content.style.height = '0px';
+        details.classList.remove('open');
+      });
+    }
+  });
+  content.addEventListener('transitionend', () => {
+    if (details.open) {
+      content.style.height = 'auto';
+    }
+  });
+});
