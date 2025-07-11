@@ -16,14 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
 document.querySelectorAll('details').forEach(details => {
   const content = details.querySelector('.content');
   const inner = content.querySelector('.content-inner');
+
   // Initial collapsed state
   content.style.height = '0px';
+
   // Handle toggle
   details.addEventListener('toggle', () => {
     if (details.open) {
       // Set to specific pixel height for animation
       const height = inner.offsetHeight;
       content.style.height = height + 'px';
+
       // Allow transition to finish, then set height to auto
       content.addEventListener('transitionend', function setAutoHeight(e) {
         if (e.propertyName === 'height') {
@@ -31,6 +34,7 @@ document.querySelectorAll('details').forEach(details => {
           content.removeEventListener('transitionend', setAutoHeight);
         }
       });
+
       details.classList.add('open');
     } else {
       // Collapse from current height
@@ -39,6 +43,13 @@ document.querySelectorAll('details').forEach(details => {
         content.style.height = '0px';
         details.classList.remove('open');
       });
+    }
+  });
+
+  // Close details when clicking anywhere inside (but not the summary)
+  details.addEventListener('click', function (e) {
+    if (details.open && !e.target.closest('summary')) {
+      details.removeAttribute('open');
     }
   });
 });
