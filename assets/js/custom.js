@@ -15,21 +15,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.querySelectorAll('details').forEach(details => {
   const content = details.querySelector('.content');
+  const inner = content.querySelector('.content-inner');
+  // Start collapsed
   content.style.height = '0px';
   details.addEventListener('toggle', () => {
-    const inner = content.querySelector('.content-inner');
     if (details.open) {
       const height = inner.offsetHeight;
       content.style.height = height + 'px';
       details.classList.add('open');
     } else {
-      content.style.height = content.offsetHeight + 'px';
-      requestAnimationFrame(() => {
-        content.style.height = '0px';
-        details.classList.remove('open');
-      });
+      content.style.height = '0px';
+      details.classList.remove('open');
     }
   });
+  // Set to auto height after opening
   content.addEventListener('transitionend', () => {
     if (details.open) {
       content.style.height = 'auto';
