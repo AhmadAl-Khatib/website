@@ -1477,24 +1477,18 @@ width:100%;
     color: #3ca2dc;
 }
 
-details a {
-  color: orange;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-details a:visited,
-details a:active {
-  color: lightblue;
-}
 details {
-  border: 1px solid #aaa;
-  border-radius: 5px;
   padding: 0.5em 1em;
   margin: 1em 0;
 }
 summary {
   cursor: pointer;
   font-weight: bold;
+  color: orange;
+  transition: color 0.3s ease;
+}
+details[open] summary {
+  color: lightblue;
 }
 .content {
   overflow: hidden;
