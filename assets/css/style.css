@@ -309,6 +309,17 @@ html[lang="ar"] #activities h3 {
     padding: 10px 0;
     text-align: left;
 }
+html[lang="ar"] #publications h2 {
+    padding-top: 30px !important;
+}
+html[lang="ar"] #publications p {
+    direction: rtl !important;
+    text-align: justify !important;
+}
+html[lang="ar"] summary.book-summary {
+    direction: rtl !important;
+    text-align: right !important;
+}
 /*----------- for box ------------*/
 .for-box
 {
