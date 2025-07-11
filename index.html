@@ -323,19 +323,20 @@
                     </p>
                     <!-- cv -->
                 <!-- CV Trigger Button -->
+                    <!-- CV Link -->
                     <p class="wow fadeInUp animated" data-wow-delay=".3s">
-                        <span class="cv-spacer"></span>
-                        <a href="#" class="cv-link" onclick="event.preventDefault(); openCVModal();">
-                            عرض السيرة الذاتية 📄
-                        </a>
+                      <span class="cv-spacer"></span>
+                      <a href="#" class="cv-link" onclick="event.preventDefault(); openCVModal();">
+                        عرض السيرة الذاتية 📄
+                      </a>
                     </p>
                     
                     <!-- CV Modal -->
-                    <div id="cvModal" class="cv-modal">
-                        <div class="cv-modal-content">
-                            <span class="cv-close" onclick="closeCVModal()">&times;</span>
-                            <div id="cvIframeContainer"></div>
-                        </div>
+                    <div id="cvModal" class="cv-modal" role="dialog" aria-modal="true" aria-labelledby="cvModalLabel" tabindex="-1">
+                      <div class="cv-modal-content">
+                        <span class="cv-close" onclick="closeCVModal()" aria-label="Close modal">&times;</span>
+                        <div id="cvIframeContainer"></div>
+                      </div>
                     </div>
 
                 </div>
