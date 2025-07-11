@@ -16,22 +16,29 @@ document.addEventListener('DOMContentLoaded', () => {
 document.querySelectorAll('details').forEach(details => {
   const content = details.querySelector('.content');
   const inner = content.querySelector('.content-inner');
-  // Start collapsed
+  // Initial collapsed state
   content.style.height = '0px';
+  // Handle toggle
   details.addEventListener('toggle', () => {
     if (details.open) {
+      // Set to specific pixel height for animation
       const height = inner.offsetHeight;
       content.style.height = height + 'px';
+      // Allow transition to finish, then set height to auto
+      content.addEventListener('transitionend', function setAutoHeight(e) {
+        if (e.propertyName === 'height') {
+          content.style.height = 'auto';
+          content.removeEventListener('transitionend', setAutoHeight);
+        }
+      });
       details.classList.add('open');
     } else {
-      content.style.height = '0px';
-      details.classList.remove('open');
-    }
-  });
-  // Set to auto height after opening
-  content.addEventListener('transitionend', () => {
-    if (details.open) {
-      content.style.height = 'auto';
+      // Collapse from current height
+      content.style.height = content.offsetHeight + 'px';
+      requestAnimationFrame(() => {
+        content.style.height = '0px';
+        details.classList.remove('open');
+      });
     }
   });
 });
