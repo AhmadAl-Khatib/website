@@ -270,6 +270,9 @@ margin:20px 0 0 0px;
     top: 0;
     width: 100%;
 }
+html[lang="ar"] #activities h3 {
+    font-size: 25px !important;
+}
 /*----------- publications ------------*/
 
 #publications {
