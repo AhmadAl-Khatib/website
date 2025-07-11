@@ -1,40 +1,48 @@
-// ✅ CV modal open function
+// Open CV modal and load iframe preview
 function openCVModal() {
   const modal = document.getElementById('cvModal');
   const container = document.getElementById('cvIframeContainer');
-
-  // Prevent duplicate iframe on repeated open
+  // Prevent adding multiple iframes
   if (!container.querySelector('iframe')) {
     const iframe = document.createElement('iframe');
-    iframe.src = 'Career.pdf'; // Or full path like '/assets/Career.pdf'
+    // Use Google Docs Viewer for better mobile compatibility
+    iframe.src = 'https://docs.google.com/gview?embedded=true&url=https://yourdomain.com/path/to/Career.pdf';
+
     iframe.style.width = '100%';
-    iframe.style.height = '80vh'; // Match CSS modal content height
+    iframe.style.height = '80vh';
     iframe.style.border = 'none';
-    iframe.setAttribute('loading', 'lazy'); // improve performance
+    iframe.setAttribute('loading', 'lazy');
     container.appendChild(iframe);
   }
-
-  modal.style.display = 'block';
+  modal.style.display = 'flex';           // show modal (flex for centering)
   document.body.style.overflow = 'hidden'; // prevent background scroll
+  modal.focus();
 }
-
-// ✅ Close modal and clean up
+// Close CV modal and cleanup
 function closeCVModal() {
   const modal = document.getElementById('cvModal');
   const container = document.getElementById('cvIframeContainer');
-  modal.style.display = 'none';
-  document.body.style.overflow = ''; // restore background scroll
-  container.innerHTML = ''; // optional: remove iframe for fresh reload
-}
 
-// ✅ Close modal on outside click
+  modal.style.display = 'none';
+  document.body.style.overflow = '';      // restore background scroll
+  container.innerHTML = '';                // remove iframe to reload fresh next time
+}
+// Close modal if clicked outside modal content
 window.addEventListener('click', function (event) {
   const modal = document.getElementById('cvModal');
   if (event.target === modal) {
     closeCVModal();
   }
 });
-
+// Optional: close modal on Escape key press
+window.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    const modal = document.getElementById('cvModal');
+    if (modal.style.display === 'flex') {
+      closeCVModal();
+    }
+  }
+});
 
 // Get today's date
 document.addEventListener('DOMContentLoaded', () => {
