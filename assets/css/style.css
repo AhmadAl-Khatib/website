@@ -1465,86 +1465,65 @@ width:100%;
 }
 
 }
-
+.cv-spacer {
+    display: block;
+    height: 10px;
+}
 .cv-link {
-  font-weight: bold;
-  color: #ffa500;
-  font-size: 18px;
-  transition: color 0.3s ease;
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
-  margin: 20px 0;
+    font-weight: bold;
+    color: #ffa500;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
 }
 .cv-link:hover {
-  color: #3ca2dc;
+    color: #3ca2dc;
 }
-/* ===== Modal Background ===== */
 .cv-modal {
-  display: none; /* hidden by default */
-  position: fixed;
-  z-index: 9999;
-  inset: 0; /* top/right/bottom/left = 0 */
-  background-color: rgba(0, 0, 0, 0.7);
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch; /* iOS smooth scroll */
-  justify-content: center; /* flex center */
-  align-items: center;     /* flex center */
-  display: flex; /* flex container for centering */
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
 }
-/* ===== Modal Content Box ===== */
 .cv-modal-content {
-  background-color: #fff;
-  width: 95%;
-  max-width: 900px;
-  max-height: 90vh;
-  border: 1px solid #888;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  position: relative;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  border-radius: 4px;
-  animation: fadeIn 0.3s ease-in-out;
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+    position: relative;
 }
-/* ===== Close Button ===== */
 .cv-close {
-  color: #ff884d;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 10000;
-  user-select: none;
+    color: #ff884d;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
 }
 .cv-close:hover,
 .cv-close:focus {
-  color: #cc6a2e;
-  text-decoration: none;
+    color: #cc6a2e;
+    text-decoration: none;
 }
-/* ===== iframe (PDF Preview) ===== */
-#cvIframeContainer iframe {
-  width: 100%;
-  height: 80vh;
-  border: none;
-  flex-grow: 1;
-  min-height: 400px;
-  display: block;
-}
-/* ===== Fade In Animation ===== */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
-
-
 
 .book-description {
   padding: 10px 15px;
