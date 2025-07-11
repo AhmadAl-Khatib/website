@@ -1448,17 +1448,18 @@ width:100%;
 .cv-spacer {
     display: block;
     height: 10px;
+    margin-top: 1em;
 }
 .cv-link {
     font-weight: bold;
-    color: #ffa500;
+    color: orange;
     font-size: 18px;
     transition: color 0.3s ease;
     text-decoration: none;
     cursor: pointer;
 }
 .cv-link:hover {
-    color: #3ca2dc;
+    color: lightblue;
 }
 
 details {
