@@ -1501,5 +1501,5 @@ details.open .content-inner {
   transition: border-color 0.4s ease;
 }
 #blog details[open] {
-  border-color: #aaa;
+  border-color: #ffffff;
 }
