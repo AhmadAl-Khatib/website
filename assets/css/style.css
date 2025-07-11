@@ -980,14 +980,9 @@ html[lang="ar"] #blog .row > p {
 }
 /* Summary: when details is closed, add 25px margin below */
 #latest-blog-post summary {
-  margin-bottom: 25px;
   padding: 0 10px;
   direction: rtl;
   text-align: justify;
-}
-/* Padding after the last paragraph when open */
-#latest-blog-post details[open] p:last-child {
-  padding-bottom: 25px;
 }
 
 /*----------- contact ------------*/
@@ -1496,4 +1491,11 @@ details[open] summary {
 details.open .content-inner {
   opacity: 1;
   transform: scaleY(1);
+}
+#blog details {
+  padding: 0.5em 1em;
+  margin-top: 1em;
+  margin-bottom: 25px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
 }
