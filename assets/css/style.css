@@ -216,6 +216,12 @@ transition: all 0.35s ease 0s;
     padding: 10px 0;
     text-align: left;
 }
+html[lang="ar"] #about p {
+    font-size: 16px;
+    padding: 10px 0;
+    direction: rtl !important;
+    text-align: justify !important;
+}
 /*----------- activities ------------*/
 
 #activities {
