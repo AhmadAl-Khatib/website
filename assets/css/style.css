@@ -972,6 +972,13 @@ html[lang="ar"] #blog .row > p {
   padding: 0 10px 0px 10px;
   margin-bottom: 10px;
 }
+/* Summary: when details is closed, add 25px margin below */
+#latest-blog-post summary {
+  margin-bottom: 25px;
+  padding: 0 10px;
+  direction: rtl;
+  text-align: justify;
+}
 /* Padding after the last paragraph when open */
 #latest-blog-post details[open] p:last-child {
   padding-bottom: 25px;
@@ -1456,6 +1463,8 @@ width:100%;
 details {
   padding: 0.5em 1em;
   margin: 1em 0;
+  border: 1px solid #aaa;
+  border-radius: 5px;
 }
 summary {
   cursor: pointer;
