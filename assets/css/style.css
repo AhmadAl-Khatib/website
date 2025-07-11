@@ -1487,6 +1487,9 @@ summary {
   color: orange;
   transition: color 0.3s ease;
 }
+summary:hover {
+  color: lightblue;
+}
 details[open] summary {
   color: lightblue;
 }
