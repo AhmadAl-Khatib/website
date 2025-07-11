@@ -1481,76 +1481,25 @@ width:100%;
     color: #3ca2dc;
 }
 
-/* Base styles for all <details> elements */
-details {
-  margin-bottom: 1.5em;
-  font-family: Arial, sans-serif;
-  color: #333;
-}
-/* Style the summary element (the clickable header) */
-details summary {
-  cursor: pointer;
-  font-weight: bold;
-  color: #ffa500;
-  font-size: 18px;
-  transition: color 0.3s ease;
-  list-style: none; /* remove default disclosure triangle */
-  outline-offset: 4px;
-  user-select: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  padding: 0.25em 0;
-}
-/* Hover & focus states for accessibility */
-details summary:hover,
-details summary:focus {
-  color: #3ca2dc;
-  text-decoration: underline;
-}
-/* Custom arrow marker using ::before */
-details summary::before {
-  content: '▶'; /* right-pointing arrow */
-  display: inline-block;
-  transform-origin: 50% 50%;
-  transition: transform 0.3s ease;
-  font-size: 0.8em;
-  color: #ffa500;
-  /* prevent arrow from being selectable */
-  user-select: none;
-}
-/* Rotate arrow when open */
-details[open] summary::before {
-  transform: rotate(90deg);
-  color: #3ca2dc;
-}
-/* Style the collapsible content area */
-details > *:not(summary) {
+.book-description {
   padding: 10px 15px;
   font-size: 16px;
   line-height: 1.8;
+  color: #333;
   background-color: #f9f9f9;
   border-top: 1px solid #ddd;
-  border-radius: 0 0 4px 4px;
-  margin-top: 0;
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, padding 0.3s ease;
-  /* Initially no padding top/bottom for smooth collapse */
-  padding-top: 0;
-  padding-bottom: 0;
-}
-/* Expanded state styles */
-details[open] > *:not(summary) {
-  max-height: 1000px; /* large enough to fit content */
-  opacity: 1;
-  padding-top: 10px;
-  padding-bottom: 10px;
   margin-top: 10px;
+  border-radius: 4px;
 }
-/* Accessibility: focus outline for keyboard users */
-details summary:focus-visible {
-  outline: 2px solid #3ca2dc;
-  outline-offset: 3px;
+.book-summary {
+  color: #ffa500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}
+.book-summary:hover {
+  color: #3ca2dc;
+  text-decoration: underline;
 }
