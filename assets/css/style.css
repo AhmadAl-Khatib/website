@@ -846,7 +846,7 @@ blockquote {
   text-align: center;
 }
 #blog title {
-  padding: 0 0px 20px 0px;
+  padding-bottom: 45px;
 }
 .blog-img {
   border: 1px solid;
