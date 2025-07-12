@@ -881,7 +881,6 @@ blockquote {
 .title p {
   padding-top: 20px !important;
   padding-bottom: 0px !important;
-  text-align: justify
 }
 .blog-img {
   border: 1px solid;
@@ -952,9 +951,10 @@ blockquote {
   font-weight: bold;
 }
 #blog .row > p {
-  padding-right: 10px;
+  padding: 0 10px !important;
   color: #ffffff;
   font-size: 14px;
+  text-align: justify
 }
 html[lang="ar"] #blog .row > p {
     direction: rtl !important;
