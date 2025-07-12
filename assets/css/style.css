@@ -1512,3 +1512,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+html[lang="ar"] {
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch;
+}
