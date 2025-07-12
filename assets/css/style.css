@@ -29,8 +29,6 @@ body {
     height: 100%;
     font-family: arial;
     font-size:14px;
-    overflow-x: hidden !important;
-    -webkit-overflow-scrolling: touch;
 }
 
 a {
