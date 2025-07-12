@@ -78,11 +78,6 @@ a {
     text-align: center;
     width: 100%;
 }
-@media (min-width: 768px) {
-    .logo {
-        width: 50%;
-    }
-}
 nav {
     background: #fff none repeat scroll 0 0 !important;
     border: 0 none !important;
@@ -130,6 +125,10 @@ transition: all 0.35s ease 0s;
      background-color: #ffa100;
     border-bottom: 10px solid #e49102;
     color: #fff;
+}
+.navbar-brand img {
+    margin-top: -25px;
+    width: 65% !important;
 }
 .header-text {
     background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
