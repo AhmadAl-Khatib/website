@@ -1494,7 +1494,7 @@ details[open] summary {
 }
 .content-inner {
   opacity: 0;
-  transform: scaleY(0.95);
+  transform: scaleY(1);
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 details.open .content-inner {
