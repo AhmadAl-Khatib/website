@@ -128,6 +128,11 @@ transition: all 0.35s ease 0s;
 }
 .navbar-brand img {
     width: 75% !important;
+    transition: 0.3s;
+    filter: grayscale(0%);
+}
+.navbar-brand img:hover {
+    filter: grayscale(100%);
 }
 .header-text {
     background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
