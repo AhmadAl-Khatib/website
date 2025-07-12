@@ -58,8 +58,12 @@ function extractDate(dateStr) {
       <p>${intro}</p>
       ${remainder ? `
       <details>
-        <summary style="cursor: pointer; font-weight: bold;">تابع قراءة المقال...</summary>
-        <p>${remainder}</p>
+        <summary>تابع قراءة المقال...</summary>
+        <div class="content">
+          <div class="content-inner">
+            <p>${remainder}</p>
+          </div>
+        </div>
       </details>` : ''}
     </div>
   </div>
