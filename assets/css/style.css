@@ -127,7 +127,6 @@ transition: all 0.35s ease 0s;
     color: #fff;
 }
 .navbar-brand img {
-    margin-top: -25px;
     width: 65% !important;
 }
 .header-text {
