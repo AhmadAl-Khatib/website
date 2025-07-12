@@ -1471,7 +1471,6 @@ width:100%;
 }
 
 details {
-  padding: 0.5em 1em;
   margin: 1em 0;
   border: 1px solid #aaa;
   border-radius: 5px;
@@ -1502,7 +1501,6 @@ details.open .content-inner {
   transform: scaleY(1);
 }
 #blog details {
-  padding: 0.5em 1em;
   margin-top: 1em;
   margin-bottom: 25px;
   border: 1px solid transparent;
