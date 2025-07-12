@@ -2,3 +2,5 @@ User-agent: *
 Disallow:
 
 Sitemap: https://ahmad-khatib.com/sitemap.xml
+Sitemap: https://blog.ahmad-khatib.com/sitemap.xml
+Sitemap: https://blog.ahmad-khatib.com/sitemap-pages.xml
