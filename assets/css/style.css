@@ -78,6 +78,11 @@ a {
     text-align: center;
     width: 100%;
 }
+@media (min-width: 768px) {
+    .logo {
+        width: 50%;
+    }
+}
 nav {
     background: #fff none repeat scroll 0 0 !important;
     border: 0 none !important;
