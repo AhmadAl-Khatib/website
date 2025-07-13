@@ -343,7 +343,6 @@ html[lang="ar"] #publications p {
   overflow: hidden;
   background-color: #f5f5f5; /* fallback if image fails */
 }
-
 /* Book item with responsive width */
 .book {
   width: 22%;
@@ -357,19 +356,16 @@ html[lang="ar"] #publications p {
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
 }
-
 /* Hover effect */
 .book:hover {
   transform: translateY(-10px);
 }
-
 /* Book cover image */
 .book img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 /* Book title overlay */
 .book .title {
   position: absolute;
@@ -384,23 +380,21 @@ html[lang="ar"] #publications p {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
-
 /* Show title on hover */
 .book:hover .title {
   opacity: 1;
 }
-
 /* Responsive: 2 per row on tablets */
 @media (max-width: 992px) {
   .book {
     width: 45%;
   }
 }
-
 /* Responsive: 1 per row on mobile */
 @media (max-width: 576px) {
   .book {
     width: 90%;
+    margin: 20px 0;
   }
 }
 /*----------- owl ------------*/
