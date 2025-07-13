@@ -333,10 +333,9 @@ html[lang="ar"] #publications p {
 /*----------- for box ------------*/
 .for-box
 {
- background: url("../img/services-bg.jpg") no-repeat scroll center bottom / cover ;
-padding-top:200px;
-background-attachment:fixed;
-padding-bottom:100px;
+ background: url("../img/books.webp") no-repeat scroll center bottom / cover ;
+  padding:100px 0 0px;
+  background-attachment:fixed;
 	overflow:hidden;
 }
 .for-box-crecl {
