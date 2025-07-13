@@ -339,9 +339,12 @@ html[lang="ar"] #publications p {
 	overflow:hidden;
 }
 /* Disable h2 before/after */
+.for-box h2::before,
+.for-box h2::after {
+  content: none !important;
 .for-box h2 {
   color: white !important;
-  padding:0px 0 100px;
+  padding:0px 0 200px;
 }
 .for-box-crecl {
     background: #fff none repeat scroll 0 0;
