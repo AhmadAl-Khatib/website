@@ -337,6 +337,18 @@ html[lang="ar"] #publications p {
   overflow: hidden;
   position: relative;
 }
+/* Container max width and centering */
+.for-box .container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+/* Use flexbox for row to center columns */
+.for-box .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center columns horizontally */
+  gap: 30px; /* space between columns */
+}
 /* Prevent h2 styling inside .for-box */
 .for-box h2::before,
 .for-box h2::after {
@@ -363,7 +375,7 @@ html[lang="ar"] #publications p {
   background: #e42f2a;
   color: #fff;
   padding: 50px 0;
-  text-align: center;
+  text-align: inherit; /* Allow per-box override */
   overflow: hidden;
   position: relative;
 }
@@ -377,6 +389,7 @@ html[lang="ar"] #publications p {
   background: #971f1b;
   transform: skewY(171.5deg);
 }
+/* Link inside box */
 .boxredbase-a {
   background: #fff;
   color: #fff;
@@ -407,21 +420,27 @@ html[lang="ar"] #publications p {
   padding: 20px 20px 60px;
   position: relative;
   overflow: hidden;
-  text-align: center;
+  /* text-align removed here to allow per box control */
 }
-/* Alignment variants */
-.for-box .boxredrtl .wbox {
+/* RTL box: right aligned text and direction */
+.boxredrtl {
+  direction: rtl;
   text-align: right;
 }
-.for-box .boxredltr .wbox {
+.boxredrtl h2,
+.boxredrtl .wbox,
+.boxredrtl .wbox p {
+  text-align: right;
+}
+/* LTR box: left aligned text and direction */
+.boxredltr {
+  direction: ltr;
   text-align: left;
 }
-/* Paragraphs inside both versions */
-.for-box .boxredrtl .wbox p,
-.for-box .boxredltr .wbox p,
-.for-box .wbox p {
-  padding: 10px;
-  text-align: inherit;
+.boxredltr h2,
+.boxredltr .wbox,
+.boxredltr .wbox p {
+  text-align: left;
 }
 /*----------- owl ------------*/
 #owl-demo .owl-item div{
