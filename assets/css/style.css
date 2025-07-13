@@ -342,14 +342,14 @@ html[lang="ar"] #publications p {
   max-width: 1140px;
   margin: 0 auto;
 }
-/* Use flexbox for row to center columns */
+/* Flexbox for row to center columns */
 .for-box .row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* center columns horizontally */
-  gap: 30px; /* space between columns */
+  justify-content: center;
+  gap: 30px;
 }
-/* Prevent h2 styling inside .for-box */
+/* Disable h2 before/after */
 .for-box h2::before,
 .for-box h2::after {
   content: none !important;
@@ -370,12 +370,12 @@ html[lang="ar"] #publications p {
   z-index: 999;
   width: 100px;
 }
-/*----------- Shared red box style -----------*/
+/* Shared red box style */
 .for-box .boxredbase {
   background: #e42f2a;
   color: #fff;
   padding: 50px 0;
-  text-align: inherit; /* Allow per-box override */
+  text-align: inherit;
   overflow: hidden;
   position: relative;
 }
@@ -413,33 +413,21 @@ html[lang="ar"] #publications p {
   transform: skewY(-5.5deg);
   z-index: -1;
 }
-/*----------- Content box inside red box -----------*/
+/* Content box inside red box */
 .for-box .wbox {
   background: #fff;
   margin-bottom: 100px;
   padding: 20px 20px 60px;
   position: relative;
   overflow: hidden;
-  /* text-align removed here to allow per box control */
 }
-/* RTL box: right aligned text and direction */
-.boxredrtl {
+/* Text alignment only for paragraphs inside .wbox */
+.boxredrtl .wbox p {
   direction: rtl;
   text-align: right;
 }
-.boxredrtl h2,
-.boxredrtl .wbox,
-.boxredrtl .wbox p {
-  text-align: right;
-}
-/* LTR box: left aligned text and direction */
-.boxredltr {
-  direction: ltr;
-  text-align: left;
-}
-.boxredltr h2,
-.boxredltr .wbox,
 .boxredltr .wbox p {
+  direction: ltr;
   text-align: left;
 }
 /*----------- owl ------------*/
