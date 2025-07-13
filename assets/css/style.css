@@ -336,7 +336,7 @@ html[lang="ar"] #publications p {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: auto !important;
     background: url("../img/books.webp") no-repeat scroll center bottom / cover ;
     padding:50px 0 0px;
     background-attachment:fixed;
