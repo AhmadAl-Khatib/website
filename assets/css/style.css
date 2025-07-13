@@ -342,6 +342,7 @@ html[lang="ar"] #publications p {
 .for-box h2::before,
 .for-box h2::after {
   content: none !important;
+}
 .for-box h2 {
   color: white !important;
   padding:0px 0 200px;
