@@ -334,14 +334,14 @@ html[lang="ar"] #publications p {
 .for-box
 {
  background: url("../img/books.webp") no-repeat scroll center bottom / cover ;
-  padding:150px 0 0px;
+  padding:50px 0 0px;
   background-attachment:fixed;
 	overflow:hidden;
 }
 /* Disable h2 before/after */
-.for-box h2::before,
-.for-box h2::after {
-  content: none !important;
+.for-box h2 {
+  color: white !important;
+  padding:0px 0 100px;
 }
 .for-box-crecl {
     background: #fff none repeat scroll 0 0;
