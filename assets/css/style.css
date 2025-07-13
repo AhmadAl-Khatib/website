@@ -330,7 +330,7 @@ html[lang="ar"] #publications p {
     direction: rtl !important;
     text-align: justify !important;
 }
-/*----------- B ------------*/
+/* Bookshelf container */
 #bookshelf {
   display: flex;
   flex-wrap: wrap;
@@ -343,16 +343,17 @@ html[lang="ar"] #publications p {
   overflow: hidden;
   background-color: #f5f5f5; /* fallback if image fails */
 }
-/* Book item with responsive width */
+/* Book card with responsive layout */
 .book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 22%;
   max-width: 250px;
-  aspect-ratio: 3 / 4;
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin: 1%;
-  position: relative;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
 }
@@ -363,34 +364,31 @@ html[lang="ar"] #publications p {
 /* Book cover image */
 .book img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
 }
-/* Book title overlay */
-.book .title {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+/* Book info: title and description */
+.book .info {
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #ffffff;
-  font-size: 14px;
   text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
 }
-/* Show title on hover */
-.book:hover .title {
-  opacity: 1;
+.book .info h3 {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #333;
 }
-/* Responsive: 2 per row on tablets */
+.book .info p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+/* Responsive: 2 books per row on tablets */
 @media (max-width: 992px) {
   .book {
     width: 45%;
   }
 }
-/* Responsive: 1 per row on mobile */
+/* Responsive: 1 book per row on mobile */
 @media (max-width: 576px) {
   .book {
     width: 90%;
