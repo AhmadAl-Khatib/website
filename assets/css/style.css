@@ -380,7 +380,7 @@ top: -20px;
 transform: skewY(171.5deg);
 }
 .clr1-a {
-    background: #3ec441 none repeat scroll 0 0;
+    background: #d8e3f4 none repeat scroll 0 0;
     left: 0;
     padding: 10px;
     position: absolute;
@@ -541,7 +541,7 @@ transform: skewY(171.5deg);
     z-index: 999;
 }
 .wbox {
-    background: #b8c5da none repeat scroll 0 0;
+    background: #d8e3f4 none repeat scroll 0 0;
     margin-bottom: 100px;
     padding: 20px 20px 60px;
     position: relative;
