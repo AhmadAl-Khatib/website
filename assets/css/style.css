@@ -331,19 +331,18 @@ html[lang="ar"] #publications p {
     text-align: justify !important;
 }
 /*----------- for box ------------*/
-.for-box
-{
- background: url("../img/books.webp") no-repeat scroll center bottom / cover ;
- padding:100px 0 0px;
- background-attachment:fixed;
- overflow:hidden;
+.for-box {
+    background: url("../img/books.webp") no-repeat center bottom / cover fixed;
+    padding: 100px 0 0;
+    overflow: hidden;
+    position: relative;
 }
 .for-box h2::before,
 .for-box h2::after {
-  content: none !important;
+    content: none !important;
 }
 .for-box-crecl {
-    background: #fff none repeat scroll 0 0;
+    background: #fff;
     border-radius: 50%;
     color: #000;
     font-size: 51px;
@@ -353,51 +352,30 @@ html[lang="ar"] #publications p {
     margin: auto;
     position: absolute;
     text-align: center;
-	top: -58px;
-	z-index:999;
+    top: -58px;
+    z-index: 999;
     width: 100px;
 }
-
-.for-box .boxredrtl
-{
-background:#e42f2a;
-color:#fff;
-padding: 50px 0 50px;
-text-align:center;
-overflow:hidden;
-position:relative;
+.for-box .boxredrtl {
+    background: #e42f2a;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
 }
-.for-box .boxredrtl::before
-{
-position:absolute;
-content:"";
-width:100%;
-height:40%;
-background:#971f1b;
-left:0;
-top: -20px;
-transform: skewY(171.5deg);
-}
-.boxredrtl-a {
-    background: #3ec441 none repeat scroll 0 0;
-    left: 0;
-    padding: 10px;
-    position: absolute;
-    width: 100%;
-}
-.boxredrtl-a::after {
-    background: #b12420 none repeat scroll 0 0;
+.for-box .boxredrtl::before {
     content: "";
-    height: 137%;
     position: absolute;
-    right: 0;
-    top: 15px;
-    transform: skewY(-5.5deg);
+    top: -20px;
+    left: 0;
     width: 100%;
-    z-index: -1;
+    height: 40%;
+    background: #971f1b;
+    transform: skewY(171.5deg);
 }
 .boxredrtl-a {
-    background: #fff none repeat scroll 0 0;
+    background: #fff;
     color: #fff;
     float: left;
     font-size: 31px;
@@ -408,17 +386,31 @@ transform: skewY(171.5deg);
     width: 101%;
     z-index: 999;
 }
-.boxredrtl .wbox {
-    background: #fff none repeat scroll 0 0;
+.boxredrtl-a::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: 100%;
+    height: 137%;
+    background: #b12420;
+    transform: skewY(-5.5deg);
+    z-index: -1;
+}
+.for-box .wbox {
+    background: #fff;
     margin-bottom: 100px;
     padding: 20px 20px 60px;
     position: relative;
-	overflow: hidden;
+    overflow: hidden;
+    text-align: center;
+}
+.for-box .boxredrtl .wbox {
     text-align: right;
 }
-.boxredrtl .wbox  p
-{
-padding:10px;
+.for-box .wbox p,
+.for-box .boxredrtl .wbox p {
+    padding: 10px;
 }
 
 /*----------- owl ------------*/
