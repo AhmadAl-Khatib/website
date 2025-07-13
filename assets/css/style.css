@@ -330,232 +330,112 @@ html[lang="ar"] #publications p {
     direction: rtl !important;
     text-align: justify !important;
 }
-/*----------- for box ------------*/
-.for-box
-{
- background: url("../img/books.webp") no-repeat scroll center bottom / cover ;
-  padding:50px 0 0px;
-  background-attachment:fixed;
-	overflow:hidden;
+/*----------- B ------------*/
+#bookshelf {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("../img/books.webp") no-repeat scroll center bottom / cover ;
+    padding:50px 0 0px;
+    background-attachment:fixed;
+    overflow:hidden;
 }
-/* Disable h2 before/after */
-.for-box h2::before,
-.for-box h2::after {
-  content: none !important;
 }
-.for-box h2 {
-  color: white !important;
-  padding:0px 0 200px;
-}
-.for-box-crecl {
-    background: #fff none repeat scroll 0 0;
-    border-radius: 50%;
-    color: #000;
-    font-size: 51px;
-    height: 100px;
-    left: 35%;
-    line-height: 104px;
-    margin: auto;
-    position: absolute;
-    text-align: center;
-	top: -58px;
-	z-index:999;
-    width: 100px;
-}
-
-.for-box .clr1
-{
-background:#e63030;
-color:#fff;
-padding: 50px 0 50px;
-text-align:center;
-overflow:hidden;
-position:relative;
-}
-.for-box .clr1::before
-{
-position:absolute;
-content:"";
-width:100%;
-height:40%;
-background:#b42520;
-left:0;
-top: -20px;
-transform: skewY(171.5deg);
-}
-.clr1-a {
-    background: #d8e3f4 none repeat scroll 0 0;
-    left: 0;
-    padding: 10px;
-    position: absolute;
-    width: 100%;
-}
-.clr1-a::after {
-    background: #e63030 none repeat scroll 0 0;
-    content: "";
-    height: 137%;
-    position: absolute;
-    right: 0;
-    top: 15px;
-    transform: skewY(-5.5deg);
-    width: 100%;
-    z-index: -1;
-}
-.clr1-a {
-    background: #fff none repeat scroll 0 0;
-    color: #fff;
-    float: left;
-    font-size: 31px;
-    left: 0;
-    overflow: hidden;
-    padding: 10px;
-    position: absolute;
-    width: 101%;
-    z-index: 999;
-}
-.for-box .clr2
-{
-background:#ff8500;
-color:#fff;
-padding: 50px 0 50px;
-text-align:center;
-overflow:hidden;
-position:relative;
-
-}
-.for-box .clr2::before
-{
-position:absolute;
-content:"";
-width:100%;
-height:40%;
-background:#da7104;
-left:0;
-top: -20px;
-transform: skewY(171.5deg);
-}
-.clr2-a::after {
-    background: #ff8500 none repeat scroll 0 0;
-    content: "";
-    height: 137%;
-    position: absolute;
-    right: 0;
-    top: 15px;
-    transform: skewY(-5.5deg);
-    width: 100%;
-    z-index: -1;
-}
-.clr2-a {
-    background: #fff none repeat scroll 0 0;
-    color: #fff;
-    float: left;
-    font-size: 31px;
-    left: 0;
-    overflow: hidden;
-    padding: 10px;
-    position: absolute;
-    width: 101%;
-    z-index: 999;
-}
-.for-box .clr3
-{
-background:#0195ff;
-color:#fff;
-text-align:center;
-padding: 50px 0 50px;
-overflow:hidden;
-position:relative;
-
-}
-.for-box .clr3::before
-{
-position:absolute;
-content:"";
-width:100%;
-height:40%;
-background:#0482d9;
-left:0;
-top: -20px;
-transform: skewY(171.5deg);
-}
-.clr3-a::after {
-    background: #0195ff none repeat scroll 0 0;
-    content: "";
-    height: 137%;
-    position: absolute;
-    right: 0;
-    top: 15px;
-    transform: skewY(-5.5deg);
-    width: 100%;
-    z-index: -1;
-}
-.clr3-a {
-    background: #fff none repeat scroll 0 0;
-    color: #fff;
-    float: left;
-    font-size: 31px;
-    left: 0;
-    overflow: hidden;
-    padding: 10px;
-    position: absolute;
-    width: 101%;
-    z-index: 999;
-}
-.for-box .clr4
-{
-background:#ff6100;
-color:#fff;
-padding: 50px 0 50px;
-text-align:center;
-overflow:hidden;
-position:relative;
-}
-.for-box .clr4::before
-{
-position:absolute;
-content:"";
-width:100%;
-height:40%;
-background:#cf5105;
-left:0;
-top: -20px;
-transform: skewY(171.5deg);
-}
-.clr4-a::after {
-    background: #ff6100 none repeat scroll 0 0;
-    content: "";
-    height: 137%;
-    position: absolute;
-    right: 0;
-    top: 15px;
-    transform: skewY(-5.5deg);
-    width: 100%;
-    z-index: -1;
-}
-.clr4-a {
-    background: #fff none repeat scroll 0 0;
-    color: #fff;
-    float: left;
-    font-size: 31px;
-    left: 0;
-    overflow: hidden;
-    padding: 10px;
-    position: absolute;
-    width: 101%;
-    z-index: 999;
-}
-.wbox {
-    background: #fff none repeat scroll 0 0;
-    margin-bottom: 100px;
-    padding: 20px 20px 60px;
+ 
+.book {
+    width: 150px;
+    height: 200px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
     position: relative;
-	overflow: hidden;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+ 
+.book:hover {
+    transform: translateY(-10px);
+}
+ 
+.book img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+ 
+.book .title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-size: 14px;
     text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
-.wbox  p
-{
-padding:10px;
+ 
+.book:hover .title {
+    opacity: 1;
 }
+ 
+        body {
+            font-family: Arial, sans-serif;
+        }
+ 
+        #bookshelf {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+ 
+        .book {
+            width: 150px;
+            height: 200px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+ 
+        .book:hover {
+            transform: translateY(-10px);
+        }
+ 
+        .book img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+ 
+        .book .title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #ffffff;
+            font-size: 14px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+ 
+        .book:hover .title {
+            opacity: 1;
+        }
 /*----------- owl ------------*/
 #owl-demo .owl-item div{
       padding:5px;
