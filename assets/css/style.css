@@ -331,104 +331,222 @@ html[lang="ar"] #publications p {
     text-align: justify !important;
 }
 /*----------- for box ------------*/
-.for-box {
-  background: url("../img/books.webp") no-repeat center bottom / cover fixed;
-  padding: 100px 0 0;
-  overflow: hidden;
-  position: relative;
+.for-box
+{
+ background: url("../img/services-bg.jpg") no-repeat scroll center bottom / cover ;
+padding-top:200px;
+background-attachment:fixed;
+padding-bottom:100px;
+	overflow:hidden;
 }
-/* Container max width and centering */
-.for-box .container {
-  max-width: 1140px;
-  margin: 0 auto;
-}
-/* Flexbox for row to center columns */
-.for-box .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-/* Disable h2 before/after */
-.for-box h2::before,
-.for-box h2::after {
-  content: none !important;
-}
-/* Circle heading badge */
 .for-box-crecl {
-  background: #fff;
-  border-radius: 50%;
-  color: #000;
-  font-size: 51px;
-  height: 100px;
-  left: 35%;
-  line-height: 104px;
-  margin: auto;
-  position: absolute;
-  text-align: center;
-  top: -58px;
-  z-index: 999;
-  width: 100px;
+    background: #fff none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #000;
+    font-size: 51px;
+    height: 100px;
+    left: 35%;
+    line-height: 104px;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+	top: -58px;
+	z-index:999;
+    width: 100px;
 }
-/* Shared red box style */
-.for-box .boxredbase {
-  background: #e42f2a;
-  color: #fff;
-  padding: 50px 0;
-  text-align: inherit;
-  overflow: hidden;
-  position: relative;
+
+.for-box .clr1
+{
+background:#3ec441;
+color:#fff;
+padding: 50px 0 50px;
+text-align:center;
+overflow:hidden;
+position:relative;
 }
-.for-box .boxredbase::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 0;
-  width: 100%;
-  height: 40%;
-  background: #971f1b;
-  transform: skewY(171.5deg);
+.for-box .clr1::before
+{
+position:absolute;
+content:"";
+width:100%;
+height:40%;
+background:#08ac0d;
+left:0;
+top: -20px;
+transform: skewY(171.5deg);
 }
-/* Link inside box */
-.boxredbase-a {
-  background: #fff;
-  color: #fff;
-  float: left;
-  font-size: 31px;
-  left: 0;
-  overflow: hidden;
-  padding: 10px;
-  position: absolute;
-  width: 101%;
-  z-index: 999;
+.clr1-a {
+    background: #3ec441 none repeat scroll 0 0;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
 }
-.boxredbase-a::after {
-  content: "";
-  position: absolute;
-  top: 15px;
-  right: 0;
-  width: 100%;
-  height: 137%;
-  background: #b12420;
-  transform: skewY(-5.5deg);
-  z-index: -1;
+.clr1-a::after {
+    background: #08ac0d none repeat scroll 0 0;
+    content: "";
+    height: 137%;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    transform: skewY(-5.5deg);
+    width: 100%;
+    z-index: -1;
 }
-/* Content box inside red box */
-.for-box .wbox {
-  background: #fff;
-  margin-bottom: 100px;
-  padding: 20px 20px 60px;
-  position: relative;
-  overflow: hidden;
+.clr1-a {
+    background: #fff none repeat scroll 0 0;
+    color: #fff;
+    float: left;
+    font-size: 31px;
+    left: 0;
+    overflow: hidden;
+    padding: 10px;
+    position: absolute;
+    width: 101%;
+    z-index: 999;
 }
-/* Text alignment only for paragraphs inside .wbox */
-.boxredrtl .wbox p {
-  direction: rtl !important;
-  text-align: right !important;
+.for-box .clr2
+{
+background:#ff8500;
+color:#fff;
+padding: 50px 0 50px;
+text-align:center;
+overflow:hidden;
+position:relative;
+
 }
-.boxredltr .wbox p {
-  direction: ltr !important;
-  text-align: left !important;
+.for-box .clr2::before
+{
+position:absolute;
+content:"";
+width:100%;
+height:40%;
+background:#da7104;
+left:0;
+top: -20px;
+transform: skewY(171.5deg);
+}
+.clr2-a::after {
+    background: #ff8500 none repeat scroll 0 0;
+    content: "";
+    height: 137%;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    transform: skewY(-5.5deg);
+    width: 100%;
+    z-index: -1;
+}
+.clr2-a {
+    background: #fff none repeat scroll 0 0;
+    color: #fff;
+    float: left;
+    font-size: 31px;
+    left: 0;
+    overflow: hidden;
+    padding: 10px;
+    position: absolute;
+    width: 101%;
+    z-index: 999;
+}
+.for-box .clr3
+{
+background:#0195ff;
+color:#fff;
+text-align:center;
+padding: 50px 0 50px;
+overflow:hidden;
+position:relative;
+
+}
+.for-box .clr3::before
+{
+position:absolute;
+content:"";
+width:100%;
+height:40%;
+background:#0482d9;
+left:0;
+top: -20px;
+transform: skewY(171.5deg);
+}
+.clr3-a::after {
+    background: #0195ff none repeat scroll 0 0;
+    content: "";
+    height: 137%;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    transform: skewY(-5.5deg);
+    width: 100%;
+    z-index: -1;
+}
+.clr3-a {
+    background: #fff none repeat scroll 0 0;
+    color: #fff;
+    float: left;
+    font-size: 31px;
+    left: 0;
+    overflow: hidden;
+    padding: 10px;
+    position: absolute;
+    width: 101%;
+    z-index: 999;
+}
+.for-box .clr4
+{
+background:#ff6100;
+color:#fff;
+padding: 50px 0 50px;
+text-align:center;
+overflow:hidden;
+position:relative;
+}
+.for-box .clr4::before
+{
+position:absolute;
+content:"";
+width:100%;
+height:40%;
+background:#cf5105;
+left:0;
+top: -20px;
+transform: skewY(171.5deg);
+}
+.clr4-a::after {
+    background: #ff6100 none repeat scroll 0 0;
+    content: "";
+    height: 137%;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    transform: skewY(-5.5deg);
+    width: 100%;
+    z-index: -1;
+}
+.clr4-a {
+    background: #fff none repeat scroll 0 0;
+    color: #fff;
+    float: left;
+    font-size: 31px;
+    left: 0;
+    overflow: hidden;
+    padding: 10px;
+    position: absolute;
+    width: 101%;
+    z-index: 999;
+}
+.wbox {
+    background: #fff none repeat scroll 0 0;
+    margin-bottom: 100px;
+    padding: 20px 20px 60px;
+    position: relative;
+	overflow: hidden;
+    text-align: center;
+}
+.wbox  p
+{
+padding:10px;
 }
 /*----------- owl ------------*/
 #owl-demo .owl-item div{
