@@ -423,12 +423,12 @@ html[lang="ar"] #publications p {
 }
 /* Text alignment only for paragraphs inside .wbox */
 .boxredrtl .wbox p {
-  direction: rtl;
-  text-align: right;
+  direction: rtl !important;
+  text-align: right !important;
 }
 .boxredltr .wbox p {
-  direction: ltr;
-  text-align: left;
+  direction: ltr !important;
+  text-align: left !important;
 }
 /*----------- owl ------------*/
 #owl-demo .owl-item div{
