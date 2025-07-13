@@ -391,7 +391,7 @@ transform: skewY(171.5deg);
     width: 100%;
 }
 .clr1-a::after {
-    background: #b42520 none repeat scroll 0 0;
+    background: #e63030 none repeat scroll 0 0;
     content: "";
     height: 137%;
     position: absolute;
