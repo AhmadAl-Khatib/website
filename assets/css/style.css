@@ -1486,6 +1486,7 @@ summary {
   font-weight: bold;
   color: orange;
   transition: color 0.3s ease;
+  margin-bottom: 30px;
 }
 summary:hover {
   color: lightblue;
