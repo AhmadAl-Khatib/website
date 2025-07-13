@@ -334,7 +334,7 @@ html[lang="ar"] #publications p {
 .for-box
 {
  background: url("../img/services-bg.jpg") no-repeat scroll center bottom / cover ;
-padding-top:0px;
+padding-top:100px;
 background-attachment:fixed;
 padding-bottom:0px;
 	overflow:hidden;
