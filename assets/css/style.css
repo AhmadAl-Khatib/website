@@ -369,18 +369,18 @@ html[lang="ar"] #publications p {
 }
 /* Book info: title and description */
 .book .info {
-  padding: 10px;
-  text-align: center;
+  padding: 10px !important;
+  text-align: center !important;
 }
 .book .info h3 {
-  font-size: 16px;
-  margin: 5px 0;
-  color: #333;
+  font-size: 16px !important;
+  margin: 5px 0 !important;
+  color: #333 !important;
 }
 .book .info p {
-  font-size: 14px;
-  color: #666;
-  margin: 0;
+  font-size: 14px !important;
+  color: #666 !important;
+  margin: 0 !important;
 }
 /* Responsive: 2 books per row on tablets */
 @media (max-width: 992px) {
