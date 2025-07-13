@@ -331,6 +331,7 @@ html[lang="ar"] #publications p {
     text-align: justify !important;
 }
 /*----------- for box ------------*/
+/* ----------- Right-aligned version ----------- */
 .for-box {
     background: url("../img/books.webp") no-repeat center bottom / cover fixed;
     padding: 100px 0 0;
@@ -411,6 +412,60 @@ html[lang="ar"] #publications p {
 .for-box .wbox p,
 .for-box .boxredrtl .wbox p {
     padding: 10px;
+}
+/* ----------- Left-aligned version ----------- */
+.for-box .boxredltr {
+  background: #e42f2a;
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.for-box .boxredltr::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: #971f1b;
+  transform: skewY(171.5deg);
+}
+.boxredltr-a {
+  background: #fff;
+  color: #fff;
+  float: left;
+  font-size: 31px;
+  left: 0;
+  overflow: hidden;
+  padding: 10px;
+  position: absolute;
+  width: 101%;
+  z-index: 999;
+}
+.boxredltr-a::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 0;
+  width: 100%;
+  height: 137%;
+  background: #b12420;
+  transform: skewY(-5.5deg);
+  z-index: -1;
+}
+.for-box .boxredltr .wbox {
+  background: #fff;
+  margin-bottom: 100px;
+  padding: 20px 20px 60px;
+  position: relative;
+  overflow: hidden;
+  text-align: left; /* 👈 LEFT aligned text */
+}
+.for-box .boxredltr .wbox p {
+  padding: 10px;
+  text-align: left;
 }
 
 /*----------- owl ------------*/
