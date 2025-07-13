@@ -334,9 +334,9 @@ html[lang="ar"] #publications p {
 .for-box
 {
  background: url("../img/services-bg.jpg") no-repeat scroll center bottom / cover ;
-padding-top:200px;
+padding-top:0px;
 background-attachment:fixed;
-padding-bottom:100px;
+padding-bottom:0px;
 	overflow:hidden;
 }
 .for-box-crecl {
