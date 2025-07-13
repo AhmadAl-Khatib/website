@@ -338,6 +338,10 @@ html[lang="ar"] #publications p {
  background-attachment:fixed;
  overflow:hidden;
 }
+.for-box h2::before,
+.for-box h2::after {
+  content: none !important;
+}
 .for-box-crecl {
     background: #fff none repeat scroll 0 0;
     border-radius: 50%;
