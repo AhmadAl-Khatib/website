@@ -285,7 +285,7 @@ html[lang="ar"] #activities h3 {
 
 #publications {
     overflow: hidden;
-    padding:50px 0 50px;
+    padding:50px 0 0px;
 }
 #publications h2 {
     padding: 50px 0 25px;
@@ -334,10 +334,9 @@ html[lang="ar"] #publications p {
 .for-box
 {
  background: url("../img/books.webp") no-repeat scroll center bottom / cover ;
-padding-top:100px;
-background-attachment:fixed;
-padding-bottom:0px;
-	overflow:hidden;
+ padding:50px 0 50px;
+ background-attachment:fixed;
+ overflow:hidden;
 }
 .for-box-crecl {
     background: #fff none repeat scroll 0 0;
