@@ -332,57 +332,55 @@ html[lang="ar"] #publications p {
 }
 /* Bookshelf Section */
 #bookshelf {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    background: url("../img/books.webp") no-repeat center bottom / cover;
-    background-attachment: fixed;
-    padding: 50px 0;
-    overflow: hidden;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: stretch;
+background: url("../img/books.webp") no-repeat center bottom / cover;
+background-attachment: fixed;
+padding: 50px 0;
+overflow: hidden;
 }
-/* Individual Book Container */
 .book {
-    width: 100%; 
-    height: auto; 
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    margin-bottom: 20px;
+width: 100%;
+height: auto;
+background-color: #ffffff;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+position: relative;
+overflow: hidden;
+transition: transform 0.3s ease-in-out;
+margin-bottom: 10px;
 }
-/* Hover Effect */
 .book:hover {
-    transform: translateY(-10px);
+transform: translateY(-10px);
 }
-/* Book Image */
 .book img {
-    width: 100%;
-    height: auto; 
-    display: block;
+width: 100%;
+height: auto;
+display: block;
 }
-/* Book Title Overlay */
 .book .title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #ffffff;
-    font-size: 14px;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+padding: 10px;
+background-color: rgba(0, 0, 0, 0.7);
+color: #ffffff;
+font-size: 14px;
+text-align: center;
+opacity: 0;
+transition: opacity 0.3s ease-in-out;
 }
 .book:hover .title {
-    opacity: 1;
+opacity: 1;
 }
-/* General Page Styling */
-body {
-    font-family: Arial, sans-serif;
+.book-description {
+padding: 10px 0;
+text-align: center;
+font-size: 14px;
+color: #333;
 }
 /* Responsive: 2 books per row on tablets */
 @media (max-width: 992px) {
