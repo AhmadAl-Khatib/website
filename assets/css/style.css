@@ -334,7 +334,7 @@ html[lang="ar"] #publications p {
 .for-box
 {
  background: url("../img/books.webp") no-repeat scroll center bottom / cover ;
-  padding:100px 0 0px;
+  padding:150px 0 0px;
   background-attachment:fixed;
 	overflow:hidden;
 }
