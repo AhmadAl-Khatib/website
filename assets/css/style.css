@@ -330,57 +330,59 @@ html[lang="ar"] #publications p {
     direction: rtl !important;
     text-align: justify !important;
 }
-/* Bookshelf container */
+/* Bookshelf Section */
 #bookshelf {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  height: auto !important;
-  padding: 50px 0;
-  background: url("../img/books.webp") no-repeat center bottom / cover;
-  background-attachment: fixed;
-  overflow: hidden;
-  background-color: #f5f5f5; /* fallback if image fails */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    background: url("../img/books.webp") no-repeat center bottom / cover;
+    background-attachment: fixed;
+    padding: 50px 0;
+    overflow: hidden;
 }
-/* Book card with responsive layout */
+/* Individual Book Container */
 .book {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 22%;
-  max-width: 250px;
-  background-color: #ffffff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin: 1%;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
+    width: 100%; 
+    height: auto; 
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
 }
-/* Hover effect */
+/* Hover Effect */
 .book:hover {
-  transform: translateY(-10px);
+    transform: translateY(-10px);
 }
-/* Book cover image */
+/* Book Image */
 .book img {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
+    width: 100%;
+    height: auto; 
+    display: block;
 }
-/* Book info: title and description */
-.book .info {
-  padding: 10px !important;
-  text-align: center !important;
+/* Book Title Overlay */
+.book .title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
-.book .info h3 {
-  font-size: 16px !important;
-  margin: 5px 0 !important;
-  color: #333 !important;
+.book:hover .title {
+    opacity: 1;
 }
-.book .info p {
-  font-size: 14px !important;
-  color: #666 !important;
-  margin: 0 !important;
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
 }
 /* Responsive: 2 books per row on tablets */
 @media (max-width: 992px) {
