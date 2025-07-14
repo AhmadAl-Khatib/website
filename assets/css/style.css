@@ -341,9 +341,13 @@ background-attachment: fixed;
 padding: 50px 0;
 overflow: hidden;
 }
-#bookshelf container {
-justify-content: center !important;
+#bookshelf .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Optional spacing between books */
 }
+
 #bookshelf h2 {
 	color:white;
 }
