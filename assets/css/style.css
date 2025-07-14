@@ -372,6 +372,8 @@ html[lang="ar"] #publications p {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s ease-in-out;
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .book:hover {
     transform: translateY(-10px);
@@ -422,18 +424,27 @@ html[lang="ar"] #publications p {
     text-align: center;
     font-size: 14px;
     color: #fff;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 /* Responsive: 2 books per row on tablets */
 @media (max-width: 992px) {
     .book {
-        width: 45%;
+        width: 200px;
+    }
+    .book-description {
+        max-width: 200px;
     }
 }
 /* Responsive: 1 book per row on mobile */
 @media (max-width: 576px) {
     .book {
-        width: 90%;
+        width: 200px;
         margin: 20px auto;
+    }
+    .book-description {
+        max-width: 200px;
     }
 }
 /*----------- owl ------------*/
