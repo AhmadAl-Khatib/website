@@ -355,6 +355,9 @@ html[lang="ar"] #publications p {
     width: 100%;
     margin-bottom: 30px;
 }
+#bookshelf h2::before,
+#bookshelf h2::after {
+  content: none !important;
 .book {
     width: 200px;
     flex: 0 0 auto;
