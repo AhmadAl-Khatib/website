@@ -342,10 +342,10 @@ padding: 50px 0;
 overflow: hidden;
 }
 #bookshelf .container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px; /* Optional spacing between books */
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 20px !important; /* Optional spacing between books */
 }
 
 #bookshelf h2 {
