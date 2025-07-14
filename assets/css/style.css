@@ -362,7 +362,13 @@ html[lang="ar"] #publications p {
 #bookshelf h2::after {
     content: none !important;
 }
-.book {
+#bookshelf .col-xs-12.col-sm-6.col-md-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#bookshelf .book {
     position: relative;
     overflow: hidden;
     width: 200px;
@@ -371,19 +377,17 @@ html[lang="ar"] #publications p {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s ease-in-out;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 20px; 
 }
-.book:hover {
+#bookshelf .book:hover {
     transform: translateY(-10px);
 }
-.book img {
+#bookshelf .book img {
     width: 100%;
     height: auto;
     display: block;
 }
-.book .title-background {
+#bookshelf .book .title-background {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -394,10 +398,10 @@ html[lang="ar"] #publications p {
     z-index: 1;
     transition: none;
 }
-.book:hover .title-background {
+#bookshelf .book:hover .title-background {
     opacity: 1;
 }
-.book .book-title {
+#bookshelf .book .book-title {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -415,36 +419,26 @@ html[lang="ar"] #publications p {
     transition: opacity 0.4s ease, transform 0.4s ease;
     z-index: 2;
 }
-.book:hover .book-title {
+#bookshelf .book:hover .book-title {
     opacity: 1;
     transform: translateY(0);
 }
-.book-description {
+#bookshelf .book-description {
     padding: 10px 0;
     text-align: center;
     font-size: 14px;
     color: #fff;
-    max-width: 200px;
-    margin-left: auto;
-    margin-right: auto;
 }
-/* Responsive: 2 books per row on tablets */
+/* --- Responsive Adjustments --- */
 @media (max-width: 992px) {
-    .book {
-        width: 200px;
-    }
-    .book-description {
-        max-width: 200px;
+    #bookshelf .book {
+        width: 45%;
     }
 }
-/* Responsive: 1 book per row on mobile */
 @media (max-width: 576px) {
-    .book {
-        width: 200px;
+    #bookshelf .book {
+        width: 90%;
         margin: 20px auto;
-    }
-    .book-description {
-        max-width: 200px;
     }
 }
 /*----------- owl ------------*/
