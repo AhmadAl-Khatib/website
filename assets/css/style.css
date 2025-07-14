@@ -341,6 +341,12 @@ background-attachment: fixed;
 padding: 50px 0;
 overflow: hidden;
 }
+#bookshelf container {
+justify-content: center !important;
+}
+#bookshelf h2 {
+	color:white;
+}
 .book {
 width: 100%;
 height: auto;
