@@ -334,38 +334,27 @@ html[lang="ar"] #publications p {
 
 /* ===================== BOOKSHELF ===================== */
 #bookshelf {
-    /* keep background & padding */
     background: url("../img/books.webp") no-repeat center bottom / cover fixed;
     padding: 50px 0;
     overflow: hidden;
 }
-
-/* Remove flex from .container */
 #bookshelf .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-    /* display: block;  ← default */
 }
-
-/* Make the .row the flex container */
 #bookshelf .row {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
-
-/* Optional: center the Section heading if you have one */
 #bookshelf h2 {
     color: #fff;
     text-align: center;
     width: 100%;
     margin-bottom: 30px;
 }
-
-
-/* Book card */
 .book {
     width: 200px;
     flex: 0 0 auto;
@@ -375,18 +364,16 @@ html[lang="ar"] #publications p {
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
-    margin-bottom: 20px;  /* keep spacing under card */
+    margin-bottom: 20px;
 }
 .book:hover {
     transform: translateY(-10px);
 }
-
 .book img {
     width: 100%;
     height: auto;
     display: block;
 }
-
 .book .title {
     position: absolute;
     bottom: 0;
@@ -403,21 +390,18 @@ html[lang="ar"] #publications p {
 .book:hover .title {
     opacity: 1;
 }
-
 .book-description {
     padding: 10px 0;
     text-align: center;
     font-size: 14px;
     color: #333;
 }
-
 /* Responsive: 2 books per row on tablets */
 @media (max-width: 992px) {
     .book {
         width: 45%;
     }
 }
-
 /* Responsive: 1 book per row on mobile */
 @media (max-width: 576px) {
     .book {
@@ -425,8 +409,6 @@ html[lang="ar"] #publications p {
         margin: 20px auto;
     }
 }
-
-
 /*----------- owl ------------*/
 #owl-demo .owl-item div{
       padding:5px;
