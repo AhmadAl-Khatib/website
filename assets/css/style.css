@@ -330,9 +330,7 @@ html[lang="ar"] #publications p {
     direction: rtl !important;
     text-align: justify !important;
 }
-/* Bookshelf Section */
-
-/* ===================== BOOKSHELF ===================== */
+/* ---------- Bookshelf Section ---------- */
 #bookshelf {
     background: url("../img/books.webp") no-repeat center bottom / cover fixed;
     padding: 50px 0;
@@ -345,28 +343,27 @@ html[lang="ar"] #publications p {
 }
 #bookshelf .row {
     display: flex;
-    justify-content: center;
+    justify-content: center !important;
     flex-wrap: wrap;
     gap: 20px;
 }
 #bookshelf h2 {
     color: #fff;
     text-align: center;
-    width: 100%;
     margin-bottom: 30px;
 }
 #bookshelf h2::before,
 #bookshelf h2::after {
-  content: none !important;
+    content: none !important;
 }
 .book {
+    position: relative;
+    overflow: hidden;
     width: 200px;
     flex: 0 0 auto;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: relative;
-    overflow: hidden;
     transition: transform 0.3s ease-in-out;
     margin-bottom: 20px;
 }
@@ -378,21 +375,39 @@ html[lang="ar"] #publications p {
     height: auto;
     display: block;
 }
-.book .title {
+.book .title-background {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 10px;
-    background-color: rgba(0,0,0,0.7);
+    height: 40px;
+    background-color: rgba(0, 0, 0, 1);
+    opacity: 0;
+    z-index: 1;
+    transition: none;
+}
+.book:hover .title-background {
+    opacity: 1;
+}
+.book .title-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
     color: #fff;
     font-size: 14px;
     text-align: center;
+    line-height: 40px;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 2;
 }
-.book:hover .title {
+
+.book:hover .title-text {
     opacity: 1;
+    transform: translateY(0);
 }
 .book-description {
     padding: 10px 0;
