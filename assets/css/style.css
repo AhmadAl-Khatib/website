@@ -340,10 +340,13 @@ html[lang="ar"] #publications p {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #bookshelf .row {
     display: flex;
-    justify-content: center !important;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -351,6 +354,9 @@ html[lang="ar"] #publications p {
     color: #fff;
     text-align: center;
     margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 24px;
+    direction: rtl;
 }
 #bookshelf h2::before,
 #bookshelf h2::after {
@@ -381,7 +387,7 @@ html[lang="ar"] #publications p {
     left: 0;
     width: 100%;
     height: 40px;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 123, 140, 1);
     opacity: 0;
     z-index: 1;
     transition: none;
@@ -389,14 +395,17 @@ html[lang="ar"] #publications p {
 .book:hover .title-background {
     opacity: 1;
 }
-.book .title-text {
+.book .book-title {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 40px;
+    margin: 0;
+    padding: 0;
     color: #fff;
     font-size: 14px;
+    font-weight: normal;
     text-align: center;
     line-height: 40px;
     opacity: 0;
@@ -404,8 +413,7 @@ html[lang="ar"] #publications p {
     transition: opacity 0.4s ease, transform 0.4s ease;
     z-index: 2;
 }
-
-.book:hover .title-text {
+.book:hover .book-title {
     opacity: 1;
     transform: translateY(0);
 }
@@ -413,7 +421,7 @@ html[lang="ar"] #publications p {
     padding: 10px 0;
     text-align: center;
     font-size: 14px;
-    color: #333;
+    color: #fff;
 }
 /* Responsive: 2 books per row on tablets */
 @media (max-width: 992px) {
