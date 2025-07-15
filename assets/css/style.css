@@ -429,6 +429,13 @@ html[lang="ar"] #publications p {
     font-size: 14px;
     color: #fff;
 }
+#bookshelf .book-description-en {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    direction: ltr !important;
+}
 /* --- Responsive Adjustments --- */
 @media (max-width: 992px) {
     #bookshelf .book {
