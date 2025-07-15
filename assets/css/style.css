@@ -373,9 +373,9 @@ html[lang="ar"] #publications p:not(.book-description-en) {
     overflow: hidden;
     width: 200px;
     flex: 0 0 auto;
-    background-color: #fff;
+    background-color: #000;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     transition: transform 0.3s ease-in-out;
     margin-bottom: 20px; 
 }
