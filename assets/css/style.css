@@ -326,7 +326,7 @@ html[lang="ar"] #activities h3 {
 html[lang="ar"] #publications h2 {
     padding-top: 30px !important;
 }
-html[lang="ar"] #publications p {
+html[lang="ar"] #publications p:not(.book-description-en) {
     direction: rtl !important;
     text-align: justify !important;
 }
