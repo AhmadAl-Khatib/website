@@ -355,7 +355,7 @@ html[lang="ar"] #publications p:not(.book-description-en) {
     text-align: center;
     margin-bottom: 30px;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 30px;
     direction: rtl;
 }
 #bookshelf h2::before,
