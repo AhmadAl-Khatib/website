@@ -330,7 +330,7 @@ html[lang="ar"] #publications p:not(.book-description-en) {
     direction: rtl !important;
     text-align: justify !important;
 }
-html[lang="ar"] #publications p:not(.book-description-ar) {
+html[lang="en"] #publications p:not(.book-description-ar) {
     direction: ltr !important;
     text-align: justify !important;
 }
@@ -434,6 +434,7 @@ html[lang="ar"] #publications p:not(.book-description-ar) {
     text-align: justify;
     font-size: 14px;
     color: #fff;
+    direction: rtl !important;
 }
 #bookshelf .book-description-en {
     padding: 10px 0;
