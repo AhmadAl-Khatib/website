@@ -427,7 +427,7 @@ html[lang="ar"] #publications p:not(.book-description-en) {
 }
 #bookshelf .book-description {
     padding: 10px 0;
-    text-align: center;
+    text-align: justify;
     font-size: 14px;
     color: #fff;
 }
