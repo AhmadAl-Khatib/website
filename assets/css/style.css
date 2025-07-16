@@ -330,6 +330,10 @@ html[lang="ar"] #publications p:not(.book-description-en) {
     direction: rtl !important;
     text-align: justify !important;
 }
+html[lang="ar"] #publications p:not(.book-description-ar) {
+    direction: ltr !important;
+    text-align: justify !important;
+}
 /* ---------- Bookshelf Section ---------- */
 #bookshelf {
     background: url("../img/books.webp") no-repeat center bottom / cover fixed;
@@ -425,7 +429,7 @@ html[lang="ar"] #publications p:not(.book-description-en) {
     opacity: 1;
     transform: translateY(0);
 }
-#bookshelf .book-description {
+#bookshelf .book-description-ar {
     padding: 10px 0;
     text-align: justify;
     font-size: 14px;
