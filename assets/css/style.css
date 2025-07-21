@@ -388,6 +388,12 @@ html[lang="en"] #publications p:not(.book-description-ar) {
     transform: translateY(-10px);
     border-color: #007b8c;
 }
+#bookshelf .book a {
+    display: block; /* يغطي كامل صندوق الكتاب */
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+}
 #bookshelf .book img {
     width: 100%;
     height: auto;
@@ -403,6 +409,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
     opacity: 0;
     z-index: 1;
     transition: none;
+    pointer-events: none; /* السماح بالنقر على الرابط دون عرقلة */
 }
 #bookshelf .book:hover .title-background {
     opacity: 1;
@@ -455,6 +462,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
         margin: 20px auto;
     }
 }
+
 /*----------- owl ------------*/
 #owl-demo .owl-item div{
       padding:5px;
