@@ -372,6 +372,15 @@ html[lang="en"] #publications p:not(.book-description-ar) {
     align-items: center;
     text-align: center;
 }
+
+/* Make the whole book area clickable via link */
+.book-link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
 #bookshelf .book {
     position: relative;
     overflow: hidden;
@@ -382,7 +391,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     transition: transform 0.3s ease-in-out;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 #bookshelf .book:hover {
     transform: translateY(-10px);
@@ -403,6 +412,9 @@ html[lang="en"] #publications p:not(.book-description-ar) {
     opacity: 0;
     z-index: 1;
     transition: none;
+
+    /* Let clicks pass through the overlay */
+    pointer-events: none;
 }
 #bookshelf .book:hover .title-background {
     opacity: 1;
@@ -455,6 +467,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
         margin: 20px auto;
     }
 }
+
 /*----------- owl ------------*/
 #owl-demo .owl-item div{
       padding:5px;
