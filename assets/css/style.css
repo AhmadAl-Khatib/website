@@ -429,6 +429,24 @@ html[lang="en"] #publications p:not(.book-description-ar) {
     opacity: 1;
     transform: translateY(0);
 }
+#bookshelf .book-button {
+    display: inline-block;
+    margin: 10px auto;
+    padding: 8px 15px;
+    background: #007b8c;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+#bookshelf .book-button:hover {
+    background: transparent;
+    color: orange;
+    border: 2px solid orange;
+}
 #bookshelf .book-description-ar {
     padding: 10px 0;
     text-align: justify;
