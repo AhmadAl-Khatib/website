@@ -386,7 +386,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 }
 #bookshelf .book:hover {
     transform: translateY(-10px);
-    border-color: #007b8c;
+    border-color: #ffa100;
 }
 #bookshelf .book img {
     width: 100%;
@@ -399,7 +399,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
     left: 0;
     width: 100%;
     height: 40px;
-    background-color: rgba(0, 123, 140, 1);
+    background-color: #ffa100;
     opacity: 0;
     z-index: 1;
     transition: none;
