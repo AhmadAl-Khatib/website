@@ -470,6 +470,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
     }
     .share-buttons span {
       color: white;
+      font-weight: bold;
       margin-right: 6px;
       font-size: 10px;
     }
