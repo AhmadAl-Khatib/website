@@ -462,7 +462,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
     direction: ltr !important;
 }
     .share-buttons {
-      margin-top: 20px;
+      margin-top: 0px;
       display: flex;
       align-items: center;
       gap: 14px;
