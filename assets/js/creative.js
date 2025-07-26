@@ -80,4 +80,4 @@ $(document).ready(function() {
         animation: 'fade'
     });
 	   
-})(jQuery);
+})(jQuery); // This correctly closes the initial (function($) { ... })(jQuery);
