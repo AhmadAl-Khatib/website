@@ -1462,3 +1462,11 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header {
+        height: 600px !important;
+    }
+    #bookshelf {
+        height: 500px !important;
+    }
+}
