@@ -69,12 +69,6 @@ $(document).ready(function() {
     new WOW().init();
 
 })(jQuery); // End of use strict
-/* Parallax
- =============================================*/
-;
-(function ($) {
-    include('../../js/jquery.rd-parallax.js');
-})(jQuery); 
 
 /* filter
  =============================================*/
@@ -88,3 +82,5 @@ $(document).ready(function() {
         animation: 'fade'
     });
 	   
+}) // Make sure this closing parenthesis is for the initial (function($) {
+(jQuery); // And this closes the initial anonymous function call.
