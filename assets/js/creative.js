@@ -68,8 +68,6 @@ $(document).ready(function() {
     // Initialize WOW.js Scrolling Animations
     new WOW().init();
 
-})(jQuery); // End of use strict
-
 /* filter
  =============================================*/
 /*--------------------------
@@ -82,5 +80,4 @@ $(document).ready(function() {
         animation: 'fade'
     });
 	   
-}) // Make sure this closing parenthesis is for the initial (function($) {
-(jQuery); // And this closes the initial anonymous function call.
+})(jQuery); // This correctly closes the initial (function($) { ... })(jQuery);
