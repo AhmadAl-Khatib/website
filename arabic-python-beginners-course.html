@@ -9,8 +9,8 @@
 
   <!-- Animate.css & WOW.js -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script type="module" src="https://unpkg.com/@cloudflare/scroll-parallax"></script>
   <style>
-    /* Tajawal Font */
     @font-face {
       font-family: 'Tajawal';
       src: url('../font/fonts/Tajawal-Regular.woff2') format('woff2');
@@ -24,7 +24,6 @@
       font-display: swap;
     }
 
-    /* Reset & base */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -46,15 +45,13 @@
       text-decoration: underline;
     }
 
-    /* Header with background */
     header.site-header {
-      background: url('assets/img/arabic-python-course-for-beginners.webp') no-repeat center center/cover;
-      color: white;
-      padding: 6rem 1rem 4rem;
-      text-align: center;
       position: sticky;
       top: 0;
       z-index: 1000;
+      color: white;
+      padding: 6rem 1rem 4rem;
+      text-align: center;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
       display: flex;
       flex-direction: column;
@@ -62,17 +59,7 @@
       align-items: center;
       min-height: 300px;
       position: relative;
-    }
-    header.site-header::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(30, 41, 59, 0.7);
-      z-index: 0;
-    }
-    header.site-header > * {
-      position: relative;
-      z-index: 1;
+      overflow: hidden;
     }
     header.site-header h1 {
       font-size: 3rem;
@@ -80,21 +67,37 @@
       font-weight: 700;
       line-height: 1.1;
       max-width: 900px;
+      position: relative;
+      z-index: 2;
     }
     header.site-header p {
       font-size: 1.3rem;
       margin-top: 1rem;
       max-width: 700px;
+      position: relative;
+      z-index: 2;
     }
 
-    /* Container */
+    .parallax-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: url('assets/img/arabic-python-course-for-beginners.webp') no-repeat center center / cover;
+    }
+
+    .parallax-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(30, 41, 59, 0.7);
+      z-index: 1;
+    }
+
     main.container {
       max-width: 960px;
       margin: 2rem auto 4rem;
       padding: 0 1rem;
     }
 
-    /* Signup Section */
     section.signup-box {
       background: #f1f5f9;
       padding: 1.8rem 1.2rem;
@@ -147,7 +150,6 @@
       outline: none;
     }
 
-    /* Episodes grid */
     section.episodes {
       margin-top: 2rem;
     }
@@ -220,7 +222,6 @@
       flex-shrink: 0;
     }
 
-    /* Pagination */
     .pagination {
       text-align: center;
       margin-top: 2.5rem;
@@ -245,7 +246,6 @@
       outline: none;
     }
 
-    /* Footer */
     footer.site-footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -265,7 +265,6 @@
       outline: none;
     }
 
-    /* Responsive */
     @media (min-width: 768px) {
       header.site-header {
         min-height: 500px;
@@ -290,7 +289,6 @@
     }
   </style>
 
-  <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -302,40 +300,25 @@
     "publisher": {
       "@type": "Person",
       "name": "أحمد الخطيب"
-    },
-    "hasPart": [
-      {
-        "@type": "VideoObject",
-        "name": "الحلقة 1: دالة print()",
-        "url": "https://www.ahmad-khatib.com/python-series/episode-1.html",
-        "thumbnailUrl": "https://img.youtube.com/vi/a1b2c3d4/hqdefault.jpg"
-      }
-    ]
+    }
   }
   </script>
 </head>
 <body>
 
   <header class="site-header wow animate__animated animate__fadeInDown" role="banner">
+    <div class="parallax-bg" data-parallax></div>
+    <div class="parallax-overlay"></div>
     <h1>تعلم بايثون بالعربية</h1>
     <p>شاهد السلسلة الكاملة من الدروس المجانية مع أحمد الخطيب</p>
   </header>
 
   <main class="container" role="main">
-
     <section class="signup-box wow animate__animated animate__fadeInUp" aria-label="اشتراك البريد الإلكتروني">
       <h2>📩 اشترك لتصلك الموارد المجانية</h2>
       <p>احصل على دروس جديدة، نصائح إضافية، وتحديثات الكتاب عبر البريد الإلكتروني.</p>
       <form action="https://your-mail-service.com/subscribe" method="POST" aria-describedby="email-desc" novalidate>
-        <input
-          type="email"
-          name="email"
-          placeholder="بريدك الإلكتروني"
-          required
-          aria-required="true"
-          aria-describedby="email-desc"
-          autocomplete="email"
-        />
+        <input type="email" name="email" placeholder="بريدك الإلكتروني" required aria-required="true" autocomplete="email" />
         <button type="submit">اشترك الآن</button>
       </form>
       <p id="email-desc" style="font-size: 0.85rem; color: #555; margin-top: 0.5rem;">
@@ -348,7 +331,6 @@
       <div id="episode-grid" class="episode-grid" role="list"></div>
       <nav id="pagination" class="pagination" aria-label="تنقل بين صفحات الحلقات"></nav>
     </section>
-
   </main>
 
   <footer class="site-footer wow animate__animated animate__fadeIn" role="contentinfo">
@@ -369,7 +351,7 @@
         title: "لمحة عن كتاب تعلم بايثون بأقل من أسبوع",
         youtubeId: "98KRFeoGkvQ",
         link: "https://youtube.com/shorts/98KRFeoGkvQ"
-      },  
+      }
     ];
 
     const episodesPerPage = 10;
@@ -384,19 +366,16 @@
       grid.innerHTML = '';
 
       pageEpisodes.forEach(ep => {
+        const safeTitle = ep.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
         const article = document.createElement('article');
         article.className = 'episode-card wow animate__animated animate__fadeInUp';
         article.setAttribute('role', 'listitem');
-
-        // Escape HTML entities in title for safety
-        const safeTitle = ep.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-
         article.innerHTML = `
           <img src="https://img.youtube.com/vi/${ep.youtubeId}/hqdefault.jpg" alt="صورة مصغرة للحلقة: ${safeTitle}">
           <div class="episode-card-content">
             <h3>${safeTitle}</h3>
-            <a href="${ep.link}" target="_blank" rel="noopener" class="watch-link" aria-label="شاهد الحلقة على يوتيوب: ${safeTitle}" title="شاهد الحلقة على يوتيوب: ${safeTitle}">
-              <svg class="icon-youtube" viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <a href="${ep.link}" target="_blank" rel="noopener" class="watch-link">
+              <svg class="icon-youtube" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M23.498 6.186a2.958 2.958 0 0 0-2.08-2.09C19.59 3.5 12 3.5 12 3.5s-7.59 0-9.42.596a2.957 2.957 0 0 0-2.08 2.09A30.043 30.043 0 0 0 0 12a30.043 30.043 0 0 0 .5 5.814 2.958 2.958 0 0 0 2.08 2.09c1.83.597 9.42.597 9.42.597s7.59 0 9.42-.597a2.958 2.958 0 0 0 2.08-2.09A30.042 30.042 0 0 0 24 12a30.042 30.042 0 0 0-.502-5.814zM9.545 15.568V8.432l6.18 3.568-6.18 3.568z"/>
               </svg>
               شاهد الحلقة
@@ -413,19 +392,16 @@
     function renderPagination(currentPage) {
       const pagination = document.getElementById('pagination');
       pagination.innerHTML = '';
-
       for (let i = 1; i <= totalPages; i++) {
         const btn = document.createElement('button');
         btn.textContent = i;
         if (i === currentPage) btn.classList.add('active');
         btn.addEventListener('click', () => renderPage(i));
-        btn.setAttribute('aria-label', `الصفحة ${i}`);
         pagination.appendChild(btn);
       }
     }
 
     renderPage(1);
   </script>
-
 </body>
 </html>
