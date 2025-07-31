@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Learn Python step-by-step in Arabic with Ahmad Al-Khatib. Free video series for beginners with downloadable resources.">
   <title>Learn Python in Arabic – Free Video Series</title>
+
+  <!-- Animate.css & WOW.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -91,6 +94,25 @@
       text-decoration: underline;
     }
 
+    .pagination {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .pagination button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      margin: 0 5px;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .pagination button.active {
+      background-color: #1e40af;
+    }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -101,7 +123,7 @@
 </head>
 <body>
 
-  <header>
+  <header class="wow animate__animated animate__fadeInDown">
     <h1>Learn Python in Arabic</h1>
     <p>Watch the complete video series by Ahmad Al-Khatib and start coding from scratch</p>
   </header>
@@ -109,7 +131,7 @@
   <main class="container">
 
     <!-- Signup box -->
-    <section class="signup-box">
+    <section class="signup-box wow animate__animated animate__fadeInUp">
       <h2>📩 Get New Episodes by Email</h2>
       <p>Subscribe to receive future lessons and bonus resources directly in your inbox.</p>
       <form action="https://your-mail-service.com/subscribe" method="POST">
@@ -118,46 +140,76 @@
       </form>
     </section>
 
-    <!-- Video episodes grid -->
+    <!-- Episode grid -->
     <section>
-      <h2 style="text-align: center; margin-bottom: 1.5rem;">🎥 Video Episodes</h2>
-      <div class="episode-grid">
-
-        <div class="episode-card">
-          <h3>Episode 1: Introduction & print()</h3>
-          <a href="/python-series/episode-1.html">▶️ Watch Episode</a>
-        </div>
-
-        <div class="episode-card">
-          <h3>Episode 2: Variables & Data Types</h3>
-          <a href="/python-series/episode-2.html">▶️ Watch Episode</a>
-        </div>
-
-        <div class="episode-card">
-          <h3>Episode 3: If/Else Conditions</h3>
-          <a href="/python-series/episode-3.html">▶️ Watch Episode</a>
-        </div>
-
-        <div class="episode-card">
-          <h3>Episode 4: Loops in Python</h3>
-          <a href="/python-series/episode-4.html">▶️ Watch Episode</a>
-        </div>
-
-        <div class="episode-card">
-          <h3>Episode 5: Functions & Arguments</h3>
-          <a href="/python-series/episode-5.html">▶️ Watch Episode</a>
-        </div>
-
-        <!-- Add more episodes below -->
-
+      <h2 class="wow animate__animated animate__fadeInUp" style="text-align: center;">🎥 Video Episodes</h2>
+      <div id="episode-grid" class="episode-grid">
+        <!-- JavaScript will render episode cards here -->
       </div>
+
+      <!-- Pagination -->
+      <div id="pagination" class="pagination"></div>
     </section>
 
   </main>
 
-  <footer>
+  <footer class="wow animate__animated animate__fadeIn">
     &copy; 2025 Ahmad Al-Khatib. All rights reserved. | <a href="/books">Books</a> | <a href="/contact">Contact</a>
   </footer>
 
+  <!-- WOW.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+
+  <!-- Pagination script -->
+  <script>
+    const episodes = Array.from({ length: 15 }, (_, i) => ({
+      title: `Episode ${i + 1}: Topic Title Here`,
+      link: `/python-series/episode-${i + 1}.html`
+    }));
+
+    const episodesPerPage = 10;
+    const totalPages = Math.ceil(episodes.length / episodesPerPage);
+
+    function renderPage(page) {
+      const start = (page - 1) * episodesPerPage;
+      const end = start + episodesPerPage;
+      const pageEpisodes = episodes.slice(start, end);
+
+      const grid = document.getElementById('episode-grid');
+      grid.innerHTML = '';
+
+      pageEpisodes.forEach(ep => {
+        const card = document.createElement('div');
+        card.className = 'episode-card wow animate__animated animate__fadeInUp';
+        card.innerHTML = `
+          <h3>${ep.title}</h3>
+          <a href="${ep.link}">▶️ Watch Episode</a>
+        `;
+        grid.appendChild(card);
+      });
+
+      renderPagination(page);
+      new WOW().init(); // re-init animations on new elements
+    }
+
+    function renderPagination(currentPage) {
+      const pagination = document.getElementById('pagination');
+      pagination.innerHTML = '';
+
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement('button');
+        btn.textContent = i;
+        if (i === currentPage) btn.classList.add('active');
+        btn.addEventListener('click', () => renderPage(i));
+        pagination.appendChild(btn);
+      }
+    }
+
+    // Initial render
+    renderPage(1);
+  </script>
 </body>
 </html>
