@@ -537,18 +537,18 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 .owl-pagination {
     visibility: hidden;
 }
-/*----------- counter ------------*/
-.counter {
+/*----------- course ------------*/
+.course {
     background: #222 none repeat scroll 0 0;
     color: #fff;
     padding: 100px 0;
     text-align: center;
 }
-.counter .size {
+.course .size {
     color: #f3ba08;
     font-size: 45px;
 }
-.counter span {
+.course span {
     color: #ff8400;
     font-size: 20px;
 }
