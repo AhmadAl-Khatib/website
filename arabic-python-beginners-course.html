@@ -391,7 +391,7 @@
         // Escape HTML entities in title for safety
         const safeTitle = ep.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-        article.innerHTML = 
+        article.innerHTML = `
           <img src="https://img.youtube.com/vi/${ep.youtubeId}/hqdefault.jpg" alt="صورة مصغرة للحلقة: ${safeTitle}">
           <div class="episode-card-content">
             <h3>${safeTitle}</h3>
@@ -402,7 +402,7 @@
               شاهد الحلقة
             </a>
           </div>
-        ;
+        `;
         grid.appendChild(article);
       });
 
@@ -419,7 +419,7 @@
         btn.textContent = i;
         if (i === currentPage) btn.classList.add('active');
         btn.addEventListener('click', () => renderPage(i));
-        btn.setAttribute('aria-label', الصفحة ${i});
+        btn.setAttribute('aria-label', `الصفحة ${i}`);
         pagination.appendChild(btn);
       }
     }
