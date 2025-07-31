@@ -9,122 +9,404 @@
 
   <!-- Animate.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- أساسي: بوتستراب -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <style>
+    /* Reset & base */
     *, *::before, *::after { box-sizing: border-box; }
-    body { font-family: 'Segoe UI', sans-serif; margin:0; padding:0; background:#fefefe; color:#333; direction:rtl; text-align:right; line-height:1.6; }
-    a { color:#2563eb; text-decoration:none; }
-    a:hover, a:focus { text-decoration:underline; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fefefe;
+      color: #333;
+      direction: rtl;
+      text-align: right;
+      line-height: 1.6;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    a:hover, a:focus {
+      text-decoration: underline;
+    }
 
-    header.site-header { height:100vh; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; text-align:center; color:white; }
-    .rd-parallax-layer { position:absolute; width:100%; height:120%; top:0; left:0; background-size:cover; background-position:center; z-index:0; }
-    .header-overlay { position:absolute; inset:0; background:rgba(30,41,59,0.6); z-index:1; }
-    .header-content { position:relative; z-index:2; padding:1rem; }
-    .header-content h1 { font-size:3rem; font-weight:700; margin:0; }
-    .header-content p { font-size:1.4rem; margin-top:1rem; }
+    /* Header with parallax background and sticky */
+    header.site-header {
+      position: relative; /* ضروري */
+      background: url('assets/img/ahmad-al-khatib-2015-lebanon-protest.webp') no-repeat center center / cover;
+      color: white;
+      padding: 6rem 1rem 4rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 
-    main.container { max-width:960px; margin:2rem auto 4rem; padding:0 1rem; }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 300px;
+      /* تفعيل overflow:hidden لبارالاكس */
+      overflow: hidden;
+    }
 
-    section.signup-box { background:#f1f5f9; padding:1.8rem 1.2rem; border-radius:8px; text-align:center; margin-bottom:2rem; box-shadow:0 2px 6px rgba(0,0,0,0.05); }
-    section.signup-box h2 { font-size:1.6rem; margin-bottom:0.5rem; }
-    section.signup-box input[type="email"] { padding:0.65rem; width:260px; max-width:100%; border:1px solid #ccc; border-radius:4px; text-align:right; font-size:1rem; }
-    section.signup-box button { padding:0.65rem 1.3rem; background:#2563eb; color:white; border:none; border-radius:4px; font-size:1rem; cursor:pointer; }
-    section.signup-box button:hover { background:#1e40af; }
+    /* إضافة طبقة شفافة للظل فوق الصورة */
+    header.site-header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(30, 41, 59, 0.7);
+      z-index: 0;
+    }
 
-    section.episodes h2 { text-align:center; font-size:1.8rem; margin-bottom:1rem; }
-    .episode-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; }
-    .episode-card { background:white; border:1px solid #e2e8f0; border-radius:8px; box-shadow:0 0 8px rgba(0,0,0,0.03); overflow:hidden; display:flex; flex-direction:column; }
-    .episode-card img { width:100%; aspect-ratio:16/9; object-fit:cover; }
-    .episode-card-content { padding:1rem; display:flex; flex-direction:column; flex-grow:1; }
-    .episode-card-content h3 { font-size:1.1rem; margin:0 0 0.5rem; }
-    .episode-card-content a.watch-link { color:#2563eb; font-weight:600; margin-top:auto; }
-    .pagination { margin-top:2rem; text-align:center; }
-    .pagination button { background:#2563eb; color:white; border:none; margin:0 5px; padding:0.55rem 1.1rem; border-radius:4px; cursor:pointer; }
-    .pagination button.active { background:#1e40af; }
+    /* محتويات الهيدر فوق الطبقة الشفافة */
+    header.site-header > * {
+      position: relative;
+      z-index: 1;
+    }
 
-    @media(max-width:600px){
-      .header-content h1 { font-size:2rem; }
-      .header-content p { font-size:1rem; }
+    header.site-header h1 {
+      font-size: 3rem;
+      margin: 0;
+      font-weight: 700;
+      line-height: 1.1;
+      max-width: 900px;
+    }
+
+    header.site-header p {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+      max-width: 700px;
+    }
+
+    /* الحاوية الرئيسية */
+    main.container {
+      max-width: 960px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+    }
+
+    /* صندوق الاشتراك */
+    section.signup-box {
+      background: #f1f5f9;
+      padding: 1.8rem 1.2rem;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 2rem;
+      direction: rtl;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.05);
+    }
+    section.signup-box h2 {
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #111827;
+    }
+    section.signup-box p {
+      margin: 0 0 1rem;
+      color: #4b5563;
+    }
+    section.signup-box form {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    section.signup-box input[type="email"] {
+      padding: 0.65rem;
+      width: 260px;
+      max-width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      text-align: right;
+      font-size: 1rem;
+      flex-grow: 1;
+    }
+    section.signup-box button {
+      padding: 0.65rem 1.3rem;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    section.signup-box button:hover,
+    section.signup-box button:focus {
+      background-color: #1e40af;
+      outline: none;
+    }
+
+    /* شبكة الحلقات */
+    section.episodes {
+      margin-top: 2rem;
+    }
+    section.episodes h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #1e293b;
+      font-weight: 700;
+    }
+    .episode-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    article.episode-card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
+      transition: transform 0.2s ease;
+      direction: rtl;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    article.episode-card:hover {
+      transform: translateY(-5px);
+    }
+    article.episode-card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 16 / 9;
+      display: block;
+    }
+    .episode-card-content {
+      padding: 1rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .episode-card h3 {
+      font-size: 1.1rem;
+      margin: 0 0 0.5rem;
+      color: #1e293b;
+      font-weight: 700;
+    }
+    .episode-card a.watch-link {
+      color: #2563eb;
+      font-weight: 600;
+      margin-top: auto;
+      align-self: flex-start;
+      transition: color 0.3s ease;
+    }
+    .episode-card a.watch-link:hover,
+    .episode-card a.watch-link:focus {
+      color: #1e40af;
+      outline: none;
+    }
+
+    /* Pagination */
+    .pagination {
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+    .pagination button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      margin: 0 5px;
+      padding: 0.55rem 1.1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    .pagination button.active {
+      background-color: #1e40af;
+    }
+    .pagination button:hover,
+    .pagination button:focus {
+      background-color: #1e40af;
+      outline: none;
+    }
+
+    /* Footer */
+    footer.site-footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
+      direction: rtl;
+      border-top: 1px solid #e2e8f0;
+    }
+    footer.site-footer a {
+      color: #2563eb;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    footer.site-footer a:hover,
+    footer.site-footer a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header.site-header {
+        padding: 4rem 1rem 3rem;
+      }
+      header.site-header h1 {
+        font-size: 2rem;
+      }
+      header.site-header p {
+        font-size: 1rem;
+        max-width: 95vw;
+      }
+      main.container {
+        margin: 1rem auto 3rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Parallax Header -->
-  <header class="site-header rd-parallax">
-    <div class="rd-parallax-layer" data-type="media" data-speed="0.3" data-url="assets/img/social-cover.webp"></div>
-    <div class="header-overlay"></div>
-    <div class="header-content wow animate__animated animate__fadeInDown">
-      <h1>تعلم بايثون بالعربية</h1>
-      <p>شاهد السلسلة الكاملة من الدروس المجانية مع أحمد الخطيب</p>
-    </div>
+  <header class="site-header wow animate__animated animate__fadeInDown" role="banner" data-parallax="scroll" data-image-src="assets/img/ahmad-al-khatib-2015-lebanon-protest.webp">
+    <h1>تعلم بايثون بالعربية</h1>
+    <p>شاهد السلسلة الكاملة من الدروس المجانية مع أحمد الخطيب</p>
   </header>
 
   <main class="container" role="main">
-    <section class="signup-box wow animate__animated animate__fadeInUp">
+
+    <!-- Signup Section -->
+    <section class="signup-box wow animate__animated animate__fadeInUp" aria-label="اشتراك البريد الإلكتروني">
       <h2>📩 اشترك لتصلك الموارد المجانية</h2>
       <p>احصل على دروس جديدة، نصائح إضافية، وتحديثات الكتاب عبر البريد الإلكتروني.</p>
-      <form action="https://your-mail-service.com/subscribe" method="POST">
-        <input type="email" name="email" placeholder="بريدك الإلكتروني" required />
+      <form action="https://your-mail-service.com/subscribe" method="POST" aria-describedby="email-desc" novalidate>
+        <input
+          type="email"
+          name="email"
+          placeholder="بريدك الإلكتروني"
+          required
+          aria-required="true"
+          aria-describedby="email-desc"
+          autocomplete="email"
+        />
         <button type="submit">اشترك الآن</button>
       </form>
-      <p id="email-desc" style="font-size:0.85rem; color:#555; margin-top:0.5rem;">لن نشارك بريدك مع أي جهة أخرى.</p>
+      <p id="email-desc" style="font-size: 0.85rem; color: #555; margin-top: 0.5rem;">
+        لن نشارك بريدك مع أي جهة أخرى.
+      </p>
     </section>
 
-    <section class="episodes">
+    <!-- Episodes Section -->
+    <section class="episodes" aria-label="حلقات فيديو تعلم بايثون">
       <h2 class="wow animate__animated animate__fadeInUp">🎥 حلقات الفيديو</h2>
       <div id="episode-grid" class="episode-grid" role="list"></div>
       <nav id="pagination" class="pagination" aria-label="تنقل بين صفحات الحلقات"></nav>
     </section>
+
   </main>
 
-  <footer class="site-footer wow animate__animated animate__fadeIn" role="contentinfo" style="text-align:center; padding:2rem 1rem; font-size:0.9rem; color:#777;">
-    &copy; 2025 أحمد الخطيب | <a href="/books">الكتب</a> | <a href="/contact">تواصل معنا</a>
+  <footer class="site-footer wow animate__animated animate__fadeIn" role="contentinfo">
+    &copy; 2025 أحمد الخطيب | <a href="/books" title="صفحة الكتب">الكتب</a> | <a href="/contact" title="صفحة التواصل">تواصل معنا</a>
   </footer>
 
-  <!-- JS Libraries -->
+  <!-- JS Libs -->
   <script src="assets/js/jquery.js"></script>
-  <script src="assets/js/jquery.rd-parallax.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.easing.min.js"></script>
+  <script src="assets/js/jquery.fittext.js"></script>
   <script src="assets/js/wow.min.js"></script>
-  <!-- Your other scripts -->
-  <script>
-    $(document).ready(function(){
-      new WOW().init();
-      if($.fn.RDParallax){ $('.rd-parallax').RDParallax(); }
-    });
-  </script>
+  <script src="assets/owl-carousel/owl.carousel.js"></script>
+  <script async src="assets/js/baguetteBox.js"></script>
+  <script async src="assets/js/plugins.js"></script>
+  <script src="assets/js/jquery.scrollUp.js"></script>
+  <script src="assets/js/jquery.rd-parallax.js"></script>
+  <script src="assets/js/creative.js"></script>
+  <script src="assets/js/custom.js"></script>
 
-  <!-- Episodes rendering -->
+  <!-- Render Episodes + Init WOW & Parallax -->
   <script>
+    // حلقات الفيديو
     const episodes = [
-      { title: "الحلقة 1: دالة print()", youtubeId: "a1b2c3d4", link: "/episode-1.html" },
-      //...add remaining episode objects
+      { title: "الحلقة 1: دالة print()", youtubeId: "a1b2c3d4", link: "/python-series/episode-1.html" },
+      { title: "الحلقة 2: المتغيرات", youtubeId: "b2c3d4e5", link: "/python-series/episode-2.html" },
+      { title: "الحلقة 3: الجمل الشرطية if/else", youtubeId: "c3d4e5f6", link: "/python-series/episode-3.html" },
+      { title: "الحلقة 4: الحلقات التكرارية", youtubeId: "d4e5f6g7", link: "/python-series/episode-4.html" },
+      { title: "الحلقة 5: الدوال", youtubeId: "e5f6g7h8", link: "/python-series/episode-5.html" },
+      { title: "الحلقة 6: القوائم", youtubeId: "f6g7h8i9", link: "/python-series/episode-6.html" },
+      { title: "الحلقة 7: القواميس", youtubeId: "g7h8i9j0", link: "/python-series/episode-7.html" },
+      { title: "الحلقة 8: الحلقات المتقدمة", youtubeId: "h8i9j0k1", link: "/python-series/episode-8.html" },
+      { title: "الحلقة 9: الإدخال والإخراج", youtubeId: "i9j0k1l2", link: "/python-series/episode-9.html" },
+      { title: "الحلقة 10: التعامل مع الملفات", youtubeId: "j0k1l2m3", link: "/python-series/episode-10.html" },
+      { title: "الحلقة 11: الأخطاء والاستثناءات", youtubeId: "k1l2m3n4", link: "/python-series/episode-11.html" },
+      { title: "الحلقة 12: الوحدات البرمجية", youtubeId: "l2m3n4o5", link: "/python-series/episode-12.html" },
+      { title: "الحلقة 13: الأصناف", youtubeId: "m3n4o5p6", link: "/python-series/episode-13.html" },
+      { title: "الحلقة 14: البرمجة الكائنية", youtubeId: "n4o5p6q7", link: "/python-series/episode-14.html" },
+      { title: "الحلقة 15: المشروع النهائي", youtubeId: "o5p6q7r8", link: "/python-series/episode-15.html" },
     ];
-    const epsPerPage = 10;
+
+    const episodesPerPage = 10;
+    const totalPages = Math.ceil(episodes.length / episodesPerPage);
+
     function renderPage(page) {
+      const start = (page - 1) * episodesPerPage;
+      const end = start + episodesPerPage;
+      const pageEpisodes = episodes.slice(start, end);
+
       const grid = document.getElementById('episode-grid');
-      const nav = document.getElementById('pagination');
       grid.innerHTML = '';
-      nav.innerHTML = '';
-      const start = (page-1)*epsPerPage;
-      episodes.slice(start, start+epsPerPage).forEach(ep =>{
-        const art = document.createElement('article'); art.className='episode-card';
-        art.innerHTML = `<img src="https://img.youtube.com/vi/${ep.youtubeId}/hqdefault.jpg" alt="${ep.title}">
-          <div class="episode-card-content"><h3>${ep.title}</h3>
-          <a class="watch-link" href="${ep.link}" target="_blank" rel="noopener">▶️ شاهد الحلقة</a></div>`;
-        grid.appendChild(art);
+
+      pageEpisodes.forEach(ep => {
+        const article = document.createElement('article');
+        article.className = 'episode-card wow animate__animated animate__fadeInUp';
+        article.setAttribute('role', 'listitem');
+        article.innerHTML = `
+          <img src="https://img.youtube.com/vi/${ep.youtubeId}/hqdefault.jpg" alt="صورة مصغرة للحلقة: ${ep.title}">
+          <div class="episode-card-content">
+            <h3>${ep.title}</h3>
+            <a href="${ep.link}" target="_blank" rel="noopener" class="watch-link" aria-label="شاهد الحلقة: ${ep.title}">▶️ شاهد الحلقة</a>
+          </div>
+        `;
+        grid.appendChild(article);
       });
-      const total = Math.ceil(episodes.length/epsPerPage);
-      for(let i=1;i<=total;i++){
-        const btn = document.createElement('button'); btn.textContent = i;
-        if(i===page) btn.classList.add('active');
-        btn.onclick=()=>renderPage(i);
-        nav.appendChild(btn);
+
+      renderPagination(page);
+      new WOW().init(); // إعادة تفعيل الحركات للعنصر الجديد
+    }
+
+    function renderPagination(currentPage) {
+      const pagination = document.getElementById('pagination');
+      pagination.innerHTML = '';
+
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement('button');
+        btn.textContent = i;
+        if (i === currentPage) btn.classList.add('active');
+        btn.setAttribute('aria-label', `الصفحة ${i}`);
+        btn.addEventListener('click', () => renderPage(i));
+        pagination.appendChild(btn);
       }
     }
-    renderPage(1);
+
+    $(document).ready(function () {
+      new WOW().init();
+
+      if ($.fn.RDParallax) {
+        // تفعيل البارالاكس على الهيدر مع الصورة الخلفية
+        $('.site-header').RDParallax({
+          // خيارات إضافية لو أردت
+          // speed: 0.3,
+          // direction: 'vertical',
+        });
+      }
+
+      renderPage(1);
+    });
   </script>
 
 </body>
