@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn Python step-by-step in Arabic with Ahmad Al-Khatib. Free video series for beginners with downloadable resources.">
+  <title>Learn Python in Arabic – Free Video Series</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fefefe;
+      color: #333;
+    }
+
+    header {
+      background-color: #1e293b;
+      color: #fff;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .signup-box {
+      background: #f1f5f9;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .signup-box input[type="email"] {
+      padding: 0.6rem;
+      width: 60%;
+      max-width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 0.5rem;
+    }
+
+    .signup-box button {
+      padding: 0.6rem 1.2rem;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .episode-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .episode-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 1rem;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .episode-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .episode-card a {
+      text-decoration: none;
+      color: #2563eb;
+    }
+
+    .episode-card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Learn Python in Arabic</h1>
+    <p>Watch the complete video series by Ahmad Al-Khatib and start coding from scratch</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Signup box -->
+    <section class="signup-box">
+      <h2>📩 Get New Episodes by Email</h2>
+      <p>Subscribe to receive future lessons and bonus resources directly in your inbox.</p>
+      <form action="https://your-mail-service.com/subscribe" method="POST">
+        <input type="email" name="email" placeholder="Your email address" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <!-- Video episodes grid -->
+    <section>
+      <h2 style="text-align: center; margin-bottom: 1.5rem;">🎥 Video Episodes</h2>
+      <div class="episode-grid">
+
+        <div class="episode-card">
+          <h3>Episode 1: Introduction & print()</h3>
+          <a href="/python-series/episode-1.html">▶️ Watch Episode</a>
+        </div>
+
+        <div class="episode-card">
+          <h3>Episode 2: Variables & Data Types</h3>
+          <a href="/python-series/episode-2.html">▶️ Watch Episode</a>
+        </div>
+
+        <div class="episode-card">
+          <h3>Episode 3: If/Else Conditions</h3>
+          <a href="/python-series/episode-3.html">▶️ Watch Episode</a>
+        </div>
+
+        <div class="episode-card">
+          <h3>Episode 4: Loops in Python</h3>
+          <a href="/python-series/episode-4.html">▶️ Watch Episode</a>
+        </div>
+
+        <div class="episode-card">
+          <h3>Episode 5: Functions & Arguments</h3>
+          <a href="/python-series/episode-5.html">▶️ Watch Episode</a>
+        </div>
+
+        <!-- Add more episodes below -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Ahmad Al-Khatib. All rights reserved. | <a href="/books">Books</a> | <a href="/contact">Contact</a>
+  </footer>
+
+</body>
+</html>
