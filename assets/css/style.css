@@ -538,19 +538,19 @@ html[lang="en"] #publications p:not(.book-description-ar) {
     visibility: hidden;
 }
 /*----------- course ------------*/
-.course {
+#course {
   background: #fff no-repeat scroll 0 0;
   color: #000;
   padding: 100px 0;
   text-align: center;
 }
-.course .size {
-    color: #f3ba08;
-    font-size: 45px;
+#course .size {
+  color: #f3ba08;
+  font-size: 45px;
 }
-.course span {
-    color: #ff8400;
-    font-size: 20px;
+#course span {
+  color: #ff8400;
+  font-size: 20px;
 }
 /*----------- gallery ------------*/
 #Gallery {
