@@ -541,7 +541,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 #course {
   background: #fff no-repeat scroll 0 0;
   color: #000;
-  padding: 100px 0;
+  padding:50px 0 50px;
   text-align: center;
 }
 #course .size {
