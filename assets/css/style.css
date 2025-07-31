@@ -539,10 +539,10 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 }
 /*----------- course ------------*/
 .course {
-    background: #101828 none repeat scroll 0 0;
-    color: #fff;
-    padding: 100px 0;
-    text-align: center;
+  background: linear-gradient(to top, #0d1d22, #14323b) no-repeat scroll 0 0;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
 }
 .course .size {
     color: #f3ba08;
