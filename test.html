@@ -2,13 +2,18 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="تعلم بايثون بالعربية مع أحمد الخطيب. دروس فيديو مجانية خطوة بخطوة وتحميل الكتاب." />
-  <title>تعلم بايثون بالعربية – سلسلة فيديوهات</title>
+  <meta name="robots" content="index, follow" />
+  <title>تعلم بايثون بالعربية – سلسلة فيديوهات تعليمية | أحمد الخطيب</title>
 
   <!-- Animate.css & WOW.js -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <style>
+    /* Reset & base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
@@ -17,199 +22,309 @@
       color: #333;
       direction: rtl;
       text-align: right;
+      line-height: 1.6;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    a:hover, a:focus {
+      text-decoration: underline;
     }
 
-    header {
-      background-color: #1e293b;
-      color: #fff;
-      padding: 1.5rem 1rem;
+    /* Header with background */
+    header.site-header {
+      background: url('/images/header-background.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 6rem 1rem 4rem;
+      text-align: center;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .header-content {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      flex-direction: row-reverse; /* Logo left for rtl */
+      align-items: center;
+      min-height: 300px;
     }
-
-    .logo {
-      height: 60px;
-      width: auto;
+    header.site-header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(30, 41, 59, 0.7);
+      z-index: 0;
     }
-
-    header h1 {
-      font-size: 2.5rem;
+    header.site-header > * {
+      position: relative;
+      z-index: 1;
+    }
+    header.site-header h1 {
+      font-size: 3rem;
       margin: 0;
+      font-weight: 700;
+      line-height: 1.1;
+      max-width: 900px;
+    }
+    header.site-header p {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+      max-width: 700px;
     }
 
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-    }
-
-    .container {
+    /* Container */
+    main.container {
       max-width: 960px;
-      margin: 2rem auto;
-      padding: 6rem 1rem 2rem;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
     }
 
-    .signup-box {
+    /* Signup Section */
+    section.signup-box {
       background: #f1f5f9;
-      padding: 1.5rem;
+      padding: 1.8rem 1.2rem;
       border-radius: 8px;
       text-align: center;
       margin-bottom: 2rem;
       direction: rtl;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.05);
     }
-
-    .signup-box input[type="email"] {
-      padding: 0.6rem;
-      width: 60%;
-      max-width: 300px;
+    section.signup-box h2 {
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #111827;
+    }
+    section.signup-box p {
+      margin: 0 0 1rem;
+      color: #4b5563;
+    }
+    section.signup-box form {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    section.signup-box input[type="email"] {
+      padding: 0.65rem;
+      width: 260px;
+      max-width: 100%;
       border: 1px solid #ccc;
       border-radius: 4px;
-      margin-left: 0.5rem; /* swapped margin side for RTL */
-      margin-right: 0;
       text-align: right;
+      font-size: 1rem;
+      flex-grow: 1;
     }
-
-    .signup-box button {
-      padding: 0.6rem 1.2rem;
+    section.signup-box button {
+      padding: 0.65rem 1.3rem;
       background: #2563eb;
-      color: #fff;
+      color: white;
       border: none;
       border-radius: 4px;
+      font-weight: 600;
+      font-size: 1rem;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    section.signup-box button:hover,
+    section.signup-box button:focus {
+      background-color: #1e40af;
+      outline: none;
     }
 
+    /* Episodes grid */
+    section.episodes {
+      margin-top: 2rem;
+    }
+    section.episodes h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #1e293b;
+      font-weight: 700;
+    }
     .episode-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
     }
-
-    .episode-card {
-      background: #fff;
+    article.episode-card {
+      background: white;
       border: 1px solid #e2e8f0;
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
       transition: transform 0.2s ease;
       direction: rtl;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
-
-    .episode-card:hover {
+    article.episode-card:hover {
       transform: translateY(-5px);
     }
-
-    .episode-card img {
+    article.episode-card img {
       width: 100%;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 16/9;
       display: block;
     }
-
     .episode-card-content {
       padding: 1rem;
-      text-align: right;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-
     .episode-card h3 {
-      font-size: 1rem;
+      font-size: 1.1rem;
       margin: 0 0 0.5rem;
+      color: #1e293b;
+      font-weight: 700;
     }
-
-    .episode-card a {
-      text-decoration: none;
+    .episode-card a.watch-link {
       color: #2563eb;
-      font-weight: 500;
+      font-weight: 600;
+      margin-top: auto;
+      align-self: flex-start;
+      transition: color 0.3s ease;
+    }
+    .episode-card a.watch-link:hover,
+    .episode-card a.watch-link:focus {
+      color: #1e40af;
+      outline: none;
     }
 
-    .episode-card a:hover {
-      text-decoration: underline;
-    }
-
+    /* Pagination */
     .pagination {
       text-align: center;
-      margin-top: 2rem;
+      margin-top: 2.5rem;
     }
-
     .pagination button {
       background: #2563eb;
       color: white;
       border: none;
       margin: 0 5px;
-      padding: 0.5rem 1rem;
+      padding: 0.55rem 1.1rem;
       border-radius: 4px;
       cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
     }
-
     .pagination button.active {
       background-color: #1e40af;
     }
+    .pagination button:hover,
+    .pagination button:focus {
+      background-color: #1e40af;
+      outline: none;
+    }
 
-    footer {
+    /* Footer */
+    footer.site-footer {
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.9rem;
       color: #777;
       direction: rtl;
+      border-top: 1px solid #e2e8f0;
+    }
+    footer.site-footer a {
+      color: #2563eb;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    footer.site-footer a:hover,
+    footer.site-footer a:focus {
+      text-decoration: underline;
+      outline: none;
     }
 
+    /* Responsive */
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.6rem;
+      header.site-header {
+        padding: 4rem 1rem 3rem;
       }
-
-      header p {
+      header.site-header h1 {
+        font-size: 2rem;
+      }
+      header.site-header p {
         font-size: 1rem;
+        max-width: 95vw;
       }
-
-      .container {
-        padding-top: 7rem;
+      main.container {
+        margin: 1rem auto 3rem;
       }
     }
   </style>
+
+  <!-- JSON-LD Structured Data for VideoSeries -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoSeries",
+    "name": "تعلم بايثون بالعربية – سلسلة فيديوهات تعليمية",
+    "description": "سلسلة دروس فيديو مجانية لتعلم لغة بايثون بالعربية مع أحمد الخطيب.",
+    "url": "https://www.ahmad-khatib.com/python-series",
+    "thumbnailUrl": "https://www.ahmad-khatib.com/images/header-background.jpg",
+    "publisher": {
+      "@type": "Person",
+      "name": "أحمد الخطيب"
+    },
+    "hasPart": [
+      {
+        "@type": "VideoObject",
+        "name": "الحلقة 1: دالة print()",
+        "url": "https://www.ahmad-khatib.com/python-series/episode-1.html",
+        "thumbnailUrl": "https://img.youtube.com/vi/a1b2c3d4/hqdefault.jpg"
+      }
+      /* Add other episodes as objects here if desired */
+    ]
+  }
+  </script>
 </head>
 <body>
 
-  <header class="wow animate__animated animate__fadeInDown">
-    <div class="header-content">
-      <img src="assets/img/social-cover.webp" alt="شعار أحمد الخطيب" class="logo" />
-      <div>
-        <h1>تعلم بايثون بالعربية</h1>
-        <p>شاهد السلسلة الكاملة من الدروس المجانية مع أحمد الخطيب</p>
-      </div>
-    </div>
+  <header class="site-header wow animate__animated animate__fadeInDown" role="banner">
+    <h1>تعلم بايثون بالعربية</h1>
+    <p>شاهد السلسلة الكاملة من الدروس المجانية مع أحمد الخطيب</p>
   </header>
 
-  <main class="container">
+  <main class="container" role="main">
 
-    <!-- Signup -->
-    <section class="signup-box wow animate__animated animate__fadeInUp">
+    <!-- Signup Section -->
+    <section class="signup-box wow animate__animated animate__fadeInUp" aria-label="اشتراك البريد الإلكتروني">
       <h2>📩 اشترك لتصلك الموارد المجانية</h2>
       <p>احصل على دروس جديدة، نصائح إضافية، وتحديثات الكتاب عبر البريد الإلكتروني.</p>
-      <form action="https://your-mail-service.com/subscribe" method="POST">
-        <input type="email" name="email" placeholder="بريدك الإلكتروني" required />
+      <form action="https://your-mail-service.com/subscribe" method="POST" aria-describedby="email-desc" novalidate>
+        <input
+          type="email"
+          name="email"
+          placeholder="بريدك الإلكتروني"
+          required
+          aria-required="true"
+          aria-describedby="email-desc"
+          autocomplete="email"
+        />
         <button type="submit">اشترك الآن</button>
       </form>
+      <p id="email-desc" style="font-size: 0.85rem; color: #555; margin-top: 0.5rem;">
+        لن نشارك بريدك مع أي جهة أخرى.
+      </p>
     </section>
 
-    <!-- Episodes -->
-    <section>
-      <h2 class="wow animate__animated animate__fadeInUp" style="text-align:center;">🎥 حلقات الفيديو</h2>
-      <div id="episode-grid" class="episode-grid"></div>
-      <div id="pagination" class="pagination"></div>
+    <!-- Episodes Section -->
+    <section class="episodes" aria-label="حلقات فيديو تعلم بايثون">
+      <h2 class="wow animate__animated animate__fadeInUp">🎥 حلقات الفيديو</h2>
+      <div id="episode-grid" class="episode-grid" role="list"></div>
+      <nav id="pagination" class="pagination" aria-label="تنقل بين صفحات الحلقات"></nav>
     </section>
 
   </main>
 
-  <footer class="wow animate__animated animate__fadeIn">
-    &copy; 2025 أحمد الخطيب | <a href="/books">الكتب</a> | <a href="/contact">تواصل معنا</a>
+  <footer class="site-footer wow animate__animated animate__fadeIn" role="contentinfo">
+    &copy; 2025 أحمد الخطيب | <a href="/books" title="صفحة الكتب">الكتب</a> | <a href="/contact" title="صفحة التواصل">تواصل معنا</a>
   </footer>
 
   <!-- WOW.js -->
@@ -248,16 +363,17 @@
       grid.innerHTML = '';
 
       pageEpisodes.forEach(ep => {
-        const card = document.createElement('div');
-        card.className = 'episode-card wow animate__animated animate__fadeInUp';
-        card.innerHTML = `
-          <img src="https://img.youtube.com/vi/${ep.youtubeId}/hqdefault.jpg" alt="صورة مصغرة لـ ${ep.title}">
+        const article = document.createElement('article');
+        article.className = 'episode-card wow animate__animated animate__fadeInUp';
+        article.setAttribute('role', 'listitem');
+        article.innerHTML = `
+          <img src="https://img.youtube.com/vi/${ep.youtubeId}/hqdefault.jpg" alt="صورة مصغرة للحلقة: ${ep.title}">
           <div class="episode-card-content">
             <h3>${ep.title}</h3>
-            <a href="${ep.link}" target="_blank">▶️ شاهد الحلقة</a>
+            <a href="${ep.link}" target="_blank" rel="noopener" class="watch-link" aria-label="شاهد الحلقة: ${ep.title}">▶️ شاهد الحلقة</a>
           </div>
         `;
-        grid.appendChild(card);
+        grid.appendChild(article);
       });
 
       renderPagination(page);
@@ -273,6 +389,7 @@
         btn.textContent = i;
         if (i === currentPage) btn.classList.add('active');
         btn.addEventListener('click', () => renderPage(i));
+        btn.setAttribute('aria-label', `الصفحة ${i}`);
         pagination.appendChild(btn);
       }
     }
