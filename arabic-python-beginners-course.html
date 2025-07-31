@@ -210,6 +210,10 @@
       color: #cc8200;
       outline: none;
     }
+    .icon-red {
+      color: red;
+      margin-left: 0.3em;
+    }
 
     /* Pagination */
     .pagination {
@@ -380,7 +384,9 @@
           <img src="https://img.youtube.com/vi/${ep.youtubeId}/hqdefault.jpg" alt="صورة مصغرة للحلقة: ${ep.title}">
           <div class="episode-card-content">
             <h3>${ep.title}</h3>
-            <a href="${ep.link}" target="_blank" rel="noopener" class="watch-link" aria-label="شاهد الحلقة: ${ep.title}">▶️ شاهد الحلقة</a>
+            <a href="${ep.link}" target="_blank" rel="noopener" class="watch-link" aria-label="شاهد الحلقة: ${ep.title}">
+              <span class="icon-red">▶️</span> شاهد الحلقة
+            </a>
           </div>
         `;
         grid.appendChild(article);
