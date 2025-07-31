@@ -562,24 +562,28 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   line-height: 1.8;
 }
 
-#course .size {
+/* Icon styling */
+#course .size,
+#course .course-feature i {
   color: #f3ba08;
-  font-size: 45px;
+  font-size: 2.5rem;
   margin-bottom: 15px;
 }
 
+/* Box title */
 #course h3 {
   font-size: 1.2rem;
   color: #333;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  min-height: 3.2em; /* Ensure consistent height for all h3s */
+  min-height: 3.2em; /* equalize h3 height */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
+/* Paragraph */
 #course span {
   font-size: 1rem;
   color: #666;
@@ -590,7 +594,9 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   flex-grow: 1;
 }
 
+/* Feature card */
 #course .course-feature {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -601,27 +607,22 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   border-radius: 12px;
   margin-bottom: 20px;
   min-height: 100%;
+  width: 100%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
-  width: 100%;
 }
 
 #course .course-feature:hover {
   transform: translateY(-5px);
 }
 
-#course .course-feature i {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  color: #f3ba08;
-}
-
-/* Force all columns to equal height */
+/* Force columns to stretch equal height */
 #course .row > div {
   display: flex;
+  flex-direction: column;
 }
 
-/* Responsive spacing adjustments */
+/* Responsive tweaks */
 @media (max-width: 767px) {
   #course h3 {
     font-size: 1.1rem;
@@ -630,6 +631,10 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 
   #course .course-feature {
     margin-bottom: 25px;
+  }
+
+  #course .row > div {
+    margin-bottom: 20px;
   }
 }
 
