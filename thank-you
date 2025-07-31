@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>شكراً لاشتراكك!</title>
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      direction: rtl;
+      text-align: center;
+    }
+    .thank-you-box {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      max-width: 500px;
+      width: 100%;
+    }
+    .thank-you-box h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #16a34a;
+    }
+    .thank-you-box p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    .thank-you-box a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #ffa100;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    .thank-you-box a:hover {
+      background-color: #cc8200;
+    }
+  </style>
+</head>
+<body>
+  <div class="thank-you-box">
+    <h1>🎉 شكراً لاشتراكك!</h1>
+    <p>تم استلام بريدك الإلكتروني بنجاح. سنقوم بإرسال الموارد التعليمية الجديدة إليك قريباً.</p>
+    <a href="https://ahmad-khatib.com/arabic-python-beginners-course">⬅️ العودة إلى صفحة الدورة</a>
+  </div>
+</body>
+</html>
