@@ -7,10 +7,9 @@
   <meta name="robots" content="index, follow" />
   <title>تعلم بايثون بالعربية – سلسلة فيديوهات تعليمية | أحمد الخطيب</title>
 
-  <!-- Animate.css & WOW.js -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
   <style>
-    /* Reset & base */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -32,94 +31,96 @@
       text-decoration: underline;
     }
 
-    /* Header with background and parallax */
+    /* Parallax Header */
     header.site-header {
       position: relative;
-      height: 100vh; /* full viewport height */
-      background-image: url('assets/img/social-cover.webp');
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      background-attachment: fixed; /* parallax effect */
-      color: white;
-      padding: 6rem 1rem 4rem;
+      height: 100vh;
+      overflow: hidden;
       text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      color: white;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
-    header.site-header::after {
+
+    .rd-parallax-layer {
+      position: absolute;
+      width: 100%;
+      height: 120%;
+      top: 0;
+      left: 0;
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+      padding: 1rem;
+      max-width: 800px;
+    }
+
+    .site-header::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(30, 41, 59, 0.7);
-      z-index: 0;
-    }
-    header.site-header > * {
-      position: relative;
+      background: rgba(30, 41, 59, 0.6);
       z-index: 1;
     }
-    header.site-header h1 {
+
+    .header-content h1 {
       font-size: 3rem;
-      margin: 0;
       font-weight: 700;
-      line-height: 1.1;
-      max-width: 900px;
-    }
-    header.site-header p {
-      font-size: 1.3rem;
-      margin-top: 1rem;
-      max-width: 700px;
+      margin: 0;
     }
 
-    /* Container */
+    .header-content p {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+    }
+
     main.container {
       max-width: 960px;
       margin: 2rem auto 4rem;
       padding: 0 1rem;
     }
 
-    /* Signup Section */
     section.signup-box {
       background: #f1f5f9;
       padding: 1.8rem 1.2rem;
       border-radius: 8px;
       text-align: center;
       margin-bottom: 2rem;
-      direction: rtl;
       box-shadow: 0 2px 6px rgb(0 0 0 / 0.05);
     }
+
     section.signup-box h2 {
-      margin: 0 0 0.5rem;
-      font-weight: 700;
       font-size: 1.6rem;
-      color: #111827;
+      margin-bottom: 0.5rem;
     }
+
     section.signup-box p {
-      margin: 0 0 1rem;
+      margin-bottom: 1rem;
       color: #4b5563;
     }
+
     section.signup-box form {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 0.5rem;
     }
+
     section.signup-box input[type="email"] {
       padding: 0.65rem;
       width: 260px;
-      max-width: 100%;
       border: 1px solid #ccc;
       border-radius: 4px;
-      text-align: right;
       font-size: 1rem;
       flex-grow: 1;
     }
+
     section.signup-box button {
       padding: 0.65rem 1.3rem;
       background: #2563eb;
@@ -129,83 +130,65 @@
       font-weight: 600;
       font-size: 1rem;
       cursor: pointer;
-      transition: background-color 0.3s ease;
     }
+
     section.signup-box button:hover,
     section.signup-box button:focus {
       background-color: #1e40af;
       outline: none;
     }
 
-    /* Episodes grid */
-    section.episodes {
-      margin-top: 2rem;
-    }
     section.episodes h2 {
       text-align: center;
       font-size: 1.8rem;
       margin-bottom: 1rem;
-      color: #1e293b;
-      font-weight: 700;
     }
+
     .episode-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
     }
+
     article.episode-card {
       background: white;
       border: 1px solid #e2e8f0;
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
-      transition: transform 0.2s ease;
-      direction: rtl;
+      display: flex;
+      flex-direction: column;
+    }
+
+    article.episode-card img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+
+    .episode-card-content {
+      padding: 1rem;
       display: flex;
       flex-direction: column;
       height: 100%;
     }
-    article.episode-card:hover {
-      transform: translateY(-5px);
-    }
-    article.episode-card img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      aspect-ratio: 16/9;
-      display: block;
-    }
-    .episode-card-content {
-      padding: 1rem;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+
     .episode-card h3 {
       font-size: 1.1rem;
       margin: 0 0 0.5rem;
-      color: #1e293b;
-      font-weight: 700;
     }
+
     .episode-card a.watch-link {
       color: #2563eb;
       font-weight: 600;
       margin-top: auto;
-      align-self: flex-start;
-      transition: color 0.3s ease;
-    }
-    .episode-card a.watch-link:hover,
-    .episode-card a.watch-link:focus {
-      color: #1e40af;
-      outline: none;
     }
 
-    /* Pagination */
     .pagination {
       text-align: center;
       margin-top: 2.5rem;
     }
+
     .pagination button {
       background: #2563eb;
       color: white;
@@ -214,57 +197,27 @@
       padding: 0.55rem 1.1rem;
       border-radius: 4px;
       cursor: pointer;
-      font-size: 1rem;
-      transition: background-color 0.3s ease;
-    }
-    .pagination button.active {
-      background-color: #1e40af;
-    }
-    .pagination button:hover,
-    .pagination button:focus {
-      background-color: #1e40af;
-      outline: none;
     }
 
-    /* Footer */
     footer.site-footer {
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.9rem;
       color: #777;
-      direction: rtl;
       border-top: 1px solid #e2e8f0;
     }
-    footer.site-footer a {
-      color: #2563eb;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    footer.site-footer a:hover,
-    footer.site-footer a:focus {
-      text-decoration: underline;
-      outline: none;
-    }
 
-    /* Responsive */
     @media (max-width: 600px) {
-      header.site-header {
-        padding: 3rem 1rem 2rem;
-      }
-      header.site-header h1 {
+      .header-content h1 {
         font-size: 2rem;
       }
-      header.site-header p {
+      .header-content p {
         font-size: 1rem;
-        max-width: 95vw;
-      }
-      main.container {
-        margin: 1rem auto 3rem;
       }
     }
   </style>
 
-  <!-- JSON-LD Structured Data for VideoSeries -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -276,129 +229,87 @@
     "publisher": {
       "@type": "Person",
       "name": "أحمد الخطيب"
-    },
-    "hasPart": [
-      {
-        "@type": "VideoObject",
-        "name": "الحلقة 1: دالة print()",
-        "url": "https://www.ahmad-khatib.com/python-series/episode-1.html",
-        "thumbnailUrl": "https://img.youtube.com/vi/a1b2c3d4/hqdefault.jpg"
-      }
-      /* Add other episodes as objects here if desired */
-    ]
+    }
   }
   </script>
 </head>
 <body>
 
-  <header class="site-header wow animate__animated animate__fadeInDown" role="banner">
-    <h1>تعلم بايثون بالعربية</h1>
-    <p>شاهد السلسلة الكاملة من الدروس المجانية مع أحمد الخطيب</p>
+  <header class="site-header rd-parallax">
+    <div class="rd-parallax-layer" data-type="media" data-speed="0.4" data-url="assets/img/social-cover.webp"></div>
+    <div class="header-content">
+      <h1>تعلم بايثون بالعربية</h1>
+      <p>شاهد السلسلة الكاملة من الدروس المجانية مع أحمد الخطيب</p>
+    </div>
   </header>
 
-  <main class="container" role="main">
-
-    <!-- Signup Section -->
-    <section class="signup-box wow animate__animated animate__fadeInUp" aria-label="اشتراك البريد الإلكتروني">
+  <main class="container">
+    <section class="signup-box">
       <h2>📩 اشترك لتصلك الموارد المجانية</h2>
       <p>احصل على دروس جديدة، نصائح إضافية، وتحديثات الكتاب عبر البريد الإلكتروني.</p>
-      <form action="https://your-mail-service.com/subscribe" method="POST" aria-describedby="email-desc" novalidate>
-        <input
-          type="email"
-          name="email"
-          placeholder="بريدك الإلكتروني"
-          required
-          aria-required="true"
-          aria-describedby="email-desc"
-          autocomplete="email"
-        />
+      <form action="https://your-mail-service.com/subscribe" method="POST" novalidate>
+        <input type="email" name="email" placeholder="بريدك الإلكتروني" required />
         <button type="submit">اشترك الآن</button>
       </form>
-      <p id="email-desc" style="font-size: 0.85rem; color: #555; margin-top: 0.5rem;">
-        لن نشارك بريدك مع أي جهة أخرى.
-      </p>
     </section>
 
-    <!-- Episodes Section -->
-    <section class="episodes" aria-label="حلقات فيديو تعلم بايثون">
-      <h2 class="wow animate__animated animate__fadeInUp">🎥 حلقات الفيديو</h2>
+    <section class="episodes">
+      <h2>🎥 حلقات الفيديو</h2>
       <div id="episode-grid" class="episode-grid" role="list"></div>
-      <nav id="pagination" class="pagination" aria-label="تنقل بين صفحات الحلقات"></nav>
+      <nav id="pagination" class="pagination" aria-label="تنقل بين الصفحات"></nav>
     </section>
-
   </main>
 
-  <footer class="site-footer wow animate__animated animate__fadeIn" role="contentinfo">
-    &copy; 2025 أحمد الخطيب | <a href="/books" title="صفحة الكتب">الكتب</a> | <a href="/contact" title="صفحة التواصل">تواصل معنا</a>
+  <footer class="site-footer">
+    &copy; 2025 أحمد الخطيب | <a href="/books">الكتب</a> | <a href="/contact">تواصل معنا</a>
   </footer>
 
-  <!-- WOW.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-  <script> new WOW().init(); </script>
+  <!-- JS Libraries (Already Included in Your Setup) -->
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/jquery.rd-parallax.js"></script>
+  <script>
+    $(document).ready(function () {
+      if ($().RDParallax) {
+        $('.rd-parallax').RDParallax();
+      }
+    });
+  </script>
 
-  <!-- Pagination + YouTube thumbnails -->
+  <!-- Episodes Rendering -->
   <script>
     const episodes = [
       { title: "الحلقة 1: دالة print()", youtubeId: "a1b2c3d4", link: "/python-series/episode-1.html" },
-      { title: "الحلقة 2: المتغيرات", youtubeId: "b2c3d4e5", link: "/python-series/episode-2.html" },
-      { title: "الحلقة 3: الجمل الشرطية if/else", youtubeId: "c3d4e5f6", link: "/python-series/episode-3.html" },
-      { title: "الحلقة 4: الحلقات التكرارية", youtubeId: "d4e5f6g7", link: "/python-series/episode-4.html" },
-      { title: "الحلقة 5: الدوال", youtubeId: "e5f6g7h8", link: "/python-series/episode-5.html" },
-      { title: "الحلقة 6: القوائم", youtubeId: "f6g7h8i9", link: "/python-series/episode-6.html" },
-      { title: "الحلقة 7: القواميس", youtubeId: "g7h8i9j0", link: "/python-series/episode-7.html" },
-      { title: "الحلقة 8: الحلقات المتقدمة", youtubeId: "h8i9j0k1", link: "/python-series/episode-8.html" },
-      { title: "الحلقة 9: الإدخال والإخراج", youtubeId: "i9j0k1l2", link: "/python-series/episode-9.html" },
-      { title: "الحلقة 10: التعامل مع الملفات", youtubeId: "j0k1l2m3", link: "/python-series/episode-10.html" },
-      { title: "الحلقة 11: الأخطاء والاستثناءات", youtubeId: "k1l2m3n4", link: "/python-series/episode-11.html" },
-      { title: "الحلقة 12: الوحدات البرمجية", youtubeId: "l2m3n4o5", link: "/python-series/episode-12.html" },
-      { title: "الحلقة 13: الأصناف", youtubeId: "m3n4o5p6", link: "/python-series/episode-13.html" },
-      { title: "الحلقة 14: البرمجة الكائنية", youtubeId: "n4o5p6q7", link: "/python-series/episode-14.html" },
-      { title: "الحلقة 15: المشروع النهائي", youtubeId: "o5p6q7r8", link: "/python-series/episode-15.html" },
+      { title: "الحلقة 2: المتغيرات", youtubeId: "b2c3d4e5", link: "/python-series/episode-2.html" }
     ];
 
     const episodesPerPage = 10;
-    const totalPages = Math.ceil(episodes.length / episodesPerPage);
-
     function renderPage(page) {
+      const grid = document.getElementById('episode-grid');
+      const pagination = document.getElementById('pagination');
+      grid.innerHTML = '';
+      pagination.innerHTML = '';
       const start = (page - 1) * episodesPerPage;
       const end = start + episodesPerPage;
-      const pageEpisodes = episodes.slice(start, end);
-
-      const grid = document.getElementById('episode-grid');
-      grid.innerHTML = '';
-
-      pageEpisodes.forEach(ep => {
-        const article = document.createElement('article');
-        article.className = 'episode-card wow animate__animated animate__fadeInUp';
-        article.setAttribute('role', 'listitem');
-        article.innerHTML = `
-          <img src="https://img.youtube.com/vi/${ep.youtubeId}/hqdefault.jpg" alt="صورة مصغرة للحلقة: ${ep.title}">
+      episodes.slice(start, end).forEach(ep => {
+        const card = document.createElement('article');
+        card.className = 'episode-card';
+        card.innerHTML = `
+          <img src="https://img.youtube.com/vi/${ep.youtubeId}/hqdefault.jpg" alt="${ep.title}">
           <div class="episode-card-content">
             <h3>${ep.title}</h3>
-            <a href="${ep.link}" target="_blank" rel="noopener" class="watch-link" aria-label="شاهد الحلقة: ${ep.title}">▶️ شاهد الحلقة</a>
-          </div>
-        `;
-        grid.appendChild(article);
+            <a class="watch-link" href="${ep.link}" target="_blank" rel="noopener">▶️ شاهد الحلقة</a>
+          </div>`;
+        grid.appendChild(card);
       });
-
-      renderPagination(page);
-      new WOW().init();
-    }
-
-    function renderPagination(currentPage) {
-      const pagination = document.getElementById('pagination');
-      pagination.innerHTML = '';
-
+      const totalPages = Math.ceil(episodes.length / episodesPerPage);
       for (let i = 1; i <= totalPages; i++) {
         const btn = document.createElement('button');
         btn.textContent = i;
-        if (i === currentPage) btn.classList.add('active');
-        btn.addEventListener('click', () => renderPage(i));
-        btn.setAttribute('aria-label', `الصفحة ${i}`);
+        if (i === page) btn.classList.add('active');
+        btn.onclick = () => renderPage(i);
         pagination.appendChild(btn);
       }
     }
-
     renderPage(1);
   </script>
 
