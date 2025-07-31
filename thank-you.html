@@ -3,58 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>شكراً لاشتراكك!</title>
+  <title>تم الاشتراك بنجاح</title>
   <style>
     body {
-      font-family: 'Tajawal', sans-serif;
-      background-color: #f9fafb;
-      color: #1f2937;
+      font-family: 'Tajawal', 'Segoe UI', Tahoma, sans-serif;
+      background-color: #f5f5f5;
       margin: 0;
-      padding: 2rem;
+      padding: 0;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      color: #1f2937;
       direction: rtl;
-      text-align: center;
     }
-    .thank-you-box {
-      background: white;
-      padding: 2.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    .thank-you-container {
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 3rem 2rem;
       max-width: 500px;
       width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
     }
-    .thank-you-box h1 {
+    .thank-you-container h1 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
-      color: #16a34a;
+      color: #0f172a;
     }
-    .thank-you-box p {
+    .thank-you-container p {
       font-size: 1.1rem;
       margin-bottom: 2rem;
+      color: #374151;
+      line-height: 1.6;
     }
-    .thank-you-box a {
+    .thank-you-container a.button {
       display: inline-block;
-      padding: 0.75rem 1.5rem;
       background-color: #ffa100;
-      color: white;
-      text-decoration: none;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
       border-radius: 6px;
+      text-decoration: none;
       font-weight: 600;
+      font-size: 1rem;
       transition: background-color 0.3s ease;
     }
-    .thank-you-box a:hover {
+    .thank-you-container a.button:hover {
       background-color: #cc8200;
     }
   </style>
 </head>
 <body>
-  <div class="thank-you-box">
-    <h1>🎉 شكراً لاشتراكك!</h1>
-    <p>تم استلام بريدك الإلكتروني بنجاح. سنقوم بإرسال الموارد التعليمية الجديدة إليك قريباً.</p>
-    <a href="https://ahmad-khatib.com/arabic-python-beginners-course">⬅️ العودة إلى صفحة الدورة</a>
+  <div class="thank-you-container">
+    <h1>تم الاشتراك بنجاح</h1>
+    <p>شكرًا لانضمامك إلى دورة تعلم بايثون. ستصلك الموارد التعليمية والتمارين المفيدة عبر بريدك الإلكتروني قريبًا.</p>
+    <a class="button" href="https://ahmad-khatib.com/arabic-python-beginners-course">العودة إلى صفحة الدورة</a>
   </div>
 </body>
 </html>
