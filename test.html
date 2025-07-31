@@ -7,16 +7,13 @@
   <meta name="robots" content="index, follow" />
   <title>تعلم بايثون بالعربية – سلسلة فيديوهات تعليمية | أحمد الخطيب</title>
 
-  <!-- Animate.css -->
+  <!-- Animate.css & WOW.js -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
-  <!-- أساسي: بوتستراب -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-
   <style>
     /* Reset & base */
-    *, *::before, *::after { box-sizing: border-box; }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
@@ -35,10 +32,9 @@
       text-decoration: underline;
     }
 
-    /* Header with parallax background and sticky */
+    /* Header with background */
     header.site-header {
-      position: relative; /* ضروري */
-      background: url('assets/img/ahmad-al-khatib-2015-lebanon-protest.webp') no-repeat center center / cover;
+      background: url('/images/header-background.jpg') no-repeat center center/cover;
       color: white;
       padding: 6rem 1rem 4rem;
       text-align: center;
@@ -46,17 +42,12 @@
       top: 0;
       z-index: 1000;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       min-height: 300px;
-      /* تفعيل overflow:hidden لبارالاكس */
-      overflow: hidden;
     }
-
-    /* إضافة طبقة شفافة للظل فوق الصورة */
     header.site-header::after {
       content: "";
       position: absolute;
@@ -64,13 +55,10 @@
       background: rgba(30, 41, 59, 0.7);
       z-index: 0;
     }
-
-    /* محتويات الهيدر فوق الطبقة الشفافة */
     header.site-header > * {
       position: relative;
       z-index: 1;
     }
-
     header.site-header h1 {
       font-size: 3rem;
       margin: 0;
@@ -78,21 +66,20 @@
       line-height: 1.1;
       max-width: 900px;
     }
-
     header.site-header p {
       font-size: 1.3rem;
       margin-top: 1rem;
       max-width: 700px;
     }
 
-    /* الحاوية الرئيسية */
+    /* Container */
     main.container {
       max-width: 960px;
       margin: 2rem auto 4rem;
       padding: 0 1rem;
     }
 
-    /* صندوق الاشتراك */
+    /* Signup Section */
     section.signup-box {
       background: #f1f5f9;
       padding: 1.8rem 1.2rem;
@@ -145,7 +132,7 @@
       outline: none;
     }
 
-    /* شبكة الحلقات */
+    /* Episodes grid */
     section.episodes {
       margin-top: 2rem;
     }
@@ -180,7 +167,7 @@
       width: 100%;
       height: auto;
       object-fit: cover;
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 16/9;
       display: block;
     }
     .episode-card-content {
@@ -271,10 +258,35 @@
       }
     }
   </style>
+
+  <!-- JSON-LD Structured Data for VideoSeries -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoSeries",
+    "name": "تعلم بايثون بالعربية – سلسلة فيديوهات تعليمية",
+    "description": "سلسلة دروس فيديو مجانية لتعلم لغة بايثون بالعربية مع أحمد الخطيب.",
+    "url": "https://www.ahmad-khatib.com/python-series",
+    "thumbnailUrl": "https://www.ahmad-khatib.com/images/header-background.jpg",
+    "publisher": {
+      "@type": "Person",
+      "name": "أحمد الخطيب"
+    },
+    "hasPart": [
+      {
+        "@type": "VideoObject",
+        "name": "الحلقة 1: دالة print()",
+        "url": "https://www.ahmad-khatib.com/python-series/episode-1.html",
+        "thumbnailUrl": "https://img.youtube.com/vi/a1b2c3d4/hqdefault.jpg"
+      }
+      /* Add other episodes as objects here if desired */
+    ]
+  }
+  </script>
 </head>
 <body>
 
-  <header class="site-header wow animate__animated animate__fadeInDown" role="banner" data-parallax="scroll" data-image-src="assets/img/ahmad-al-khatib-2015-lebanon-protest.webp">
+  <header class="site-header wow animate__animated animate__fadeInDown" role="banner">
     <h1>تعلم بايثون بالعربية</h1>
     <p>شاهد السلسلة الكاملة من الدروس المجانية مع أحمد الخطيب</p>
   </header>
@@ -315,23 +327,12 @@
     &copy; 2025 أحمد الخطيب | <a href="/books" title="صفحة الكتب">الكتب</a> | <a href="/contact" title="صفحة التواصل">تواصل معنا</a>
   </footer>
 
-  <!-- JS Libs -->
-  <script src="assets/js/jquery.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.easing.min.js"></script>
-  <script src="assets/js/jquery.fittext.js"></script>
-  <script src="assets/js/wow.min.js"></script>
-  <script src="assets/owl-carousel/owl.carousel.js"></script>
-  <script async src="assets/js/baguetteBox.js"></script>
-  <script async src="assets/js/plugins.js"></script>
-  <script src="assets/js/jquery.scrollUp.js"></script>
-  <script src="assets/js/jquery.rd-parallax.js"></script>
-  <script src="assets/js/creative.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <!-- WOW.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script> new WOW().init(); </script>
 
-  <!-- Render Episodes + Init WOW & Parallax -->
+  <!-- Pagination + YouTube thumbnails -->
   <script>
-    // حلقات الفيديو
     const episodes = [
       { title: "الحلقة 1: دالة print()", youtubeId: "a1b2c3d4", link: "/python-series/episode-1.html" },
       { title: "الحلقة 2: المتغيرات", youtubeId: "b2c3d4e5", link: "/python-series/episode-2.html" },
@@ -376,7 +377,7 @@
       });
 
       renderPagination(page);
-      new WOW().init(); // إعادة تفعيل الحركات للعنصر الجديد
+      new WOW().init();
     }
 
     function renderPagination(currentPage) {
@@ -387,26 +388,13 @@
         const btn = document.createElement('button');
         btn.textContent = i;
         if (i === currentPage) btn.classList.add('active');
-        btn.setAttribute('aria-label', `الصفحة ${i}`);
         btn.addEventListener('click', () => renderPage(i));
+        btn.setAttribute('aria-label', `الصفحة ${i}`);
         pagination.appendChild(btn);
       }
     }
 
-    $(document).ready(function () {
-      new WOW().init();
-
-      if ($.fn.RDParallax) {
-        // تفعيل البارالاكس على الهيدر مع الصورة الخلفية
-        $('.site-header').RDParallax({
-          // خيارات إضافية لو أردت
-          // speed: 0.3,
-          // direction: 'vertical',
-        });
-      }
-
-      renderPage(1);
-    });
+    renderPage(1);
   </script>
 
 </body>
