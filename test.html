@@ -32,10 +32,15 @@
       text-decoration: underline;
     }
 
-    /* Header with background */
+    /* Header with background and parallax */
     header.site-header {
-      position: relative; /* add this */
-      background: url('assets/img/social-cover.webp') no-repeat center center / cover;
+      position: relative;
+      height: 100vh; /* full viewport height */
+      background-image: url('assets/img/social-cover.webp');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment: fixed; /* parallax effect */
       color: white;
       padding: 6rem 1rem 4rem;
       text-align: center;
@@ -47,7 +52,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      min-height: 300px;
     }
     header.site-header::after {
       content: "";
@@ -245,7 +249,7 @@
     /* Responsive */
     @media (max-width: 600px) {
       header.site-header {
-        padding: 4rem 1rem 3rem;
+        padding: 3rem 1rem 2rem;
       }
       header.site-header h1 {
         font-size: 2rem;
