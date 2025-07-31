@@ -1,31 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Learn Python in Arabic with Ahmad Al-Khatib. Free step-by-step video lessons and book download.">
-  <title>Learn Python in Arabic – Video Series</title>
+  <meta name="description" content="تعلم بايثون بالعربية مع أحمد الخطيب. دروس فيديو مجانية خطوة بخطوة وتحميل الكتاب." />
+  <title>تعلم بايثون بالعربية – سلسلة فيديوهات</title>
 
   <!-- Animate.css & WOW.js -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
       background: #fefefe;
       color: #333;
+      direction: rtl;
+      text-align: right;
     }
 
     header {
       background-color: #1e293b;
       color: #fff;
       padding: 1.5rem 1rem;
-      text-align: center;
       position: sticky;
       top: 0;
       z-index: 1000;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      flex-direction: row-reverse; /* Logo left for rtl */
+    }
+
+    .logo {
+      height: 60px;
+      width: auto;
     }
 
     header h1 {
@@ -35,7 +50,7 @@
 
     header p {
       font-size: 1.2rem;
-      margin-top: 1rem;
+      margin-top: 0.5rem;
     }
 
     .container {
@@ -50,6 +65,7 @@
       border-radius: 8px;
       text-align: center;
       margin-bottom: 2rem;
+      direction: rtl;
     }
 
     .signup-box input[type="email"] {
@@ -58,7 +74,9 @@
       max-width: 300px;
       border: 1px solid #ccc;
       border-radius: 4px;
-      margin-right: 0.5rem;
+      margin-left: 0.5rem; /* swapped margin side for RTL */
+      margin-right: 0;
+      text-align: right;
     }
 
     .signup-box button {
@@ -83,6 +101,7 @@
       overflow: hidden;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
       transition: transform 0.2s ease;
+      direction: rtl;
     }
 
     .episode-card:hover {
@@ -96,6 +115,7 @@
 
     .episode-card-content {
       padding: 1rem;
+      text-align: right;
     }
 
     .episode-card h3 {
@@ -137,6 +157,7 @@
       padding: 2rem 1rem;
       font-size: 0.9rem;
       color: #777;
+      direction: rtl;
     }
 
     @media (max-width: 600px) {
@@ -157,25 +178,30 @@
 <body>
 
   <header class="wow animate__animated animate__fadeInDown">
-    <h1>Learn Python in Arabic</h1>
-    <p>Watch the complete free video series by Ahmad Al-Khatib</p>
+    <div class="header-content">
+      <img src="assets/img/social-cover.webp" alt="شعار أحمد الخطيب" class="logo" />
+      <div>
+        <h1>تعلم بايثون بالعربية</h1>
+        <p>شاهد السلسلة الكاملة من الدروس المجانية مع أحمد الخطيب</p>
+      </div>
+    </div>
   </header>
 
   <main class="container">
 
     <!-- Signup -->
     <section class="signup-box wow animate__animated animate__fadeInUp">
-      <h2>📩 Subscribe for Free Resources</h2>
-      <p>Get new lessons, bonus tips, and book updates by email.</p>
+      <h2>📩 اشترك لتصلك الموارد المجانية</h2>
+      <p>احصل على دروس جديدة، نصائح إضافية، وتحديثات الكتاب عبر البريد الإلكتروني.</p>
       <form action="https://your-mail-service.com/subscribe" method="POST">
-        <input type="email" name="email" placeholder="Your email address" required />
-        <button type="submit">Subscribe</button>
+        <input type="email" name="email" placeholder="بريدك الإلكتروني" required />
+        <button type="submit">اشترك الآن</button>
       </form>
     </section>
 
     <!-- Episodes -->
     <section>
-      <h2 class="wow animate__animated animate__fadeInUp" style="text-align:center;">🎥 Video Episodes</h2>
+      <h2 class="wow animate__animated animate__fadeInUp" style="text-align:center;">🎥 حلقات الفيديو</h2>
       <div id="episode-grid" class="episode-grid"></div>
       <div id="pagination" class="pagination"></div>
     </section>
@@ -183,7 +209,7 @@
   </main>
 
   <footer class="wow animate__animated animate__fadeIn">
-    &copy; 2025 Ahmad Al-Khatib | <a href="/books">Books</a> | <a href="/contact">Contact</a>
+    &copy; 2025 أحمد الخطيب | <a href="/books">الكتب</a> | <a href="/contact">تواصل معنا</a>
   </footer>
 
   <!-- WOW.js -->
@@ -193,21 +219,21 @@
   <!-- Pagination + YouTube thumbnails -->
   <script>
     const episodes = [
-      { title: "Episode 1: print() Function", youtubeId: "a1b2c3d4", link: "/python-series/episode-1.html" },
-      { title: "Episode 2: Variables", youtubeId: "b2c3d4e5", link: "/python-series/episode-2.html" },
-      { title: "Episode 3: If/Else", youtubeId: "c3d4e5f6", link: "/python-series/episode-3.html" },
-      { title: "Episode 4: Loops", youtubeId: "d4e5f6g7", link: "/python-series/episode-4.html" },
-      { title: "Episode 5: Functions", youtubeId: "e5f6g7h8", link: "/python-series/episode-5.html" },
-      { title: "Episode 6: Lists", youtubeId: "f6g7h8i9", link: "/python-series/episode-6.html" },
-      { title: "Episode 7: Dictionaries", youtubeId: "g7h8i9j0", link: "/python-series/episode-7.html" },
-      { title: "Episode 8: Loops Advanced", youtubeId: "h8i9j0k1", link: "/python-series/episode-8.html" },
-      { title: "Episode 9: Input/Output", youtubeId: "i9j0k1l2", link: "/python-series/episode-9.html" },
-      { title: "Episode 10: File Handling", youtubeId: "j0k1l2m3", link: "/python-series/episode-10.html" },
-      { title: "Episode 11: Errors & Exceptions", youtubeId: "k1l2m3n4", link: "/python-series/episode-11.html" },
-      { title: "Episode 12: Modules", youtubeId: "l2m3n4o5", link: "/python-series/episode-12.html" },
-      { title: "Episode 13: Classes", youtubeId: "m3n4o5p6", link: "/python-series/episode-13.html" },
-      { title: "Episode 14: OOP", youtubeId: "n4o5p6q7", link: "/python-series/episode-14.html" },
-      { title: "Episode 15: Final Project", youtubeId: "o5p6q7r8", link: "/python-series/episode-15.html" },
+      { title: "الحلقة 1: دالة print()", youtubeId: "a1b2c3d4", link: "/python-series/episode-1.html" },
+      { title: "الحلقة 2: المتغيرات", youtubeId: "b2c3d4e5", link: "/python-series/episode-2.html" },
+      { title: "الحلقة 3: الجمل الشرطية if/else", youtubeId: "c3d4e5f6", link: "/python-series/episode-3.html" },
+      { title: "الحلقة 4: الحلقات التكرارية", youtubeId: "d4e5f6g7", link: "/python-series/episode-4.html" },
+      { title: "الحلقة 5: الدوال", youtubeId: "e5f6g7h8", link: "/python-series/episode-5.html" },
+      { title: "الحلقة 6: القوائم", youtubeId: "f6g7h8i9", link: "/python-series/episode-6.html" },
+      { title: "الحلقة 7: القواميس", youtubeId: "g7h8i9j0", link: "/python-series/episode-7.html" },
+      { title: "الحلقة 8: الحلقات المتقدمة", youtubeId: "h8i9j0k1", link: "/python-series/episode-8.html" },
+      { title: "الحلقة 9: الإدخال والإخراج", youtubeId: "i9j0k1l2", link: "/python-series/episode-9.html" },
+      { title: "الحلقة 10: التعامل مع الملفات", youtubeId: "j0k1l2m3", link: "/python-series/episode-10.html" },
+      { title: "الحلقة 11: الأخطاء والاستثناءات", youtubeId: "k1l2m3n4", link: "/python-series/episode-11.html" },
+      { title: "الحلقة 12: الوحدات البرمجية", youtubeId: "l2m3n4o5", link: "/python-series/episode-12.html" },
+      { title: "الحلقة 13: الأصناف", youtubeId: "m3n4o5p6", link: "/python-series/episode-13.html" },
+      { title: "الحلقة 14: البرمجة الكائنية", youtubeId: "n4o5p6q7", link: "/python-series/episode-14.html" },
+      { title: "الحلقة 15: المشروع النهائي", youtubeId: "o5p6q7r8", link: "/python-series/episode-15.html" },
     ];
 
     const episodesPerPage = 10;
@@ -225,10 +251,10 @@
         const card = document.createElement('div');
         card.className = 'episode-card wow animate__animated animate__fadeInUp';
         card.innerHTML = `
-          <img src="https://img.youtube.com/vi/${ep.youtubeId}/hqdefault.jpg" alt="${ep.title} thumbnail">
+          <img src="https://img.youtube.com/vi/${ep.youtubeId}/hqdefault.jpg" alt="صورة مصغرة لـ ${ep.title}">
           <div class="episode-card-content">
             <h3>${ep.title}</h3>
-            <a href="${ep.link}" target="_blank">▶️ Watch Episode</a>
+            <a href="${ep.link}" target="_blank">▶️ شاهد الحلقة</a>
           </div>
         `;
         grid.appendChild(card);
