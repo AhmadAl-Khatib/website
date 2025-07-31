@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -204,6 +205,9 @@
       margin-top: auto;
       align-self: flex-start;
       transition: color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3em;
     }
     .episode-card a.watch-link:hover,
     .episode-card a.watch-link:focus {
@@ -212,7 +216,9 @@
     }
     .icon-red {
       color: red;
-      margin-left: 0.3em;
+      font-weight: 700;
+      font-size: 1.1em;
+      line-height: 1;
     }
 
     /* Pagination */
@@ -392,7 +398,7 @@
           <div class="episode-card-content">
             <h3>${ep.title}</h3>
             <a href="${ep.link}" target="_blank" rel="noopener" class="watch-link" aria-label="شاهد الحلقة: ${ep.title}">
-              <span class="icon-red">▶️</span> شاهد الحلقة
+              <span class="icon-red">►</span> شاهد الحلقة
             </a>
           </div>
         `;
@@ -422,3 +428,4 @@
 
 </body>
 </html>
+```
