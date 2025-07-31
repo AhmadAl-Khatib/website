@@ -540,7 +540,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 /*----------- course ------------*/
 #course {
   background: #fff no-repeat scroll 0 0;
-  color: #000;
+  color: #333333;
   padding:50px 0 50px;
   text-align: center;
 }
