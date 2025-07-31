@@ -540,17 +540,49 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 /*----------- course ------------*/
 #course {
   background: #fff no-repeat scroll 0 0;
-  color: #333333;
-  padding:50px 0 50px;
+  color: #333;
+  padding: 50px 0;
   text-align: center;
 }
 #course .size {
   color: #f3ba08;
   font-size: 45px;
+  margin-bottom: 15px;
+}
+#course h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 #course span {
-  color: #ff8400;
-  font-size: 20px;
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  display: block;
+  max-width: 280px;
+  margin: 0 auto;
+}
+#course .course-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 15px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  min-height: 280px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+#course .course-feature:hover {
+  transform: translateY(-5px);
+}
+@media (min-width: 768px) {
+  #course .col-md-4 {
+    margin-bottom: 0;
+  }
 }
 /*----------- gallery ------------*/
 #Gallery {
