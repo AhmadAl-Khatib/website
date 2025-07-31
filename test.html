@@ -20,8 +20,12 @@
     header {
       background-color: #1e293b;
       color: #fff;
-      padding: 3rem 1rem;
+      padding: 1.5rem 1rem;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
     header h1 {
@@ -37,7 +41,7 @@
     .container {
       max-width: 960px;
       margin: 2rem auto;
-      padding: 0 1rem;
+      padding: 6rem 1rem 2rem;
     }
 
     .signup-box {
@@ -133,6 +137,20 @@
       padding: 2rem 1rem;
       font-size: 0.9rem;
       color: #777;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      .container {
+        padding-top: 7rem;
+      }
     }
   </style>
 </head>
