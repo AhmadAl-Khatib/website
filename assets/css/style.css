@@ -544,7 +544,6 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   padding: 50px 0;
   text-align: center;
   direction: rtl;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #course header h2 {
@@ -568,7 +567,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 #course .course-feature i {
   color: #f3ba08;
   font-size: 2.5rem;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 /* Layout fix: row and columns flexbox */
@@ -576,7 +575,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 5px;
 }
 
 #course .row > div {
@@ -590,8 +589,8 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 15px;
-  background-color: #f9f9f9;
+  padding: 15px 15px;
+  background-color: #f1f5f9;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
