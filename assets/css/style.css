@@ -615,7 +615,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   justify-content: space-between;
   align-items: center;
   padding: 15px 15px;
-  background-color: #f1f5f9;
+  background-color: #282828;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
@@ -635,6 +635,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   font-size: 1.4em;
   font-weight: 600;
   color: #333;
+  min-height: auto;
   margin-top: 10px;
   margin-bottom: 1.5rem;
   min-height: 2.2em;
@@ -648,7 +649,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 /* Descriptions */
 #course span {
   font-size: 16px;
-  color: #666;
+  color: #fff;
   line-height: 1.6;
   display: block;
   max-width: 280px;
@@ -674,8 +675,8 @@ html[lang="en"] #publications p:not(.book-description-ar) {
     min-height: auto;
   }
 
-  #course h3 {
-    min-height: auto;
+  #course h4 {
+  color: #fff;
   }
 }
 
@@ -1590,5 +1591,6 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
