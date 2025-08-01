@@ -556,6 +556,8 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 
 #course p {
   font-size: 16px;
+  text-align: justify;
+  text-align-last: center;
   color: #555;
   max-width: 700px;
   margin: 1rem auto 2rem;
