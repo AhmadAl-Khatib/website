@@ -539,8 +539,9 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 }
 /*----------- course ------------*/
 #course {
-  background: url("../img/arabic-python-course-for-beginners-ahmad-al-khatib.webp");
+  background: url("../img/arabic-python-course-for-beginners-ahmad-al-khatib.webp") no-repeat center center;
   color: #333;
+  background-size: cover;
   padding: 50px 0;
   text-align: center;
   direction: rtl;
@@ -1589,4 +1590,5 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
