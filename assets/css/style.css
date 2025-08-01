@@ -595,7 +595,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 #course .course-button:hover {
   background: transparent;
   color: #007b8c;
-  border: 2px solid orange;
+  border: 2px solid #007b8c;
 }
 #course .course-cta {
   text-align: center;
@@ -1573,6 +1573,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
