@@ -566,6 +566,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 #course .course-feature i {
   color: #e0b63c;
   font-size: 2.5rem;
+  margin-top: 10px;
   margin-bottom: 5px;
 }
 /* Layout fix: row and columns flexbox */
@@ -1577,6 +1578,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
