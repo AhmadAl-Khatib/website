@@ -611,7 +611,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   font-weight: 600;
   color: #333;
   margin-bottom: 0.5rem;
-  min-height: 3.2em;
+  min-height: 2.2em;
   display: flex;
   align-items: center;
   justify-content: center;
