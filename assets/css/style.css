@@ -584,6 +584,29 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   display: flex;
   flex-direction: column;
 }
+#course .course-button {
+  display: inline-block;
+  margin: 10px auto 20px;
+  padding: 8px 15px;
+  background: #007b8c;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+#course .course-button:hover {
+  background: transparent;
+  color: orange;
+  border: 2px solid orange;
+}
+
+#course .course-cta {
+  text-align: center;
+}
 
 #course .course-feature {
   flex: 1 1 auto;
