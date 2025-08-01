@@ -544,6 +544,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   padding: 50px 0;
   text-align: center;
   direction: rtl;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #course header h2 {
@@ -551,13 +552,14 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   font-weight: 700;
   color: #111;
   line-height: 1.5;
+  margin-bottom: 0.5rem;
 }
 
 #course header p {
   font-size: 1.1rem;
   color: #555;
   max-width: 700px;
-  margin: 1rem auto;
+  margin: 1rem auto 2rem;
   line-height: 1.8;
 }
 
@@ -569,10 +571,12 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   margin-bottom: 15px;
 }
 
-/* Layout fix: row and column */
+/* Layout fix: row and columns flexbox */
 #course .row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center; /* Center columns horizontally */
+  gap: 15px; /* spacing between cards */
 }
 
 #course .row > div {
@@ -594,10 +598,12 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   text-align: center;
   width: 100%;
   min-height: 100%;
+  box-sizing: border-box;
 }
 
 #course .course-feature:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(243, 186, 8, 0.3);
 }
 
 /* Headings inside cards */
@@ -606,10 +612,12 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   font-weight: 600;
   color: #333;
   margin-bottom: 0.5rem;
-  min-height: 3.2em;
+  min-height: 3.2em; /* Equal height for titles */
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  padding: 0 5px;
 }
 
 /* Descriptions */
@@ -620,22 +628,29 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   display: block;
   max-width: 280px;
   margin: 0 auto;
-  flex-grow: 1;
+  flex-grow: 1; /* Fill remaining vertical space */
 }
 
-/* Responsive tweaks */
-@media (max-width: 767px) {
-  #course h3 {
-    font-size: 1.1rem;
-    min-height: auto;
-  }
-
-  #course .course-feature {
-    margin-bottom: 20px;
-  }
-
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
   #course .row > div {
-    margin-bottom: 20px;
+    flex: 0 0 50%; /* 2 columns on tablets */
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #course .row > div {
+    flex: 0 0 100%; /* Full width on mobiles */
+    max-width: 100%;
+  }
+  
+  #course .course-feature {
+    min-height: auto; /* Let height adjust naturally */
+  }
+  
+  #course h3 {
+    min-height: auto;
   }
 }
 
