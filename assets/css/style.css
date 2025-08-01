@@ -564,7 +564,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 /* Icons */
 #course .size,
 #course .course-feature i {
-  color: #f3ba08;
+  color: #e0b63c;
   font-size: 2.5rem;
   margin-bottom: 5px;
 }
@@ -607,7 +607,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   justify-content: space-between;
   align-items: center;
   padding: 15px 15px;
-  background-color: #bfc2c5;
+  background-color: #0e2a30;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
@@ -1573,6 +1573,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
