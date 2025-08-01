@@ -575,7 +575,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 5px;
+  gap: 15px;
 }
 
 #course .row > div {
