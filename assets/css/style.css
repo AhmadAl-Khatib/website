@@ -540,7 +540,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 /*----------- course ------------*/
 #course {
   background: url("../img/arabic-python-course-for-beginners-ahmad-al-khatib.webp");
-  background-size: cover;
+  background-size: contain;
   color: #333;
   padding: 50px 0;
   text-align: center;
