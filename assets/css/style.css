@@ -613,7 +613,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   font-weight: 600;
   color: #333;
   margin-top: 10px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
   min-height: 2.2em;
   display: flex;
   align-items: center;
@@ -629,7 +629,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   line-height: 1.6;
   display: block;
   max-width: 280px;
-  margin: 0 auto;
+  margin: 10px auto;
   flex-grow: 1;
 }
 
