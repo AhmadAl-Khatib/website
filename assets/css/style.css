@@ -583,7 +583,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   display: inline-block;
   margin: 10px auto 20px;
   padding: 8px 15px;
-  background: #ffa100;
+  background: #e0b63c;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
@@ -620,7 +620,6 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(243, 186, 8, 0.3);
 }
-/* Headings inside cards */
 #course h3 {
   font-size: 1.4em;
   font-weight: 600;
@@ -635,10 +634,15 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   text-align: center;
   padding: 0 5px;
 }
+#course h4 {
+  font-size: 1.4em !important;
+  font-weight: 600 !important;
+  color: #fff !important;
+}
 /* Descriptions */
 #course span {
-  font-size: 16px;
-  color: #000;
+  font-size: 14px;
+  color: #fff;
   line-height: 1.6;
   display: block;
   max-width: 280px;
@@ -1573,6 +1577,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
