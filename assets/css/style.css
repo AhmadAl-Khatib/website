@@ -542,14 +542,14 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   background: url("../img/arabic-python-course-for-beginners-ahmad-al-khatib.webp") no-repeat center center;
   color: #333;
   background-size: cover;
-  padding: 50px 0;
+  padding: 50px 0 50px 0;
   text-align: center;
   direction: rtl;
 }
 #course h2 {
   font-size: 30px;
   font-weight: 700;
-  color: #111;
+  color: #333;
   line-height: 1.5;
   margin-bottom: 0.5rem;
 }
@@ -585,7 +585,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   margin: 10px auto 20px;
   padding: 8px 15px;
   background: #e0b63c;
-  color: #fff;
+  color: #333;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
@@ -608,7 +608,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   justify-content: space-between;
   align-items: center;
   padding: 15px 15px;
-  background-color: #194b56;
+  background-color: #435b6f;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
@@ -637,13 +637,12 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 }
 #course h4 {
   font-size: 1.4em !important;
-  font-weight: 600 !important;
-  color: #fff !important;
+  color: #333 !important;
 }
 /* Descriptions */
 #course span {
   font-size: 14px;
-  color: #fff;
+  color: #333;
   line-height: 1.6;
   display: block;
   max-width: 280px;
@@ -666,8 +665,6 @@ html[lang="en"] #publications p:not(.book-description-ar) {
     min-height: auto;
   }
 }
-
-
 /*----------- gallery ------------*/
 #Gallery {
     padding:50px 0 50px;
@@ -1578,6 +1575,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
