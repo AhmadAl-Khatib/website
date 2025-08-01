@@ -548,7 +548,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 }
 
 #course header h2 {
-  font-size: 2rem;
+  font-size: 30px;
   font-weight: 700;
   color: #111;
   line-height: 1.5;
@@ -556,7 +556,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 }
 
 #course header p {
-  font-size: 1.1rem;
+  font-size: 16px;
   color: #555;
   max-width: 700px;
   margin: 1rem auto 2rem;
@@ -575,8 +575,8 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 #course .row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center columns horizontally */
-  gap: 15px; /* spacing between cards */
+  justify-content: center;
+  gap: 15px;
 }
 
 #course .row > div {
@@ -608,11 +608,11 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 
 /* Headings inside cards */
 #course h3 {
-  font-size: 1.2rem;
+  font-size: 1.4em;
   font-weight: 600;
   color: #333;
   margin-bottom: 0.5rem;
-  min-height: 3.2em; /* Equal height for titles */
+  min-height: 3.2em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -622,37 +622,38 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 
 /* Descriptions */
 #course span {
-  font-size: 1rem;
+  font-size: 16px;
   color: #666;
   line-height: 1.6;
   display: block;
   max-width: 280px;
   margin: 0 auto;
-  flex-grow: 1; /* Fill remaining vertical space */
+  flex-grow: 1;
 }
 
 /* Responsive adjustments */
 @media (max-width: 991.98px) {
   #course .row > div {
-    flex: 0 0 50%; /* 2 columns on tablets */
+    flex: 0 0 50%;
     max-width: 50%;
   }
 }
 
 @media (max-width: 575.98px) {
   #course .row > div {
-    flex: 0 0 100%; /* Full width on mobiles */
+    flex: 0 0 100%;
     max-width: 100%;
   }
-  
+
   #course .course-feature {
-    min-height: auto; /* Let height adjust naturally */
+    min-height: auto;
   }
-  
+
   #course h3 {
     min-height: auto;
   }
 }
+
 
 /*----------- gallery ------------*/
 #Gallery {
