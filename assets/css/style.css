@@ -279,7 +279,7 @@ html[lang="ar"] #activities h3 {
     font-size: 25px !important;
 }
 .rd-parallax {
-    height: 100vh;
+    height: 100vh !important;
 }
 /*----------- publications ------------*/
 
@@ -1578,6 +1578,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
