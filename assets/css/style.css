@@ -230,17 +230,14 @@ html[lang="ar"] #person p {
     text-align: justify !important;
 }
 /*----------- activities ------------*/
-
 #activities {
     background: url("../img/ahmad-al-khatib-activities.webp") no-repeat scroll center bottom / cover;
     color: #fff;
     overflow: hidden;
     padding: 50px 0 50px;
     transition: all 0.35s ease 0s;
-    background-attachment: fixed;
     height: auto;
 }
-
 .t-box {
     background: #fff none repeat scroll 0 0;
     color: #000;
@@ -249,35 +246,28 @@ html[lang="ar"] #person p {
     text-align: center;
     width: 100%;
 }
-
 .timg > img {
     width: 100%;
 }
-
 .t-box .social-links {
     padding: 0px;
     margin: 20px 0 0 0px;
 }
-
 .t-box .social-links > li {
     display: inline;
     font-size: 25px;
     padding: 8px;
 }
-
 .t-box .social-links a {
     color: #ffa100;
 }
-
 .t-box .social-links a:hover {
     color: #333;
 }
-
 .timg {
     position: relative;
     transition: all 0.35s ease 0s;
 }
-
 .timg:hover::after {
     background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
     content: "";
@@ -287,12 +277,9 @@ html[lang="ar"] #person p {
     top: 0;
     width: 100%;
 }
-
 html[lang="ar"] #activities h3 {
     font-size: 25px !important;
 }
-
-/* This rule is necessary for the parallax effect to work correctly */
 .rd-parallax {
     height: 100vh;
 }
@@ -1593,5 +1580,6 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
