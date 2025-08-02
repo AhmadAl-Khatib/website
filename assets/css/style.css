@@ -232,10 +232,13 @@ html[lang="ar"] #person p {
 /*----------- activities ------------*/
 
 #activities {
+    background: url("../img/ahmad-al-khatib-activities.webp") no-repeat scroll center bottom / cover;
     color: #fff;
     overflow: hidden;
-    padding:50px 0 50px;
+    padding: 50px 0 50px;
     transition: all 0.35s ease 0s;
+    background-attachment: fixed;
+    height: auto;
 }
 
 .t-box {
@@ -289,7 +292,7 @@ html[lang="ar"] #activities h3 {
     font-size: 25px !important;
 }
 
-/* New CSS for Parallax */
+/* This rule is necessary for the parallax effect to work correctly */
 .rd-parallax {
     height: 100vh;
 }
@@ -1590,4 +1593,5 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
