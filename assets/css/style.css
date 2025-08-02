@@ -551,7 +551,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   font-weight: 700;
   color: #333;
   line-height: 1.5;
-  margin-bottom: 0.5rem;
+  margin-bottom: 30px;
 }
 #python-course p {
   font-size: 16px;
@@ -637,13 +637,13 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   padding: 0 5px;
 }
 #python-course h4 {
-  font-size: 10px !important;
+  font-size: 14px !important;
   color: #fff !important;
   font-weight: 600 !important;
 }
 /* Descriptions */
 #python-course span {
-  font-size: 10px;
+  font-size: 14px;
   color: #fff;
   line-height: 1.6;
   display: block;
@@ -1577,6 +1577,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
