@@ -565,7 +565,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 #python-course .size,
 #python-course .course-feature i {
   color: #e0b63c;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-top: 10px;
   margin-bottom: 5px;
 }
@@ -1577,6 +1577,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
