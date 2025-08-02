@@ -163,45 +163,27 @@
     },
     {
       "@type": "Book",
-      "@id": "https://www.ahmad-khatib.com/#book",
+      "@id": "https://ahmad-khatib.com/#bookshelf",
       "name": "تعلم بايثون بأقل من أسبوع",
-      "url": "https://www.ahmad-khatib.com/#publications",
-      "mainEntityOfPage": "https://www.ahmad-khatib.com/#publications",
+      "url": "https://ahmad-khatib.com/#bookshelf",
+      "mainEntityOfPage": "https://ahmad-khatib.com/#bookshelf",
       "inLanguage": "ar",
       "isbn": "B0FJ8Y6G7K",
       "image": "https://www.ahmad-khatib.com/assets/img/ahmad-al-khatib-book-تعلم-بايثون-بأقل-من-أسبوع.webp",
       "description": "دليل أساسي لمساعدة المبتدئين على إتقان مفاهيم البرمجة بلغة بايثون بسرعة وكفاءة، مع مشاريع عملية وتطبيقات ذكاء اصطناعي.",
       "author": {
         "@type": "Person",
-        "name": "أحمد عبد القادر الخطيب",
-        "url": "https://www.ahmad-khatib.com/"
+        "@id": "https://www.ahmad-khatib.com/#person"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "موقع أحمد الخطيب",
-        "url": "https://www.ahmad-khatib.com/"
+        "name": "Amazon",
+        "url": "https://www.amazon.com/"
       },
-      "datePublished": "2023-09-15",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "1"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Verified Reader"
-        },
-        "reviewBody": "كتاب ممتاز للمبتدئين! بسيط، واضح، ومفيد جداً."
-      },
+      "datePublished": "2023-07-20",
       "sameAs": [
-        "https://www.amazon.com/dp/B0FJ8Y6G7K"
+        "https://www.amazon.com/dp/B0FJ8Y6G7K",
+        "https://www.goodreads.com/book/show/239140541"
       ]
     },
     {
@@ -216,8 +198,31 @@
         "@id": "https://www.ahmad-khatib.com/#person"
       },
       "inLanguage": "ar",
-      "description": "مقالات وأفكار من أحمد الخطيب في البرمجة، السياسة، والذكاء الاصناعي.",
+      "description": "مقالات وأفكار من أحمد الخطيب في البرمجة، السياسة، والذكاء الاصطناعي.",
       "mainEntityOfPage": "https://blog.ahmad-khatib.com/"
+    },
+    {
+      "@type": "EducationalCourse",
+      "@id": "https://www.ahmad-khatib.com/#python-course",
+      "name": "دورة بايثون مجانية للمبتدئين باللغة العربية – تعلّم البرمجة من الصفر حتى الاحتراف",
+      "description": "ابدأ رحلتك في تعلم البرمجة مع دورة بايثون المجانية للمبتدئين باللغة العربية. دورة مصممة خصيصًا للناطقين بالعربية، والمبتدئين من الصفر دون أي خبرة برمجية سابقة، بأسلوب عملي مبسط عبر فيديوهات قصيرة تشرح مفاهيم بايثون الأساسية ببساطة ووضوح. مبنية على كتاب 'تعلّم بايثون بأقل من أسبوع'.",
+      "provider": {
+        "@type": "Person",
+        "@id": "https://www.ahmad-khatib.com/#person"
+      },
+      "url": "https://www.ahmad-khatib.com/#python-course",
+      "inLanguage": "ar",
+      "learningResourceType": ["Course", "Video Tutorials"],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Beginner Programmers"
+      },
+      "about": [
+        { "@type": "Thing", "name": "Python programming" },
+        { "@type": "Thing", "name": "Programming from scratch" },
+        { "@type": "Thing", "name": "Software Development" }
+      ],
+      "coursePrerequisites": "No prior programming experience required"
     }
   ]
 }
@@ -931,6 +936,7 @@ window.onload = function() {
     
 </body>
 </html>
+
 
 
 
