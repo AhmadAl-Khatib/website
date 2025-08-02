@@ -232,7 +232,7 @@ html[lang="ar"] #person p {
 /*----------- activities ------------*/
 
 #activities {
-   background: url("../img/ahmad-al-khatib-activities.webp") no-repeat scroll center bottom / cover ;
+   background: url("../img/ahmad-al-khatib-activities.webp") no-repeat center bottom / cover fixed;
     color: #fff;
     overflow: hidden;
     padding:50px 0 50px;
@@ -1061,7 +1061,7 @@ html[lang="ar"] #blog .row > p {
 /*----------- contact ------------*/
 #contact
 {
- background: url("../img/contact-ahmad-al-khatib.webp") no-repeat scroll center center / cover  ;
+ background: url("../img/contact-ahmad-al-khatib.webp") no-repeat center bottom / cover fixed;
     color: #fff;
     overflow: hidden;
     padding:50px 0 50px;
@@ -1577,3 +1577,4 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
