@@ -583,7 +583,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 #python-course .course-button {
   display: inline-block;
   margin: 10px auto 20px;
-  padding: 8px 15px;
+  padding: 12px 20px;
   background: #e0b63c;
   color: #333;
   border-radius: 5px;
@@ -595,8 +595,8 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 }
 #python-course .course-button:hover {
   background: transparent;
-  color: #007b8c;
-  border: 2px solid #007b8c;
+  color: #306998;
+  border: 2px solid #306998;
 }
 #python-course .course-cta {
   text-align: center;
@@ -1575,6 +1575,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
