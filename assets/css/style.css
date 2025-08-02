@@ -231,7 +231,6 @@ html[lang="ar"] #person p {
 }
 /*----------- activities ------------*/
 #activities {
-    background: url("../img/ahmad-al-khatib-activities.webp") no-repeat scroll center bottom / cover;
     color: #fff;
     overflow: hidden;
     padding: 50px 0 50px;
@@ -1579,6 +1578,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
