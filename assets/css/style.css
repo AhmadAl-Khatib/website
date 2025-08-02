@@ -232,12 +232,12 @@ html[lang="ar"] #person p {
 /*----------- activities ------------*/
 
 #activities {
-   background: url("../img/ahmad-al-khatib-activities.webp") no-repeat scroll center bottom / cover ;
     color: #fff;
     overflow: hidden;
     padding:50px 0 50px;
     transition: all 0.35s ease 0s;
 }
+
 .t-box {
     background: #fff none repeat scroll 0 0;
     color: #000;
@@ -246,28 +246,35 @@ html[lang="ar"] #person p {
     text-align: center;
     width: 100%;
 }
+
 .timg > img {
     width: 100%;
 }
+
 .t-box .social-links {
-padding:0px;
-margin:20px 0 0 0px;  
+    padding: 0px;
+    margin: 20px 0 0 0px;
 }
+
 .t-box .social-links > li {
     display: inline;
     font-size: 25px;
     padding: 8px;
 }
+
 .t-box .social-links a {
     color: #ffa100;
 }
+
 .t-box .social-links a:hover {
     color: #333;
 }
+
 .timg {
     position: relative;
-	  transition: all 0.35s ease 0s;
+    transition: all 0.35s ease 0s;
 }
+
 .timg:hover::after {
     background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
     content: "";
@@ -277,8 +284,14 @@ margin:20px 0 0 0px;
     top: 0;
     width: 100%;
 }
+
 html[lang="ar"] #activities h3 {
     font-size: 25px !important;
+}
+
+/* New CSS for Parallax */
+.rd-parallax {
+    height: 100vh;
 }
 /*----------- publications ------------*/
 
@@ -1577,3 +1590,4 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
