@@ -608,7 +608,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   justify-content: space-between;
   align-items: center;
   padding: 15px 15px;
-  background-color: #435b6f;
+  background-color: #306998;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
@@ -1575,6 +1575,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
