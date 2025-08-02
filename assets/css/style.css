@@ -538,7 +538,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
     visibility: hidden;
 }
 /*----------- course ------------*/
-#course {
+#python-course {
   background: url("../img/arabic-python-course-for-beginners-ahmad-al-khatib.webp") no-repeat center center;
   color: #333;
   background-size: cover;
@@ -546,14 +546,14 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   text-align: center;
   direction: rtl;
 }
-#course h2 {
+#python-course h2 {
   font-size: 30px;
   font-weight: 700;
   color: #333;
   line-height: 1.5;
   margin-bottom: 0.5rem;
 }
-#course p {
+#python-course p {
   font-size: 16px;
   text-align: justify;
   text-align-last: center;
@@ -562,25 +562,25 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   line-height: 1.8;
 }
 /* Icons */
-#course .size,
-#course .course-feature i {
+#python-course .size,
+#python-course .course-feature i {
   color: #e0b63c;
   font-size: 2.5rem;
   margin-top: 10px;
   margin-bottom: 5px;
 }
 /* Layout fix: row and columns flexbox */
-#course .row {
+#python-course .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
 }
-#course .row > div {
+#python-course .row > div {
   display: flex;
   flex-direction: column;
 }
-#course .course-button {
+#python-course .course-button {
   display: inline-block;
   margin: 10px auto 20px;
   padding: 8px 15px;
@@ -593,15 +593,15 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   transition: all 0.3s ease;
   text-align: center;
 }
-#course .course-button:hover {
+#python-course .course-button:hover {
   background: transparent;
   color: #007b8c;
   border: 2px solid #007b8c;
 }
-#course .course-cta {
+#python-course .course-cta {
   text-align: center;
 }
-#course .course-feature {
+#python-course .course-feature {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
@@ -617,11 +617,11 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   min-height: 100%;
   box-sizing: border-box;
 }
-#course .course-feature:hover {
+#python-course .course-feature:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(243, 186, 8, 0.3);
 }
-#course h3 {
+#python-course h3 {
   font-size: 1.4em;
   font-weight: 600;
   color: #333;
@@ -635,12 +635,12 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   text-align: center;
   padding: 0 5px;
 }
-#course h4 {
+#python-course h4 {
   font-size: 1.4em !important;
   color: #fff !important;
 }
 /* Descriptions */
-#course span {
+#python-course span {
   font-size: 14px;
   color: #fff;
   line-height: 1.6;
@@ -651,17 +651,17 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 }
 /* Responsive adjustments */
 @media (max-width: 991.98px) {
-  #course .row > div {
+  #python-course .row > div {
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
 @media (max-width: 575.98px) {
-  #course .row > div {
+  #python-course .row > div {
     flex: 0 0 100%;
     max-width: 100%;
   }
-  #course .course-feature {
+  #python-course .course-feature {
     min-height: auto;
   }
 }
@@ -1575,6 +1575,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
