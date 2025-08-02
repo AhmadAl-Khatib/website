@@ -918,6 +918,12 @@
 <script src="assets/js/custom.js"></script>
 
 <script>
+    $(document).ready(function() {
+    // Initialize RDParallax plugin if it exists
+    if ($.fn.RDParallax) {
+        $(".rd-parallax").RDParallax();
+    }
+    });
 window.onload = function() {
     if (typeof oldIE === 'undefined' && Object.keys) {
         hljs.initHighlighting(); // Syntax highlighting
@@ -940,6 +946,7 @@ window.onload = function() {
     
 </body>
 </html>
+
 
 
 
