@@ -636,12 +636,12 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   padding: 0 5px;
 }
 #python-course h4 {
-  font-size: 1.4em !important;
+  font-size: 1em !important;
   color: #fff !important;
 }
 /* Descriptions */
 #python-course span {
-  font-size: 14px;
+  font-size: 12px;
   color: #fff;
   line-height: 1.6;
   display: block;
@@ -1575,6 +1575,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
