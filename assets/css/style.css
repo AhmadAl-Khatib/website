@@ -585,8 +585,9 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   margin: 10px auto 20px;
   padding: 12px 20px;
   background: #e0b63c;
-  color: #000;
+  color: #333;
   border-radius: 5px;
+  font-size: 1.2em;
   text-decoration: none;
   font-weight: bold;
   border: 2px solid transparent;
@@ -1576,6 +1577,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
