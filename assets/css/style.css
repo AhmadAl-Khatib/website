@@ -65,7 +65,7 @@ a {
     transition: all 0.35s ease 0s;
 }
 .header2 {
-   background: rgba(0, 0, 0, 0) url("../img/about-ahmad-al-khatib.webp") repeat fixed center bottom / cover  ;
+   background: rgba(0, 0, 0, 0) url("../img/person-ahmad-al-khatib.webp") repeat fixed center bottom / cover  ;
     color: #fff;
     height: 100%;
     overflow: hidden;
@@ -189,17 +189,17 @@ transition: all 0.35s ease 0s;
 	transition: all 0.35s ease 0s;
 }
 
-#about {
+#person {
     overflow: hidden;
     padding: 50px 0 50px;
 }
-#about h2 {
+#person h2 {
     padding: 50px 0 25px;
     position: relative;
     text-align: center;
     width: 100%;
 }
-#about h2::before {
+#person h2::before {
     background: #000 none repeat scroll 0 0;
     bottom: 9px;
     content: "";
@@ -208,7 +208,7 @@ transition: all 0.35s ease 0s;
     width: 100%;
 	left:0;
 }
-#about h2::after {
+#person h2::after {
     background: #ffa100 none repeat scroll 0 0;
     bottom: 9px;
     content: "";
@@ -218,12 +218,12 @@ transition: all 0.35s ease 0s;
     width: 50%;
     z-index: 999;
 }
-#about p {
+#person p {
     font-size: 16px;
     padding: 10px 0;
     text-align: justify;
 }
-html[lang="ar"] #about p {
+html[lang="ar"] #person p {
     font-size: 16px;
     padding: 10px 0;
     direction: rtl !important;
@@ -1186,7 +1186,7 @@ width:100%;
 .element-item {
 width:50%;
 }
-#about img {
+#person img {
     left: -24px;
     position: relative;
 }
@@ -1200,7 +1200,7 @@ width:50%;
 }
 @media (max-width:800px)
 {
-#about img {
+#person img {
     left: -40px;
     position: relative;
 }
@@ -1220,7 +1220,7 @@ width:50%;
 }
 @media (max-width:980px)
 {
-#about img {
+#person img {
    left: 0;
     position: relative;
     width: 100%;
@@ -1249,7 +1249,7 @@ width:50%;
 .col-md-6 {
     width: 100%;
 }
-#about img {
+#person img {
     left: 0;
     position: relative;
 }
@@ -1575,6 +1575,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
