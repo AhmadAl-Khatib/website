@@ -243,6 +243,21 @@ html[lang="ar"] #person p {
   padding: 50px 0;
   transition: all 0.35s ease 0s;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  position: relative;
+  z-index: 1;
+}
+#activities::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -120px;
+  width: 200%;
+  height: 350px;
+  background: rgba(255, 255, 255, 0.15);
+  transform: skewY(10deg);
+  z-index: 0;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
 }
 .t-box {
   background: rgba(255, 255, 255, 0.1);
@@ -251,22 +266,24 @@ html[lang="ar"] #person p {
   padding: 0 20px 22px;
   text-align: center;
   width: 100%;
-  border-radius: 0;
+  border-radius: 0 0 12px 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(6px);
-  border-top: 3px solid #ff6b6b;
+  border-top: 1.5px solid #efa360;
+  position: relative;
+  z-index: 2;
 }
 .timg {
   position: relative;
   transition: all 0.35s ease 0s;
   overflow: hidden;
-  border-radius: 0;
+  border-radius: 12px 12px 0 0;
 }
 .timg > img {
   width: 100%;
   transition: transform 0.5s ease;
   display: block;
-  border-radius: 0;
+  border-radius: 12px 12px 0 0;
 }
 .timg:hover img {
   transform: scale(1.05);
@@ -280,22 +297,6 @@ html[lang="ar"] #person p {
   top: 0;
   width: 100%;
   z-index: 1;
-}
-.t-box .social-links {
-  padding: 0;
-  margin: 20px 0 0 0;
-}
-.t-box .social-links > li {
-  display: inline;
-  font-size: 25px;
-  padding: 8px;
-}
-.t-box .social-links a {
-  color: #ffa100;
-  transition: color 0.3s ease;
-}
-.t-box .social-links a:hover {
-  color: #333;
 }
 html[lang="ar"] #activities h3 {
   font-size: 25px !important;
@@ -1598,6 +1599,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
