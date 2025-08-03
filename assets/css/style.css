@@ -230,55 +230,75 @@ html[lang="ar"] #person p {
     text-align: justify !important;
 }
 /*----------- activities ------------*/
-
 #activities {
-  background: linear-gradient(to bottom, #c5722f, #de863b, #f2a35a);
+  background: linear-gradient(
+    to top right,
+    #7e1f1f 0%,      
+    #a63a2b 50%,     
+    #d2734a 85%,     
+    #f1a159 100%     
+  );
   color: #fff;
   overflow: hidden;
-  padding: 50px 0 50px;
+  padding: 50px 0;
   transition: all 0.35s ease 0s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 .t-box {
-    background: #fff none repeat scroll 0 0;
-    color: #000;
-    float: left;
-    padding: 0 0 22px;
-    text-align: center;
-    width: 100%;
-}
-.timg > img {
-    width: 100%;
-}
-.t-box .social-links {
-padding:0px;
-margin:20px 0 0 0px;  
-}
-.t-box .social-links > li {
-    display: inline;
-    font-size: 25px;
-    padding: 8px;
-}
-.t-box .social-links a {
-    color: #ffa100;
-}
-.t-box .social-links a:hover {
-    color: #333;
+  background: rgba(255, 255, 255, 0.1);
+  color: #eee;
+  float: left;
+  padding: 0 20px 22px;
+  text-align: center;
+  width: 100%;
+  border-radius: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+  border-top: 3px solid #ff6b6b;
 }
 .timg {
-    position: relative;
-	  transition: all 0.35s ease 0s;
+  position: relative;
+  transition: all 0.35s ease 0s;
+  overflow: hidden;
+  border-radius: 0;
+}
+.timg > img {
+  width: 100%;
+  transition: transform 0.5s ease;
+  display: block;
+  border-radius: 0;
+}
+.timg:hover img {
+  transform: scale(1.05);
 }
 .timg:hover::after {
-    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.t-box .social-links {
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+.t-box .social-links > li {
+  display: inline;
+  font-size: 25px;
+  padding: 8px;
+}
+.t-box .social-links a {
+  color: #ffa100;
+  transition: color 0.3s ease;
+}
+.t-box .social-links a:hover {
+  color: #333;
 }
 html[lang="ar"] #activities h3 {
-    font-size: 25px !important;
+  font-size: 25px !important;
 }
 /*----------- publications ------------*/
 
@@ -1578,6 +1598,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
