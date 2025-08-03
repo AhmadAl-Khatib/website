@@ -232,11 +232,11 @@ html[lang="ar"] #person p {
 /*----------- activities ------------*/
 
 #activities {
-   background: #de863b;
-    color: #fff;
-    overflow: hidden;
-    padding:50px 0 50px;
-    transition: all 0.35s ease 0s;
+  background: linear-gradient(to bottom, #cc7834, #de863b);
+  color: #fff;
+  overflow: hidden;
+  padding: 50px 0 50px;
+  transition: all 0.35s ease 0s;
 }
 .t-box {
     background: #fff none repeat scroll 0 0;
@@ -1578,6 +1578,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
