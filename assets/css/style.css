@@ -564,7 +564,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 /* Icons */
 #python-course .size,
 #python-course .course-feature i {
-  color: #306998;
+  color: #333;
   font-size: 2rem;
   margin-top: 10px;
   margin-bottom: 5px;
@@ -584,9 +584,9 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   display: inline-block;
   margin: 10px auto 20px;
   padding: 12px 20px;
-  background: #306998;
+  background: #ffa100;
   color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 1em;
   text-decoration: none;
   font-weight: bold;
@@ -596,8 +596,8 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 }
 #python-course .course-button:hover {
   background: transparent;
-  color: #306998;
-  border: 2px solid #306998;
+  color: #ffa100;
+  border: 2px solid #ffa100;
 }
 #python-course .course-cta {
   text-align: center;
@@ -1577,6 +1577,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
