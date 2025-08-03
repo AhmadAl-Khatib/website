@@ -596,8 +596,8 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 }
 #python-course .course-button:hover {
   background: transparent;
-  color: #ffa100;
-  border: 2px solid #ffa100;
+  color: #2e86ce;
+  border: 2px solid #2e86ce;
 }
 #python-course .course-cta {
   text-align: center;
@@ -1577,6 +1577,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
