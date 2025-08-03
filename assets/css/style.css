@@ -561,7 +561,6 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   margin: 1rem auto 2rem;
   line-height: 1.8;
 }
-/* Icons */
 #python-course .size,
 #python-course .course-feature i {
   color: #333;
@@ -570,11 +569,10 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   margin-bottom: 5px;
   transition: color 0.3s ease;
 }
-#python-course .size:hover,
-#python-course .course-feature i:hover {
+#python-course .course-feature:hover .size,
+#python-course .course-feature:hover i {
   color: #2e86ce;
 }
-/* Layout fix: row and columns flexbox */
 #python-course .row {
   display: flex;
   flex-wrap: wrap;
@@ -646,7 +644,6 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   color: #333 !important;
   font-weight: 600 !important;
 }
-/* Descriptions */
 #python-course span {
   font-size: 14px;
   color: #333;
@@ -656,7 +653,6 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   margin: 10px auto;
   flex-grow: 1;
 }
-/* Responsive adjustments */
 @media (max-width: 991.98px) {
   #python-course .row > div {
     flex: 0 0 50%;
@@ -1582,6 +1578,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
