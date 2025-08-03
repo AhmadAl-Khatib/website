@@ -266,7 +266,6 @@ html[lang="ar"] #person p {
   padding: 0 20px 22px;
   text-align: center;
   width: 100%;
-  border-radius: 0 0 12px 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(6px);
   border-top: 1.5px solid #efa360;
@@ -277,13 +276,11 @@ html[lang="ar"] #person p {
   position: relative;
   transition: all 0.35s ease 0s;
   overflow: hidden;
-  border-radius: 12px 12px 0 0;
 }
 .timg > img {
   width: 100%;
   transition: transform 0.5s ease;
   display: block;
-  border-radius: 12px 12px 0 0;
 }
 .timg:hover img {
   transform: scale(1.05);
@@ -1599,6 +1596,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
