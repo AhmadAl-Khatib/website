@@ -257,7 +257,7 @@ html[lang="ar"] #person p {
   transform: skewY(10deg);
   z-index: 0;
   pointer-events: none;
-  mix-blend-mode: soft-light;
+  mix-blend-mode: overlay;
 }
 .t-box {
   background: rgba(255, 255, 255, 0.1);
@@ -1596,6 +1596,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
