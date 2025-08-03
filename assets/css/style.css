@@ -232,7 +232,7 @@ html[lang="ar"] #person p {
 /*----------- activities ------------*/
 
 #activities {
-  background: linear-gradient(to bottom, #cc7834, #de863b);
+  background: linear-gradient(to bottom, #c5722f, #de863b, #f2a35a);
   color: #fff;
   overflow: hidden;
   padding: 50px 0 50px;
@@ -1578,6 +1578,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
