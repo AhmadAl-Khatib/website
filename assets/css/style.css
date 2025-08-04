@@ -353,9 +353,31 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 }
 /* ---------- Bookshelf Section ---------- */
 #bookshelf {
-    background: url("../img/books.webp") no-repeat center bottom / cover scroll;
-    padding: 50px 0;
-    overflow: hidden;
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+  background-color: #0a0a0a;
+  background-image:
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.035) 0%,
+      rgba(255, 255, 255, 0.015) 12%,
+      transparent 28%
+    ),
+    repeating-conic-gradient(
+      from 30deg,
+      rgba(255, 255, 255, 0.018) 0deg 60deg,
+      transparent 60deg 120deg
+    );
+  background-size:
+    100% 100%,
+    6px 5px;
+  background-repeat: no-repeat, repeat;
+  background-position: center, top left;
+}
+#bookshelf > * {
+  position: relative;
+  z-index: 1;
 }
 #bookshelf .container {
     max-width: 1200px;
@@ -1594,6 +1616,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
