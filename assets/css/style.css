@@ -357,12 +357,12 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   padding: 80px 0;
   overflow: hidden;
   background-color: #0a0a0a;
-  background-image:
+  background-image: 
     radial-gradient(
-      circle at center,
-      rgba(255, 255, 255, 0.035) 0%,
-      rgba(255, 255, 255, 0.015) 12%,
-      transparent 28%
+      ellipse at center,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0.85) 85%,
+      rgba(0, 0, 0, 0.95) 100%
     ),
     repeating-conic-gradient(
       from 30deg,
@@ -371,9 +371,30 @@ html[lang="en"] #publications p:not(.book-description-ar) {
     );
   background-size:
     100% 100%,
-    8px 8px;
+    10px 10px;
   background-repeat: no-repeat, repeat;
   background-position: center, top left;
+}
+#bookshelf::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -120px;
+  width: 200%;
+  height: 350px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.03) 20%,
+    rgba(255, 255, 255, 0.10) 40%,
+    rgba(255, 255, 255, 0.01) 60%,
+    rgba(255, 255, 255, 0) 80%,
+    rgba(255, 255, 255, 0.75) 90%
+  );
+  transform: skewY(10deg);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 1;
+  mix-blend-mode: screen;
 }
 #bookshelf > * {
   position: relative;
@@ -977,6 +998,19 @@ blockquote {
   transition: all 0.35s ease 0s;
   position: relative;
   text-align: center;
+}
+#blog::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -120px;
+  width: 200%;
+  height: 350px;
+  background: rgba(255, 255, 255, 0.15);
+  transform: skewY(10deg);
+  z-index: 0;
+  pointer-events: none;
+  mix-blend-mode: overlay;
 }
 .title {
   padding-bottom: 45px !important;
@@ -1616,6 +1650,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
