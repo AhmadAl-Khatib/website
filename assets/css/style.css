@@ -371,7 +371,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
     );
   background-size:
     100% 100%,
-    6px 5px;
+    8px 8px;
   background-repeat: no-repeat, repeat;
   background-position: center, top left;
 }
@@ -1616,6 +1616,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
