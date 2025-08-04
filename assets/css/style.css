@@ -58,7 +58,7 @@ a {
 	position: relative;
 }
 .header {
-   background: rgba(0, 0, 0, 0) url("../img/ahmad-al-khatib-header.webp") repeat fixed center 0 / cover  ;
+background: rgba(0, 0, 0, 0) url("../img/ahmad-al-khatib-header.webp") repeat scroll center 0 / cover;
     color: #fff;
     height: 100%;
     overflow: hidden;
@@ -353,7 +353,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 }
 /* ---------- Bookshelf Section ---------- */
 #bookshelf {
-    background: url("../img/books.webp") no-repeat center bottom / cover fixed;
+    background: url("../img/books.webp") no-repeat center bottom / cover scroll;
     padding: 50px 0;
     overflow: hidden;
 }
@@ -1594,6 +1594,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
