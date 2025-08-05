@@ -1214,7 +1214,7 @@ html[lang="ar"] #blog .row > p {
   top: 10%;
   height: 80%;
   width: 2px;
-  background-color: #666;
+  background-color: #333;
   z-index: 10;
 }
 
@@ -1813,6 +1813,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
