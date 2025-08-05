@@ -1332,10 +1332,11 @@ html[lang="ar"] #blog .row > p {
     overflow-x: auto;
     gap: 15px;
     justify-content: center;
-    padding-bottom: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
-    margin: 0 10px 30px;
+    margin: 0px 30px;
   }
   #footer .footer-nav li {
     flex-shrink: 0;
@@ -1771,6 +1772,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
