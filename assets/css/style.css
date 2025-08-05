@@ -1149,8 +1149,8 @@ html[lang="ar"] #blog .row > p {
     linear-gradient(to top, #1f1f1f 0%, #292525 100%),
     repeating-linear-gradient(
       -45deg,
-      rgba(255,255,255,0.015) 0,
-      rgba(255,255,255,0.015) 1px,
+      rgba(255,255,255,0.03) 0,   /* was 0.015 */
+      rgba(255,255,255,0.03) 1px,
       transparent 1px,
       transparent 8px
     );
@@ -1166,6 +1166,7 @@ html[lang="ar"] #blog .row > p {
   align-items: center;
   justify-content: center;
 }
+
 #contact::before {
   content: "";
   position: absolute;
@@ -1175,61 +1176,78 @@ html[lang="ar"] #blog .row > p {
   height: 300px;
   background: linear-gradient(
     to right,
-    rgba(255, 255, 255, 0.02) 20%,
-    rgba(255, 255, 255, 0.06) 40%,
-    rgba(255, 255, 255, 0.01) 60%,
-    rgba(255, 255, 255, 0) 80%,
-    rgba(255, 255, 255, 0.15) 90%
+    rgba(255, 255, 255, 0.03) 20%,  /* was 0.02 */
+    rgba(255, 255, 255, 0.08) 40%,  /* was 0.06 */
+    rgba(255, 255, 255, 0.03) 60%,  /* was 0.01 */
+    rgba(255, 255, 255, 0.01) 80%,  /* was 0.00 */
+    rgba(255, 255, 255, 0.18) 90%   /* was 0.15 */
   );
   transform: skewY(10deg);
   mix-blend-mode: screen;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.6;
+  opacity: 0.75; /* was 0.6 */
 }
-#contact input[type="text"]{
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #666;
-    border-radius: 4px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-    color: #555;
-    display: block;
-    font-size: 14px;
-    height: 57px;
-    line-height: 1.42857;
-    padding: 10px 12px;
-    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
-    width: 100%;
+
+#contact input[type="text"],
+#contact input[type="email"] {
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #666;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  color: #555;
+  display: block;
+  font-size: 14px;
+  height: 57px;
+  line-height: 1.42857;
+  padding: 10px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  width: 100%;
 }
-#contact input[type="email"]{
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #666;
-    border-radius: 4px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-    color: #555;
-    display: block;
-    font-size: 14px;
-    height: 57px;
-    line-height: 1.42857;
-    padding: 10px 12px;
-    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
-    width: 100%;
-}
+
 #contact .btn-block {
-    background: #ffa100 none repeat scroll 0 0;
-    border-radius: 0;
-    color: #000;
-    display: block;
-    float: right;
-    font-size: 16px;
-    margin-bottom: 50px;
-    margin-right: 15px;
-    padding: 10px 0;
-    transition: all 0.3s ease 0s;
-    width: 165px;
+  background: #ffa100 none repeat scroll 0 0;
+  border-radius: 0;
+  color: #000;
+  display: block;
+  float: right;
+  font-size: 16px;
+  margin-bottom: 50px;
+  margin-right: 15px;
+  padding: 10px 0;
+  transition: all 0.3s ease 0s;
+  width: 165px;
 }
+
+/* === Responsive: Improve Visibility and Spacing === */
+@media (max-width: 576px) {
+  #contact {
+    padding: 40px 15px;
+    background-image:
+      linear-gradient(to top, #1f1f1f 0%, #292525 100%),
+      repeating-linear-gradient(
+        -45deg,
+        rgba(255,255,255,0.05) 0,
+        rgba(255,255,255,0.05) 1px,
+        transparent 1px,
+        transparent 6px
+      );
+    background-blend-mode: overlay;
+  }
+
+  #contact::before {
+    opacity: 0.9;
+  }
+
+  #contact .btn-block {
+    float: none;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 220px;
+  }
+}
+
 
 /* GENERAL FOOTER STYLES */
 #footer {
@@ -1860,6 +1878,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
