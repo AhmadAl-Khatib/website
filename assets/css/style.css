@@ -354,7 +354,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 /* ---------- Bookshelf Section ---------- */
 #bookshelf {
   position: relative;
-  padding: 80px 0;
+  padding: 50px 0;
   overflow: hidden;
   background-color: #0a0a0a;
   background-image:
@@ -367,7 +367,6 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   background-size: 100% 100%, 20px 20px;
   background-repeat: no-repeat, repeat;
 }
-
 #bookshelf::before {
   content: "";
   position: absolute;
@@ -387,12 +386,10 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   opacity: 0.7;
   z-index: 1;
 }
-
 #bookshelf > * {
   position: relative;
   z-index: 2;
 }
-
 #bookshelf .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -401,14 +398,12 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   flex-direction: column;
   align-items: center;
 }
-
 #bookshelf .row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
 }
-
 #bookshelf h2 {
   color: #fff;
   text-align: center;
@@ -422,14 +417,12 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 #bookshelf h2::after {
   content: none !important;
 }
-
 #bookshelf .col-xs-12.col-sm-6.col-md-3 {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-
 #bookshelf .book {
   position: relative;
   overflow: hidden;
@@ -451,13 +444,11 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   outline-offset: 4px;
   transform: translateY(-10px);
 }
-
 #bookshelf .book img {
   width: 100%;
   height: auto;
   display: block;
 }
-
 #bookshelf .book .title-background {
   position: absolute;
   bottom: 0;
@@ -469,11 +460,9 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   z-index: 1;
   transition: opacity 0.4s ease;
 }
-
 #bookshelf .book:hover .title-background {
   opacity: 1;
 }
-
 #bookshelf .book .book-title {
   position: absolute;
   bottom: 0;
@@ -492,12 +481,10 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   transition: opacity 0.4s ease, transform 0.4s ease;
   z-index: 2;
 }
-
 #bookshelf .book:hover .book-title {
   opacity: 1;
   transform: translateY(0);
 }
-
 #bookshelf .book-button {
   display: inline-block;
   margin: 10px auto;
@@ -510,13 +497,11 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   transition: all 0.3s ease;
   text-align: center;
 }
-
 #bookshelf .book-button:hover {
   background: transparent;
   color: orange;
   border: 2px solid orange;
 }
-
 #bookshelf .book-description-ar {
   padding: 10px 0;
   text-align: justify;
@@ -524,7 +509,6 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   color: #fff;
   direction: rtl !important;
 }
-
 #bookshelf .book-description-en {
   padding: 10px 0;
   text-align: justify;
@@ -532,7 +516,6 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   color: #fff;
   direction: ltr !important;
 }
-
 .share-buttons {
   margin-top: 0px;
   display: flex;
@@ -541,14 +524,12 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   font-size: 18px;
   flex-wrap: wrap;
 }
-
 .share-buttons span {
   color: white;
   font-weight: bold;
   margin-right: 6px;
   font-size: 10px;
 }
-
 .share-buttons a {
   color: white;
   text-decoration: none;
@@ -558,33 +539,27 @@ html[lang="en"] #publications p:not(.book-description-ar) {
 .share-buttons a:hover {
   transform: scale(1.2);
 }
-
 .share-buttons a[aria-label*="Twitter"]:hover { color: #1da1f2; }
 .share-buttons a[aria-label*="Facebook"]:hover { color: #1877f2; }
 .share-buttons a[aria-label*="LinkedIn"]:hover { color: #0a66c2; }
 .share-buttons a[aria-label*="WhatsApp"]:hover { color: #25d366; }
-
 /* --- Responsive Adjustments --- */
 @media (max-width: 992px) {
   #bookshelf .book {
     width: 45%;
   }
 }
-
 @media (max-width: 576px) {
   #bookshelf .book {
     width: 90%;
     margin: 20px auto;
   }
-
   #bookshelf h2 {
     font-size: 24px;
   }
-
   #bookshelf .book-title {
     font-size: 13px;
   }
-
   .share-buttons {
     justify-content: center;
     gap: 10px;
@@ -1885,6 +1860,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
