@@ -1186,7 +1186,7 @@ html[lang="ar"] #blog .row > p {
 
 /* GENERAL FOOTER STYLES */
 #footer {
-  background-color: #14140d;
+  background-color: #111;
   color: #ddd;
   padding: 50px 0;
   font-family: Arial, sans-serif;
@@ -1771,6 +1771,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
