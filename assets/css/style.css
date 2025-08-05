@@ -1134,7 +1134,7 @@ html[lang="ar"] #blog .row > p {
 /*----------- contact ------------*/
 #contact
 {
- background: url("../img/contact-ahmad-al-khatib.webp") no-repeat scroll center bottom / cover;
+    background: #242424 no-repeat scroll center bottom / cover;
     color: #fff;
     overflow: hidden;
     padding:50px 0 50px;
@@ -1185,7 +1185,7 @@ html[lang="ar"] #blog .row > p {
 }
 
 #footer {
-    background: rgba(0, 0, 0, 0) url("../img/footer-bg.webp") no-repeat scroll -554px -686px;
+    background: #ffa500 no-repeat scroll -554px -686px;
     color: #fff;
     padding: 60px 0 60px;
     position: relative;
@@ -1650,6 +1650,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
