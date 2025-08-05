@@ -357,205 +357,241 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   padding: 80px 0;
   overflow: hidden;
   background-color: #0a0a0a;
-  background-image: 
-    radial-gradient(
-      ellipse at center,
-      rgba(0, 0, 0, 0) 40%,
-      rgba(0, 0, 0, 0.85) 85%,
-      rgba(0, 0, 0, 0.95) 100%
-    ),
-    repeating-conic-gradient(
-      from 30deg,
-      rgba(255, 255, 255, 0.018) 0deg 60deg,
-      transparent 60deg 120deg
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.85) 100%),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.025) 0 10px,
+      transparent 10px 20px
     );
-  background-size:
-    100% 100%,
-    10px 10px;
+  background-size: 100% 100%, 20px 20px;
   background-repeat: no-repeat, repeat;
-  background-position: center, top left;
 }
+
 #bookshelf::before {
   content: "";
   position: absolute;
-  top: -100px;
+  top: -120px;
   left: -120px;
-  width: 200%;
-  height: 350px;
+  width: 240%;
+  height: 360px;
   background: linear-gradient(
     to right,
-    rgba(255, 255, 255, 0.03) 20%,
-    rgba(255, 255, 255, 0.10) 40%,
-    rgba(255, 255, 255, 0.01) 60%,
-    rgba(255, 255, 255, 0) 80%,
-    rgba(255, 255, 255, 0.75) 90%
+    rgba(255,255,255,0)    0%,
+    rgba(255,255,255,0.08) 30%,
+    rgba(255,255,255,0.02) 60%,
+    rgba(255,255,255,0)    100%
   );
-  transform: skewY(10deg);
-  z-index: 1;
+  transform: skewY(8deg);
   pointer-events: none;
-  opacity: 1;
-  mix-blend-mode: screen;
+  opacity: 0.7;
+  z-index: 1;
 }
+
 #bookshelf > * {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
+
 #bookshelf .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 #bookshelf .row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
 }
+
 #bookshelf h2 {
-    color: #fff;
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: bold;
-    font-size: 30px;
-    direction: rtl;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 30px;
+  direction: rtl;
 }
+
 #bookshelf h2::before,
 #bookshelf h2::after {
-    content: none !important;
+  content: none !important;
 }
+
 #bookshelf .col-xs-12.col-sm-6.col-md-3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
+
 #bookshelf .book {
-    position: relative;
-    overflow: hidden;
-    width: 200px;
-    flex: 0 0 auto;
-    background-color: #000;
-    border: 1px solid #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease-in-out;
-    margin-bottom: 20px; 
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  flex: 0 0 auto;
+  background-color: #000;
+  border: 1px solid #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin-bottom: 20px; 
 }
 #bookshelf .book:hover {
-    transform: translateY(-10px);
-    border-color: #007b8c;
+  transform: translateY(-10px);
+  border-color: #007b8c;
+  box-shadow: 0 4px 12px rgba(0,123,140,0.4);
 }
+#bookshelf .book:focus-visible {
+  outline: 2px solid #007b8c;
+  outline-offset: 4px;
+  transform: translateY(-10px);
+}
+
 #bookshelf .book img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
+
 #bookshelf .book .title-background {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    background-color: #007b8c;
-    opacity: 0;
-    z-index: 1;
-    transition: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #007b8c;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.4s ease;
 }
+
 #bookshelf .book:hover .title-background {
-    opacity: 1;
+  opacity: 1;
 }
+
 #bookshelf .book .book-title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    font-size: 14px;
-    font-weight: normal;
-    text-align: center;
-    line-height: 40px;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  line-height: 40px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 2;
 }
+
 #bookshelf .book:hover .book-title {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
+
 #bookshelf .book-button {
-    display: inline-block;
-    margin: 10px auto;
-    padding: 8px 15px;
-    background: #007b8c;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-    text-align: center;
+  display: inline-block;
+  margin: 10px auto;
+  padding: 8px 15px;
+  background: #007b8c;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  text-align: center;
 }
+
 #bookshelf .book-button:hover {
-    background: transparent;
-    color: orange;
-    border: 2px solid orange;
+  background: transparent;
+  color: orange;
+  border: 2px solid orange;
 }
+
 #bookshelf .book-description-ar {
-    padding: 10px 0;
-    text-align: justify;
-    font-size: 14px;
-    color: #fff;
-    direction: rtl !important;
+  padding: 10px 0;
+  text-align: justify;
+  font-size: 14px;
+  color: #fff;
+  direction: rtl !important;
 }
+
 #bookshelf .book-description-en {
-    padding: 10px 0;
-    text-align: justify;
-    font-size: 14px;
-    color: #fff;
-    direction: ltr !important;
+  padding: 10px 0;
+  text-align: justify;
+  font-size: 14px;
+  color: #fff;
+  direction: ltr !important;
 }
-    .share-buttons {
-      margin-top: 0px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-size: 18px;
-    }
-    .share-buttons span {
-      color: white;
-      font-weight: bold;
-      margin-right: 6px;
-      font-size: 10px;
-    }
-    .share-buttons a {
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s, transform 0.2s;
-    }
-    .share-buttons a:hover {
-      transform: scale(1.2);
-    }
-    .share-buttons a[aria-label*="Twitter"]:hover { color: #1da1f2; }
-    .share-buttons a[aria-label*="Facebook"]:hover { color: #1877f2; }
-    .share-buttons a[aria-label*="LinkedIn"]:hover { color: #0a66c2; }
-    .share-buttons a[aria-label*="WhatsApp"]:hover { color: #25d366; }
+
+.share-buttons {
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 18px;
+  flex-wrap: wrap;
+}
+
+.share-buttons span {
+  color: white;
+  font-weight: bold;
+  margin-right: 6px;
+  font-size: 10px;
+}
+
+.share-buttons a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.share-buttons a:hover {
+  transform: scale(1.2);
+}
+
+.share-buttons a[aria-label*="Twitter"]:hover { color: #1da1f2; }
+.share-buttons a[aria-label*="Facebook"]:hover { color: #1877f2; }
+.share-buttons a[aria-label*="LinkedIn"]:hover { color: #0a66c2; }
+.share-buttons a[aria-label*="WhatsApp"]:hover { color: #25d366; }
+
 /* --- Responsive Adjustments --- */
 @media (max-width: 992px) {
-    #bookshelf .book {
-        width: 45%;
-    }
+  #bookshelf .book {
+    width: 45%;
+  }
 }
+
 @media (max-width: 576px) {
-    #bookshelf .book {
-        width: 90%;
-        margin: 20px auto;
-    }
+  #bookshelf .book {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  #bookshelf h2 {
+    font-size: 24px;
+  }
+
+  #bookshelf .book-title {
+    font-size: 13px;
+  }
+
+  .share-buttons {
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+  }
 }
+
 /*----------- owl ------------*/
 #owl-demo .owl-item div{
       padding:5px;
@@ -1849,6 +1885,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
