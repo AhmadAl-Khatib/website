@@ -11942,3 +11942,7 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
     margin-top: 0 !important;
   }
 }
+
+.resume-skill-item + .resume-skill-item .resume-skills-cat {
+  margin-top: 35px;
+}
