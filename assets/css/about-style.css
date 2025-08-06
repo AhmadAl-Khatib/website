@@ -235,7 +235,8 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: calc(1.3rem + 0.6vw);
+  font-size: calc(19px);
+  margin-bottom:15px;;
 }
 
 @media (min-width: 1200px) {
