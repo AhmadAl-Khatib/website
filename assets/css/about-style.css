@@ -11937,3 +11937,8 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
   }
 }
 
+@media (max-width: 576px) {
+  .mt-3 {
+    margin-top: 0 !important;
+  }
+}
