@@ -11759,7 +11759,7 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
 }
 
 .resume-header {
-  background: #30a39c;
+  background: #1b9597;
   color: rgba(255, 255, 255, 0.9);
   height: auto;
 }
@@ -11935,7 +11935,4 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
     border-radius: 4px;
   }
 }
-.resume-social img[src*="snapchat.svg"],
-.resume-social img[src*="tiktok.svg"] {
-  filter: brightness(0) saturate(100%) invert(36%) sepia(62%) saturate(2453%) hue-rotate(142deg) brightness(92%) contrast(90%);
-}
+
