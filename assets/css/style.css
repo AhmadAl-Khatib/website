@@ -1278,11 +1278,9 @@ html[lang="ar"] #blog .row > p {
       );
     background-blend-mode: overlay;
   }
-
   #contact::before {
     opacity: 0.9;
   }
-
   #contact .btn-block {
     float: none;
     margin: 20px auto;
@@ -1290,7 +1288,6 @@ html[lang="ar"] #blog .row > p {
     max-width: 220px;
   }
 }
-
 
 /* GENERAL FOOTER STYLES */
 #footer {
@@ -1301,23 +1298,31 @@ html[lang="ar"] #blog .row > p {
   direction: rtl;
   text-align: center;
 }
-
 #footer .row {
   display: flex;
   align-items: center;
-  flex-wrap: wrap; /* changed from nowrap */
+  flex-wrap: nowrap; /* keep columns in one row */
   max-width: 1100px;
   margin: 0 auto;
   position: relative;
+  gap: 20px;
 }
-
-#footer .footer-col {
-  flex: 1 1 33%;
-  padding: 0 20px;
-  position: relative;
-  min-width: 250px; /* added to avoid too narrow columns */
+/* Fixed width social icons column */
+#footer .footer-col.social {
+  flex: 0 0 220px;
+  padding: 0 10px;
 }
-
+/* Flexible middle navigation column */
+#footer .footer-col.nav {
+  flex: 1 1 auto;
+  padding: 0 10px;
+  min-width: 0; /* prevent overflow */
+}
+/* Fixed width contact info column */
+#footer .footer-col.contact {
+  flex: 0 0 220px;
+  padding: 0 10px;
+}
 #footer .separator {
   position: absolute;
   top: 10%;
@@ -1326,15 +1331,12 @@ html[lang="ar"] #blog .row > p {
   background-color: #333;
   z-index: 10;
 }
-
 #footer .separator.separator-1 {
   left: calc(33.3333% - 1px);
 }
-
 #footer .separator.separator-2 {
   left: calc(66.6666% - 1px);
 }
-
 #footer .social-links {
   list-style: none;
   padding: 0;
@@ -1344,7 +1346,6 @@ html[lang="ar"] #blog .row > p {
   gap: 14px;
   font-size: 18px;
 }
-
 #footer .social-links a {
   background-color: #242424;
   color: #fff;
@@ -1357,24 +1358,21 @@ html[lang="ar"] #blog .row > p {
   text-decoration: none;
   transition: background 0.3s, transform 0.2s, color 0.3s;
 }
-
 #footer .social-links a:hover {
   transform: scale(1.2);
 }
-
-/* Existing hover colors */
+/* Hover colors for social icons */
 #footer .social-links a[aria-label*="Twitter"]:hover { color: #1da1f2; }
 #footer .social-links a[aria-label*="Facebook"]:hover { color: #1877f2; }
 #footer .social-links a[aria-label*="Instagram"]:hover { color: #e1306c; }
-
-/* Added hover colors for new social links */
 #footer .social-links a[aria-label*="LinkedIn"]:hover { color: #0077b5; }
 #footer .social-links a[aria-label*="GitHub"]:hover { color: #333; }
 #footer .social-links a[aria-label*="YouTube"]:hover { color: #ff0000; }
-#footer .social-links a[aria-label*="TikTok"]:hover { filter: brightness(1.2); } /* brighten TikTok svg */
-#footer .social-links a[aria-label*="Snapchat"]:hover { filter: brightness(1.2); } /* brighten Snapchat svg */
+#footer .social-links a[aria-label*="TikTok"]:hover,
+#footer .social-links a[aria-label*="Snapchat"]:hover {
+  filter: brightness(1.2);
+}
 #footer .social-links a[aria-label*="Website"]:hover { color: #ffa100; }
-
 #footer .footer-nav {
   list-style: none;
   padding: 0;
@@ -1385,12 +1383,10 @@ html[lang="ar"] #blog .row > p {
   font-size: 15px;
   gap: 10px;
 }
-
 #footer .footer-nav li {
   position: relative;
   padding: 0 10px;
 }
-
 #footer .footer-nav li:not(:last-child)::after {
   content: "|";
   position: absolute;
@@ -1399,19 +1395,16 @@ html[lang="ar"] #blog .row > p {
   transform: translateY(-50%);
   color: #666;
 }
-
 #footer .footer-nav a {
   color: #ccc;
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
 #footer .footer-nav a:hover,
 #footer .footer-nav a:focus {
   color: #ffa100;
   outline: none;
 }
-
 #footer .contact-info {
   margin-top: 20px;
   font-size: 14px;
@@ -1419,24 +1412,20 @@ html[lang="ar"] #blog .row > p {
   text-align: center;
   padding: 0 20px;
 }
-
 #footer .contact-info a[href^="tel"] {
   direction: ltr;
   display: inline-block;
   unicode-bidi: embed;
 }
-
 #footer .contact-info a {
   color: #ffa100;
   text-decoration: none;
 }
-
 #footer .contact-info a:hover,
 #footer .contact-info a:focus {
   text-decoration: underline;
   outline: none;
 }
-
 #footer .footer-bottom {
   border-top: 1px solid #333;
   margin-top: 30px;
@@ -1444,75 +1433,23 @@ html[lang="ar"] #blog .row > p {
   font-size: 14px;
   color: #aaa;
 }
-
-/* Responsive */
+/* Responsive for smaller screens */
 @media (max-width: 600px) {
   #footer .row {
+    flex-wrap: wrap;
     flex-direction: column;
-    position: static;
     align-items: center;
   }
-
-  #footer .footer-col {
-    padding: 0;
-  }
-
-  #footer .separator {
-    display: none;
-  }
-
-  #footer .row > div {
-    margin-bottom: 40px;
+  #footer .footer-col.social,
+  #footer .footer-col.nav,
+  #footer .footer-col.contact {
+    flex: none;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 0 15px;
     text-align: center !important;
   }
-
-  #footer .social-links {
-    margin-bottom: 30px;
-  }
-
-  #footer .social-links a {
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    font-size: 22px;
-  }
-
-  #footer .footer-nav {
-    flex-direction: row;
-    overflow-x: auto;
-    gap: 15px;
-    justify-content: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
-    margin: 0 30px;
-  }
-
-  #footer .footer-nav li {
-    flex-shrink: 0;
-    white-space: nowrap;
-  }
-
-  #footer .footer-nav a {
-    font-size: 16px;
-    padding: 8px 12px;
-  }
-
-  #footer .contact-info {
-    font-size: 16px;
-    padding: 0 15px;
-    line-height: 2;
-  }
-
-  #footer .footer-bottom {
-    font-size: 15px;
-    padding: 10px 0;
-  }
 }
-
-
-
 
 @media (min-width:768px) and (max-width:1024px)
 {
@@ -1932,6 +1869,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
