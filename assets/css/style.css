@@ -117,32 +117,35 @@ transition: all 0.35s ease 0s;
 }
 /* Dropdown menu container */
 .navbar-default .dropdown-menu {
-    background-color: rgba(0, 0, 0, 0.95); /* dark transparent background */
+    background-color: rgba(0, 0, 0, 0.95); 
     border: none;
     border-radius: 0;
     min-width: 180px;
     box-shadow: none;
-    margin-top: 0; /* aligns better with nav item */
+    margin-top: 0;
 }
-
-/* Dropdown links (normal state) */
+/* Dropdown links - normal state */
 .navbar-default .dropdown-menu > li > a {
-    color: #fff;
+    color: #fff;                             
     padding: 12px 20px;
     font-size: 18px;
     background-color: transparent;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    border-bottom: 3px solid transparent;   
+    transition: background-color 0.3s ease, 
+                color 0.3s ease, 
+                border-bottom 0.3s ease;
 }
-
-/* Dropdown link on hover */
+/* Dropdown links - hover, focus, active states */
 .navbar-default .dropdown-menu > li > a:hover,
-.navbar-default .dropdown-menu > li > a:focus {
-    background-color: #ffa100;
-    color: #fff;
+.navbar-default .dropdown-menu > li > a:focus,
+.navbar-default .dropdown-menu > li > a:active {
+    background-color: #ffa100;         
+    color: #fff;                             
+    border-bottom: 3px solid #e49102;       
     text-decoration: none;
     outline: none;
+    box-shadow: none;
 }
-
 /* Prevent blue background on click/focus */
 .navbar-default .dropdown-menu > li > a:active {
     background-color: #ffa100;
@@ -150,7 +153,6 @@ transition: all 0.35s ease 0s;
     outline: none;
     box-shadow: none;
 }
-
 .navbar-default .navbar-nav > li > a:visited {
     background-color: #ffa100;
     border-bottom: 10px solid #e49102;
@@ -1919,6 +1921,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
