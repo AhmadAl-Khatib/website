@@ -133,6 +133,11 @@ transition: all 0.35s ease 0s;
     background-color: #ffa100;
     color: #fff;
 }
+.navbar-default .navbar-nav > li > a:visited {
+    background-color: #ffa100;
+    border-bottom: 10px solid #e49102;
+    color: #fff;
+}
 .navbar-default .navbar-nav > li > a {
     color: #fff;
     font-size: 20px;
@@ -1896,6 +1901,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
