@@ -1296,30 +1296,37 @@ html[lang="ar"] #blog .row > p {
   color: #ddd;
   padding: 50px 0;
   font-family: Arial, sans-serif;
+  text-align: center;
   direction: rtl;
-  text-align: center;
 }
-
 #footer .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
-#footer .row {
+.footer-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
-  text-align: center;
+  align-items: flex-start;
+  gap: 30px;
+  position: relative;
 }
-
-#footer .footer-col {
-  flex: 1 1 33%;
-  padding: 20px;
+.footer-col {
+  flex: 1;
+  padding: 0 10px;
+  min-width: 200px;
   box-sizing: border-box;
 }
-
-#footer .social-links {
+.footer-divider {
+  width: 1px;
+  background-color: #333;
+  height: 100%;
+  align-self: stretch;
+  display: block;
+}
+.social-links {
   list-style: none;
   padding: 0;
   margin: 0 0 20px;
@@ -1328,8 +1335,7 @@ html[lang="ar"] #blog .row > p {
   justify-content: center;
   gap: 12px;
 }
-
-#footer .social-links a {
+.social-links a {
   background-color: #242424;
   color: #fff;
   display: inline-flex;
@@ -1340,114 +1346,86 @@ html[lang="ar"] #blog .row > p {
   border-radius: 50%;
   text-decoration: none;
   transition: background 0.3s, transform 0.2s, color 0.3s;
+  font-size: 18px;
 }
-
-#footer .social-links a:hover {
-  transform: scale(1.2);
+.social-links a img {
+  width: 20px;
+  height: 20px;
+  display: block;
 }
-
-#footer .social-links a[aria-label*="Twitter"]:hover { color: #1da1f2; }
-#footer .social-links a[aria-label*="Facebook"]:hover { color: #1877f2; }
-#footer .social-links a[aria-label*="Instagram"]:hover { color: #e1306c; }
-#footer .social-links a[aria-label*="YouTube"]:hover { color: #ff0000; }
-#footer .social-links a[aria-label*="LinkedIn"]:hover { color: #0077b5; }
-#footer .social-links a[aria-label*="GitHub"]:hover { color: #ccc; }
-#footer .social-links a[aria-label*="TikTok"]:hover img,
-#footer .social-links a[aria-label*="Snapchat"]:hover img {
-  filter: brightness(1.5);
+.social-links a:hover {
+  transform: scale(1.15);
 }
-
-#footer .footer-nav {
+.social-links a[aria-label*="Facebook"]:hover { color: #1877f2; }
+.social-links a[aria-label*="Twitter"]:hover { color: #1da1f2; }
+.social-links a[aria-label*="Instagram"]:hover { color: #e1306c; }
+.social-links a[aria-label*="LinkedIn"]:hover { color: #0077b5; }
+.social-links a[aria-label*="YouTube"]:hover { color: #ff0000; }
+.social-links a[aria-label*="GitHub"]:hover { color: #6e5494; }
+.social-links a[aria-label*="Website"]:hover { color: #ffa100; }
+.footer-nav {
   list-style: none;
   padding: 0;
-  margin: 0 auto 20px;
+  margin: 20px 0;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  font-size: 15px;
-  gap: 10px;
+  justify-content: center;
+  gap: 12px;
 }
-
-#footer .footer-nav li {
-  position: relative;
-  padding: 0 10px;
-}
-
-#footer .footer-nav li:not(:last-child)::after {
-  content: "|";
-  position: absolute;
-  left: -10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #666;
-}
-
-#footer .footer-nav a {
+.footer-nav a {
   color: #ccc;
   text-decoration: none;
+  font-size: 15px;
   transition: color 0.3s ease;
 }
-
-#footer .footer-nav a:hover {
+.footer-nav a:hover,
+.footer-nav a:focus {
   color: #ffa100;
+  outline: none;
 }
-
-#footer .contact-info {
+.contact-info {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.8;
 }
-
-#footer .contact-info a {
+.contact-info a[href^="tel"] {
+  direction: ltr;
+  unicode-bidi: embed;
+  display: inline-block;
+}
+.contact-info a {
   color: #ffa100;
   text-decoration: none;
 }
-
-#footer .contact-info a:hover {
+.contact-info a:hover,
+.contact-info a:focus {
   text-decoration: underline;
+  outline: none;
 }
-
-#footer .footer-bottom {
+.footer-bottom {
   border-top: 1px solid #333;
   margin-top: 30px;
   padding-top: 20px;
   font-size: 14px;
   color: #aaa;
 }
-
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
-  #footer .row {
-    flex-direction: column;
-  }
-
-  #footer .footer-col {
-    flex: 1 1 100%;
-    padding: 20px 0;
-  }
-
-  #footer .footer-nav {
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
-    padding: 10px 0;
-    margin: 10px 0;
-  }
-}
-
-/* Responsive for smaller screens */
-@media (max-width: 600px) {
-  #footer .row {
-    flex-wrap: wrap;
+  .footer-row {
     flex-direction: column;
     align-items: center;
   }
-  #footer .footer-col.social,
-  #footer .footer-col.nav,
-  #footer .footer-col.contact {
-    flex: none;
-    width: 100%;
+  .footer-divider {
+    display: none;
+  }
+  .footer-col {
     margin-bottom: 30px;
-    padding: 0 15px;
-    text-align: center !important;
+  }
+  .social-links {
+    justify-content: center;
+  }
+  .footer-nav {
+    gap: 16px;
+    flex-wrap: wrap;
   }
 }
 
@@ -1869,6 +1847,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
