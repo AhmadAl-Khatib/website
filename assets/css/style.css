@@ -130,10 +130,10 @@ transition: all 0.35s ease 0s;
     padding: 12px 20px;
     font-size: 18px;
     background-color: transparent;
-    border-bottom: 10px solid transparent;   
+    border-bottom: 10px solid transparent;
     transition: background-color 0.3s ease, 
                 color 0.3s ease, 
-                border-bottom 0.3s ease;
+                border-bottom-color 0.3s ease; 
 }
 /* Dropdown links - hover, focus, active states */
 .navbar-default .dropdown-menu > li > a:hover,
@@ -141,7 +141,7 @@ transition: all 0.35s ease 0s;
 .navbar-default .dropdown-menu > li > a:active {
     background-color: #ffa100;         
     color: #fff;                             
-    border-bottom: 3px solid #e49102;       
+    border-bottom-color: #e49102;  
     text-decoration: none;
     outline: none;
     box-shadow: none;
@@ -1921,6 +1921,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
