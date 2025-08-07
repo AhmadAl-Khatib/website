@@ -1305,7 +1305,7 @@ html[lang="ar"] #blog .row > p {
 #footer .row {
   display: flex;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap; /* changed from nowrap */
   max-width: 1100px;
   margin: 0 auto;
   position: relative;
@@ -1315,6 +1315,7 @@ html[lang="ar"] #blog .row > p {
   flex: 1 1 33%;
   padding: 0 20px;
   position: relative;
+  min-width: 250px; /* added to avoid too narrow columns */
 }
 
 #footer .separator {
@@ -1361,9 +1362,18 @@ html[lang="ar"] #blog .row > p {
   transform: scale(1.2);
 }
 
+/* Existing hover colors */
 #footer .social-links a[aria-label*="Twitter"]:hover { color: #1da1f2; }
 #footer .social-links a[aria-label*="Facebook"]:hover { color: #1877f2; }
 #footer .social-links a[aria-label*="Instagram"]:hover { color: #e1306c; }
+
+/* Added hover colors for new social links */
+#footer .social-links a[aria-label*="LinkedIn"]:hover { color: #0077b5; }
+#footer .social-links a[aria-label*="GitHub"]:hover { color: #333; }
+#footer .social-links a[aria-label*="YouTube"]:hover { color: #ff0000; }
+#footer .social-links a[aria-label*="TikTok"]:hover { filter: brightness(1.2); } /* brighten TikTok svg */
+#footer .social-links a[aria-label*="Snapchat"]:hover { filter: brightness(1.2); } /* brighten Snapchat svg */
+#footer .social-links a[aria-label*="Website"]:hover { color: #ffa100; }
 
 #footer .footer-nav {
   list-style: none;
@@ -1500,6 +1510,7 @@ html[lang="ar"] #blog .row > p {
     padding: 10px 0;
   }
 }
+
 
 
 
@@ -1921,6 +1932,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
