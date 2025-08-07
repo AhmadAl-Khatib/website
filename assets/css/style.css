@@ -115,6 +115,24 @@ color:#fff;
  background: rgba(0, 0, 0, 1) none repeat scroll 0 0 !important;
 transition: all 0.35s ease 0s;
 }
+.navbar-default .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.95); /* dark background */
+    border: none;
+    border-radius: 0;
+    min-width: 180px;
+}
+
+.navbar-default .dropdown-menu > li > a {
+    color: #fff; /* white text */
+    padding: 12px 20px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-default .dropdown-menu > li > a:hover {
+    background-color: #ffa100;
+    color: #fff;
+}
 .navbar-default .navbar-nav > li > a {
     color: #fff;
     font-size: 20px;
@@ -1878,6 +1896,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
