@@ -1290,9 +1290,6 @@ html[lang="ar"] #blog .row > p {
 }
 
 /* GENERAL FOOTER STYLES */
-
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
-
 #footer {
   background-color: #111;
   color: #ddd;
@@ -1346,17 +1343,6 @@ html[lang="ar"] #blog .row > p {
 
 #footer .social-links a:hover {
   transform: scale(1.2);
-}
-
-#footer .social-links a[aria-label*="Twitter"]:hover { color: #1da1f2; }
-#footer .social-links a[aria-label*="Facebook"]:hover { color: #1877f2; }
-#footer .social-links a[aria-label*="Instagram"]:hover { color: #e1306c; }
-#footer .social-links a[aria-label*="YouTube"]:hover { color: #ff0000; }
-#footer .social-links a[aria-label*="LinkedIn"]:hover { color: #0077b5; }
-#footer .social-links a[aria-label*="GitHub"]:hover { color: #ccc; }
-#footer .social-links a[aria-label*="TikTok"]:hover img,
-#footer .social-links a[aria-label*="Snapchat"]:hover img {
-  filter: brightness(1.5);
 }
 
 #footer .footer-nav {
@@ -1854,6 +1840,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
