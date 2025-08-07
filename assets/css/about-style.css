@@ -12262,3 +12262,7 @@ html:lang(ar) .resume-timeline-item::before {
 html:lang(ar) .resume-timeline-item {
   padding-right: 30px; 
 }
+html[lang="ar"] .resume-company-name.ms-auto {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
