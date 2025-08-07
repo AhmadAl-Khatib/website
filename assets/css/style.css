@@ -117,7 +117,7 @@ transition: all 0.35s ease 0s;
 }
 /* Dropdown menu container */
 .navbar-default .dropdown-menu {
-    background-color: rgba(0, 0, 0, 0.95); 
+    background-color: #47585f; 
     border: none;
     border-radius: 0;
     min-width: 180px;
@@ -1921,6 +1921,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
