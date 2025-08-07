@@ -115,24 +115,42 @@ color:#fff;
  background: rgba(0, 0, 0, 1) none repeat scroll 0 0 !important;
 transition: all 0.35s ease 0s;
 }
+/* Dropdown menu container */
 .navbar-default .dropdown-menu {
-    background-color: rgba(0, 0, 0, 0.95); /* dark background */
+    background-color: rgba(0, 0, 0, 0.95); /* dark transparent background */
     border: none;
     border-radius: 0;
     min-width: 180px;
+    box-shadow: none;
+    margin-top: 0; /* aligns better with nav item */
 }
 
+/* Dropdown links (normal state) */
 .navbar-default .dropdown-menu > li > a {
-    color: #fff; /* white text */
+    color: #fff;
     padding: 12px 20px;
     font-size: 18px;
-    transition: background-color 0.3s ease;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navbar-default .dropdown-menu > li > a:hover {
+/* Dropdown link on hover */
+.navbar-default .dropdown-menu > li > a:hover,
+.navbar-default .dropdown-menu > li > a:focus {
     background-color: #ffa100;
     color: #fff;
+    text-decoration: none;
+    outline: none;
 }
+
+/* Prevent blue background on click/focus */
+.navbar-default .dropdown-menu > li > a:active {
+    background-color: #ffa100;
+    color: #fff;
+    outline: none;
+    box-shadow: none;
+}
+
 .navbar-default .navbar-nav > li > a:visited {
     background-color: #ffa100;
     border-bottom: 10px solid #e49102;
@@ -1901,6 +1919,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
