@@ -12,11 +12,79 @@
     
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <!-- Fallback PNG favicon for older browsers -->
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <!-- Legacy ICO for older Windows/IE -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <!-- Apple devices (iPhone, iPad) -->
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+    <!-- ====== ADD CANONICAL HERE (immediately after description) ====== -->
+    <link rel="canonical" href="https://ahmad-khatib.com/">
+    <link rel="alternate" hreflang="ar" href="https://ahmad-khatib.com/" />
+    <link rel="alternate" hreflang="en" href="https://ahmad-khatib.com/en" />
+
+    <!-- ====== 5) ADD OPEN GRAPH TAGS ====== -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="أحمد الخطيب – كاتب رأي ومؤلف، ناشط اجتماعي وسياسي، ورائد أعمال">
+    <meta property="og:description" content="الموقع الرسمي لأحمد الخطيب – كاتب رأي ومؤلف في مجال البرمجة والتكنولوجيا، وناشط سياسي واجتماعي لبناني. يشارك مقالات وأفكار حول الواقع السياسي، والتطوير الشخصي، وريادة الأعمال، والذكاء الاصطناعي.">
+    <meta property="og:url" content="https://ahmad-khatib.com/">
+    <meta property="og:image" content="https://ahmad-khatib.com/assets/img/about-ahmad-al-khatib.webp">
+
+    <!-- ====== 6) ADD TWITTER CARD TAGS ====== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="أحمد الخطيب – كاتب رأي ومؤلف، ناشط اجتماعي وسياسي، ورائد أعمال">
+    <meta name="twitter:description" content="الموقع الرسمي لأحمد الخطيب – كاتب رأي ومؤلف في مجال البرمجة والتكنولوجيا، وناشط سياسي واجتماعي لبناني. يشارك مقالات وأفكار حول الواقع السياسي، والتطوير الشخصي، وريادة الأعمال، والذكاء الاصطناعي.">
+    <meta name="twitter:image" content="https://ahmad-khatib.com/assets/img/about-ahmad-al-khatib.webp">
+
+    <!-- =============== Bootstrap Core CSS =============== -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <!-- =============== fonts awesome =============== -->
     <link rel="stylesheet" href="assets/font/css/font-awesome.min.css" type="text/css">
+    <!-- =============== Plugin CSS =============== -->
+    <link rel="stylesheet" href="assets/css/animate.min.css" type="text/css">
+    <!-- =============== Custom CSS =============== -->
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <!-- =============== Owl Carousel Assets =============== -->
+    <link href="assets/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="assets/owl-carousel/owl.theme.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/isotope-docs.css" media="screen">
+    <link rel="stylesheet" href="assets/css/baguetteBox.css">
        
     <link id="theme-style" rel="stylesheet" href="assets/css/about-style.css">
 
-
+</script>
+    <style>
+  /* Apply Tajawal to the whole site */
+  html, body {
+    font-family: 'Tajawal', sans-serif !important;
+  }
+  /* Exclude Font Awesome icons */
+  [class^="fa"],
+  [class*=" fa-"],
+  i {
+    font-family: 'FontAwesome' !important;
+  }
+  /* Exclude Owl Carousel buttons */
+  .owl-prev,
+  .owl-next,
+  .owl-nav button,
+  .owl-dot {
+    font-family: 'FontAwesome' !important;
+  }
+  /* ❌ Exclude social icons inside .social-links */
+  .social-links *,
+  .social-links i {
+    font-family: 'FontAwesome' !important;
+  }
+</style>
+<script>
+  if (window.location.pathname === '/index.html') {
+    window.location.replace('/');
+  }
+</script>
 </head> 
 
 <body>	
@@ -513,9 +581,81 @@
     </article> 
 
     
-    <footer class="footer text-center pt-2 pb-5">
-	    <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
-    </footer>
+    <!-- Footer -->
+<footer id="footer" dir="rtl">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col col-xs-12 col-sm-4">
+        <ul class="social-links">
+          <li><a href="https://www.facebook.com/ahmad.khatib.9237244" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com/alkhatib_ahmad1" aria-label="Twitter"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/alkhatib_ahmad1/" aria-label="Instagram"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-col col-xs-12 col-sm-4">
+        <ul class="footer-nav">
+          <li><a class="page-scroll" href="#home">الرئيسية</a></li>
+          <li><a class="page-scroll" href="#person">من أنا</a></li>
+          <li><a class="page-scroll" href="#publications">مؤلفاتي</a></li>
+          <li><a class="page-scroll" href="#python-course">دوراتي</a></li>
+          <li><a class="page-scroll" href="#blog">مدونتي</a></li>
+          <li><a class="page-scroll" href="#Gallery">أرشيف الصور</a></li>
+          <li><a class="page-scroll" href="#contact">تواصل معي</a></li>
+        </ul>
+      </div>
+      <div class="footer-col col-xs-12 col-sm-4">
+        <div class="contact-info">
+          <p>الشوف، لبنان</p>
+          <p><a href="tel:+96170559966">00961 70 55 99 66</a></p>
+          <p><a href="mailto:ahmad@ahmad-khatib.com">ahmad@ahmad-khatib.com</a></p>
+        </div>
+      </div>
+      <div class="separator separator-1"></div>
+      <div class="separator separator-2"></div>
+    </div>
+    <div class="footer-bottom">
+      <p>أحمد الخطيب 2025</p>
+    </div>
+  </div>
+</footer>
+    
+    <!-- =============== jQuery =============== -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/isotope-docs.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.easing.min.js"></script>
+<script src="assets/js/jquery.fittext.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/owl-carousel/owl.carousel.js"></script>
+<script async src="assets/js/baguetteBox.js"></script>
+<script async src="assets/js/plugins.js"></script>
+<script src="assets/js/jquery.scrollUp.js"></script>
+<script src="assets/js/creative.js"></script>
+<script src="assets/js/custom.js"></script>
+
+<script>
+window.onload = function() {
+    if (typeof oldIE === 'undefined' && Object.keys) {
+        hljs.initHighlighting(); // Syntax highlighting
+    }
+    baguetteBox.run('.baguetteBoxOne'); // Lightbox gallery
+    baguetteBox.run('.baguetteBoxTwo');
+    baguetteBox.run('.baguetteBoxThree', {
+        animation: 'fadeIn'
+    });
+    baguetteBox.run('.baguetteBoxFour', {
+        buttons: false
+    });
+    baguetteBox.run('.baguetteBoxFive', {
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+        }
+    });
+};
+</script>
+    
+</body>
+</html>
 
     
 
