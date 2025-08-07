@@ -130,7 +130,7 @@ transition: all 0.35s ease 0s;
     padding: 12px 20px;
     font-size: 18px;
     background-color: transparent;
-    border-bottom: 3px solid transparent;   
+    border-bottom: 10px solid transparent;   
     transition: background-color 0.3s ease, 
                 color 0.3s ease, 
                 border-bottom 0.3s ease;
@@ -1921,6 +1921,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
