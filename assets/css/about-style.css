@@ -12193,3 +12193,37 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
   }
 }
 
+
+html:lang(ar) .resume-body{
+  direction: rtl;
+  text-align: right;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #F7F8FA;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #434E5E;
+    overflow-x: hidden;
+    padding-top: 80px; /* Base padding for smaller screens */
+}
+
+/* Adjust padding for larger screens where the navbar is taller */
+@media (min-width: 992px) {
+    body {
+        padding-top: 120px;
+    }
+}
+
+.resume-header {
+    background: #007b8c;
+    color: rgba(255, 255, 255, 0.9);
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .pt-md-0 {
+        padding-top: 0 !important;
+    }
+}
