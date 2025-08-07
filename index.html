@@ -924,17 +924,6 @@
 <script src="assets/js/jquery.scrollUp.js"></script>
 <script src="assets/js/creative.js"></script>
 <script src="assets/js/custom.js"></script>
-<script>
-  $(function() {
-    $('a.page-scroll').bind('click', function(event) {
-      var $anchor = $(this);
-      $('html, body').stop().animate({
-        scrollTop: $($anchor.attr('href')).offset().top
-      }, 1000, 'easeInOutExpo');
-      event.preventDefault();
-    });
-  });
-</script>
 
 <script>
 window.onload = function() {
@@ -959,6 +948,7 @@ window.onload = function() {
     
 </body>
 </html>
+
 
 
 
