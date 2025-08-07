@@ -184,6 +184,20 @@
     scroll-behavior: smooth;
   }
 }
+/* Tajawal font faces */
+@font-face {
+    font-family: 'Tajawal';
+    src: url('../font/fonts/Tajawal-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tajawal';
+    src: url('../font/fonts/Tajawal-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
 
 body {
   margin: 0;
@@ -12226,4 +12240,25 @@ body {
     .pt-md-0 {
         padding-top: 0 !important;
     }
+}
+/* Apply Tajawal to all elements except Font Awesome icons */
+html:lang(ar) body,
+html:lang(ar) body *:not(.fa):not(.fas):not(.far):not(.fal):not(.fab):not(.fa-solid) {
+    font-family: 'Tajawal', sans-serif !important;
+}
+html:lang(ar) .resume-body{
+  direction: rtl;
+  text-align: right;
+}
+html:lang(ar) .list-unstyled {
+  padding: 0 !important;
+}
+html:lang(ar) .resume-timeline::before {
+  left: auto;                   
+}
+html:lang(ar) .resume-timeline-item::before {
+  right: -8px;       
+}
+html:lang(ar) .resume-timeline-item {
+  padding-right: 30px; 
 }
