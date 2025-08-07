@@ -465,7 +465,18 @@
 
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
-
+    <script>
+        $(document).ready(function() {
+            var navbar = $('#mainNav');
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 50) {
+                    navbar.addClass('scrolled');
+                } else {
+                    navbar.removeClass('scrolled');
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
