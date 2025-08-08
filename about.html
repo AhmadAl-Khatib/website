@@ -33,15 +33,9 @@
                 <li class="nav-item">
                     <a class="page-scroll nav-link active" href="/index.html">الرئيسية</a>
                 </li>
-				<li class="nav-item dropdown">
-				    <a class="nav-link dropdown-toggle page-scroll" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-				        من أنا <span class="caret"></span>
-				    </a>
-				    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-				        <li><a class="page-scroll dropdown-item" href="/index.html#person">نبذة شخصية</a></li>
-				        <li><a class="page-scroll dropdown-item" href="#">السيرة الذاتية</a></li>
-				    </ul>
-				</li>
+                <li class="nav-item">
+                    <a class="page-scroll nav-link" href="/index.html#person">من أنا</a>
+                </li>
                 <li class="nav-item">
                     <a class="page-scroll nav-link" href="/index.html#publications">مؤلفاتي</a>
                 </li>
@@ -465,18 +459,6 @@
 
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            var navbar = $('#mainNav');
-            $(window).scroll(function() {
-                if ($(this).scrollTop() > 50) {
-                    navbar.addClass('scrolled');
-                } else {
-                    navbar.removeClass('scrolled');
-                }
-            });
-        });
-    </script>
 
 </body>
 </html>
