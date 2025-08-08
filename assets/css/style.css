@@ -266,6 +266,25 @@ transition: all 0.35s ease 0s;
     padding: 10px 0;
     text-align: justify;
 }
+#person .button {
+  cursor: pointer;
+  font-weight: bold;
+  font-size:14px;
+  color: #ffa100;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  margin: 0px 0 20px;
+  border: 1px solid #aaa;
+}
+#person .button:hover {
+  color: lightblue;
+}
+#person .button.active {
+  color: lightblue;
+}  
 html[lang="ar"] #person p {
     font-size: 16px;
     padding: 10px 0;
@@ -1294,7 +1313,7 @@ html[lang="ar"] #blog .row > p {
   background-color: #111;
   color: #ddd;
   padding: 50px 0;
-  font-family: Arial, sans-serif;
+  font-family: tajawal, sans-serif;
   direction: rtl;
   text-align: center;
 }
@@ -1840,74 +1859,4 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
-
-#person .button {
-  cursor: pointer;
-  font-weight: bold;
-  font-size:14px;
-  color: #ffa100;
-  transition: color 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 5px;
-  padding: 0.5em 1em;
-  margin: 0px 0 20px;
-  border: 1px solid #aaa;
-}
-#person .button:hover {
-  color: lightblue;
-}
-#person .button.active {
-  color: lightblue;
-}  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
