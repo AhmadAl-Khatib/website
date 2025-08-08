@@ -12268,6 +12268,12 @@ html[lang="ar"] .resume-company-name.ms-auto {
     margin-left: 0 !important;
     margin-right: auto !important;
 }
+html[lang="ar"] ol, ul {
+  padding-left: 0rem;
+}
+html[lang="ar"] .resume-timeline {
+  padding-left: 0rem;
+}
 .resume-header {
     background: #007b8c;
     color: rgba(255, 255, 255, 0.9);
