@@ -1841,6 +1841,25 @@ details.open .content-inner {
   border-color: #ffffff;
 }
 
+#person .button {
+  cursor: pointer;
+  font-weight: bold;
+  font-size:14px;
+  color: #ffa100;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  margin: 0px 0 20px;
+  border: 1px solid #aaa;
+}
+#person .button:hover {
+  color: lightblue;
+}
+#person .button.active {
+  color: lightblue;
+}  
 
 
 
