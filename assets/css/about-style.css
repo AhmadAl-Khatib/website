@@ -12062,11 +12062,13 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
     }
 
     .navbar-brand {
-        padding: 15px !important;
+        padding-top: 0px !important;
+        padding-bottom: 5px !important;
+        padding-left: 0px !important; 
     }
 
     .navbar-brand img {
-        width: 75% !important;
+        width: 65% !important;
     }
     
     .navbar-nav {
