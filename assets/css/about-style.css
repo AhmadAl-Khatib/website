@@ -12268,11 +12268,14 @@ html[lang="ar"] .resume-company-name.ms-auto {
     margin-left: 0 !important;
     margin-right: auto !important;
 }
-html[lang="ar"] ol, ul {
-  padding-left: 0rem;
-}
+html[lang="ar"] ol,
+html[lang="ar"] ul,
 html[lang="ar"] .resume-timeline {
-  padding-left: 0rem;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    list-style-position: inside;
 }
 .resume-header {
     background: #007b8c;
