@@ -11962,22 +11962,22 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
 }
 
 /* --- Navbar Styles --- */
-
-/* Base Navbar */
 .navbar {
     background: transparent !important;
-    padding: 0.5rem 1rem !important;
+    padding: 0 !important;
     transition: all 0.35s ease-in-out;
 }
 
-/* Sticky Navbar (affix equivalent) */
 .navbar.fixed-top {
     background: rgba(0, 0, 0, 1) !important;
     transition: all 0.35s ease-in-out;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Logo Sizing and Hover Effect */
+.navbar-brand {
+    padding: 15px 15px !important;
+}
+
 .navbar-brand img {
     width: 75% !important;
     transition: filter 0.3s ease-in-out;
@@ -11988,25 +11988,21 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
     filter: grayscale(100%);
 }
 
-/* Main Navbar Links */
 .navbar-nav .nav-link {
     color: #fff !important;
     font-size: 20px;
-    padding: 25px 26px !important;
+    padding: 50px 26px 35px !important;
     transition: all 0.35s ease-in-out;
     border-bottom: 10px solid transparent;
 }
 
-/* Navbar Link Hover/Focus/Active States */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus,
 .navbar-nav .nav-link.active {
     background-color: #ffa100;
-    border-bottom-color: #e49102;
     color: #fff !important;
+    border-bottom-color: #e49102;
 }
-
-/* --- Dropdown Menu Styles --- */
 
 .dropdown-menu {
     background-color: #47585f !important;
@@ -12041,37 +12037,66 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
     box-shadow: none;
 }
 
-/* --- Responsive Navbar Overrides --- */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar-nav .nav-link {
+        font-size: 18px;
+        padding: 40px 15px 25px !important;
+    }
+}
 
 @media (max-width: 991.98px) {
+    .navbar-collapse {
+        flex-basis: 100%;
+        flex-grow: 1;
+        align-items: center;
+    }
+
+    .navbar-brand {
+        padding: 15px !important;
+    }
+
     .navbar-brand img {
-        width: 65% !important;
+        width: 75% !important;
     }
-    .navbar-toggler {
-        border-color: #fff !important;
+
+    .navbar-nav {
+        background: #000 !important;
+        width: 100%;
+        margin-top: 0 !important;
+        flex-direction: column;
     }
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-    }
-    .navbar-toggler:hover .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-    }
+
     .navbar-nav .nav-link {
         padding: 10px 15px !important;
         font-size: 18px;
-        border-bottom: none !important;
         width: 100%;
-        text-align: center;
+        border-bottom: none !important;
+        text-align: left;
     }
+
     .navbar-nav .nav-link:hover,
     .navbar-nav .nav-link:focus,
     .navbar-nav .nav-link.active {
-      border-bottom: none !important;
-      background-color: #ffa100;
-      color: #fff !important;
+        background-color: #ffa100;
+        color: #fff !important;
+        border-bottom: none !important;
     }
-    .navbar-nav {
-      background-color: #000 !important;
+
+    .navbar-toggler {
+        border-color: #fff !important;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+    .navbar-toggler:hover {
+        background-color: orange !important;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
     }
 }
 
