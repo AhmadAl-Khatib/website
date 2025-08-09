@@ -16,6 +16,7 @@
 
 
     <link rel="stylesheet" href="assets/font/css/font-awesome.min.css" type="text/css">
+    
     <link id="theme-style" rel="stylesheet" href="assets/css/about-style.css">
     
     <script type="application/ld+json">
@@ -600,79 +601,36 @@
 document.addEventListener("DOMContentLoaded", function() {
   gsap.registerPlugin(ScrollTrigger);
 
-  // Profile photo: simple fade-in (no scale/translate)
-  gsap.from('.resume-picture-holder img', {
+  // Set initial state for all elements to be animated to ensure they are visible
+  gsap.set('.resume-wrapper-inner > *', { autoAlpha: 1 });
+
+  // Staggered fade and slide up for all sections and content
+  gsap.from('.resume-wrapper-inner > *', {
     opacity: 0,
-    duration: 1,
-    ease: 'power2.out',
-    // run on DOMContentLoaded so the photo appears early and gracefully
-    onStart: function() { /* no-op */ }
+    y: 20,
+    duration: 0.8,
+    stagger: 0.1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: '.resume-wrapper-inner',
+      start: 'top 85%',
+      toggleActions: 'play none none none'
+    }
   });
 
-  // Headings: gentle fade + slide up, once only
-  gsap.utils.toArray('h1.name, .resume-section-title').forEach(function(el, i) {
-    gsap.from(el, {
-      opacity: 0,
-      y: 24,
-      duration: 1,
-      ease: 'power2.out',
-      delay: i * 0.06,
-      scrollTrigger: {
-        trigger: el,
-        start: 'top 85%',
-        once: true
-      }
-    });
-  });
-
-  // Paragraphs and list items: fade in staggered on scroll (exclude footer)
-  gsap.utils.toArray('p, li').forEach(function(el) {
-    if (el.closest && el.closest('#footer')) return;
-    gsap.from(el, {
-      opacity: 0,
-      y: 14,
-      duration: 0.75,
-      ease: 'power1.out',
-      scrollTrigger: {
-        trigger: el,
-        start: 'top 92%',
-        once: true
-      }
-    });
-  });
-
-  // Timeline items: slide from right to left, once only
-  gsap.utils.toArray('.resume-timeline-item').forEach(function(item, index) {
-    gsap.from(item, {
-      opacity: 0,
-      x: 40,
-      duration: 0.9,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: item,
-        start: 'top 92%',
-        once: true
-      }
-    });
-  });
-
-  // Skills bars: animate width from 0 to inline style width (once only)
-  gsap.utils.toArray('.progress-bar').forEach(function(bar) {
-    var targetWidth = bar.style.width || (bar.getAttribute('aria-valuenow') ? bar.getAttribute('aria-valuenow') + '%' : '0%');
-    // Set to 0 first
-    gsap.set(bar, { width: '0%' });
-    gsap.to(bar, {
-      width: targetWidth,
-      duration: 0.6, // Made animation faster
+  // Animate skill bars
+  gsap.utils.toArray('.progress-bar').forEach(bar => {
+    gsap.from(bar, {
+      width: '0%',
+      duration: 1.2,
       ease: 'power2.out',
       scrollTrigger: {
         trigger: bar,
         start: 'top 92%',
-        once: true
+        toggleActions: 'play none none none'
       }
     });
   });
-  
 });
 </script>
 </body>
