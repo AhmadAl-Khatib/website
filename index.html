@@ -899,189 +899,189 @@ window.onload = function() {
 <script>
   document.addEventListener("DOMContentLoaded", function() {
 
-    // Register ScrollTrigger plugin
-    gsap.registerPlugin(ScrollTrigger);
+// Register ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
 
-    // Initial page load animation
-    gsap.from("#mainNav", {
-      yPercent: -100,
-      opacity: 0,
-      duration: 1,
-      ease: "power3.out"
-    });
-    gsap.from(".header-content", {
-      y: 50,
-      opacity: 0,
-      duration: 1,
-      delay: 0.5,
-      ease: "power3.out"
-    });
+    // Initial page load animation
+    gsap.from("#mainNav", {
+      yPercent: -100,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out"
+    });
+    gsap.from(".header-content", {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      delay: 0.5,
+      ease: "power3.out"
+    });
 
-    // Animate section headings
-    gsap.utils.toArray("section h2, section h3").forEach(heading => {
-      gsap.from(heading, {
-        scrollTrigger: {
-          trigger: heading,
-          start: "top 80%",
-          toggleActions: "play none none reverse"
-        },
-        y: 20,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power2.out"
-      });
-    });
+    // Animate section headings
+    gsap.utils.toArray("section h2, section h3").forEach(heading => {
+      gsap.from(heading, {
+        scrollTrigger: {
+          trigger: heading,
+          start: "top 80%",
+          toggleActions: "play none none reverse"
+        },
+        y: 20,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out"
+      });
+    });
 
-    // "About Me" section
-    gsap.from("#person .person-image-container img", {
-      scrollTrigger: {
-        trigger: "#person",
-        start: "top 75%",
-        toggleActions: "play none none reverse"
-      },
-      x: -50,
-      opacity: 0,
-      duration: 1,
-      ease: "power2.out"
-    });
-    gsap.from("#person .person-content p", {
-      scrollTrigger: {
-        trigger: "#person .person-content",
-        start: "top 85%",
-        toggleActions: "play none none reverse"
-      },
-      y: 20,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.2,
-      ease: "power2.out"
-    });
+    // "About Me" section
+    gsap.from("#person .person-image-container img", {
+      scrollTrigger: {
+        trigger: "#person",
+        start: "top 75%",
+        toggleActions: "play none none reverse"
+      },
+      x: -50,
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out"
+    });
+    gsap.from("#person .person-content p", {
+      scrollTrigger: {
+        trigger: "#person .person-content",
+        start: "top 85%",
+        toggleActions: "play none none reverse"
+      },
+      y: 20,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "power2.out"
+    });
 
-    // "Activities" section (staggered timeline)
-    gsap.utils.toArray(".activity-item").forEach((item, i) => {
-      gsap.from(item, {
-        scrollTrigger: {
-          trigger: item,
-          start: "top 85%",
-          toggleActions: "play none none reverse"
-        },
-        x: i % 2 === 0 ? -100 : 100,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out"
-      });
-    });
+    // "Activities" section (staggered timeline)
+    gsap.utils.toArray(".activity-item").forEach((item, i) => {
+      gsap.from(item, {
+        scrollTrigger: {
+          trigger: item,
+          start: "top 85%",
+          toggleActions: "play none none reverse"
+        },
+        x: i % 2 === 0 ? -100 : 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
+      });
+    });
 
-    // "Publications" section
-    gsap.from("#publications .publications-image-container", {
-      scrollTrigger: {
-        trigger: "#publications",
-        start: "top 75%",
-        toggleActions: "play none none reverse"
-      },
-      scale: 0.8,
-      opacity: 0,
-      duration: 1.2,
-      ease: "back.out(1.7)"
-    });
-    gsap.from("#publications .publications-content p, #publications .publications-content .button", {
-      scrollTrigger: {
-        trigger: "#publications .publications-content",
-        start: "top 85%",
-        toggleActions: "play none none reverse"
-      },
-      y: 20,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.2,
-      ease: "power2.out"
-    });
+    // "Publications" section
+    gsap.from("#publications .publications-image-container", {
+      scrollTrigger: {
+        trigger: "#publications",
+        start: "top 75%",
+        toggleActions: "play none none reverse"
+      },
+      scale: 0.8,
+      opacity: 0,
+      duration: 1.2,
+      ease: "back.out(1.7)"
+    });
+    gsap.from("#publications .publications-content p, #publications .publications-content .button", {
+      scrollTrigger: {
+        trigger: "#publications .publications-content",
+        start: "top 85%",
+        toggleActions: "play none none reverse"
+      },
+      y: 20,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "power2.out"
+    });
 
-    // "Bookshelf" section (staggered cards)
-    gsap.utils.toArray(".book-item").forEach((book, i) => {
-      gsap.from(book, {
-        scrollTrigger: {
-          trigger: book,
-          start: "top 85%",
-          toggleActions: "play none none reverse"
-        },
-        y: 50,
-        opacity: 0,
-        duration: 1,
-        delay: i * 0.2,
-        ease: "power3.out"
-      });
-    });
+    // "Bookshelf" section (staggered cards)
+    gsap.utils.toArray(".book-item").forEach((book, i) => {
+      gsap.from(book, {
+        scrollTrigger: {
+          trigger: book,
+          start: "top 85%",
+          toggleActions: "play none none reverse"
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        delay: i * 0.2,
+        ease: "power3.out"
+      });
+    });
 
-    // "Python Course" features
-    gsap.from(".course-feature-item", {
-      scrollTrigger: {
-        trigger: "#python-course",
-        start: "top 75%",
-        toggleActions: "play none none reverse"
-      },
-      y: 50,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: "power2.out"
-    });
+    // "Python Course" features
+    gsap.from(".course-feature-item", {
+      scrollTrigger: {
+        trigger: "#python-course",
+        start: "top 75%",
+        toggleActions: "play none none reverse"
+      },
+      y: 50,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: "power2.out"
+    });
 
-    // "Blog" section
-    gsap.from("#blog .latest-post", {
-      scrollTrigger: {
-        trigger: "#blog",
-        start: "top 75%",
-        toggleActions: "play none none reverse"
-      },
-      x: -50,
-      opacity: 0,
-      duration: 1,
-      ease: "power2.out"
-    });
-    gsap.from("#blog .blog-item", {
-      scrollTrigger: {
-        trigger: "#blog .blog-item",
-        start: "top 85%",
-        toggleActions: "play none none reverse"
-      },
-      y: 30,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.2,
-      ease: "power2.out"
-    });
+    // "Blog" section
+    gsap.from("#blog .latest-post", {
+      scrollTrigger: {
+        trigger: "#blog",
+        start: "top 75%",
+        toggleActions: "play none none reverse"
+      },
+      x: -50,
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out"
+    });
+    gsap.from("#blog .blog-item", {
+      scrollTrigger: {
+        trigger: "#blog .blog-item",
+        start: "top 85%",
+        toggleActions: "play none none reverse"
+      },
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "power2.out"
+    });
 
-    // "Gallery" items
-    gsap.utils.toArray(".element-item").forEach((item, i) => {
-      gsap.from(item, {
-        scrollTrigger: {
-          trigger: item,
-          start: "top 90%",
-          toggleActions: "play none none reverse"
-        },
-        scale: 0.9,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power2.out"
-      });
-    });
+    // "Gallery" items
+    gsap.utils.toArray(".element-item").forEach((item, i) => {
+      gsap.from(item, {
+        scrollTrigger: {
+          trigger: item,
+          start: "top 90%",
+          toggleActions: "play none none reverse"
+        },
+        scale: 0.9,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out"
+      });
+    });
 
-    // "Contact" form
-    gsap.from("#contact .form-group, #contact button", {
-      scrollTrigger: {
-        trigger: "#contact",
-        start: "top 75%",
-        toggleActions: "play none none reverse"
-      },
-      y: 20,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.1,
-      ease: "power2.out"
-    });
-
+    // "Contact" form
+    gsap.from("#contact .form-group, #contact button", {
+      scrollTrigger: {
+        trigger: "#contact",
+        start: "top 75%",
+        toggleActions: "play none none reverse"
+      },
+      y: 20,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.1,
+      ease: "power2.out"
+    });
   });
 </script>
 </body>
 </html>
+
