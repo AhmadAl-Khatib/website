@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -16,7 +17,6 @@
 
 
     <link rel="stylesheet" href="assets/font/css/font-awesome.min.css" type="text/css">
-    
     <link id="theme-style" rel="stylesheet" href="assets/css/about-style.css">
     
     <script type="application/ld+json">
@@ -26,7 +26,7 @@
       "name": "أحمد الخطيب",
       "url": "https://ahmad-khatib.com/index",
       "image": "https://ahmad-khatib.com/assets/img/about-ahmad-al-khatib-career.webp",
-      "jobTitle": "الإدارة الدينامية، العلاقات العامة، الذكاء الاصطناعي والبرمجة",
+      "jobTitle": "الإدارة الديناميكية، العلاقات العامة، الذكاء الاصطناعي والبرمجة",
       "description": "مسيرة مهنية بدأت في 2010، تتمحور حول الإدارة الديناميكية، العلاقات العامة، والخبرة في الذكاء الاصطناعي والبرمجة. بناء شبكات علاقات واسعة مع قيادات وشركات عالمية في الخليج وأوروبا.",
       "worksFor": [
         {
@@ -242,12 +242,12 @@
 												      </span>@alkhatib_ahmad1</a>
 												  </li>
 												</ul>
-									    </div></div></div></header>
+									    </div></div></div></div></header>
 		    <div class="resume-body p-5">
 			    <section class="resume-section summary-section mb-5">
 				    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">ملخص السيرة الذاتية: خبرات في الإدارة والعلاقات العامة</h2>
 				    <div class="resume-section-content">
-					    <p class="mb-0" >بدأت مسيرتي المهنية في عام 2010 عبر الانخراط في العمل العائلي، جيث كانت مرحلة تأسيسية لتشكيل شبكة علاقات واسعة النطاق، تشمل قيادات وشخصيات بارزة في عالم الأعمال، إلى جانب مؤسسات وشركات عالمية رائدة في القطاعين العام والخاص، على امتداد منطقة الخليج العربي وأوروبا.</p>
+					    <p class="mb-0">بدأت مسيرتي المهنية في عام 2010 عبر الانخراط في العمل العائلي، جيث كانت مرحلة تأسيسية لتشكيل شبكة علاقات واسعة النطاق، تشمل قيادات وشخصيات بارزة في عالم الأعمال، إلى جانب مؤسسات وشركات عالمية رائدة في القطاعين العام والخاص، على امتداد منطقة الخليج العربي وأوروبا.</p>
 				    <h3 class="mt-4 font-weight-bold">خبرات رئيسية ومشاريع استراتيجية ضمن إطار 
                                     العمل العائلي</h3>
 					  <ul class="pl-3">
@@ -312,7 +312,7 @@
 										        <h3 class="resume-position-title font-weight-bold mb-1">مستشار رئيس مجلس الإدارة</h3>
 										        <div class="resume-company-name ms-auto">UK & Global Partners Ltd |
                                                 المملكة المتحدة</div>
-										    </div><div class="resume-position-time">2019 - 2025</div>
+									    </div><div class="resume-position-time">2019 - 2025</div>
 									    </div><div class="resume-timeline-item-desc">
 										    <p>طبيعة العمل (SIC): 59113 - أنشطة إنتاج البرامج التلفزيونية  | 68100 - شراء وبيع العقارات الخاصة  | 68310 - وكالات العقارات  | 85600 - خدمات الدعم التعليمي.</p>
 									    </div></article><article class="resume-timeline-item position-relative pb-5">
@@ -502,7 +502,7 @@
 								        <div class="resume-degree font-weight-bold">بكالوريوس في إدارة الأعمال</div>
 								        <div class="resume-degree-org">AUL University - Lebanon</div>
 								    </li>
-								    <li >
+								    <li>
 								        <div class="resume-degree font-weight-bold">العديد من الدورات التدريبية</div>
 								        <div class="resume-degree-org">التطوير الذاتي، القيادة والتواصل، التسويق، وسائل التواصل الاجتماعي والتسويق الإلكتروني، التصميم الجرافيكي، وتحرير الفيديو.</div>
 								    </li>
@@ -595,43 +595,5 @@
   </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  gsap.registerPlugin(ScrollTrigger);
-
-  // Set initial state for all elements to be animated to ensure they are visible
-  gsap.set('.resume-wrapper-inner > *', { autoAlpha: 1 });
-
-  // Staggered fade and slide up for all sections and content
-  gsap.from('.resume-wrapper-inner > *', {
-    opacity: 0,
-    y: 20,
-    duration: 0.8,
-    stagger: 0.1,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: '.resume-wrapper-inner',
-      start: 'top 85%',
-      toggleActions: 'play none none none'
-    }
-  });
-
-  // Animate skill bars
-  gsap.utils.toArray('.progress-bar').forEach(bar => {
-    gsap.from(bar, {
-      width: '0%',
-      duration: 1.2,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: bar,
-        start: 'top 92%',
-        toggleActions: 'play none none none'
-      }
-    });
-  });
-});
-</script>
 </body>
 </html>
