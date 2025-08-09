@@ -1115,7 +1115,7 @@ blockquote {
 #latest-blog-post .blog-img {
     width: 50%;
     padding-bottom: 28.125%;
-    margin: 0 auto 25px auto;
+    margin: 0 auto 30px auto;
     border: 1px solid;
     border-radius: 5px;
     position: relative;
@@ -1879,5 +1879,6 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
