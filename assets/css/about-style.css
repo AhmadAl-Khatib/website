@@ -12233,6 +12233,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     color: #434E5E;
     padding-top: 60px;
+    overflow-y: hidden;
 }
 @media (min-width: 768px) {
     body {
