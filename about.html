@@ -19,6 +19,14 @@
     <link id="theme-style" rel="stylesheet" href="assets/css/about-style.css">
     <link rel="stylesheet" href="assets/css/animate.min.css" type="text/css">
     
+    <style>
+        body {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.5s linear;
+        }
+    </style>
+    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -598,6 +606,12 @@
 <script src="assets/js/wow.min.js"></script>
 <script>
     new WOW().init();
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        var body = document.querySelector('body');
+        body.style.visibility = 'visible';
+        body.style.opacity = '1';
+    });
 </script>
 </body>
 </html>
