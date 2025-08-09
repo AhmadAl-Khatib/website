@@ -16,7 +16,6 @@
 
 
     <link rel="stylesheet" href="assets/font/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/animate.min.css" type="text/css">
     <link id="theme-style" rel="stylesheet" href="assets/css/about-style.css">
     
     <script type="application/ld+json">
@@ -595,38 +594,10 @@
   </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script>
-    new WOW().init();
-</script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  // Avoid conflicts with existing WOW.js animations by removing wow-related classes
-  // only for elements we will animate. We do this at runtime so the original file content
-  // remains exactly unchanged.
-  function safeRemoveWow(selector) {
-    document.querySelectorAll(selector).forEach(function(el) {
-      // don't touch footer elements
-      if (el.closest && el.closest('#footer')) return;
-      el.classList.remove('wow','fadeIn','fadeInUp','fadeInDown','fadeInLeft','fadeInRight');
-      // ensure visible in case wow added visibility:hidden
-      el.style.visibility = 'visible';
-    });
-  }
-
-  // selectors to neutralize WOW for (only non-footer)
-  ['.resume-picture-holder img', 'h1.name', '.resume-section-title', '.resume-timeline-item', '.progress-bar'].forEach(safeRemoveWow);
-
-  // Also ensure paragraphs and list items outside footer are visible
-  document.querySelectorAll('p, li').forEach(function(el) {
-    if (el.closest && el.closest('#footer')) return;
-    el.style.visibility = 'visible';
-  });
-
-  // Register ScrollTrigger
   gsap.registerPlugin(ScrollTrigger);
 
   // Profile photo: simple fade-in (no scale/translate)
