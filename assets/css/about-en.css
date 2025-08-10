@@ -12088,7 +12088,7 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
     color: #ddd;
     padding: 50px 0;
     font-family: Arial, sans-serif;
-    direction: rtl;
+    direction: ltr;
     text-align: center;
 }
 #footer .container {
@@ -12148,7 +12148,7 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
 #footer .footer-nav li:not(:last-child)::after {
     content: "|";
     position: absolute;
-    left: -10px;
+    right: -7px;
     top: 50%;
     transform: translateY(-50%);
     color: #666;
