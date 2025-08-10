@@ -11819,6 +11819,7 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
   font-size: 1.25rem;
   position: relative;
   color: #328998;
+  font-weight:600;
 }
 
 .resume-section-title:after {
@@ -11933,7 +11934,8 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
 }
 
 .resume-lang-name {
-  color: #434E5E;
+  color: #434e5ebd;
+  font-weight: 600;
 }
 
 .footer .fa-heart {
