@@ -11919,6 +11919,8 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
 
 .resume-lang-name {
   color: #434E5E;
+  padding-top: 10px;
+  font-weight: bold;
 }
 
 .footer .fa-heart {
