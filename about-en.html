@@ -27,16 +27,12 @@
     <link id="theme-style" rel="stylesheet" href="assets/css/about-en.css">
     <link rel="stylesheet" href="assets/font/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="assets/css/animate.min.css" type="text/css">
-    <style>
-        body {
-            visibility: hidden;
-            opacity: 0;
-            transition: visibility 0s, opacity 0.5s linear;
-        }
-    </style>
 </head> 
 
 <body>	
+	    <div id="preloader">
+        <img src="assets/img/loading-cylon-red.svg" alt="Loading..." width="120">
+    </div>
 <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
     <div class="container">
         <a class="navbar-brand" href="en.html">
@@ -537,15 +533,18 @@
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/wow.min.js"></script>
-<script>
-    new WOW().init();
-    
-    document.addEventListener("DOMContentLoaded", function() {
-        var body = document.querySelector('body');
-        body.style.visibility = 'visible';
-        body.style.opacity = '1';
-    });
-</script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            window.addEventListener("load", function() {
+                const preloader = document.getElementById('preloader');
+                preloader.classList.add('hidden');
+                document.body.classList.add('loaded');
+                new WOW().init();
+            });
+        });
+    </script>
+</body>
+
 
     
 
