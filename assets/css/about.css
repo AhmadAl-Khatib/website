@@ -12290,9 +12290,6 @@ html[lang="ar"] .resume-timeline {
     padding-top: 10 !important;
 }
 /* Preloader styles */
-body {
-    background-color: #fff !important;
-}
 #preloader {
     background: #fff none repeat scroll 0 0;
     bottom: 0;
