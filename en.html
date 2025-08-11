@@ -41,147 +41,93 @@
     <link rel="stylesheet" href="assets/css/isotope-docs.css" media="screen">
     <link rel="stylesheet" href="assets/css/baguetteBox.css">
     
+    <!-- JSON-LD Schema -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@context":"https://schema.org",
+      "@graph":[
         {
-          "@type": "WebPage",
-          "@id": "https://www.ahmad-khatib.com/#webpage",
-          "url": "https://www.ahmad-khatib.com/",
-          "name": "Ahmad Al-Khatib – Opinion Writer & Activist",
-          "inLanguage": "en",
-          "description": "Discover the work of Ahmad Al-Khatib – opinion writer, activist, and entrepreneur. Explore his articles, publications including the book 'Learn Python in Less Than a Week', and his involvement in social and political initiatives. Get in touch with him.",
-          "publisher": {
-            "@type": "Organization",
-            "name": "Ahmad Al-Khatib Official Website",
-            "url": "https://www.ahmad-khatib.com/"
+          "@type":"WebPage",
+          "@id":"https://ahmad-khatib.com/#webpage",
+          "url":"https://ahmad-khatib.com/en",
+          "name":"Ahmad Al-Khatib – Opinion Writer & Activist",
+          "inLanguage":"en",
+          "description":"Discover the work of Ahmad Al-Khatib – opinion writer, activist, and entrepreneur. Explore his articles, publications including the book 'Learn Python in Less Than a Week', and social-political initiatives.",
+          "publisher":{
+            "@type":"Organization",
+            "name":"Ahmad Al-Khatib Official Website",
+            "url":"https://www.ahmad-khatib.com/"
           }
         },
         {
-          "@type": "Person",
-          "@id": "https://www.ahmad-khatib.com/#person",
-          "name": "Ahmad Abdelkader Al-Khatib",
-          "alternateName": "Ahmad Al-Khatib",
-          "url": "https://www.ahmad-khatib.com/#about",
-          "image": "https://www.ahmad-khatib.com/assets/img/about ahmad al khatib.webp",
-          "jobTitle": "Opinion Writer, Activist, Programming Author, Entrepreneur",
-          "description": "Ahmad Al-Khatib is a prominent opinion writer and activist focused on social and political issues, and a published author in programming and artificial intelligence. He is the author of the book 'Learn Python in Less Than a Week'.",
-          "gender": "Male",
-          "birthDate": "1989-03-07",
-          "birthPlace": {
-            "@type": "Place",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Mazboud",
-              "addressRegion": "Chouf",
-              "addressCountry": "LB"
+          "@type":"Person",
+          "@id":"https://ahmad-khatib.com/#person",
+          "name":"Ahmad Abdelkader Al-Khatib",
+          "alternateName":"Ahmad Al-Khatib",
+          "url":"https://ahmad-khatib.com/en#about",
+          "image":"https://ahmad-khatib.com/assets/img/about-ahmad-al-khatib.webp",
+          "jobTitle":"Opinion Writer, Activist, Programming Author, Entrepreneur",
+          "description":"Ahmad Al-Khatib is a prominent opinion writer and activist, and author of 'Learn Python in Less Than a Week'.",
+          "gender":"Male",
+          "birthDate":"1989-03-07",
+          "birthPlace":{
+            "@type":"Place",
+            "address":{
+              "@type":"PostalAddress",
+              "addressLocality":"Mazboud",
+              "addressRegion":"Chouf",
+              "addressCountry":"LB"
             }
           },
-          "alumniOf": [
-            {
-              "@type": "EducationalOrganization",
-              "name": "Arts, Sciences and Technology University in Lebanon",
-              "sameAs": "https://www.aul.edu.lb/"
-            },
-            {
-              "@type": "EducationalOrganization",
-              "name": "UK International College London",
-              "sameAs": "https://www.ukicollege.com/"
-            },
-            {
-              "@type": "EducationalOrganization",
-              "name": "University of East London",
-              "sameAs": "https://www.uel.ac.uk/"
-            }
+          "alumniOf":[
+            {"@type":"EducationalOrganization","name":"Arts, Sciences and Technology University in Lebanon","sameAs":"https://www.aul.edu.lb/"},
+            {"@type":"EducationalOrganization","name":"UK International College London","sameAs":"https://www.ukicollege.com/"},
+            {"@type":"EducationalOrganization","name":"University of East London","sameAs":"https://www.uel.ac.uk/"}
           ],
-          "hasOccupation": [
-            { "@type": "Occupation", "name": "Writer" },
-            { "@type": "Occupation", "name": "Activist" },
-            { "@type": "Occupation", "name": "Entrepreneur" }
+          "hasOccupation":[
+            {"@type":"Occupation","name":"Writer"},
+            {"@type":"Occupation","name":"Activist"},
+            {"@type":"Occupation","name":"Entrepreneur"}
           ],
-          "knowsAbout": [
-            "Python programming",
-            "Artificial Intelligence",
-            "Lebanese politics",
-            "Social activism",
-            "Middle East affairs",
-            "October 17 Uprising"
+          "knowsAbout":["Python programming","Artificial Intelligence","Lebanese politics","Social activism","Middle East affairs","October 17 Uprising"],
+          "memberOf":[
+            {"@type":"Organization","name":"October 17 People's Bloc"},
+            {"@type":"Organization","name":"Beirut Arabic Festival"}
           ],
-          "memberOf": [
-            { "@type": "Organization", "name": "October 17 People's Bloc" },
-            { "@type": "Organization", "name": "Beirut Arabic Festival" }
+          "parent":[{"@type":"Person","name":"Abdelkader Al-Khatib"},{"@type":"Person","name":"Samar Malek Al-Khatib"}],
+          "worksFor":{"@type":"Organization","name":"Ahmad Al-Khatib Official Website","url":"https://www.ahmad-khatib.com/"},
+          "sameAs":["https://www.linkedin.com/in/alkhatibahmad/","https://www.facebook.com/ahmad.khatib.9237244","https://twitter.com/alkhatib_ahmad1","https://www.instagram.com/alkhatib_ahmad1/","https://blog.ahmad-khatib.com/"],
+          "contactPoint":[
+            {"@type":"ContactPoint","telephone":"+96170559966","contactType":"CustomerService","areaServed":"LB","availableLanguage":["ar","en"]},
+            {"@type":"ContactPoint","email":"ahmad@ahmad-khatib.com","contactType":"GeneralInquiry","availableLanguage":["ar","en"]}
           ],
-          "parent": [
-            { "@type": "Person", "name": "Abdelkader Al-Khatib" },
-            { "@type": "Person", "name": "Samar Malek Al-Khatib" }
-          ],
-          "worksFor": {
-            "@type": "Organization",
-            "name": "Ahmad Al-Khatib Official Website",
-            "url": "https://www.ahmad-khatib.com/"
-          },
-          "sameAs": [
-            "https://www.linkedin.com/in/alkhatibahmad/",
-            "https://www.facebook.com/ahmad.khatib.9237244",
-            "https://twitter.com/alkhatib_ahmad1",
-            "https://www.instagram.com/alkhatib_ahmad1/",
-            "https://blog.ahmad-khatib.com/"
-          ],
-          "contactPoint": [
-            {
-              "@type": "ContactPoint",
-              "telephone": "+96170559966",
-              "contactType": "CustomerService",
-              "areaServed": "LB",
-              "availableLanguage": ["ar", "en"]
-            },
-            {
-              "@type": "ContactPoint",
-              "email": "ahmad@ahmad-khatib.com",
-              "contactType": "GeneralInquiry",
-              "availableLanguage": ["ar", "en"]
-            }
-          ],
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Chouf",
-            "addressCountry": "LB"
-          }
+          "address":{"@type":"PostalAddress","addressLocality":"Chouf","addressCountry":"LB"}
         },
         {
-          "@type": "Book",
-          "@id": "https://www.ahmad-khatib.com/#book",
-          "name": "Learn Python in Less Than a Week",
-          "url": "https://www.ahmad-khatib.com/#publications",
-          "inLanguage": "en",
-          "image": "https://www.ahmad-khatib.com/assets/img/ahmad al khatib book تعلم بايثون بأقل من أسبوع.webp",
-          "description": "A comprehensive guide to help beginners quickly and efficiently master Python programming concepts, complete with practical projects and AI applications.",
-          "author": {
-            "@type": "Person",
-            "name": "Ahmad Abdelkader Al-Khatib",
-            "url": "https://www.ahmad-khatib.com/"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Ahmad Al-Khatib Official Website",
-            "url": "https://www.ahmad-khatib.com/"
-          }
+          "@type":"Book",
+          "@id":"https://ahmad-khatib.com/en#book",
+          "name":"Learn Python in Less Than a Week",
+          "url":"https://ahmad-khatib.com/en#publications",
+          "inLanguage":"en",
+          "image":"https://www.ahmad-khatib.com/assets/img/ahmad-al-khatib-book-تعلم-بايثون-بأقل-من-أسبوع.webp",
+          "description":"A comprehensive guide to help beginners master Python programming quickly, including practical projects and AI applications.",
+          "author":{"@type":"Person","name":"Ahmad Abdelkader Al-Khatib","url":"https://www.ahmad-khatib.com/"},
+          "publisher":{"@type":"Organization","name":"Amazon","url":"https://www.amazon.com/"},
+          "datePublished":"2023-07-20",
+          "sameAs":["https://www.amazon.com/dp/B0FJ8Y6G7K","https://www.goodreads.com/book/show/239140541"]
         },
         {
-          "@type": "Blog",
-          "@id": "https://blog.ahmad-khatib.com/#blog",
-          "url": "https://blog.ahmad-khatib.com/",
-          "name": "مدونة أحمد الخطيب",
-          "publisher": {
-            "@id": "https://www.ahmad-khatib.com/#person"
-        },
-          "author": {
-            "@id": "https://www.ahmad-khatib.com/#person"
-        },
-          "inLanguage": "ar",
-          "description": "مقالات وأفكار من أحمد الخطيب في البرمجة، السياسة، والذكاء الاصطناعي.",
-          "mainEntityOfPage": "https://blog.ahmad-khatib.com/"
+          "@type":"EducationalCourse",
+          "@id":"https://ahmad-khatib.com/en#python-course",
+          "name":"Free Arabic Python Course for Beginners – Learn Programming from Zero to Mastery",
+          "url":"https://ahmad-khatib.com/en#python-course",
+          "inLanguage":"ar",
+          "description":"Start your journey in programming with a free Arabic Python course designed for absolute beginners. Practical videos guide you through core Python concepts.",
+          "provider":{"@type":"Person","@id":"https://ahmad-khatib.com/#person"},
+          "learningResourceType":["Course","VideoTutorial"],
+          "audience":{"@type":"Audience","audienceType":"Beginner Programmers"},
+          "about":[{"@type":"Thing","name":"Python programming"},{"@type":"Thing","name":"Programming from scratch"},{"@type":"Thing","name":"Software development"}],
+          "coursePrerequisites":"No prior programming experience required"
         }
       ]
     }
@@ -749,3 +695,4 @@ window.onload = function() {
     
 </body>
 </html>
+
