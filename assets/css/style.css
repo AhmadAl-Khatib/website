@@ -565,6 +565,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   border: 2px solid orange;
 }
 #bookshelf .book-description-ar {
+  font-family: tajawal;
   padding: 10px 0;
   text-align: justify;
   font-size: 14px;
@@ -587,6 +588,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   flex-wrap: wrap;
 }
 .share-buttons span {
+  font-family: tajawal;
   color: white;
   font-weight: bold;
   margin-right: 6px;
@@ -2025,6 +2027,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
