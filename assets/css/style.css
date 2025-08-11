@@ -945,21 +945,62 @@ html[lang="en"] #python-course span {
     min-height: auto;
   }
 }
-/* ========== LTR (English) Styles ========== */
-html[lang="en"] {
-  direction: ltr;
+/* ===== Base styling for details/summary ===== */
+
+.course-collapse {
+  border-radius: 12px;
+  background-color: #d4d4d4;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 15px;
+  margin-bottom: 30px;
+  transition: box-shadow 0.3s ease;
 }
 
-html[lang="en"] .btn[data-bs-toggle="collapse"]::after {
+.course-collapse:hover {
+  box-shadow: 0 8px 20px rgba(243,186,8,0.3);
+}
+
+.course-collapse summary {
+  font-weight: 600;
+  font-size: 1.1em;
+  cursor: pointer;
+  outline: none;
+  padding: 8px 0;
+  user-select: none;
+  /* Remove default arrow for custom */
+  list-style: none;
+}
+
+.course-collapse summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Arrow for LTR */
+html[lang="en"] .course-collapse summary::after {
   content: " ▼";
   font-size: 0.8em;
+  float: right;
   transition: transform 0.3s ease;
 }
 
-html[lang="en"] .btn[aria-expanded="true"]::after {
+html[lang="en"] .course-collapse[open] summary::after {
   transform: rotate(180deg);
 }
 
+/* Arrow for RTL */
+html[lang="ar"] .course-collapse summary::before {
+  content: "▼ ";
+  font-size: 0.8em;
+  float: left;
+  transition: transform 0.3s ease;
+}
+
+html[lang="ar"] .course-collapse[open] summary::before {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
+/* List item icon margin and text alignment */
 html[lang="en"] ul li {
   text-align: left;
 }
@@ -968,28 +1009,49 @@ html[lang="en"] ul li i {
   margin-left: 0;
 }
 
-/* ========== RTL (Arabic) Styles ========== */
-html[lang="ar"] {
-  direction: rtl;
-}
-
-html[lang="ar"] .btn[data-bs-toggle="collapse"]::before {
-  content: "▼ ";
-  font-size: 0.8em;
-  transition: transform 0.3s ease;
-}
-
-html[lang="ar"] .btn[aria-expanded="true"]::before {
-  transform: rotate(180deg);
-  display: inline-block;
-}
-
 html[lang="ar"] ul li {
   text-align: right;
 }
 html[lang="ar"] ul li i {
   margin-left: 8px;
   margin-right: 0;
+}
+
+/* Direction set on html based on lang attribute */
+html[lang="en"] {
+  direction: ltr;
+}
+
+html[lang="ar"] {
+  direction: rtl;
+}
+
+/* Responsive control: collapse closed on mobile & vertical iPad (max-width: 991.98px) */
+/* open by default on larger screens */
+@media (max-width: 991.98px) {
+  .course-collapse {
+    /* Remove the 'open' attribute effect on smaller screens */
+    open: false; /* does not work in CSS but indicates intent */
+  }
+
+  .course-collapse:not([open]) > *:not(summary) {
+    display: none;
+  }
+  .course-collapse:not([open]) {
+    padding-bottom: 0;
+  }
+}
+
+/* Force details to be open by default on desktop */
+/* Since CSS can’t set open attribute, you must have open in HTML */
+/* But to visually force open on desktop, override display:none on children */
+@media (min-width: 992px) {
+  .course-collapse > *:not(summary) {
+    display: block !important;
+  }
+  .course-collapse {
+    padding-bottom: 15px;
+  }
 }
 
 /*----------- gallery ------------*/
@@ -2071,6 +2133,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
