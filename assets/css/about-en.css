@@ -12225,3 +12225,11 @@ body {
     top: 0;
     z-index: 9999;
 }
+#loading {
+    height: 200px;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+    position: absolute;
+    top: 50%;
+    width: 200px;
+}
