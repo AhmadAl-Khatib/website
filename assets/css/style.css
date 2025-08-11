@@ -800,6 +800,152 @@ html[lang="en"] #publications p:not(.book-description-ar) {
     min-height: auto;
   }
 }
+html[lang="en"] #python-course {
+  background: url("../img/arabic-python-course-for-beginners-ahmad-al-khatib.webp") no-repeat center center;
+  color: #333;
+  background-size: cover;
+  padding: 50px 0;
+  text-align: center;
+  direction: ltr;
+}
+
+html[lang="en"] #python-course h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+html[lang="en"] #python-course p {
+  font-size: 16px;
+  text-align: justify;
+  text-align-last: center;
+  color: #555;
+  margin: 1rem auto 2rem;
+  line-height: 1.8;
+}
+
+html[lang="en"] #python-course .size,
+html[lang="en"] #python-course .course-feature i {
+  color: #333;
+  font-size: 2rem;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+html[lang="en"] #python-course .course-feature:hover .size,
+html[lang="en"] #python-course .course-feature:hover i {
+  color: #2e86ce;
+}
+
+html[lang="en"] #python-course .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+html[lang="en"] #python-course .row > div {
+  display: flex;
+  flex-direction: column;
+}
+
+html[lang="en"] #python-course .course-button {
+  display: inline-block;
+  margin: 10px auto 20px;
+  padding: 12px 20px;
+  background: #ffa100;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 1em;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+html[lang="en"] #python-course .course-button:hover {
+  background: transparent;
+  color: #2e86ce;
+  border: 2px solid #2e86ce;
+}
+
+html[lang="en"] #python-course .course-cta {
+  text-align: center;
+}
+
+html[lang="en"] #python-course .course-feature {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #d4d4d4;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  text-align: center;
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+html[lang="en"] #python-course .course-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(243, 186, 8, 0.3);
+}
+
+html[lang="en"] #python-course h3 {
+  font-size: 1.4em;
+  font-weight: 600;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 1.5rem;
+  min-height: 2.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 5px;
+}
+
+html[lang="en"] #python-course h4 {
+  font-size: 14px !important;
+  color: #333 !important;
+  font-weight: 600 !important;
+}
+
+html[lang="en"] #python-course span {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+  display: block;
+  max-width: 280px;
+  margin: 10px auto;
+  flex-grow: 1;
+}
+
+@media (max-width: 991.98px) {
+  html[lang="en"] #python-course .row > div {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  html[lang="en"] #python-course .row > div {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  html[lang="en"] #python-course .course-feature {
+    min-height: auto;
+  }
+}
+
 /*----------- gallery ------------*/
 #Gallery {
     padding:50px 0 50px;
@@ -1879,6 +2025,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
