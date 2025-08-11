@@ -1593,7 +1593,13 @@ html[lang="en"] #contact .btn-block {
   font-size: 14px;
   color: #aaa;
 }
-
+html[lang="en"] #footer .footer-nav li:not(:last-child)::after {
+  left: auto;
+  right: -7px;
+}
+html[lang="en"] #footer {
+  direction: ltr;
+}
 /* Responsive */
 @media (max-width: 768px) {
   #footer .row {
@@ -2032,6 +2038,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
