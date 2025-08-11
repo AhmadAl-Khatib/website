@@ -1450,7 +1450,11 @@ html[lang="ar"] #blog .row > p {
   transition: all 0.3s ease 0s;
   width: 165px;
 }
-
+html[lang="en"] #contact .btn-block {
+  float: left;
+  margin-left: 15px; /* swap sides for spacing */
+  margin-right: 0;
+}
 /* === Responsive: Improve Visibility and Spacing === */
 @media (max-width: 576px) {
   #contact {
@@ -2028,6 +2032,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
