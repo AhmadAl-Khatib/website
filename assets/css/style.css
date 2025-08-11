@@ -945,6 +945,52 @@ html[lang="en"] #python-course span {
     min-height: auto;
   }
 }
+/* ========== LTR (English) Styles ========== */
+html[lang="en"] {
+  direction: ltr;
+}
+
+html[lang="en"] .btn[data-bs-toggle="collapse"]::after {
+  content: " ▼";
+  font-size: 0.8em;
+  transition: transform 0.3s ease;
+}
+
+html[lang="en"] .btn[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+html[lang="en"] ul li {
+  text-align: left;
+}
+html[lang="en"] ul li i {
+  margin-right: 8px;
+  margin-left: 0;
+}
+
+/* ========== RTL (Arabic) Styles ========== */
+html[lang="ar"] {
+  direction: rtl;
+}
+
+html[lang="ar"] .btn[data-bs-toggle="collapse"]::before {
+  content: "▼ ";
+  font-size: 0.8em;
+  transition: transform 0.3s ease;
+}
+
+html[lang="ar"] .btn[aria-expanded="true"]::before {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
+html[lang="ar"] ul li {
+  text-align: right;
+}
+html[lang="ar"] ul li i {
+  margin-left: 8px;
+  margin-right: 0;
+}
 
 /*----------- gallery ------------*/
 #Gallery {
@@ -2025,6 +2071,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
