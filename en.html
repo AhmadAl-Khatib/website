@@ -152,7 +152,7 @@
     <!-- Preloader -->
     <div id="preloader">
         <div id="loading">
-            <img width="256" height="32" src="assets/img/loading-cylon-red.svg">
+            <img width="256" height="32" src="assets/img/loading-cylon-red.svg" alt="Loading Ahmad Al Khatib Website">
         </div>
     </div>
     
@@ -168,7 +168,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/logo.ar.svg" alt="Ahmad Al Khatib Arabic website" style="transition: 0.3s; filter: grayscale(0%);" onmouseover="this.style.filter='grayscale(100%)'" onmouseout="this.style.filter='grayscale(0%)'">
+                        <img src="assets/img/logo.ar.svg" alt="Ahmad Al Khatib Arabic website">
                     </a>
                 </div>
 
@@ -177,8 +177,14 @@
                         <li>
                             <a class="page-scroll" href="#home">Home</a>
                         </li>
-                        <li>
-                            <a class="page-scroll" href="#about">About</a>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle page-scroll" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                About<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="page-scroll" href="#person">Profile overview</a></li>
+                                <li><a class="page-scroll" href="/about">Career</a></li>
+                            </ul>
                         </li>
                         <li>
                             <a class="page-scroll" href="#publications">Publications</a>
@@ -236,7 +242,7 @@
     </header>
     
     <!-- About Section -->
-    <section id="about" class="">
+    <section id="person" class="">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-6 wow fadeInDown animated" data-wow-delay=".5s">
@@ -714,6 +720,7 @@ window.onload = function() {
     
 </body>
 </html>
+
 
 
 
