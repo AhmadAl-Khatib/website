@@ -548,6 +548,7 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   transform: translateY(0);
 }
 #bookshelf .book-button {
+  font-family:tajawal;
   display: inline-block;
   margin: 10px auto;
   padding: 8px 15px;
@@ -2027,6 +2028,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
