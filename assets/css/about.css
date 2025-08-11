@@ -198,12 +198,6 @@
     font-display: swap;
 }
 
-html, body {
-    background: #fff; /* white from the very first frame */
-    margin: 0;
-    padding: 0;
-}
-
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
