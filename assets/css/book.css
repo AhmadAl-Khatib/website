@@ -261,30 +261,37 @@ a:hover {
 /* Collapsible Sections */
 details {
     margin-bottom: 2rem;
-    border: 1px solid #e0e0e0;
     border-radius: var(--border-radius);
-    padding: 1.5rem;
-    background: var(--light-color);
+    overflow: hidden; /* Ensures box-shadow and border-radius are applied correctly */
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    transition: background 0.3s ease;
-}
-
-details[open] {
-    background: var(--bg-light);
 }
 
 summary {
-    list-style: none; /* Hide default arrow */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background: var(--light-color);
     cursor: pointer;
     font-weight: 700;
+    list-style: none; /* Hide default arrow */
     position: relative;
-    padding-inline-end: 30px; /* Space for the arrow */
+    transition: background-color 0.3s ease;
+}
+
+summary:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+}
+
+details[open] summary {
+    background-color: var(--bg-light);
 }
 
 summary h2 {
     color: var(--primary-color);
-    text-align: right; /* Adjust for RTL */
-    margin-bottom: 0;
+    text-align: right;
+    margin: 0;
+    font-size: 1.5rem;
 }
 
 summary h2::after {
@@ -292,21 +299,21 @@ summary h2::after {
 }
 
 summary i.fa-chevron-down {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) rotate(0deg);
     transition: transform 0.3s ease;
-    left: 0; /* Adjust for RTL */
+    font-size: 1.5rem;
+    color: var(--secondary-color);
 }
 
 details[open] summary i.fa-chevron-down {
-    transform: translateY(-50%) rotate(180deg);
+    transform: rotate(180deg);
 }
 
 details p {
-    margin-top: 1.5rem;
+    padding: 1.5rem;
+    padding-top: 0; /* Align with the new summary style */
+    margin-top: 0;
+    background: var(--bg-light);
 }
-
 
 /* Benefits List */
 .benefits-list {
