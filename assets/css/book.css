@@ -258,6 +258,56 @@ a:hover {
     background-color: var(--bg-light);
 }
 
+/* Collapsible Sections */
+details {
+    margin-bottom: 2rem;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    background: var(--light-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: background 0.3s ease;
+}
+
+details[open] {
+    background: var(--bg-light);
+}
+
+summary {
+    list-style: none; /* Hide default arrow */
+    cursor: pointer;
+    font-weight: 700;
+    position: relative;
+    padding-inline-end: 30px; /* Space for the arrow */
+}
+
+summary h2 {
+    color: var(--primary-color);
+    text-align: right; /* Adjust for RTL */
+    margin-bottom: 0;
+}
+
+summary h2::after {
+    display: none; /* Hide the h2 underline from your original CSS */
+}
+
+summary i.fa-chevron-down {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 0.3s ease;
+    left: 0; /* Adjust for RTL */
+}
+
+details[open] summary i.fa-chevron-down {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+details p {
+    margin-top: 1.5rem;
+}
+
+
 /* Benefits List */
 .benefits-list {
     list-style: none;
