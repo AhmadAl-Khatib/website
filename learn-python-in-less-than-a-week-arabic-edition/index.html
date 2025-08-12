@@ -1,95 +1,248 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>عنوان كتابك</title>
-    <link rel="stylesheet" href="/assets/css/book.css" type="text/css">
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>عنوان كتابك الرئيسي | اسم المؤلف</title>
+
+    <meta name="description" content="وصف موجز وجذاب للكتاب هنا. استخدم كلمتك الرئيسية الأساسية واذكر الفائدة الأساسية للقارئ. هذا ما يظهر في جوجل.">
+    
+    <meta name="keywords" content="كلمتك الرئيسية, كلمة ثانوية, موضوع الكتاب, اسم المؤلف">
+
+    <link rel="canonical" href="https://www.yourwebsite.com/book-page-url" />
+
+    <meta property="og:title" content="عنوان كتابك الرئيسي | اسم المؤلف" />
+    <meta property="og:description" content="وصف موجز وجذاب للكتاب هنا لجذب النقرات من وسائل التواصل الاجتماعي." />
+    <meta property="og:image" content="https://www.yourwebsite.com/path/to/your/book-cover-high-res.jpg" />
+    <meta property="og:url" content="https://www.yourwebsite.com/book-page-url" />
+    <meta property="og:type" content="book" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="عنوان كتابك الرئيسي | اسم المؤلف">
+    <meta name="twitter:description" content="وصف موجز وجذاب للكتاب هنا لجذب النقرات من تويتر.">
+    <meta name="twitter:image" content="https://www.yourwebsite.com/path/to/your/book-cover-high-res.jpg">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "عنوان كتابك الرئيسي",
+      "author": {
+        "@type": "Person",
+        "name": "اسم المؤلف"
+      },
+      "url": "https://www.yourwebsite.com/book-page-url",
+      "image": "https://www.yourwebsite.com/path/to/your/book-cover-high-res.jpg",
+      "description": "وصف مفصل للكتاب هنا، يمكن أن يكون أطول من الوصف التعريفي.",
+      "isbn": "978-3-16-148410-0",
+      "workExample": [
+        {
+          "@type": "Book",
+          "isbn": "978-3-16-148410-0",
+          "bookEdition": "Hardcover",
+          "bookFormat": "https://schema.org/Hardcover",
+          "potentialAction": {
+            "@type": "BuyAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://www.amazon.com/dp/YOUR_ASIN_HERE",
+              "actionPlatform": [
+                "https://schema.org/DesktopWebPlatform",
+                "https://schema.org/IOSPlatform",
+                "https://schema.org/AndroidPlatform"
+              ]
+            },
+            "price": "19.99",
+            "priceCurrency": "USD"
+          }
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "125"
+      }
+    }
+    </script>
 </head>
 <body>
 
-  <!-- شريط علوي ثابت -->
-  <header class="sticky-header">
-    <div class="sticky-content">
-      <img src="/assets/img/book/learn-python-in-less-than-a-week.webp" alt="غلاف صغير" class="sticky-cover">
-      <span class="sticky-title">عنوان كتابك</span>
-      <a href="#buy" class="btn primary small">شراء</a>
-    </div>
-  </header>
+    <header class="sticky-bar">
+        <div class="container sticky-bar-content">
+            <div class="sticky-book-info">
+                <img src="https://via.placeholder.com/40x60/cccccc/333333?text=غلاف" alt="غلاف كتاب: عنوان كتابك الرئيسي" class="sticky-book-cover">
+                <span>عنوان كتابك الرئيسي</span>
+            </div>
+            <a href="#buy-now-amazon" class="btn btn-primary" aria-label="شراء الكتاب الآن من أمازون">اشترِ الآن</a>
+        </div>
+    </header>
 
-  <!-- قسم الغلاف -->
-  <section class="hero fade-in">
-    <div class="hero-content">
-      <img src="/assets/img/book/learn-python-in-less-than-a-week.webp" alt="غلاف الكتاب" class="book-cover hover-zoom">
-      <div class="hero-text">
-        <h1>عنوان كتابك</h1>
-        <p class="subtitle">عبارة جذابة تشد القارئ</p>
-        <a href="#buy" class="btn primary">اشتري الآن</a>
-      </div>
-    </div>
-  </section>
+    <main>
 
-  <!-- فهرس المحتويات -->
-  <section class="toc fade-in">
-    <h2>فهرس المحتويات</h2>
-    <ol>
-      <li>المقدمة</li>
-      <li>الفصل الأول: البداية</li>
-      <li>الفصل الثاني: الرحلة</li>
-      <li>الفصل الثالث: التحدي</li>
-      <li>الفصل الرابع: الحل</li>
-      <li>الخاتمة</li>
-    </ol>
-  </section>
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1 class="fade-in-up">
+                        عنوان كتابك الجذاب والمستهدف بالكلمات الرئيسية
+                    </h1>
+                    <p class="subtitle fade-in-up">
+                        اكتشف الاستراتيجيات التي ستغير طريقة تفكيرك في [موضوع الكتاب].
+                    </p>
+                    <p class="description fade-in-up">
+                        هذا هو الكتاب الوحيد الذي ستحتاجه لإتقان [مهارة]، وحل [مشكلة]، وتحقيق [نتيجة مرغوبة]. انضم إلى آلاف القراء الذين غيروا حياتهم.
+                    </p>
+                    <div class="cta-buttons fade-in-up">
+                        <a href="#buy-now-amazon" id="buy-on-amazon-main" class="btn btn-primary btn-lg" aria-label="شراء الكتاب الآن من أمازون">
+                            <i class="fab fa-amazon"></i> اشترِ من أمازون
+                        </a>
+                        <a href="#sample" class="btn btn-secondary btn-lg" aria-label="تحميل فصل مجاني من الكتاب">
+                            <i class="fa fa-download"></i> حمّل الفصل العيّنة
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image fade-in-up">
+                    <img src="https://via.placeholder.com/400x600/cccccc/333333?text=غلاف+الكتاب" alt="غلاف كتاب: عنوان كتابك الرئيسي من تأليف اسم المؤلف">
+                </div>
+            </div>
+        </section>
 
-  <!-- الفصل الأول -->
-  <section class="chapter fade-in">
-    <h2>الفصل الأول: البداية</h2>
-    <p>
-      هنا يمكنك وضع مقتطف من الفصل الأول لشد انتباه القارئ. استخدم أسلوباً شيقاً 
-      وانتهي بجملة تجعل القارئ متحمساً لقراءة المزيد.
-    </p>
-    <p>
-      أضف المزيد من الفقرات إذا أردت، مع الحفاظ على عنصر التشويق والحماس.
-    </p>
-  </section>
+        <nav class="page-nav fade-in-up">
+            <div class="container">
+                <a href="#about">عن الكتاب</a>
+                <a href="#toc">جدول المحتويات</a>
+                <a href="#author">عن المؤلف</a>
+                <a href="#reviews">المراجعات</a>
+            </div>
+        </nav>
 
-  <!-- قسم الشراء -->
-  <section class="buy fade-in" id="buy">
-    <h2>احصل على الكتاب</h2>
-    <p>متوفر بصيغة إلكترونية ونسخة ورقية.</p>
-    <a href="#" class="btn primary">شراء من أمازون</a>
-    <a href="#" class="btn secondary">تحميل عينة</a>
-  </section>
+        <section id="about" class="content-section fade-in-up">
+            <div class="container">
+                <h2>ماذا لو كان بإمكانك [تحقيق فائدة رئيسية]؟</h2>
+                <p>في هذا الكتاب الرائد، يأخذك [اسم المؤلف] في رحلة عميقة لكشف أسرار [موضوع الكتاب]. ستتعلم ليس فقط النظريات، بل أيضًا الخطوات العملية التي يمكنك تطبيقها اليوم. هذا الكتاب هو خريطة طريقك نحو [الهدف النهائي للقارئ]. تم تصميم كل فصل بعناية ليكون سهل الفهم وقابلاً للتنفيذ، مما يضمن حصولك على نتائج حقيقية.</p>
+            </div>
+        </section>
 
-  <footer>
-    <p>© ٢٠٢٥ اسم المؤلف. جميع الحقوق محفوظة.</p>
-  </footer>
+        <section id="benefits" class="content-section bg-light fade-in-up">
+            <div class="container">
+                <h2>ماذا ستكتشف في الداخل:</h2>
+                <ul class="benefits-list">
+                    <li><i class="fas fa-check-circle"></i> استراتيجيات مثبتة لـ [حل مشكلة معينة].</li>
+                    <li><i class="fas fa-check-circle"></i> الأخطاء الشائعة التي يجب تجنبها عند [ممارسة شيء ما].</li>
+                    <li><i class="fas fa-check-circle"></i> إطار عمل خطوة بخطوة لـ [بناء/تحقيق شيء ما].</li>
+                    <li><i class="fas fa-check-circle"></i> كيف تفكر مثل الخبراء في مجال [المجال].</li>
+                    <li><i class="fas fa-check-circle"></i> أسرار داخلية لـ [تحقيق ميزة تنافسية].</li>
+                </ul>
+            </div>
+        </section>
 
-  <script>
-    // Sticky header scroll effect
-    const header = document.querySelector('.sticky-header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
+        <section id="toc" class="content-section fade-in-up">
+            <div class="container">
+                <h2>نظرة سريعة على جدول المحتويات</h2>
+                <div class="toc-columns">
+                    <ol class="toc-list">
+                        <li>مقدمة: لماذا هذا الكتاب الآن؟</li>
+                        <li>الفصل 1: أساسيات [الموضوع الرئيسي]</li>
+                        <li>الفصل 2: المبدأ الأول: [مبدأ مهم]</li>
+                        <li>الفصل 3: المبدأ الثاني: [مبدأ مهم]</li>
+                        <li>الفصل 4: دراسة حالة: [قصة نجاح]</li>
+                        <li>الفصل 5: استراتيجيات متقدمة</li>
+                        <li>الفصل 6: دمج كل شيء معًا</li>
+                        <li>خاتمة: خطوتك التالية نحو الإتقان</li>
+                    </ol>
+                </div>
+                 <div class="toc-cta">
+                    <p>هل أنت مستعد للغوص أعمق؟</p>
+                    <a href="#sample" class="btn btn-secondary" aria-label="تحميل فصل العينة الآن">حمّل فصل العينة الآن</a>
+                </div>
+            </div>
+        </section>
 
-    // Fade-in on scroll
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.2 };
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      });
-    }, appearOptions);
-    faders.forEach(fader => appearOnScroll.observe(fader));
-  </script>
+        <section id="author" class="content-section bg-light fade-in-up">
+            <div class="container author-content">
+                <img src="https://via.placeholder.com/150x150/cccccc/333333?text=المؤلف" alt="صورة المؤلف: اسم المؤلف" class="author-img">
+                <div class="author-bio">
+                    <h2>عن المؤلف</h2>
+                    <p><strong>[اسم المؤلف]</strong> هو خبير معترف به في [مجاله]، مع أكثر من [عدد] سنوات من الخبرة. بعد مساعدة [نوع العملاء/الشركات] على تحقيق [نتيجة]، يشارك [اسم المؤلف] الآن معرفته مع العالم في هذا الكتاب الذي طال انتظاره. وهو أيضًا [اذكر أي إنجازات أخرى، مثل متحدث، مؤسس، إلخ].</p>
+                    <div class="author-social">
+                        <a href="#" aria-label="متابعة المؤلف على تويتر"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="متابعة المؤلف على لينكدإن"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="زيارة موقع المؤلف"><i class="fas fa-globe"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="content-section fade-in-up">
+            <div class="container">
+                <h2>مراجعات القراء</h2>
+                <div class="reviews-grid">
+                    <figure class="review-card">
+                        <blockquote>
+                            <p>"هذا الكتاب غير قواعد اللعبة بالنسبة لي. الأفكار عملية وقوية. يجب أن يقرأه أي شخص جاد في [الموضوع]."</p>
+                        </blockquote>
+                        <figcaption>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            - اسم المراجع، لقبه المهني
+                        </figcaption>
+                    </figure>
+                    <figure class="review-card">
+                        <blockquote>
+                            <p>"أخيرًا، كتاب يشرح [مفاهيم معقدة] بطريقة سهلة الفهم. لقد طبقت المبادئ ورأيت نتائج فورية."</p>
+                        </blockquote>
+                        <figcaption>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                            - اسم مراجع آخر، قارئ معتمد من أمازون
+                        </figcaption>
+                    </figure>
+                    <figure class="review-card">
+                        <blockquote>
+                            <p>"كنت مترددًا في البداية، ولكن هذا الكتاب تجاوز كل توقعاتي. إنه استثمار سيؤتي ثماره عشرة أضعاف."</p>
+                        </blockquote>
+                        <figcaption>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            - اسم مؤثر في المجال، اسم شركته
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section id="final-cta" class="content-section final-cta-section fade-in-up">
+            <div class="container">
+                <h2>هل أنت مستعد لتغيير [جانب من حياتك/عملك]؟</h2>
+                <p>لا تنتظر لحظة أخرى لبدء رحلتك نحو الإتقان. احصل على نسختك الآن وابدأ في تطبيق هذه الاستراتيجيات التي ستغير حياتك اليوم.</p>
+                <a href="#buy-now-amazon" id="buy-now-amazon" class="btn btn-primary btn-lg btn-buy-final" aria-label="شراء نسختك الآن من أمازون">
+                    <i class="fab fa-amazon"></i> احصل على نسختك الآن
+                </a>
+            </div>
+        </section>
+
+    </main>
+    
+    <div id="sample"></div>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 اسم المؤلف. جميع الحقوق محفوظة.</p>
+            <p><a href="#">سياسة الخصوصية</a> | <a href="#">شروط الخدمة</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
