@@ -1,0 +1,188 @@
+:root {
+  --accent-orange: #ffa100;
+  --accent-teal: #007b8c;
+  --text-color: #333;
+  --bg-color: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Tajawal', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.8;
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+/* شريط علوي ثابت */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background: var(--bg-color);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+.sticky-header.scrolled {
+  padding: 0.3rem 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  opacity: 0.95;
+}
+.sticky-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.sticky-cover {
+  width: 40px;
+  height: 55px;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+.sticky-header.scrolled .sticky-cover {
+  transform: scale(0.9);
+}
+.sticky-title {
+  font-weight: bold;
+  font-size: 1rem;
+  flex: 1;
+  margin: 0 0.8rem;
+}
+.btn.small {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+/* قسم الغلاف */
+.hero {
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-teal));
+  color: white;
+  padding: 3rem 2rem;
+}
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.book-cover {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+.hover-zoom {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-zoom:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.btn.primary {
+  background: var(--bg-color);
+  color: var(--accent-teal);
+}
+.btn.primary:hover {
+  background: linear-gradient(90deg, var(--accent-orange), var(--accent-teal));
+  color: white;
+  transform: translateY(-2px);
+}
+.btn.secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+.btn.secondary:hover {
+  background: white;
+  color: var(--accent-teal);
+}
+
+/* فهرس المحتويات */
+.toc {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-right: 5px solid var(--accent-orange);
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+.toc h2 {
+  margin-bottom: 1rem;
+}
+.toc ol {
+  padding-right: 1.2rem;
+}
+
+/* الفصل الأول */
+.chapter {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-right: 5px solid var(--accent-teal);
+  background: #fdfdfd;
+  border-radius: 5px;
+}
+
+/* قسم الشراء */
+.buy {
+  text-align: center;
+  padding: 2rem;
+  background: #f4f4f4;
+}
+.buy h2 {
+  margin-bottom: 1rem;
+}
+.buy a {
+  margin: 0.5rem;
+}
+
+/* التذييل */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+  font-size: 0.9rem;
+}
+
+/* تأثيرات الظهور */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .sticky-title {
+    font-size: 0.9rem;
+  }
+}
