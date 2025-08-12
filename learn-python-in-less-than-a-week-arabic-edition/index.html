@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عنوان كتابك</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- شريط علوي ثابت -->
+  <header class="sticky-header">
+    <div class="sticky-content">
+      <img src="cover.jpg" alt="غلاف صغير" class="sticky-cover">
+      <span class="sticky-title">عنوان كتابك</span>
+      <a href="#buy" class="btn primary small">شراء</a>
+    </div>
+  </header>
+
+  <!-- قسم الغلاف -->
+  <section class="hero fade-in">
+    <div class="hero-content">
+      <img src="cover.jpg" alt="غلاف الكتاب" class="book-cover hover-zoom">
+      <div class="hero-text">
+        <h1>عنوان كتابك</h1>
+        <p class="subtitle">عبارة جذابة تشد القارئ</p>
+        <a href="#buy" class="btn primary">اشتري الآن</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- فهرس المحتويات -->
+  <section class="toc fade-in">
+    <h2>فهرس المحتويات</h2>
+    <ol>
+      <li>المقدمة</li>
+      <li>الفصل الأول: البداية</li>
+      <li>الفصل الثاني: الرحلة</li>
+      <li>الفصل الثالث: التحدي</li>
+      <li>الفصل الرابع: الحل</li>
+      <li>الخاتمة</li>
+    </ol>
+  </section>
+
+  <!-- الفصل الأول -->
+  <section class="chapter fade-in">
+    <h2>الفصل الأول: البداية</h2>
+    <p>
+      هنا يمكنك وضع مقتطف من الفصل الأول لشد انتباه القارئ. استخدم أسلوباً شيقاً 
+      وانتهي بجملة تجعل القارئ متحمساً لقراءة المزيد.
+    </p>
+    <p>
+      أضف المزيد من الفقرات إذا أردت، مع الحفاظ على عنصر التشويق والحماس.
+    </p>
+  </section>
+
+  <!-- قسم الشراء -->
+  <section class="buy fade-in" id="buy">
+    <h2>احصل على الكتاب</h2>
+    <p>متوفر بصيغة إلكترونية ونسخة ورقية.</p>
+    <a href="#" class="btn primary">شراء من أمازون</a>
+    <a href="#" class="btn secondary">تحميل عينة</a>
+  </section>
+
+  <footer>
+    <p>© ٢٠٢٥ اسم المؤلف. جميع الحقوق محفوظة.</p>
+  </footer>
+
+  <script>
+    // Sticky header scroll effect
+    const header = document.querySelector('.sticky-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Fade-in on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2 };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+
+</body>
+</html>
