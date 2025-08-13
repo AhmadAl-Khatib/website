@@ -372,6 +372,17 @@ details p {
     color: #6a6a6a;
     padding-bottom: 15px;
 }
+.chapter-full {
+    list-style-position: inside;
+    padding-bottom:20px;
+    padding-inline-start: 40px;
+    padding-left: 15px;
+    background:#f6f6f6;
+}
+.chapter-full h3 {
+    color: #6a6a6a;
+    padding-bottom: 15px;
+}
 /* Author Section */
 .author-content {
     display: flex;
