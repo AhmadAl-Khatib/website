@@ -379,7 +379,7 @@ details p {
     padding-left: 15px;
     background:#f6f6f6;
 }
-.chapter-full h3 {
+.chapter-full h3, h4{
     color: #6a6a6a;
     padding-bottom: 15px;
 }
