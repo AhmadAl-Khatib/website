@@ -65,7 +65,7 @@ h2::after {
 }
 
 p {
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
     max-width: 70ch; /* Optimal reading width */
 }
 
