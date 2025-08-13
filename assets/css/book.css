@@ -673,3 +673,11 @@ pre {
     list-style: disc;
     padding-right: 0px
 }
+.chapter-full figure img {
+    max-width: 100%;
+    height: auto;
+}
+.chapter-full figcaption {
+    text-align: center;
+    padding-bottom: 10px;
+}
