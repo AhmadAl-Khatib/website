@@ -586,17 +586,24 @@ ul ul, ol ul {
     list-style-type: square;
 }
 .toc-list ol{
-    list-style-type: disc;
-}
-.toc-list ol ol{
     list-style-type: circle;
+}
+.toc-list ol ol {
+    list-style-type: none;
+    padding-inline-start: 1.5rem;
+}
+.toc-list ol ol li::before {
+    content: "〉"; 
+    margin-inline-end: 0.5rem; 
+    color: #333;
+    vertical-align: middle;
 }
 .toc-list ol ol ol {
     list-style-type: none;
     padding-inline-start: 1.5rem;
 }
 .toc-list ol ol ol li::before {
-    content: "〉"; 
+    content: "〉〉"; 
     margin-inline-end: 0.5rem; 
     color: #333;
     vertical-align: middle;
