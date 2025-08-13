@@ -324,7 +324,7 @@ details p {
     gap: 1.5rem;
 }
 .benefits-list li {
-    font-size: 1.1rem;
+    font-size: 16px;
     display: flex;
     align-items: flex-start;
     gap: 10px;
