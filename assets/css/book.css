@@ -350,6 +350,11 @@ details p {
     margin-bottom: 0.75rem;
     font-size: 1.1rem;
 }
+.toc-full {
+    list-style-position: inside;
+    padding-inline-start: 40px;
+    background:#f6f6f6;
+}
 .toc-cta {
     text-align: center;
     margin-top: 3rem;
