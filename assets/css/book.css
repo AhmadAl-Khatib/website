@@ -368,6 +368,10 @@ details p {
     padding-inline-start: 40px;
     background:#f6f6f6;
 }
+.intro-full h3 {
+    color: #6a6a6a;
+    padding-bottom: 15px;
+}
 /* Author Section */
 .author-content {
     display: flex;
