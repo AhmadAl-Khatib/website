@@ -292,6 +292,7 @@ summary h2 {
     text-align: right;
     margin: 0;
     font-size: 1.5rem;
+    padding-right:20px;
 }
 
 summary h2::after {
@@ -392,8 +393,8 @@ summary {
 }
 
 summary h3 {
-  display: inline-block;
-  text-align: center;
+  text-align: right;
+  padding-right:20px;
 }
 /* Reviews Section */
 .reviews-grid {
@@ -617,4 +618,20 @@ ul ul, ol ul {
     margin-inline-end: 0.5rem; 
     color: #333;
     vertical-align: middle;
+}
+#toc.content-section {
+    padding-bottom: 0rem;
+    margin-bottom:70px;
+}
+#introduction.content-section {
+    padding-bottom: 0rem;
+    padding-top: 0rem;
+    margin-bottom:70px;
+    margin-top:50px;
+}
+#chapter-one.content-section {
+    padding-bottom: 0rem;
+    padding-top: 0rem;
+    margin-bottom:0px;
+    margin-top:50px;
 }
