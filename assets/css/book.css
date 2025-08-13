@@ -312,7 +312,6 @@ details p {
     padding: 1.5rem;
     padding-top: 0; /* Align with the new summary style */
     margin-top: 0;
-    background: var(--bg-light);
 }
 
 /* Benefits List */
