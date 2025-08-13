@@ -271,7 +271,7 @@ summary {
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem;
-    background: #e2e2e2;
+    background: #eaeaea;
     cursor: pointer;
     font-weight: 700;
     list-style: none; /* Hide default arrow */
@@ -280,7 +280,7 @@ summary {
 }
 
 summary:hover {
-    background-color: #f0f0f0; /* Light gray on hover */
+    background-color: #e0e0e0; /* Light gray on hover */
 }
 
 details[open] summary {
