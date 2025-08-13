@@ -620,18 +620,5 @@ ul ul, ol ul {
     vertical-align: middle;
 }
 #toc.content-section {
-    padding-bottom: 0rem;
-    margin-bottom:70px;
-}
-#introduction.content-section {
-    padding-bottom: 0rem;
-    padding-top: 0rem;
-    margin-bottom:70px;
-    margin-top:50px;
-}
-#chapter-one.content-section {
-    padding-bottom: 0rem;
-    padding-top: 0rem;
-    margin-bottom:0px;
-    margin-top:50px;
+    padding-top: 80px;
 }
