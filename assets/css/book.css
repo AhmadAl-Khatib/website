@@ -290,7 +290,7 @@ summary h2 {
     color: var(--primary-color);
     text-align: right;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 14px;
     padding-right:20px;
 }
 
