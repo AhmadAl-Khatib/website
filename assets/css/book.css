@@ -280,11 +280,11 @@ summary {
 }
 
 summary:hover {
-    background-color: #e0e0e0; /* Light gray on hover */
+    background-color: #f6f6f6;
 }
 
 details[open] summary {
-    background-color: var(--bg-light);
+    background-color: #f6f6f6;
 }
 
 summary h2 {
