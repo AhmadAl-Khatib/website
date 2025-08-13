@@ -658,3 +658,8 @@ pre, code {
     text-align: left;
     font-size:18px;
 }
+pre {
+    overflow-x: auto;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
