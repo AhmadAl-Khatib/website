@@ -696,3 +696,24 @@ pre {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: none; /* This is the key: it's hidden until content is expanded */
 }
+/* يستهدف وسم <figure> ليكون الحاوية القابلة للتصغير والتكبير */
+figure {
+    display: inline-block;
+    cursor: zoom-in;
+}
+
+/* يستهدف وسم <img> داخل <figure> */
+figure img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* يستهدف حالة التكبير عند إضافة كلاس "zoomed" إلى <figure> */
+figure.zoomed {
+    cursor: zoom-out;
+}
+
+figure.zoomed img {
+    transform: scale(1.5); /* قيمة التكبير */
+}
