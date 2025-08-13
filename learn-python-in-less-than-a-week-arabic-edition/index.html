@@ -791,6 +791,14 @@
             <p><a href="#">سياسة الخصوصية</a> | <a href="#">شروط الخدمة</a></p>
         </div>
     </footer>
+<script>
+    document.addEventListener('click', function(event) {
+        const details = event.target.closest('details[open]');
+        if (details && !details.querySelector('summary').contains(event.target)) {
+            details.open = false;
+        }
+    });
+</script>
 
 <script>
         document.addEventListener('DOMContentLoaded', function() {
