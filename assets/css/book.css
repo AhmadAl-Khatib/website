@@ -364,7 +364,11 @@ details p {
     font-size: 1.2rem;
     font-weight: 700;
 }
-
+.intro-full {
+    list-style-position: inside;
+    padding-inline-start: 40px;
+    background:#f6f6f6;
+}
 /* Author Section */
 .author-content {
     display: flex;
