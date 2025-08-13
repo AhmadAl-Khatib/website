@@ -792,14 +792,36 @@
             <p><a href="#">سياسة الخصوصية</a> | <a href="#">شروط الخدمة</a></p>
         </div>
     </footer>
-<script>
-    document.addEventListener('click', function(event) {
-        const details = event.target.closest('details[open]');
-        if (details && !details.querySelector('summary').contains(event.target)) {
-            details.open = false;
-        }
-    });
-</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const detailsElements = document.querySelectorAll('details');
+
+            detailsElements.forEach(details => {
+                details.addEventListener('toggle', function() {
+                    if (details.open) {
+                        let collapseBtn = details.querySelector('.collapse-btn');
+                        if (!collapseBtn) {
+                            collapseBtn = document.createElement('button');
+                            collapseBtn.className = 'collapse-btn';
+                            collapseBtn.textContent = 'طي المحتوى';
+                            details.appendChild(collapseBtn);
+
+                            collapseBtn.addEventListener('click', function() {
+                                details.open = false;
+                                // Automatically scroll back to the summary after closing
+                                details.querySelector('summary').scrollIntoView({ behavior: 'smooth' });
+                            });
+                        }
+                    } else {
+                        const collapseBtn = details.querySelector('.collapse-btn');
+                        if (collapseBtn) {
+                            collapseBtn.remove();
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 
 <script>
         document.addEventListener('DOMContentLoaded', function() {
