@@ -681,3 +681,22 @@ pre {
     text-align: center;
     padding-bottom: 10px;
 }
+.collapse-btn {
+    position: sticky;
+    bottom: 20px;
+    right: 20px; /* Changed from 'left' to 'right' for RTL layout */
+    z-index: 1000;
+    padding: 10px 15px;
+    background-color: #337ab7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Initially hidden */
+}
+
+details[open] .collapse-btn {
+    display: block; /* Shows the button when the details element is expanded */
+}
