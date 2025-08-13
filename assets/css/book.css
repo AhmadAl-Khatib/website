@@ -263,7 +263,6 @@ details {
     margin-bottom: 2rem;
     border-radius: var(--border-radius);
     overflow: hidden; /* Ensures box-shadow and border-radius are applied correctly */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 summary {
