@@ -662,4 +662,10 @@ pre {
     overflow-x: auto;
     word-wrap: break-word;
     white-space: pre-wrap;
+    margin-bottom:10px;
+    background: #e7e9eb
+}
+.chapter-full p {
+    padding-bottom:10px;
+    margin-bottom:0px;
 }
