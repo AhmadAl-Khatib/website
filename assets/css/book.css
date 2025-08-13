@@ -704,7 +704,8 @@ figure {
 
 figure > div {
     max-width: 100%;
-    overflow: auto;
+    overflow-x: auto; 
+    overflow-y: hidden; 
 }
 
 figure img {
@@ -715,5 +716,5 @@ figure img {
 }
 
 figure.zoomed img {
-    width: 200%;
+    width: 200%; 
 }
