@@ -696,25 +696,3 @@ pre {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: none; 
 }
-
-figure {
-    display: inline-block;
-    cursor: zoom-in;
-}
-
-figure > div {
-    max-width: 100%;
-    overflow-x: auto; 
-    overflow-y: hidden; 
-}
-
-figure img {
-    max-width: 100%;
-    height: auto;
-    transition: width 0.3s ease; 
-    cursor: zoom-out;
-}
-
-figure.zoomed img {
-    width: 200%; 
-}
