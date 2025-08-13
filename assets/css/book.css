@@ -701,17 +701,19 @@ figure {
     display: inline-block;
     cursor: zoom-in;
 }
+
 figure > div {
     max-width: 100%;
-    overflow: auto; 
+    overflow: auto;
 }
+
 figure img {
     max-width: 100%;
     height: auto;
-    transition: transform 0.3s ease;
+    transition: width 0.3s ease;
     cursor: zoom-out;
 }
+
 figure.zoomed img {
-    transform: scale(2.0); 
-    transform-origin: top left; 
+    width: 200%;
 }
