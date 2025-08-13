@@ -711,7 +711,7 @@ figure > div {
 figure img {
     max-width: 100%;
     height: auto;
-    transition: width 0.3s ease;
+    transition: width 0.3s ease; 
     cursor: zoom-out;
 }
 
