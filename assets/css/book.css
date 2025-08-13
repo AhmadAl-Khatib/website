@@ -375,7 +375,7 @@ details p {
 .chapter-full {
     list-style-position: inside;
     padding-bottom:20px;
-    padding-inline-start: 40px;
+    padding-right: 40px;
     padding-left: 15px;
     background:#f6f6f6;
 }
@@ -656,4 +656,5 @@ ul ul, ol ul {
 pre, code {
     direction: ltr;
     text-align: left;
+    font-size:18px;
 }
