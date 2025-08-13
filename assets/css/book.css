@@ -581,3 +581,6 @@ ul ul, ol ul {
     inset-inline-start: 0;
     transform: translateY(-50%);
 }
+.toc-list {
+    list-style-type: square;
+}
