@@ -792,38 +792,37 @@
             <p><a href="#">سياسة الخصوصية</a> | <a href="#">شروط الخدمة</a></p>
         </div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const detailsElements = document.querySelectorAll('details');
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const detailsElements = document.querySelectorAll('details');
+        const floatingBtn = document.getElementById('collapseFloatingBtn');
 
-            detailsElements.forEach(details => {
-                details.addEventListener('toggle', function() {
-                    if (details.open) {
-                        let collapseBtn = details.querySelector('.collapse-btn');
-                        if (!collapseBtn) {
-                            collapseBtn = document.createElement('button');
-                            collapseBtn.className = 'collapse-btn';
-                            collapseBtn.textContent = 'طي المحتوى';
-                            details.appendChild(collapseBtn);
+        detailsElements.forEach(details => {
+            details.addEventListener('toggle', function() {
+                // Check if any details element on the page is currently open
+                const anyOpen = Array.from(detailsElements).some(d => d.open);
 
-                            collapseBtn.addEventListener('click', function() {
-                                details.open = false;
-                                // Automatically scroll back to the summary after closing
-                                details.querySelector('summary').scrollIntoView({ behavior: 'smooth' });
-                            });
-                        }
-                    } else {
-                        const collapseBtn = details.querySelector('.collapse-btn');
-                        if (collapseBtn) {
-                            collapseBtn.remove();
-                        }
-                    }
-                });
+                if (anyOpen) {
+                    floatingBtn.style.display = 'block'; // Show the button
+                } else {
+                    floatingBtn.style.display = 'none'; // Hide the button
+                }
             });
         });
-    </script>
 
-<script>
+        // Add a click listener to the floating button
+        floatingBtn.addEventListener('click', function() {
+            // Find the currently open details element
+            const openDetails = document.querySelector('details[open]');
+            if (openDetails) {
+                // Close it
+                openDetails.open = false;
+                // Scroll back to the summary after closing
+                openDetails.querySelector('summary').scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+</script>
         document.addEventListener('DOMContentLoaded', function() {
 
             // --- Sticky Header on Scroll ---
