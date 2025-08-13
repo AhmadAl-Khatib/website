@@ -643,3 +643,7 @@ ul ul, ol ul {
 #toc h3 {
         font-size: 14px;
 }
+pre, code {
+    direction: ltr;
+    text-align: left;
+}
