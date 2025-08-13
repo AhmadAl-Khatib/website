@@ -384,7 +384,16 @@ details p {
     font-size: 1.5rem;
     color: var(--primary-color);
 }
+summary {
+  display: block;
+  text-align: center;
+  padding: 1.5rem 0;
+}
 
+summary h3 {
+  display: inline-block;
+  text-align: center;
+}
 /* Reviews Section */
 .reviews-grid {
     display: grid;
