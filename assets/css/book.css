@@ -339,6 +339,7 @@ details p {
 .toc-columns {
     column-count: 2;
     column-gap: 2rem;
+    padding-bottom: 20px;
 }
 .toc-list {
     list-style-position: inside;
