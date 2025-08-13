@@ -255,7 +255,7 @@ a:hover {
     max-width: 800px;
 }
 .bg-light {
-    background-color: var(--bg-light);
+    background-color: var(--light-color);
 }
 
 /* Collapsible Sections */
