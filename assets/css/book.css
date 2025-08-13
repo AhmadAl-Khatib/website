@@ -249,7 +249,7 @@ a:hover {
 
 /* --- Content Sections --- */
 .content-section {
-    padding: 6rem 0;
+    padding: 40px 0 40px;
 }
 .content-section .container {
     max-width: 800px;
