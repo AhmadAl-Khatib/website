@@ -669,3 +669,7 @@ pre {
     padding-bottom:10px;
     margin-bottom:0px;
 }
+.chapter-full li, ul, ol{
+    list-style: disc;
+    padding-right: 0px
+}
