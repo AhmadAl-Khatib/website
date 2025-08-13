@@ -681,10 +681,10 @@ pre {
     text-align: center;
     padding-bottom: 10px;
 }
-.collapse-btn {
-    position: sticky;
+#collapseFloatingBtn {
+    position: fixed;
     bottom: 20px;
-    right: 20px; /* Changed from 'left' to 'right' for RTL layout */
+    right: 20px;
     z-index: 1000;
     padding: 10px 15px;
     background-color: #337ab7;
@@ -694,9 +694,5 @@ pre {
     cursor: pointer;
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: none; /* Initially hidden */
-}
-
-details[open] .collapse-btn {
-    display: block; /* Shows the button when the details element is expanded */
+    display: none; /* This is the key: it's hidden until content is expanded */
 }
