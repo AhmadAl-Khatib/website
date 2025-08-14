@@ -560,7 +560,24 @@ html[lang="en"] #publications p:not(.book-description-ar) {
   transition: all 0.3s ease;
   text-align: center;
 }
+#bookshelf .book-button1 {
+  font-family:tajawal;
+  display: inline-block;
+  margin: 10px auto;
+  padding: 8px 15px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+  text-align: center;
+}
 #bookshelf .book-button:hover {
+  background: transparent;
+  color: orange;
+  border: 2px solid orange;
+}
+#bookshelf .book-button1:hover {
   background: transparent;
   color: orange;
   border: 2px solid orange;
@@ -2038,6 +2055,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
