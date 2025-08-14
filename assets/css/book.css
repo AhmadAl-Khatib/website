@@ -173,14 +173,14 @@ details p { padding: 1.5rem; padding-top: 0; margin-top: 0; }
 
 .toc-list {
     list-style-position: outside;
-    padding-inline-start: 0;
+    padding-inline-start: 10;
     margin: 0;
 }
 .toc-list > li { margin-bottom: 0.75rem; font-size: 16px; }
 
 .toc-full {
     list-style-position: outside;
-    padding-inline-start: 40px;
+    padding-inline-start: 30px;
     background: #f6f6f6;
 }
 
