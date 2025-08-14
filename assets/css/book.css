@@ -682,7 +682,8 @@ pre {
     padding-bottom: 10px;
 }
 #collapseFloatingBtn {
-    font-seze: 16px;
+    font-family: tajawal;
+    font-size: 16px;
     position: fixed;
     bottom: 20px;
     right: 20px;
