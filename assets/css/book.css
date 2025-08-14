@@ -258,6 +258,7 @@ ul { list-style-type: disc; }
 ol { list-style-type: decimal; }
 ul li, ol li { margin-bottom: 0.5rem; font-size: 16px; color: var(--dark-color); }
 ul ul, ol ul, ul ol, ol ol { margin-top: 0.5rem; margin-bottom: 0; padding-inline-start: 1.25rem; }
+.benefits-list .fas.fa-check-circle { color: var(--primary-color); }
 
 .list-subtle { list-style: none; padding-inline-start: 0; }
 .list-subtle li { position: relative; padding-inline-start: 20px; }
