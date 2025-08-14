@@ -317,7 +317,7 @@ pre {
     .hero-content { flex-direction: column; text-align: center; }
     .hero-text { order: 2; }
     .hero-image { order: 1; margin-bottom: 2rem; }
-    .hero-image img { max-width: 320px; }
+    .hero-image img { max-width: 250px; }
     .cta-buttons { justify-content: center; }
     .author-content { flex-direction: column; text-align: center; }
 }
