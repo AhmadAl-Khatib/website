@@ -207,7 +207,7 @@ details p { padding: 1.5rem; padding-top: 0; margin-top: 0; }
 .author-content { display: flex; align-items: center; gap: 3rem; }
 .author-img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 5px var(--light-color), var(--box-shadow); }
 .author-bio { flex: 1; min-width: 0; }
-.author-social { margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.author-social { margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
 .author-social a { font-size: 1.5rem; color: var(--primary-color); }
 
 .reviews-grid {
