@@ -752,44 +752,29 @@
 <script src="/assets/js/creative.js"></script>
 <script src="/assets/js/custom.js"></script>
 
-  <script>
-    window.onload = function() {
-      // Logic from the first script
-      if (typeof oldIE === 'undefined' && Object.keys) {
-          hljs.initHighlighting(); // Syntax highlighting
-      }
-      baguetteBox.run('.baguetteBoxOne'); // Lightbox gallery
-      baguetteBox.run('.baguetteBoxTwo');
-      baguetteBox.run('.baguetteBoxThree', {
-          animation: 'fadeIn'
-      });
-      baguetteBox.run('.baguetteBoxFour', {
-          buttons: false
-      });
-      baguetteBox.run('.baguetteBoxFive', {
-          captions: function(element) {
-              return element.getElementsByTagName('img')[0].alt;
-          }
-      });
-      
-      // Logic from the second script
-      const navbar = document.querySelector('.navbar');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-          navbar.classList.add('fixed-top');
-        } else {
-          navbar.classList.remove('fixed-top');
+<script>
+window.onload = function() {
+    if (typeof oldIE === 'undefined' && Object.keys) {
+        hljs.initHighlighting(); // Syntax highlighting
+    }
+    baguetteBox.run('.baguetteBoxOne'); // Lightbox gallery
+    baguetteBox.run('.baguetteBoxTwo');
+    baguetteBox.run('.baguetteBoxThree', {
+        animation: 'fadeIn'
+    });
+    baguetteBox.run('.baguetteBoxFour', {
+        buttons: false
+    });
+    baguetteBox.run('.baguetteBoxFive', {
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
         }
-      });
-    };
-  </script>
-
-  
+    });
+};
+</script>
+    
 </body>
 </html>
-
-
-
 
 
 
