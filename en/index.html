@@ -772,9 +772,29 @@ window.onload = function() {
     });
 };
 </script>
-    
+    <script>
+
+    window.onload = function() {
+  // Get the navbar element
+  const navbar = document.querySelector('.navbar');
+
+  // Add a scroll event listener to the window
+  window.addEventListener('scroll', () => {
+    // Check if the user has scrolled down more than 50 pixels
+    if (window.scrollY > 50) {
+      // Add the 'fixed-top' class
+      navbar.classList.add('fixed-top');
+    } else {
+      // Otherwise, remove the 'fixed-top' class
+      navbar.classList.remove('fixed-top');
+    }
+  });
+};
+  </script>
+  
 </body>
 </html>
+
 
 
 
