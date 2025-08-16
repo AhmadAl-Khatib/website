@@ -1,540 +1,512 @@
-<!doctype html>
-<html lang="ar" dir="rtl" data-theme="light">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>دورة البرمجة الاحترافية | Ahmad</title>
-    <meta name="description" content="دورة برمجة عملية بتجربة تعلم متدرجة، تمارين واقعية، ومرافقة تعليمية عالية الجودة.">
-    <link rel="canonical" href="https://example.com/course/">
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
-    <meta property="og:title" content="دورة البرمجة الاحترافية">
-    <meta property="og:description" content="تعلم بواجهة مستخدم مدروسة، مهام تطبيقية، ونظام تقدم واضح.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://example.com/course/">
-    <meta property="og:image" content="https://example.com/assets/og-course.jpg">
-    <meta name="theme-color" content="#0f766e">
-    <style>
-/* =========================================
-   Pro UX/UI Course Theme
-   ========================================= */
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ابدأ تعلم لغة بايثون من الصفر بالعربية مع أحمد الخطيب. دروس فيديو قصيرة، موارد مجانية، وكتاب شامل لتعلم البرمجة بسهولة." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ahmad-khatib.com/arabic-python-beginners-course" />
 
-/* Palette, elevation, and radii */
-:root {
-  /* Brand core */
-  --brand-amber: #f59e0b;
-  --brand-amber-600: #d97706;
-  --brand-teal: #0f766e;
-  --brand-teal-700: #115e59;
-  --brand-indigo: #4338ca;
+  <title>تعلم بايثون للمبتدئين بالعربية | دورة فيديو مجانية خطوة بخطوة - أحمد الخطيب</title>
 
-  /* Accents */
-  --accent-pink: #be185d;
-  --accent-emerald: #059669;
+  <!-- Open Graph / Twitter Cards -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="تعلم بايثون للمبتدئين بالعربية | دورة فيديو مجانية مع أحمد الخطيب" />
+<meta property="og:description" content="دروس بايثون مجانية خطوة بخطوة باللغة العربية. شاهد الفيديوهات، حمل الكتاب، وابدأ رحلتك في تعلم البرمجة بسهولة." />
+<meta property="og:url" content="https://www.ahmad-khatib.com/arabic-python-beginners-course" />
+<meta property="og:image" content="https://www.ahmad-khatib.com/assets/img/arabic-python-course-for-beginners.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="تعلم بايثون للمبتدئين بالعربية | دورة فيديو مجانية مع أحمد الخطيب" />
+<meta name="twitter:description" content="دروس بايثون مجانية خطوة بخطوة باللغة العربية. شاهد الفيديوهات، حمل الكتاب، وابدأ رحلتك في تعلم البرمجة بسهولة." />
+<meta name="twitter:image" content="https://www.ahmad-khatib.com/assets/img/arabic-python-course-for-beginners.webp" />
+<meta name="twitter:site" content="@alkhatib_ahmad1" />
 
-  /* Neutral spectrum */
-  --ink: #0f172a;
-  --ink-600: #334155;
-  --ink-400: #64748b;
-  --bg: #ffffff;
-  --bg-soft: #f8fafc;
-  --bg-elev: #ffffff;
-  --border: #e2e8f0;
+  <!-- Tajawal Font -->
+  <style>
+    @font-face {
+      font-family: 'Tajawal';
+      src: url('../font/fonts/Tajawal-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Tajawal';
+      src: url('../font/fonts/Tajawal-Bold.woff2') format('woff2');
+      font-weight: 700;
+      font-display: swap;
+    }
+  </style>
 
-  /* States */
-  --focus: #1d4ed8;
+  <!-- Animate.css & WOW.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-  /* Radii & shadows */
-  --r-sm: 8px;
-  --r-md: 12px;
-  --r-lg: 16px;
-  --shadow-sm: 0 4px 14px rgba(2, 8, 23, .05);
-  --shadow: 0 10px 30px rgba(2, 8, 23, .08);
-  --shadow-lg: 0 20px 50px rgba(2, 8, 23, .12);
-}
-
-/* Dark theme */
-html[data-theme="dark"] {
-  --bg: #0b1220;
-  --bg-soft: #0f172a;
-  --bg-elev: #0b1324;
-  --ink: #e5e7eb;
-  --ink-600: #cbd5e1;
-  --ink-400: #94a3b8;
-  --border: #1f2937;
-  --shadow-sm: 0 4px 14px rgba(0,0,0,.35);
-  --shadow: 0 10px 30px rgba(0,0,0,.45);
-  --shadow-lg: 0 20px 50px rgba(0,0,0,.55);
-}
-
-/* Base */
-*,
-*::before,
-*::after { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  margin: 0;
-  font-family: 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: var(--bg);
-  color: var(--ink);
-  line-height: 1.7;
-  text-align: right;
-}
-
-img { max-width: 100%; display: block; border-radius: var(--r-sm); }
-svg { vertical-align: middle; }
-
-.container { max-width: 1100px; margin-inline: auto; padding-inline: 1rem; }
-
-h1, h2, h3 { margin: 0 0 .5rem; font-weight: 800; color: var(--ink); }
-p { margin: 0 0 1rem; }
-
-/* Fluid type */
-h1 { font-size: clamp(2rem, 3.8vw, 3rem); line-height: 1.2; }
-h2 { font-size: clamp(1.5rem, 2.5vw, 2.25rem); }
-h3 { font-size: clamp(1.25rem, 1.8vw, 1.6rem); }
-
-/* Links */
-a {
-  color: var(--brand-amber);
-  text-decoration: none;
-  background-image: linear-gradient(currentColor, currentColor);
-  background-size: 0% 2px;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size .25s ease;
-}
-a:hover, a:focus { background-size: 100% 2px; }
-a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
-
-/* Buttons */
-.btn {
-  --bg: var(--brand-teal);
-  --fg: #fff;
-  display: inline-flex;
-  align-items: center;
-  gap: .6rem;
-  padding: .8rem 1.2rem;
-  border-radius: var(--r-md);
-  border: 2px solid transparent;
-  background: var(--bg);
-  color: var(--fg);
-  font-weight: 800;
-  min-height: 44px;
-  box-shadow: var(--shadow-sm);
-  transition: transform .12s ease, box-shadow .18s ease, background-color .2s ease, border-color .2s ease;
-}
-.btn:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
-.btn:active { transform: translateY(0); }
-.btn:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
-
-.btn--ghost {
-  --bg: transparent;
-  --fg: var(--brand-teal);
-  border-color: var(--brand-teal);
-  box-shadow: none;
-}
-.btn--amber { --bg: linear-gradient(180deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%); --fg: #111827; border-color: #f59e0b; }
-
-/* Top bar */
-.skip-link {
-  position: absolute; inset-inline-start: 1rem; top: -40px;
-  background: var(--bg-elev); padding: .5rem .75rem; border-radius: 6px;
-  transition: top .2s ease; z-index: 10000; border: 1px solid var(--border);
-}
-.skip-link:focus { top: 1rem; outline: 3px solid var(--focus); }
-
-.header {
-  position: sticky; top: 0; z-index: 50;
-  background: color-mix(in oklab, var(--bg) 92%, transparent);
-  backdrop-filter: saturate(180%) blur(10px);
-  border-bottom: 1px solid var(--border);
-}
-.nav {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: .75rem 0;
-}
-.brand {
-  display: inline-flex; align-items: center; gap: .6rem; font-weight: 800;
-  color: var(--ink);
-}
-.theme-toggle { all: unset; cursor: pointer; }
-.theme-toggle .btn { padding: .55rem .8rem; border-radius: var(--r-sm); }
-
-/* Hero */
-.hero {
-  position: relative;
-  padding: clamp(2rem, 4vw, 4rem) 0;
-  background:
-    radial-gradient(1200px 600px at 20% -10%, color-mix(in oklab, var(--brand-teal) 28%, transparent) 0%, transparent 60%),
-    radial-gradient(900px 500px at 110% 20%, color-mix(in oklab, var(--brand-amber) 26%, transparent) 0%, transparent 60%),
-    linear-gradient(180deg, color-mix(in oklab, var(--bg-soft) 80%, transparent), var(--bg));
-}
-.hero__grid { display: grid; gap: 1.5rem; grid-template-columns: 1.1fr .9fr; align-items: center; }
-.hero__lead { color: var(--ink-600); font-size: 1.125rem; max-width: 60ch; }
-.hero__badges { display: flex; flex-wrap: wrap; gap: .6rem; margin: .75rem 0; }
-.badge {
-  display: inline-flex; align-items: center; gap: .4rem;
-  background: var(--bg-elev); color: var(--ink-400);
-  border: 1px solid var(--border); border-radius: 999px; padding: .35rem .65rem;
-  box-shadow: var(--shadow-sm);
-}
-
-/* Media panel */
-.media {
-  position: relative; border-radius: var(--r-lg); overflow: clip;
-  background: var(--bg-elev); border: 1px solid var(--border); box-shadow: var(--shadow);
-}
-.media::after {
-  content: ""; position: absolute; inset: 0;
-  background: radial-gradient(600px 220px at 50% -10%, rgba(245, 158, 11, .15), transparent 60%);
-  pointer-events: none;
-}
-
-/* Breadcrumbs */
-.breadcrumb {
-  font-size: .95rem; color: var(--ink-400); margin: .25rem 0 1rem;
-}
-.breadcrumb nav ol { list-style: none; padding: 0; margin: 0; display: flex; gap: .5rem; flex-wrap: wrap; }
-.breadcrumb a { color: var(--ink-400); text-decoration: underline; }
-.breadcrumb li[aria-current="page"] { color: var(--ink-600); font-weight: 700; }
-
-/* Section header */
-.section-title { text-align: center; margin: 0 0 .5rem; }
-.section-desc { text-align: center; color: var(--ink-400); max-width: 65ch; margin: 0 auto 1.25rem; }
-
-/* Cards grid */
-.grid { display: grid; gap: 1.25rem; }
-.grid--cards { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-
-.card {
-  background: var(--bg-elev); border: 1px solid var(--border);
-  border-radius: var(--r-lg); overflow: clip; display: grid; grid-template-rows: auto 1fr;
-  box-shadow: var(--shadow-sm);
-  transition: transform .18s ease, box-shadow .18s ease, border-color .2s ease;
-}
-.card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: color-mix(in oklab, var(--brand-teal) 30%, var(--border)); }
-.card__media img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 0; }
-.card__body { padding: 1rem; display: grid; align-content: start; gap: .5rem; }
-.card__title { font-weight: 800; font-size: 1.1rem; }
-.card__meta { display: flex; gap: .6rem; flex-wrap: wrap; color: var(--ink-400); font-size: .95rem; }
-
-/* Signup block */
-.signup {
-  background: var(--bg-elev);
-  padding: 1.8rem 1.2rem;
-  border-radius: var(--r-lg);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  margin: 2rem 0;
-}
-.signup__form { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; }
-.input {
-  width: min(360px, 100%);
-  padding: .7rem .9rem;
-  border: 1px solid var(--border);
-  border-radius: var(--r-md);
-  font-size: 1rem;
-  background: var(--bg);
-  color: var(--ink);
-}
-.input:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
-.signup__note { font-size: .9rem; color: var(--ink-400); margin-top: .5rem; text-align: center; }
-
-/* Syllabus (accordion) */
-.syllabus { background: var(--bg-soft); padding: 2rem 1rem; border-radius: var(--r-lg); border: 1px solid var(--border); }
-.syllabus details {
-  background: var(--bg-elev); border: 1px solid var(--border);
-  border-radius: var(--r-md); padding: .85rem 1rem; margin-bottom: .8rem;
-  transition: border-color .2s ease, background-color .2s ease;
-}
-.syllabus summary {
-  cursor: pointer; font-weight: 800; color: var(--ink);
-  display: flex; align-items: center; justify-content: space-between;
-}
-.syllabus details[open] { border-color: color-mix(in oklab, var(--brand-amber) 30%, var(--border)); }
-.syllabus__content { color: var(--ink-600); padding-top: .5rem; }
-
-/* FAQ */
-.faq { background: var(--bg-soft); padding: 2rem 1rem; border-radius: var(--r-lg); border: 1px solid var(--border); }
-.faq__item {
-  background: var(--bg-elev); border: 1px solid var(--border); border-radius: var(--r-md);
-  padding: 1rem; margin-bottom: 1rem; box-shadow: var(--shadow-sm);
-}
-.faq__q { font-weight: 800; cursor: pointer; }
-.faq__a { color: var(--ink-600); }
-
-/* Footer */
-.footer {
-  text-align: center; padding: 2rem 1rem; color: var(--ink-400);
-  border-top: 1px solid var(--border);
-}
-.footer a { color: var(--brand-amber); font-weight: 800; }
-
-/* Utilities */
-.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 1rem 0; }
-.kpi {
-  background: var(--bg-elev); border: 1px solid var(--border); border-radius: var(--r-md);
-  padding: .9rem; text-align: center; box-shadow: var(--shadow-sm);
-}
-.kpi strong { display: block; font-size: 1.35rem; color: var(--brand-teal); }
-
-/* Responsive */
-@media (max-width: 992px) {
-  .hero__grid { grid-template-columns: 1fr; }
-  .media { order: -1; }
-}
-@media (max-width: 640px) {
-  .container { padding-inline: .85rem; }
-  .kpis { grid-template-columns: repeat(2, 1fr); }
-  .signup__form { flex-direction: column; align-items: stretch; }
-  .btn { justify-content: center; width: 100%; }
-}
-@media (max-width: 420px) {
-  .grid--cards { grid-auto-flow: column; grid-auto-columns: 85%; overflow-x: auto; scroll-snap-type: x mandatory; }
-  .card { scroll-snap-align: start; }
-}
-
-/* Motion respect */
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .btn, .card, a, details { transition: none !important; }
-}
-    </style>
-
-    <script>
-      // Minimal, accessible theme toggle
-      document.addEventListener('DOMContentLoaded', () => {
-        const root = document.documentElement;
-        const saved = localStorage.getItem('theme');
-        if (saved) root.setAttribute('data-theme', saved);
-
-        const toggle = document.getElementById('theme-toggle');
-        if (toggle) {
-          toggle.addEventListener('click', () => {
-            const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            root.setAttribute('data-theme', next);
-            localStorage.setItem('theme', next);
-          });
+  <!-- Structured Data: Course -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Course",
+        "name": "تعلم بايثون للمبتدئين باللغة العربية",
+        "description": "دورة فيديو مجانية لتعلم البرمجة بلغة بايثون من الصفر خطوة بخطوة باللغة العربية مع أحمد الخطيب.",
+        "provider": {
+          "@type": "Person",
+          "name": "أحمد الخطيب",
+          "url": "https://www.ahmad-khatib.com"
+        },
+        "educationalLevel": "Beginner",
+        "inLanguage": "ar",
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "name": "تعلم بايثون بالعربية – سلسلة فيديو تعليمية",
+          "url": "https://www.ahmad-khatib.com/arabic-python-beginners-course",
+          "courseMode": "online",
+          "startDate": "2025-07-31",
+          "inLanguage": "ar"
         }
-      });
-    </script>
+      },
+      {
+        "@type": "VideoSeries",
+        "name": "تعلم بايثون بالعربية – سلسلة فيديو تعليمية",
+        "description": "سلسلة فيديو لتعلم البرمجة بلغة بايثون خطوة بخطوة باللغة العربية مع أحمد الخطيب.",
+        "url": "https://www.ahmad-khatib.com/arabic-python-beginners-course",
+        "inLanguage": "ar",
+        "thumbnailUrl": "https://www.ahmad-khatib.com/assets/img/arabic-python-course-for-beginners.webp",
+        "publisher": {
+          "@type": "Person",
+          "name": "أحمد الخطيب",
+          "url": "https://www.ahmad-khatib.com"
+        },
+        "hasPart": [
+          {
+            "@type": "VideoObject",
+            "name": "الحلقة 1: تعلم البرمجة بلغة بايثون من الصفر | print function",
+            "description": "شرح مفهوم دالة print في لغة بايثون مع تطبيق عملي للمبتدئين.",
+            "thumbnailUrl": "https://img.youtube.com/vi/s5tbceQSsng/hqdefault.jpg",
+            "uploadDate": "2025-07-31",
+            "url": "https://youtube.com/shorts/s5tbceQSsng",
+            "embedUrl": "https://www.youtube.com/embed/s5tbceQSsng",
+            "inLanguage": "ar"
+          },
+          {
+            "@type": "VideoObject",
+            "name": "لمحة عن كتاب تعلم بايثون بأقل من أسبوع",
+            "description": "استعراض سريع لمحتوى كتاب تعلم بايثون للمبتدئين باللغة العربية.",
+            "thumbnailUrl": "https://img.youtube.com/vi/98KRFeoGkvQ/hqdefault.jpg",
+            "uploadDate": "2025-07-31",
+            "url": "https://youtube.com/shorts/98KRFeoGkvQ",
+            "embedUrl": "https://www.youtube.com/embed/98KRFeoGkvQ",
+            "inLanguage": "ar"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "هل يمكنني تعلم بايثون بدون خبرة برمجية؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "نعم، هذه الدورة مخصصة للمبتدئين بالكامل ولا تحتاج إلى أي معرفة برمجية سابقة."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "هل الدورة مجانية بالكامل؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "نعم، جميع الحلقات متاحة مجانًا للمستخدمين."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- Styles and rest of HTML continues in next message... -->
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fefefe;
+      color: #333;
+      direction: rtl;
+      text-align: right;
+      line-height: 1.6;
+    }
+    a {
+      color: #ffa100;
+      text-decoration: none;
+    }
+    a:hover, a:focus {
+      text-decoration: underline;
+    }
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Course",
-      "name": "دورة البرمجة الاحترافية",
-      "description": "مسار عملي مع وحدات واضحة وتمارين واقعية، مصمم بتجربة مستخدم عالية.",
-      "provider": {
-        "@type": "Person",
-        "name": "Ahmad",
-        "url": "https://example.com/ahmad/"
+    header.site-header {
+      background: url('assets/img/arabic-python-course-for-beginners.webp') no-repeat center center/cover;
+      color: white;
+      padding: 6rem 1rem 4rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 300px;
+      position: relative;
+    }
+    header.site-header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(30, 41, 59, 0.7);
+      z-index: 0;
+    }
+    header.site-header > * {
+      position: relative;
+      z-index: 1;
+    }
+    header.site-header h1 {
+      font-size: 2.6rem;
+      margin: 0;
+      font-weight: 700;
+      line-height: 1.2;
+      max-width: 900px;
+    }
+    header.site-header p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      max-width: 700px;
+    }
+
+    main.container {
+      max-width: 960px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+    }
+
+    section.signup-box {
+      background: #f1f5f9;
+      padding: 1.8rem 1.2rem;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 2rem;
+      direction: rtl;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.05);
+    }
+    section.signup-box h2 {
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #111827;
+    }
+    section.signup-box p {
+      margin: 0 0 1rem;
+      color: #4b5563;
+    }
+    section.signup-box form {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    section.signup-box input[type="email"] {
+      padding: 0.65rem;
+      width: 260px;
+      max-width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      text-align: right;
+      font-size: 1rem;
+      flex-grow: 1;
+    }
+    section.signup-box button {
+      padding: 0.65rem 1.3rem;
+      background: #ffa100;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    section.signup-box button:hover,
+    section.signup-box button:focus {
+      background-color: #cc8200;
+      outline: none;
+    }
+
+    section.episodes {
+      margin-top: 2rem;
+    }
+    section.episodes h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #1e293b;
+      font-weight: 700;
+    }
+    .episode-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    article.episode-card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
+      transition: transform 0.2s ease;
+      direction: rtl;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    article.episode-card:hover {
+      transform: translateY(-5px);
+    }
+    article.episode-card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 16/9;
+      display: block;
+    }
+    .episode-card-content {
+      padding: 1rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .episode-card h3 {
+      font-size: 1.1rem;
+      margin: 0 0 0.5rem;
+      color: #1e293b;
+      font-weight: 700;
+    }
+    .episode-card p.description {
+      font-size: 0.95rem;
+      color: #555;
+      margin: 0.5rem 0 1rem;
+    }
+    .episode-card a.watch-link {
+      color: #ffa100;
+      font-weight: 600;
+      margin-top: auto;
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3em;
+      transition: color 0.3s ease;
+    }
+    .episode-card a.watch-link:hover,
+    .episode-card a.watch-link:focus {
+      color: #cc8200;
+      outline: none;
+    }
+    .icon-youtube {
+      width: 1.2em;
+      height: 1.2em;
+      fill: #ff0000;
+      flex-shrink: 0;
+    }
+
+    .pagination {
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+    .pagination button {
+      background: #ffa100;
+      color: white;
+      border: none;
+      margin: 0 5px;
+      padding: 0.55rem 1.1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    .pagination button.active {
+      background-color: #cc8200;
+    }
+    .pagination button:hover,
+    .pagination button:focus {
+      background-color: #cc8200;
+      outline: none;
+    }
+
+    footer.site-footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
+      direction: rtl;
+      border-top: 1px solid #e2e8f0;
+    }
+    footer.site-footer a {
+      color: #ffa100;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    footer.site-footer a:hover,
+    footer.site-footer a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+
+    .faq-section {
+      background: #f9fafb;
+      padding: 2rem 1rem;
+      border-radius: 8px;
+      margin-top: 4rem;
+    }
+    .faq-section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+    .faq-section details {
+      margin-bottom: 1rem;
+      background: white;
+      padding: 1rem;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+    }
+    .faq-section summary {
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      header.site-header h1 {
+        font-size: 2rem;
+      }
+      header.site-header p {
+        font-size: 1rem;
       }
     }
-    </script>
-  </head>
+  </style>
+</head>
+<body>
 
-  <body>
-    <a href="#main" class="skip-link">تخطي إلى المحتوى</a>
+<header class="site-header wow animate__animated animate__fadeInDown">
+  <h1>تعلم بايثون للمبتدئين بالعربية مجانًا | دورة فيديو خطوة بخطوة - أحمد الخطيب</h1>
+  <p>ابدأ رحلتك في تعلم البرمجة بلغة بايثون من خلال دروس فيديو قصيرة وسهلة، مبنية على كتاب "تعلم بايثون بأقل من أسبوع" من إعداد أحمد الخطيب.</p>
+</header>
 
-    <header class="header">
-      <div class="container nav" role="navigation" aria-label="الشريط العلوي">
-        <a href="/" class="brand">
-          <img src="https://example.com/assets/logo.svg" alt="" width="28" height="28" style="border-radius:8px">
-          <span>Ahmad Academy</span>
-        </a>
-        <div style="display:flex; gap:.5rem; align-items:center">
-          <a class="btn btn--ghost" href="#syllabus">المنهج</a>
-          <a class="btn btn--amber" href="#signup">سجل الآن</a>
-          <button id="theme-toggle" class="theme-toggle" aria-label="تبديل السمة">
-            <span class="btn btn--ghost" aria-hidden="true">🌓</span>
-          </button>
-        </div>
-      </div>
-    </header>
+<main class="container" role="main">
+  <section class="signup-box wow animate__animated animate__fadeInUp" aria-label="اشتراك البريد الإلكتروني لدورة تعلم بايثون">
+    <h2>📩 اشترك الآن لتصلك موارد إضافية مجانية لدورة تعلم بايثون للمبتدئين</h2>
+    <p>احصل على تمارين عملية، فيديوهات تعليمية جديدة، وتعليمات حصرية عبر البريد الإلكتروني — اشترك مجانًا وابدأ التعلم من اليوم!</p>
+    <form action="https://formsubmit.co/a.khatib.89@outlook.com" method="POST" aria-describedby="signup-desc" novalidate>
+      <input
+        type="email"
+        name="email"
+        placeholder="أدخل بريدك الإلكتروني"
+        required
+        aria-required="true"
+        aria-describedby="signup-desc"
+        autocomplete="email"
+        inputmode="email"
+        aria-label="بريدك الإلكتروني"
+      />
+      <button type="submit">اشترك الآن</button>
+    </form>
+    <p id="signup-desc" style="font-size: 0.85rem; color: #555; margin-top: 0.5rem;">
+      لن نشارك بريدك الإلكتروني مع أي جهة أخرى ولن نرسل إليك أية رسائل غير مرغوبة.
+    </p>
+  </section>
+</main>
 
-    <main id="main">
-      <section class="hero">
-        <div class="container">
-          <div class="breadcrumb">
-            <nav aria-label="مسار التنقل">
-              <ol>
-                <li><a href="/">الرئيسية</a></li>
-                <li><a href="/courses/">الدورات</a></li>
-                <li aria-current="page">دورة البرمجة الاحترافية</li>
-              </ol>
-            </nav>
-          </div>
+  <section class="episodes" aria-label="حلقات فيديو تعلم بايثون">
+    <h2>🎥 دروس فيديو لتعلم بايثون خطوة بخطوة</h2>
+    <div id="episode-grid" class="episode-grid"></div>
+    <nav id="pagination" class="pagination"></nav>
+  </section>
 
-          <div class="hero__grid">
-            <div>
-              <h1>تعلم البرمجة بواجهة مصممة لتسهّل عليك كل خطوة</h1>
-              <p class="hero__lead">
-                تجربة تعلم مدروسة: وحدات قصيرة، أمثلة عملية، وتقييمات سريعة لتحافظ على زخمك. كل ذلك ضمن تصميم واضح ومريح.
-              </p>
-              <div class="hero__badges">
-                <span class="badge">⏱️ 24 ساعة محتوى</span>
-                <span class="badge">📁 12 وحدة</span>
-                <span class="badge">🧩 تمارين تفاعلية</span>
-                <span class="badge">🔖 شهادة إتمام</span>
-              </div>
-              <div style="display:flex; gap:.6rem; flex-wrap:wrap; margin-top: .5rem;">
-                <a class="btn" href="#episodes">ابدأ الاستكشاف</a>
-                <a class="btn btn--ghost" href="#faq">أسئلة متكررة</a>
-              </div>
-              <div class="kpis" role="list">
-                <div class="kpi" role="listitem"><strong>+4.9/5</strong><span>تقييم الطلاب</span></div>
-                <div class="kpi" role="listitem"><strong>+3K</strong><span>متعلّم نشط</span></div>
-                <div class="kpi" role="listitem"><strong>100%</strong><span>مشاريع عملية</span></div>
-                <div class="kpi" role="listitem"><strong>RTL</strong><span>تصميم عربي</span></div>
-              </div>
-            </div>
+  <section class="faq-section" aria-label="الأسئلة الشائعة">
+    <h2>الأسئلة الشائعة حول تعلم بايثون</h2>
+    <details>
+      <summary>هل يمكنني تعلم بايثون بدون خبرة برمجية؟</summary>
+      <p>نعم، هذه الدورة مخصصة للمبتدئين بالكامل ولا تحتاج إلى أي معرفة برمجية سابقة.</p>
+    </details>
+    <details>
+      <summary>هل الدورة مجانية بالكامل؟</summary>
+      <p>نعم، جميع الحلقات متاحة مجانًا للمستخدمين.</p>
+    </details>
+  </section>
+</main>
 
-            <div class="media" aria-label="معاينة الدروس">
-              <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="واجهة تعليمية تعرض كود وتمارين عملية">
-            </div>
-          </div>
-        </div>
-      </section>
+<footer class="site-footer wow animate__animated animate__fadeIn">
+  2025 أحمد الخطيب | <a href="https://ahmad-khatib.com/#publications">الكتب</a> | <a href="https://ahmad-khatib.com/#contact">تواصل معنا</a>
+</footer>
 
-      <section id="episodes" class="container" style="padding: 2rem 0 0;">
-        <h2 class="section-title">مقتطفات من الدروس</h2>
-        <p class="section-desc">نماذج قصيرة تعكس أسلوب الشرح والتطبيق العملي قبل الانضمام الكامل.</p>
-        <div class="grid grid--cards">
-          <article class="card">
-            <div class="card__media">
-              <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" alt="شرح أساسيات المتغيرات">
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">المتغيرات وأنواع البيانات</h3>
-              <p class="card__meta">10 دقائق • مستوى مبتدئ</p>
-              <p>تعرف على الأساسيات مع أمثلة بسيطة وتمارين قصيرة.</p>
-              <a href="#" class="btn btn--ghost">مشاهدة</a>
-            </div>
-          </article>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>new WOW().init();</script>
+<script>
+  const episodes = [
+    {
+      title: "حلقة 1: تعلم البرمجة بلغة بايثون من الصفر | print function | كل يوم معلومة",
+      youtubeId: "s5tbceQSsng",
+      link: "https://youtube.com/shorts/s5tbceQSsng",
+      description: "تعلم استخدام دالة print في بايثون لطباعة النصوص على الشاشة - أول خطوة للمبتدئين."
+    },
+    {
+      title: "لمحة عن كتاب تعلم بايثون بأقل من أسبوع",
+      youtubeId: "98KRFeoGkvQ",
+      link: "https://youtube.com/shorts/98KRFeoGkvQ",
+      description: "تعرف على كتاب تعلم بايثون بأقل من أسبوع - كتاب شامل مناسب للمبتدئين من الصفر."
+    }
+  ];
+  const episodesPerPage = 10;
+  const totalPages = Math.ceil(episodes.length / episodesPerPage);
 
-          <article class="card">
-            <div class="card__media">
-              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" alt="هياكل التحكم">
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">هياكل التحكم</h3>
-              <p class="card__meta">14 دقيقة • أساسيات</p>
-              <p>تعامل مع الشروط والحلقات بثقة من خلال سيناريوهات واقعية.</p>
-              <a href="#" class="btn btn--ghost">مشاهدة</a>
-            </div>
-          </article>
+  function renderPage(page) {
+    const grid = document.getElementById('episode-grid');
+    grid.innerHTML = '';
+    const start = (page - 1) * episodesPerPage;
+    const end = start + episodesPerPage;
+    episodes.slice(start, end).forEach(ep => {
+      const el = document.createElement('article');
+      el.className = 'episode-card wow animate__animated animate__fadeInUp';
+      el.innerHTML = `
+        <img src=\"https://img.youtube.com/vi/${ep.youtubeId}/hqdefault.jpg\" alt=\"${ep.title}\" loading=\"lazy\">
+        <div class=\"episode-card-content\">
+          <h3>${ep.title}</h3>
+          <p class=\"description\">${ep.description}</p>
+          <a href=\"${ep.link}\" target=\"_blank\" rel=\"noopener\" class=\"watch-link\">
+            <svg class=\"icon-youtube\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M23.498 6.186a2.958 2.958 0 0 0-2.08-2.09C19.59 3.5 12 3.5 12 3.5s-7.59 0-9.42.596a2.957 2.957 0 0 0-2.08 2.09A30.043 30.043 0 0 0 0 12a30.043 30.043 0 0 0 .5 5.814 2.958 2.958 0 0 0 2.08 2.09c1.83.597 9.42.597 9.42.597s7.59 0 9.42-.597a2.958 2.958 0 0 0 2.08-2.09A30.042 30.042 0 0 0 24 12a30.042 30.042 0 0 0-.502-5.814zM9.545 15.568V8.432l6.18 3.568-6.18 3.568z\"/></svg>
+            شاهد الحلقة
+          </a>
+        </div>`;
+      grid.appendChild(el);
+    });
+    renderPagination(page);
+  }
 
-          <article class="card">
-            <div class="card__media">
-              <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1200&auto=format&fit=crop" alt="مشروع صغير">
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">مشروع صغير: قائمة مهام</h3>
-              <p class="card__meta">22 دقيقة • تطبيقي</p>
-              <p>طبّق ما تعلمته ببناء تطبيق مصغّر خطوة بخطوة.</p>
-              <a href="#" class="btn btn--ghost">مشاهدة</a>
-            </div>
-          </article>
-        </div>
-      </section>
+  function renderPagination(currentPage) {
+    const pagination = document.getElementById('pagination');
+    pagination.innerHTML = '';
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement('button');
+      btn.textContent = i;
+      if (i === currentPage) btn.classList.add('active');
+      btn.addEventListener('click', () => renderPage(i));
+      pagination.appendChild(btn);
+    }
+  }
 
-      <section id="signup" class="container" style="padding: 2rem 0;">
-        <div class="signup" role="region" aria-label="نموذج التسجيل">
-          <h2 class="section-title">انضم الآن</h2>
-          <p class="section-desc">سجّل بريدك لتصلك تفاصيل الالتحاق والعروض المبكرة.</p>
-          <form class="signup__form" action="/subscribe/" method="post">
-            <label class="visually-hidden" for="email">البريد الإلكتروني</label>
-            <input class="input" type="email" id="email" name="email" required inputmode="email" placeholder="you@example.com" autocomplete="email" aria-describedby="signup-note">
-            <button class="btn btn--amber" type="submit">سجّل اهتمامك</button>
-          </form>
-          <p id="signup-note" class="signup__note">لن نرسل رسائل مزعجة — إلغاء الاشتراك متاح في أي وقت.</p>
-        </div>
-      </section>
-
-      <section id="syllabus" class="container" style="padding: 0 0 2rem;">
-        <h2 class="section-title">المنهج المختصر</h2>
-        <p class="section-desc">من التأسيس إلى المشروع النهائي عبر وحدات قصيرة، واضحة، ومتصلة.</p>
-        <div class="syllabus">
-          <details>
-            <summary>الوحدة 1: الأساسيات</summary>
-            <div class="syllabus__content">
-              المتغيرات • الأنواع • المدخلات والمخرجات • مهام قصيرة
-            </div>
-          </details>
-          <details>
-            <summary>الوحدة 2: التحكم في التدفق</summary>
-            <div class="syllabus__content">
-              if/else • الحلقات • التعامل مع الأخطاء • تمارين
-            </div>
-          </details>
-          <details>
-            <summary>الوحدة 3: الهياكل والوظائف</summary>
-            <div class="syllabus__content">
-              القوائم • القواميس • الدوال • اختبارات بسيطة
-            </div>
-          </details>
-          <details>
-            <summary>الوحدة 4: المشروع التطبيقي</summary>
-            <div class="syllabus__content">
-              بناء تطبيق صغير مع مراجعة كود وتغذية راجعة.
-            </div>
-          </details>
-        </div>
-      </section>
-
-      <section id="faq" class="container" style="padding: 0 0 2rem;">
-        <h2 class="section-title">الأسئلة المتكررة</h2>
-        <div class="faq">
-          <div class="faq__item">
-            <div class="faq__q" role="button" tabindex="0" aria-expanded="false">هل تناسب الدورة المبتدئين؟</div>
-            <div class="faq__a">نعم، تم تصميم المحتوى بتسلسل تدريجي وتقييمات قصيرة.</div>
-          </div>
-          <div class="faq__item">
-            <div class="faq__q" role="button" tabindex="0" aria-expanded="false">ما هي مدة الوصول؟</div>
-            <div class="faq__a">وصول كامل للمحتوى والتحديثات لمدة 12 شهرًا.</div>
-          </div>
-          <div class="faq__item">
-            <div class="faq__q" role="button" tabindex="0" aria-expanded="false">هل توجد شهادات؟</div>
-            <div class="faq__a">نعم، شهادة إتمام بعد المشروع النهائي.</div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container">
-        <p>© <span id="year"></span> Ahmad. جميع الحقوق محفوظة.</p>
-        <p>
-          تابعني:
-          <a href="https://x.com/ahmad/">X</a> •
-          <a href="https://github.com/ahmad/">GitHub</a> •
-          <a href="https://www.linkedin.com/in/ahmad/">LinkedIn</a>
-        </p>
-      </div>
-    </footer>
-
-    <script>
-      // Year
-      document.getElementById('year').textContent = new Date().getFullYear();
-
-      // Minimal FAQ toggle state reflect (for custom divs)
-      document.querySelectorAll('.faq__q').forEach(q => {
-        q.addEventListener('click', () => {
-          const expanded = q.getAttribute('aria-expanded') === 'true';
-          q.setAttribute('aria-expanded', String(!expanded));
-          const a = q.nextElementSibling;
-          if (!expanded) a.style.display = 'block'; else a.style.display = 'none';
-        });
-        q.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); q.click(); }
-        });
-        // initialize hidden
-        const a = q.nextElementSibling; a.style.display = 'none';
-      });
-    </script>
-  </body>
+  renderPage(1);
+</script>
+</body>
 </html>
