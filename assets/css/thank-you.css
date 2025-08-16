@@ -8,7 +8,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #1f2937;
+  color: #333;
   direction: rtl;
 }
 
@@ -28,13 +28,13 @@ main.thank-you-container {
 h1 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: #0f172a;
+  color: #333;
 }
 
 p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
-  color: #374151;
+  color: #333;
   line-height: 1.6;
 }
 
@@ -82,9 +82,18 @@ a.button:hover {
 .social h2 {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
-  color: #0f172a;
+  color: #333;
   font-weight: 700;
   letter-spacing: -0.5px;
+}
+
+.social h2::before {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 1px;
+  margin: 0 auto 1.6rem;
+  background-color: #b3b3b3;
 }
 
 /* Social List Layout */
@@ -106,8 +115,8 @@ a.button:hover {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: #d1d5db; /* Gray circle */
-  color: #ffffff; /* White icon */
+  background-color: #d1d5db;
+  color: #ffffff;
   font-size: 1.25rem;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
   text-decoration: none;
@@ -116,7 +125,7 @@ a.button:hover {
 /* Hover & Focus States */
 .social-list li a:hover,
 .social-list li a:focus {
-  background-color: #2563eb;
+  background-color: #3495d9;
   color: #ffffff;
   transform: scale(1.15);
   outline: none;
