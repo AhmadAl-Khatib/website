@@ -46,7 +46,7 @@ body {
 
 img { max-width: 100%; display: block; }
 
-h1 { font-size: clamp(1.8rem, 3vw + 1rem, 3rem); font-weight: 700; color: var(--ink); margin-bottom: .5rem; }
+h1 { font-size: clamp(1.8rem, 3vw + 1rem, 3rem); font-weight: 700; color: #fff; margin-bottom: .5rem; }
 h2 { font-size: clamp(1.5rem, 2.2vw + 1rem, 2.25rem); font-weight: 700; color: var(--ink); margin-bottom: .5rem; }
 h3 { font-size: clamp(1.25rem, 1.8vw + 1rem, 1.75rem); font-weight: 700; color: var(--ink); margin-bottom: .5rem; }
 .section-title { font-size: 1.8rem; text-align: center; margin-bottom: 1rem; }
