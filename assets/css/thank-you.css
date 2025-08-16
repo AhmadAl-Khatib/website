@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
   font-family: 'Tajawal', 'Segoe UI', Tahoma, sans-serif;
   background-color: #f5f5f5;
@@ -11,6 +12,7 @@ body {
   direction: rtl;
 }
 
+/* Container */
 main.thank-you-container {
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
@@ -22,6 +24,7 @@ main.thank-you-container {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
+/* Headings and Text */
 h1 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
@@ -35,6 +38,7 @@ p {
   line-height: 1.6;
 }
 
+/* Button */
 a.button {
   display: inline-block;
   background-color: #ffa100;
@@ -51,6 +55,7 @@ a.button:hover {
   background-color: #cc8200;
 }
 
+/* Links Section */
 .links {
   margin-top: 2rem;
 }
@@ -67,50 +72,77 @@ a.button:hover {
   text-decoration: underline;
 }
 
-/* Social Links Container */
-.social-links {
+/* Social Section Container */
+.social {
+  margin-top: 2.5rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.social h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #0f172a;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Social List Layout */
+.social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  padding: 0;
-  margin: 2rem auto 0;
-  list-style: none;
 }
 
 /* Individual Link Styling */
-.social-links li a {
+.social-list li a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: #f1f5f9; /* Light slate background */
-  color: #2563eb; /* Blue-600 */
+  background-color: #d1d5db; /* Gray circle */
+  color: #ffffff; /* White icon */
   font-size: 1.25rem;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
   text-decoration: none;
 }
 
 /* Hover & Focus States */
-.social-links li a:hover,
-.social-links li a:focus {
+.social-list li a:hover,
+.social-list li a:focus {
   background-color: #2563eb;
   color: #ffffff;
-  transform: translateY(-2px);
+  transform: scale(1.15);
   outline: none;
 }
 
-/* Optional: Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-  .social-links li a {
-    background-color: #1e293b; /* Slate-800 */
-    color: #60a5fa; /* Blue-400 */
+/* Responsive Enhancements */
+@media (max-width: 480px) {
+  main.thank-you-container {
+    padding: 2rem 1rem;
   }
 
-  .social-links li a:hover {
-    background-color: #60a5fa;
-    color: #1e293b;
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .social h2 {
+    font-size: 1.1rem;
+  }
+
+  .social-list li a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
   }
 }
