@@ -1,0 +1,377 @@
+:root {
+  --brand: #ffa100;
+  --brand-800: #cc8200;
+  --teal: #007b8c;
+  --ink: #1e293b;
+  --muted: #4b5563;
+  --bg: #ffffff;
+  --bg-soft: #f7f9fb;
+  --border: #e2e8f0;
+  --radius: 12px;
+  --shadow: 0 10px 30px rgba(0,0,0,0.06);
+  --shadow-soft: 0 6px 20px rgba(0,0,0,0.05);
+  --maxw: 1120px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --bg-soft: #0f172a;
+    --ink: #e5e7eb;
+    --muted: #cbd5e1;
+    --border: #1f2a44;
+    --shadow: 0 10px 30px rgba(0,0,0,0.4);
+    --shadow-soft: 0 6px 20px rgba(0,0,0,0.3);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.65;
+  text-align: right;
+  direction: rtl;
+}
+
+a {
+  color: var(--brand);
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+.skip-link {
+  position: absolute;
+  inset-inline-start: 1rem;
+  top: -40px;
+  background: var(--ink);
+  color: #fff;
+  padding: .5rem .75rem;
+  border-radius: 6px;
+  transition: top .2s ease;
+  z-index: 10000;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+.container {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding: 0 1rem;
+}
+
+/* Header / Hero */
+.site-header {
+  position: relative;
+  background: url('/assets/img/arabic-python-course-for-beginners.webp') center/cover no-repeat;
+  color: #fff;
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: clip;
+}
+.site-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,123,140,.85), rgba(255,161,0,.85));
+  mix-blend-mode: multiply;
+}
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 1rem 3rem;
+}
+.hero-title {
+  font-size: clamp(1.8rem, 3vw + 1rem, 3rem);
+  margin: 0 0 .75rem;
+  font-weight: 700;
+}
+.hero-sub {
+  font-size: clamp(1rem, .5vw + .9rem, 1.25rem);
+  max-width: 60ch;
+  margin: 0 auto 1.25rem;
+  color: #f1f5f9;
+}
+.hero-ctas {
+  display: inline-flex;
+  gap: .6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .75rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  border: 2px solid transparent;
+  transition: transform .08s ease, background-color .2s ease, border-color .2s ease;
+}
+.btn:focus-visible {
+  outline: 3px solid rgba(255,161,0,.5);
+  outline-offset: 2px;
+}
+.btn-primary {
+  background: var(--brand);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--brand-800);
+  transform: translateY(-1px);
+}
+.btn-ghost {
+  background: rgba(255,255,255,.12);
+  color: #fff;
+  border-color: rgba(255,255,255,.35);
+}
+.btn-ghost:hover {
+  background: rgba(255,255,255,.2);
+  transform: translateY(-1px);
+}
+
+.nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 1rem;
+}
+.logo {
+  font-weight: 800;
+  color: #fff;
+}
+.nav-links {
+  display: flex;
+  gap: .4rem;
+  flex-wrap: wrap;
+}
+
+/* Metrics */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+.metric {
+  background: rgba(255,255,255,.12);
+  backdrop-filter: blur(6px);
+  padding: .9rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.25);
+}
+.metric h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+.metric p {
+  margin: .25rem 0 0;
+  color: #e2e8f0;
+  font-size: .95rem;
+}
+
+/* Sections */
+main {
+  padding: 2.5rem 0 3.5rem;
+}
+.section {
+  margin-top: 2rem;
+}
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Signup */
+.signup-box {
+  background: var(--bg-soft);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+.signup-box h2 {
+  margin: 0 0 .5rem;
+  font-size: 1.5rem;
+  color: var(--ink);
+}
+.signup-box p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+.signup-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+.input {
+  padding: .7rem .8rem;
+  min-width: 260px;
+  max-width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #fff;
+}
+@media (prefers-color-scheme: dark) {
+  .input {
+    background: #0b1424;
+    color: #fff;
+  }
+}
+
+/* Episodes */
+.episodes h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+.episode-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+.episode-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+.episode-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0,0,0,.12);
+}
+.episode-thumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+.episode-body {
+  padding: 1rem;
+  display: grid;
+  gap: .6rem;
+}
+.episode-body h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.episode-body p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .95rem;
+}
+.watch-link {
+  color: var(--teal);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  font-size: .9rem;
+  color: var(--muted);
+  margin: 1rem 0;
+}
+.breadcrumbs a {
+  color: var(--teal);
+}
+
+/* FAQ */
+.faq {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+.faq h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: var(--ink);
+}
+.faq details {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+  padding: .8rem 1rem;
+  margin-bottom: .8rem;
+}
+.faq summary {
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--ink);
+}
+.faq p {
+  margin-top: .5rem;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  font-size: .9rem;
+}
+footer a {
+  color: var(--brand);
+  font-weight: 600;
+  text-decoration: none;
+}
+footer a:hover,
+footer a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Responsive Typography */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-sub {
+    font-size: 1rem;
+  }
+  .signup-box h2 {
+    font-size: 1.3rem;
+  }
+  .faq h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
