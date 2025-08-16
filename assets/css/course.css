@@ -92,8 +92,8 @@ a:hover, a:focus { background-size: 100% 2px; }
 }
 .btn--ghost {
   --btn-bg: transparent;
-  --btn-color: #ffa100;
-  border-color: #ffa100;
+  --btn-color: #fff;
+  border-color: #fff;
   box-shadow: none;
 }
 .btn--ghost:hover { background: rgba(0,123,140,0.07); }
