@@ -1,63 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Branded Course Page</title>
-  <meta name="description" content="Learn modern web development with Ahmad's expert-led course." />
-  <link rel="canonical" href="https://example.com/course/" />
-  <link rel="stylesheet" href="fonts.css" />
-  <link rel="stylesheet" href="/assets/css/course.css" type="text/css">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="تعلم بايثون للمبتدئين باللغة العربية مع أحمد الخطيب. دورة مجانية خطوة بخطوة مع فيديوهات قصيرة وتمارين وكتاب شامل." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://ahmad-khatib.com/arabic-python-beginners-course/" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <title>تعلم بايثون للمبتدئين بالعربية | دورة فيديو مجانية خطوة بخطوة - أحمد الخطيب</title>
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:site_name" content="Ahmad Al-Khatib" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ar_AR" />
+  <meta property="og:title" content="تعلم بايثون للمبتدئين بالعربية | دورة فيديو مجانية مع أحمد الخطيب" />
+  <meta property="og:description" content="سلسلة فيديو بالعربية لتعلم بايثون من الصفر مع تمارين وكتاب مجاني. ابدأ الآن." />
+  <meta property="og:url" content="https://ahmad-khatib.com/arabic-python-beginners-course/" />
+  <meta property="og:image" content="https://ahmad-khatib.com/assets/img/arabic-python-course-for-beginners.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@alkhatib_ahmad1" />
+  <meta name="twitter:title" content="تعلم بايثون للمبتدئين بالعربية | دورة فيديو مجانية مع أحمد الخطيب" />
+  <meta name="twitter:description" content="ابدأ تعلم بايثون من الصفر بالعربية عبر فيديوهات قصيرة وتمارين وكتاب مجاني." />
+  <meta name="twitter:image" content="https://ahmad-khatib.com/assets/img/arabic-python-course-for-beginners.webp" />
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://img.youtube.com" crossorigin>
+  <link rel="preconnect" href="https://www.youtube.com" crossorigin>
+
+  <!-- Tajawal Font -->
+  <link rel="stylesheet" href="fonts.css">
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="brand">Ahmad Academy</h1>
-      <nav class="nav">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/course/" class="nav-link active">Course</a>
-        <a href="/contact/" class="nav-link">Contact</a>
+  <a class="skip-link" href="#main">تجاوز إلى المحتوى</a>
+
+  <header class="site-header" role="banner" aria-label="تعلم بايثون للمبتدئين بالعربية">
+    <div class="hero-inner container">
+      <nav aria-label="روابط أساسية" class="nav-main">
+        <a href="https://ahmad-khatib.com/" class="logo">أحمد الخطيب</a>
+        <div class="nav-links">
+          <a class="btn btn-ghost" href="#episodes">الحلقات</a>
+          <a class="btn btn-ghost" href="#faq">الأسئلة الشائعة</a>
+          <a class="btn btn-primary" href="#signup">اشترك مجانًا</a>
+        </div>
       </nav>
+
+      <h1 class="hero-title">تعلم بايثون للمبتدئين بالعربية — دورة مجانية خطوة بخطوة</h1>
+      <p class="hero-sub">ابدأ رحلتك في البرمجة مع سلسلة فيديو قصيرة وتمارين عملية مبنية على كتاب “تعلم بايثون بأقل من أسبوع”.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#episodes">ابدأ الآن</a>
+        <a class="btn btn-ghost" href="#signup">احصل على الموارد المجانية</a>
+      </div>
+
+      <div class="metrics container" aria-label="مؤشرات الثقة">
+        <div class="metric"><h3>100% مجاني</h3><p>وصول مفتوح دائمًا</p></div>
+        <div class="metric"><h3>قصير وعملي</h3><p>دروس مركّزة</p></div>
+        <div class="metric"><h3>للمبتدئين</h3><p>بدون خبرة مسبقة</p></div>
+      </div>
     </div>
   </header>
 
-  <main class="course-content container">
-    <section class="intro">
-      <h2>Master Modern Web Development</h2>
-      <p>Join Ahmad's expert-led course and build production-grade websites with semantic HTML, modular CSS, and SEO precision.</p>
-      <a href="#enroll" class="cta-button">Enroll Now</a>
-    </section>
+  <main id="main" class="container" role="main">
+    <nav class="breadcrumbs" aria-label="مسار التنقل">
+      <a href="https://ahmad-khatib.com/">الرئيسية</a> / <span>دورة بايثون للمبتدئين</span>
+    </nav>
 
-    <section class="modules">
-      <h3>Course Modules</h3>
-      <ul class="module-list">
-        <li>✅ Semantic HTML & Accessibility</li>
-        <li>✅ Modular CSS Architecture</li>
-        <li>✅ DNS, Canonicals & Deployment</li>
-        <li>✅ Structured Data & SEO</li>
-      </ul>
-    </section>
-
-    <section id="enroll" class="enroll">
-      <h3>Ready to Level Up?</h3>
-      <form class="enroll-form">
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required placeholder="you@example.com" />
-        <button type="submit">Join the Waitlist</button>
+    <section id="signup" class="section signup-box card">
+      <h2>📩 اشترك لتصلك موارد إضافية مجانية</h2>
+      <p>تمارين عملية، تحديثات الدروس، وإرشادات أسبوعية — مجانًا عبر بريدك الإلكتروني.</p>
+      <form class="signup-form" action="https://formsubmit.co/a.khatib.89@outlook.com" method="POST" novalidate>
+        <input class="input" type="email" name="email" placeholder="أدخل بريدك الإلكتروني" required aria-required="true" autocomplete="email" />
+        <button class="btn btn-primary" type="submit">اشترك الآن</button>
       </form>
+    </section>
+
+    <section id="episodes" class="section episodes">
+      <h2>🎥 دروس فيديو لتعلم بايثون خطوة بخطوة</h2>
+      <div id="episode-grid" class="episode-grid" role="list"></div>
+    </section>
+
+    <section id="faq" class="section faq card">
+      <h2>الأسئلة الشائعة</h2>
+      <details>
+        <summary>هل يمكنني تعلم بايثون بدون خبرة برمجية؟</summary>
+        <p>نعم، هذه الدورة مخصصة للمبتدئين بالكامل ولا تحتاج إلى أي معرفة برمجية سابقة.</p>
+      </details>
+      <details>
+        <summary>هل الدورة مجانية بالكامل؟</summary>
+        <p>نعم، جميع الحلقات متاحة مجانًا للمستخدمين.</p>
+      </details>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Ahmad Academy. All rights reserved.</p>
-      <nav class="footer-nav">
-        <a href="https://twitter.com/ahmad" rel="me">Twitter</a>
-        <a href="https://github.com/ahmad" rel="me">GitHub</a>
-        <a href="/privacy/">Privacy</a>
-      </nav>
-    </div>
+  <footer class="container">
+    <p>© 2025 أحمد الخطيب | <a href="https://ahmad-khatib.com/#publications">الكتب</a> | <a href="https://ahmad-khatib.com/#contact">تواصل</a></p>
   </footer>
+
+  <!-- Episodes data -->
+  <script>
+    const EPISODES = [
+      {
+        title: "حلقة 1: تعلم البرمجة بلغة بايثون من الصفر | print function | كل يوم معلومة",
+        youtubeId: "s5tbceQSsng",
+        link: "https://youtube.com/shorts/s5tbceQSsng",
+        description: "تعلم استخدام دالة print في بايثون لطباعة النصوص على الشاشة - أول خطوة للمبتدئين."
+      },
+      {
+        title: "لمحة عن كتاب تعلم بايثون بأقل من أسبوع",
+        youtubeId: "98KRFeoGkvQ",
+        link: "https://youtube.com/shorts/98KRFeoGkvQ",
+        description: "تعرف على كتاب تعلم بايثون بأقل من أسبوع - كتاب شامل مناسب للمبتدئين من الصفر."
+      }
+    ];
+
+    document.getElementById('episode-grid').innerHTML =
+      EPISODES.map(ep => `
+        <article class="episode-card">
+          <img class="episode-thumb" src="https://img.youtube.com/vi/${ep.youtubeId}/hqdefault.jpg" alt="${ep.title}" loading="lazy">
+          <div class="episode-body">
+            <h3>${ep.title}</h3>
+            <p>${ep.description}</p>
+            <a class="watch-link" href="${ep.link}" target="_blank" rel="noopener">شاهد الحلقة</a>
+          </div>
+        </article>
+      `).join('');
+  </script>
 </body>
 </html>
