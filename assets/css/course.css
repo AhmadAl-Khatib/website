@@ -86,7 +86,7 @@ a:hover, a:focus { background-size: 100% 2px; }
 
 .btn--primary {
   --btn-bg: var(--brand-primary);
-  --btn-color: #111;
+  --btn-color: #fff;
   border-color: var(--brand-primary-dark);
   background-image: linear-gradient(180deg, var(--brand-primary-light) 0%, var(--brand-primary) 30%, var(--brand-primary-dark) 100%);
 }
