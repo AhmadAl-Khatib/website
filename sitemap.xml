@@ -1,15 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url>
-      <loc>https://www.ahmad-khatib.com/</loc>
-      <lastmod>2025-06-29</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>1.0</priority>
-   </url>
-   <url>
-      <loc>https://www.ahmad-khatib.com/en</loc>
-      <lastmod>2025-06-29</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.9</priority>
-   </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Home -->
+  <url>
+    <loc>https://ahmad-khatib.com/</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://ahmad-khatib.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ahmad-khatib.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ahmad-khatib.com/"/>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://ahmad-khatib.com/about/</loc>
+    <lastmod>2025-08-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://ahmad-khatib.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ahmad-khatib.com/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ahmad-khatib.com/about/"/>
+  </url>
+
+  <!-- Book (AR/EN pair) -->
+  <url>
+    <loc>https://ahmad-khatib.com/books/learn-python-in-less-than-a-week-arabic-edition/</loc>
+    <lastmod>2025-08-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://ahmad-khatib.com/books/learn-python-in-less-than-a-week-arabic-edition/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ahmad-khatib.com/en/books/learn-python-in-less-than-a-week/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ahmad-khatib.com/books/learn-python-in-less-than-a-week-arabic-edition/"/>
+  </url>
+  <url>
+    <loc>https://ahmad-khatib.com/en/books/learn-python-in-less-than-a-week/</loc>
+    <lastmod>2025-08-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://ahmad-khatib.com/books/learn-python-in-less-than-a-week-arabic-edition/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ahmad-khatib.com/en/books/learn-python-in-less-than-a-week/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ahmad-khatib.com/en/books/learn-python-in-less-than-a-week/"/>
+  </url>
+
+  <!-- Arabic course -->
+  <url>
+    <loc>https://ahmad-khatib.com/arabic-python-beginners-course/</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Exclusions: 404, under-development, thank-you (keep out) -->
 </urlset>
+
