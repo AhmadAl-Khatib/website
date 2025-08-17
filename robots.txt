@@ -1,6 +1,15 @@
 User-agent: *
-Disallow:
+# Allow everything except utility pages and staging paths
+Disallow: /under-development/
+Disallow: /en/under-development/
+Disallow: /thank-you/
+Disallow: /en/thank-you/
+Disallow: /en/python-beginners-course/a
+
+# Allow assets
+Allow: /assets/
+
+# Crawl speed hints (Google ignores crawl-delay; others may not)
+# Crawl-delay: 2
 
 Sitemap: https://ahmad-khatib.com/sitemap.xml
-Sitemap: https://blog.ahmad-khatib.com/sitemap.xml
-Sitemap: https://blog.ahmad-khatib.com/sitemap-pages.xml
