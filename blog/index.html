@@ -7,26 +7,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="أحمد الخطيب">
   <link rel="icon" href="/assets/img/favicon.ico">
-  <!-- Canonical & hreflang -->
+
   <link rel="canonical" href="https://ahmad-khatib.com/blog/">
   <link rel="alternate" hreflang="ar" href="https://ahmad-khatib.com/blog/">
   <link rel="alternate" hreflang="en" href="https://ahmad-khatib.com/en/blog/">
   <link rel="alternate" hreflang="x-default" href="https://ahmad-khatib.com/blog/">
-  <!-- Open Graph -->
+
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ahmad-khatib.com/blog/">
   <meta property="og:title" content="مدونة أحمد الخطيب – مقالات مختارة">
   <meta property="og:description" content="روابط إلى أحدث المقالات مع معاينات مختصرة، والانتقال إلى blog.ahmad-khatib.com.">
-  <meta property="og:url" content="https://ahmad-khatib.com/blog/">
   <meta property="og:image" content="https://ahmad-khatib.com/assets/img/ahmad-al-khatib-blog.webp">
   <meta property="og:locale" content="ar_AR">
   <meta property="og:site_name" content="Ahmad Al Khatib">
-  <!-- Twitter -->
+
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@alkhatib_ahmad1">
   <meta name="twitter:title" content="مدونة أحمد الخطيب – مقالات مختارة">
   <meta name="twitter:description" content="مدخل مختصر للمدونة وروابط انتقال إلى blog.ahmad-khatib.com.">
-  <meta name="twitter:site" content="@alkhatib_ahmad1">
+  <meta name="twitter:image" content="https://ahmad-khatib.com/assets/img/ahmad-al-khatib-blog.webp">
 
-  <!-- Structured Data -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -54,10 +59,7 @@
         "name":"مدونة أحمد الخطيب",
         "inLanguage":"ar",
         "description":"صفحة فهرس صغيرة لعرض مقتطفات وروابط نحو المدونة المستضافة على blog.ahmad-khatib.com",
-        "potentialAction":{
-          "@type":"ReadAction",
-          "target":"https://blog.ahmad-khatib.com/"
-        }
+        "potentialAction":{"@type":"ReadAction","target":"https://blog.ahmad-khatib.com/"}
       },
       {
         "@type":"CollectionPage",
@@ -67,72 +69,81 @@
         "hasPart":{
           "@type":"ItemList",
           "itemListElement":[
-            {
-              "@type":"ListItem","position":1,
-              "item":{
-                "@type":"BlogPosting",
-                "headline":"اخترت لكم هذا المقال",
-                "url":"https://blog.ahmad-khatib.com/2025/03/blog-post_10.html"
-              }
-            },
-            {
-              "@type":"ListItem","position":2,
-              "item":{
-                "@type":"BlogPosting",
-                "headline":"سلسلة: آل الخطيب في لبنان، شخصيات تركت أثراً",
-                "url":"https://blog.ahmad-khatib.com/search/label/%D8%A2%D9%84%20%D8%A7%D9%84%D8%AE%D8%B7%D9%8A%D8%A8%20%D9%81%D9%8A%20%D9%84%D8%A8%D9%86%D8%A7%D9%86%20%D8%B4%D8%AE%D8%B5%D9%8A%D8%A7%D8%AA%20%D8%AA%D8%B1%D9%83%D8%AA%20%D8%A3%D8%AB%D8%B1%D8%A7%D9%8B%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE"
-              }
-            }
+            {"@type":"ListItem","position":1,"item":{"@type":"BlogPosting","headline":"اخترت لكم هذا المقال","url":"https://blog.ahmad-khatib.com/2025/03/blog-post_10.html"}},
+            {"@type":"ListItem","position":2,"item":{"@type":"BlogPosting","headline":"سلسلة: آل الخطيب في لبنان، شخصيات تركت أثراً","url":"https://blog.ahmad-khatib.com/search/label/%D8%A2%D9%84%20%D8%A7%D9%84%D8%AE%D8%B7%D9%8A%D8%A8%20%D9%81%D9%8A%20%D9%84%D8%A8%D9%86%D8%A7%D9%86%20%D8%B4%D8%AE%D8%B5%D9%8A%D8%A7%D8%AA%20%D8%AA%D8%B1%D9%83%D8%AA%20%D8%A3%D8%AB%D8%B1%D8%A7%D9%8B%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE"}}
           ]
         }
       }
     ]
   }
   </script>
-
-  <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.8;margin:0;color:#111}
-    header,main,footer{max-width:1100px;margin:auto;padding:16px}
-    .posts{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-    .card{border:1px solid #eee;border-radius:14px;padding:14px}
-    .btn{display:inline-block;padding:10px 16px;border:1px solid #ddd;border-radius:10px;text-decoration:none}
-    img{max-width:100%;height:auto}
-    .muted{color:#666}
-  </style>
 </head>
 <body>
-  <header>
-    <nav aria-label="breadcrumb"><a href="/">الرئيسية</a> › <strong>المدونة</strong></nav>
-    <h1>مدونة أحمد الخطيب</h1>
-    <p class="muted">هذه صفحة تعريفية موجزة تُظهر مقتطفات وروابط انتقال إلى المدونة الرئيسية المستضافة على <strong>blog.ahmad-khatib.com</strong>. الهدف هو سهولة الاكتشاف من Google مع محتوى أصيل مختصر، بدون تكرار حرفي لمحتوى الصفحة الرئيسية.</p>
-    <p><a class="btn" href="https://blog.ahmad-khatib.com/">انتقال إلى جميع المقالات</a></p>
+
+  <header class="page-header">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <a href="/">الرئيسية</a> &rsaquo; <span>المدونة</span>
+      </nav>
+      <h1>مدونة أحمد الخطيب</h1>
+      <p class="subtitle">هذه صفحة تعريفية موجزة تُظهر مقتطفات وروابط انتقال إلى المدونة الرئيسية المستضافة على <strong>blog.ahmad-khatib.com</strong>.</p>
+      <a class="btn btn--primary" href="https://blog.ahmad-khatib.com/">تصفح جميع المقالات</a>
+    </div>
   </header>
 
   <main>
-    <section class="posts" aria-label="مقالات مختارة">
-      <article class="card">
-        <img src="/assets/img/ahmad-al-khatib-articles-about-hrh-mbs.webp" alt="مقال مختار">
-        <h2>اخترت لكم هذا المقال</h2>
-        <p>رؤية شخصية حول القيادة والتحديث في المنطقة.</p>
-        <p><a class="btn" href="https://blog.ahmad-khatib.com/2025/03/blog-post_10.html" rel="noopener">اقرأ على المدونة</a></p>
-      </article>
-      <article class="card">
-        <img src="/assets/img/ahmad-al-khatib-blog.webp" alt="تصفح كل المقالات">
-        <h2>تصفح جميع المقالات</h2>
-        <p>مدونة سياسية-اجتماعية وعلمية مرتبطة بمشاريعي التأليفية.</p>
-        <p><a class="btn" href="https://blog.ahmad-khatib.com/" rel="noopener">الانتقال إلى المدونة</a></p>
-      </article>
-      <article class="card">
-        <img src="/assets/img/ahmad-al-khatib-articles-about-al-khatib-family.webp" alt="سلسلة آل الخطيب في لبنان">
-        <h2>سلسلة: آل الخطيب في لبنان</h2>
-        <p>بورتريهات تاريخية لشخصيات تركت أثراً في لبنان.</p>
-        <p><a class="btn" href="https://blog.ahmad-khatib.com/search/label/%D8%A2%D9%84%20%D8%A7%D9%84%D8%AE%D8%B7%D9%8A%D8%A8%20%D9%81%D9%8A%20%D9%84%D8%A8%D9%86%D8%A7%D9%86%20%D8%B4%D8%AE%D8%B5%D9%8A%D8%A7%D8%AA%20%D8%AA%D8%B1%D9%83%D8%AA%20%D8%A3%D8%AB%D8%B1%D8%A7%D9%8B%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE" rel="noopener">اقرأ السلسلة</a></p>
-      </article>
+    <section class="blog-section" aria-labelledby="blog-heading">
+      <div class="container">
+        <h2 id="blog-heading" class="visually-hidden">مقالات مختارة</h2>
+        <div class="grid-container">
+          <article class="blog-card">
+            <figure class="blog-card__figure">
+                <img src="/assets/img/ahmad-al-khatib-articles-about-hrh-mbs.webp" alt="مقال مختار عن القيادة والتحديث" loading="lazy">
+            </figure>
+            <div class="blog-card__content">
+              <h3>اخترت لكم هذا المقال</h3>
+              <p>رؤية شخصية حول القيادة والتحديث في المنطقة.</p>
+            </div>
+            <footer class="blog-card__footer">
+              <a class="btn btn--secondary" href="https://blog.ahmad-khatib.com/2025/03/blog-post_10.html" rel="noopener">اقرأ على المدونة</a>
+            </footer>
+          </article>
+
+          <article class="blog-card">
+            <figure class="blog-card__figure">
+                <img src="/assets/img/ahmad-al-khatib-blog.webp" alt="صورة للمدونة الرئيسية" loading="lazy">
+            </figure>
+            <div class="blog-card__content">
+              <h3>تصفح جميع المقالات</h3>
+              <p>مدونة سياسية-اجتماعية وعلمية مرتبطة بمشاريعي التأليفية.</p>
+            </div>
+            <footer class="blog-card__footer">
+              <a class="btn btn--secondary" href="https://blog.ahmad-khatib.com/" rel="noopener">الانتقال إلى المدونة</a>
+            </footer>
+          </article>
+
+          <article class="blog-card">
+            <figure class="blog-card__figure">
+                <img src="/assets/img/ahmad-al-khatib-articles-about-al-khatib-family.webp" alt="مقال عن تاريخ آل الخطيب في لبنان" loading="lazy">
+            </figure>
+            <div class="blog-card__content">
+              <h3>سلسلة: آل الخطيب في لبنان</h3>
+              <p>بورتريهات تاريخية لشخصيات تركت أثراً في لبنان.</p>
+            </div>
+            <footer class="blog-card__footer">
+              <a class="btn btn--secondary" href="https://blog.ahmad-khatib.com/search/label/%D8%A2%D9%84%20%D8%A7%D9%84%D8%AE%D8%B7%D9%8A%D8%A8%20%D9%81%D9%8A%20%D9%84%D8%A8%D9%86%D8%A7%D9%86%20%D8%B4%D8%AE%D8%B5%D9%8A%D8%A7%D8%AA%20%D8%AA%D8%B1%D9%83%D8%AA%20%D8%A3%D8%AB%D8%B1%D8%A7%D9%8B%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE" rel="noopener">اقرأ السلسلة</a>
+            </footer>
+          </article>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>© أحمد الخطيب 2025 — <a href="/">العودة إلى الرئيسية</a></p>
+  <footer class="page-footer">
+    <div class="container">
+      <p>&copy; 2025 أحمد الخطيب &mdash; <a href="/">العودة إلى الصفحة الرئيسية</a></p>
+    </div>
   </footer>
+
 </body>
 </html>
