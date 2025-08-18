@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>مؤلفات أحمد الخطيب والكتب الموصى بها | أحمد الخطيب</title>
-  <meta name="description" content="جميع مؤلفات أحمد الخطيب مع لمحات تفصيلية وطرق الشراء، إضافةً إلى رف كتب مختارة في البرمجة وريادة الأعمال.">
+  <meta name="description" content="جميع مؤلفات أحمد الخطيب مع تفاصيل وروابط شراء، إضافةً إلى رف كتب مختارة في البرمجة وريادة الأعمال.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="أحمد الخطيب">
   <link rel="icon" href="/assets/img/favicon.ico">
@@ -20,7 +20,7 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="مؤلفات أحمد الخطيب والكتب الموصى بها">
-  <meta property="og:description" content="مؤلفات أحمد الخطيب مع رف كتب برمجية مختارة وروابط شراء.">
+  <meta property="og:description" content="مؤلفات أحمد الخطيب مع رف كتب مختارة وروابط شراء.">
   <meta property="og:url" content="https://ahmad-khatib.com/publications/">
   <meta property="og:image" content="https://ahmad-khatib.com/assets/img/ahmad-al-khatib-book-تعلم-بايثون-بأقل-من-أسبوع.webp">
   <meta property="og:locale" content="ar_AR">
@@ -40,7 +40,7 @@
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- Navbar (copied from your main index.html) -->
   <header>
     <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark" id="navbar">
       <div class="container">
@@ -64,40 +64,66 @@
     </nav>
   </header>
 
-  <main class="container" style="margin-top:120px">
-    <header class="text-center mb-5">
-      <h1>المؤلفات ورفّ الكتب</h1>
-      <p>هنا تجد جميع مؤلفاتي إضافة إلى مجموعة من الكتب الموصى بها للمهتمين بالبرمجة وريادة الأعمال.</p>
-    </header>
+  <!-- Page intro (unique content to avoid duplication with homepage) -->
+  <section class="section bg-light">
+    <div class="container text-center">
+      <h1 class="mb-4">المؤلفات ورفّ الكتب</h1>
+      <p class="text-muted">في هذه الصفحة جمعت لكم جميع مؤلفاتي إضافة إلى رف كتب مختارة في مجالات البرمجة وريادة الأعمال. هذه النسخة المستقلة تختلف عن الصفحة الرئيسية لأنها تحتوي على تفاصيل إضافية لتساعدكم في الاختيار والشراء.</p>
+    </div>
+  </section>
 
-    <section id="publications" aria-labelledby="pub-h" class="mb-5">
-      <h2 id="pub-h">المؤلفات</h2>
-      <article class="mb-4">
-        <figure>
-          <img src="/assets/img/ahmad-al-khatib-book-تعلم-بايثون-بأقل-من-أسبوع.webp" alt="غلاف كتاب تعلّم بايثون بأقل من أسبوع" class="img-fluid rounded shadow">
-          <figcaption class="mt-2">كتاب تعلّم بايثون بأقل من أسبوع</figcaption>
-        </figure>
-        <h3>تعلّم بايثون بأقل من أسبوع</h3>
-        <p>دليل عملي لتعلّم لغة بايثون خطوة بخطوة، مع مشاريع تطبيقية شاملة.</p>
-        <p>
-          <a href="https://ahmad-khatib.com/books/learn-python-in-less-than-a-week-arabic-edition/" class="btn btn-primary">صفحة الكتاب</a>
-          <a href="https://www.amazon.com/dp/B0FJ8Y6G7K" class="btn btn-outline-secondary" rel="noopener">شراء من أمازون</a>
-        </p>
-      </article>
-    </section>
+  <!-- Publications Section (copied from index.html) -->
+  <section class="section" id="publications">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="mb-4">المؤلفات</h2>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Example book card -->
+        <div class="col-lg-6">
+          <div class="card shadow-sm rounded border-0">
+            <img src="/assets/img/ahmad-al-khatib-book-تعلم-بايثون-بأقل-من-أسبوع.webp" class="card-img-top" alt="غلاف كتاب تعلّم بايثون بأقل من أسبوع">
+            <div class="card-body">
+              <h3 class="card-title">تعلّم بايثون بأقل من أسبوع</h3>
+              <p class="card-text">دليل عملي شامل لتعلّم لغة بايثون خطوة بخطوة، مع مشاريع تطبيقية.</p>
+              <a href="https://ahmad-khatib.com/books/learn-python-in-less-than-a-week-arabic-edition/" class="btn btn-primary">صفحة الكتاب</a>
+              <a href="https://www.amazon.com/dp/B0FJ8Y6G7K" class="btn btn-outline-secondary" rel="noopener">شراء من أمازون</a>
+            </div>
+          </div>
+        </div>
+        <!-- Add other publication cards here if needed -->
+      </div>
+    </div>
+  </section>
 
-    <section id="bookshelf" aria-labelledby="shelf-h">
-      <h2 id="shelf-h">رفّ الكتب</h2>
-      <p>اختيارات مميزة لكتب داعمة للتعلّم والعمل.</p>
-      <article class="mb-4">
-        <h3>Python Essentials</h3>
-        <p>مراجع ومصادر لتسريع التعلّم ومراجعة المفاهيم.</p>
-        <p><a href="/under-development/" class="btn btn-outline-secondary">اطلع على المزيد</a></p>
-      </article>
-    </section>
-  </main>
+  <!-- Bookshelf Section (copied from index.html) -->
+  <section class="section bg-light" id="bookshelf">
+    <div class="container">
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-8 text-center">
+          <h2>رفّ الكتب</h2>
+          <p class="text-muted">اختيارات مميزة من كتب برمجية وريادية ملهمة.</p>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Example book item -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card shadow-sm rounded border-0">
+            <img src="/assets/img/كتاب-تعلم-پايثون-بأقل-من-أسبوع!.webp" class="card-img-top" alt="كتاب تعلّم بايثون بأقل من أسبوع">
+            <div class="card-body">
+              <h5 class="card-title">تعلّم بايثون بأقل من أسبوع</h5>
+              <a href="https://www.amazon.com/dp/B0FJ8Y6G7K" class="btn btn-outline-primary" rel="noopener">شراء</a>
+            </div>
+          </div>
+        </div>
+        <!-- More bookshelf cards can be added here -->
+      </div>
+    </div>
+  </section>
 
-  <!-- Footer -->
+  <!-- Footer (copied from your index.html) -->
   <footer class="footer">
     <div class="container text-center">
       <p class="mb-0">© 2025 أحمد الخطيب - جميع الحقوق محفوظة</p>
