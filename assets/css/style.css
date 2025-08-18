@@ -126,7 +126,7 @@ transition: all 0.35s ease 0s;
 }
 /* Dropdown links - normal state */
 .navbar-default .dropdown-menu > li > a {
-    color: #fff;                             
+    color: #fff !important;                             
     padding: 7px 20px;
     font-size: 18px;
     background-color: transparent;
@@ -2055,6 +2055,7 @@ details.open .content-inner {
 #blog details[open] {
   border-color: #ffffff;
 }
+
 
 
 
