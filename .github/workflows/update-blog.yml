@@ -1,0 +1,30 @@
+name: Update Blog
+
+on:
+  workflow_dispatch:   # manually trigger workflow
+
+jobs:
+  update-blog:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Download built blog artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: blog-html
+          path: blog-temp
+
+      - name: Move blog HTML to /blog
+        run: |
+          rm -rf blog
+          mv blog-temp/* blog
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add blog -f
+          git commit -m "Update blog HTML [skip ci]" || echo "No changes to commit"
+          git push
