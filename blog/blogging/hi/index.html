@@ -248,51 +248,52 @@
       
       "articleSection": "Blogging",
       "isAccessibleForFree": true,
-      "author": {
-        "@type": "Person",
-        "@id": "https://ahmad-khatib.com/#person"
+      "wordCount": 301,
+      "timeRequired": "PT1M",
+      "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": { "@type": "http://schema.org/ReadAction" },
+        "userInteractionCount": 1
       },
-      "publisher": {
-        "@id": "https://ahmad-khatib.com/#person"
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://ahmad-khatib.com/blog/blogging/hi/"
-      },
+      "author": { "@id": "https://ahmad-khatib.com/#person" },
+      "publisher": { "@id": "https://ahmad-khatib.com/#org" },
+      "mainEntityOfPage": { "@id": "https://ahmad-khatib.com/blog/blogging/hi/#webpage" },
       "image": {
         "@type": "ImageObject",
-        "url": "{"path"=>"../assets/img/ahmad-al-khatib-logo.png", "alt"=>"Accessible alt text test for the image", "no_bg"=>false}"
+        "@id": "https://ahmad-khatib.com/blog/blogging/hi/#primaryimage",
+        "url": "{"path"=>"../assets/img/ahmad-al-khatib-logo.png", "alt"=>"Accessible alt text test for the image", "no_bg"=>false}",
+        "width": 1200,
+        "height": 630
       },
       "datePublished": "2000-01-01T08:09:09+02:00",
-      "dateModified": ""
+      "dateModified": "2000-01-01T08:09:09+02:00"
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://ahmad-khatib.com/blog/blogging/hi/#breadcrumb",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "الرئيسية",
-          "item": "https://ahmad-khatib.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "المدونة",
-          "item": "https://ahmad-khatib.com/blog/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "test post",
-          "item": "https://ahmad-khatib.com/blog/blogging/hi/"
-        }
+        { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://ahmad-khatib.com/" },
+        { "@type": "ListItem", "position": 2, "name": "المدونة", "item": "https://ahmad-khatib.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "test post", "item": "https://ahmad-khatib.com/blog/blogging/hi/" }
       ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://ahmad-khatib.com/#org",
+      "name": "Ahmad Al Khatib",
+      "url": "https://ahmad-khatib.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://ahmad-khatib.com/#logo",
+        "url": "https://ahmad-khatib.com/assets/img/logo.webp",
+        "width": 250,
+        "height": 60
+      }
     }
   ]
 }
 </script>
+
   
 
   <!-- Multilingual hreflang (dynamic) -->
