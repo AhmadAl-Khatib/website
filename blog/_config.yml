@@ -1,0 +1,182 @@
+# The Site Configuration
+
+# Import the theme
+theme: jekyll-theme-chirpy
+
+# The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
+lang: ar
+
+# Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
+timezone: Asia/Beirut
+
+# Permalink and slug settings for SEO
+permalink: /:categories/:title/
+slugify:
+  mode: latin
+  cased: false
+
+# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+title: "أحمد الخطيب"
+tagline: "مدونة أحمد الخطيب"
+description: >-
+  سياسة، مجتمع، تكنولوجيا، برمجة، ذكاء اصطناعي
+
+url: "https://ahmad-khatib.com"
+baseurl: "/blog"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+github:
+  username: AhmadAl-Khatib
+
+twitter:
+  username: alkhatib_ahmad1
+
+social:
+  name: أحمد الخطيب
+  email: ahmad@ahmad-khatib.com
+  links:
+    - https://x.com/alkhatib_ahmad1
+    - https://github.com/AhmadAl-Khatib
+    - https://www.facebook.com/ahmad.khatib.9237244/
+    - https://www.linkedin.com/in/alkhatibahmad/
+
+webmaster_verifications:
+  google:
+  bing:
+  alexa:
+  yandex:
+  baidu:
+  facebook:
+
+analytics:
+  google:
+    id:
+  goatcounter:
+    id:
+  umami:
+    id:
+    domain:
+  matomo:
+    id:
+    domain:
+  cloudflare:
+    id:
+  fathom:
+    id:
+
+pageviews:
+  provider:
+
+theme_mode:
+
+cdn: "https://chirpy-img.netlify.app"
+
+avatar: https://pbs.twimg.com/profile_images/1950655021688791040/3xr1IIMM_400x400.jpg
+
+social_preview_image:
+
+toc: true
+
+comments:
+  provider:
+  disqus:
+    shortname:
+  utterances:
+    repo:
+    issue_term:
+  giscus:
+    repo:
+    repo_id:
+    category:
+    category_id:
+    mapping:
+    strict:
+    input_position:
+    lang:
+    reactions_enabled:
+
+assets:
+  self_host:
+    enabled:
+    env:
+
+pwa:
+  enabled: true
+  cache:
+    enabled: true
+    deny_paths:
+
+paginate: 10
+
+baseurl: ""
+
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+      toc: true
+      permalink: /:categories/:title/
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
