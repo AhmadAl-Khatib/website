@@ -38,18 +38,28 @@
   "@context": "https://schema.org",
   "@graph": [
 
+    /* ===== WebSite entity ===== */
+    {
+      "@type": "WebSite",
+      "@id": "https://ahmad-khatib.com/blog/#website",
+      "url": "https://ahmad-khatib.com/blog/",
+      "name": "أحمد الخطيب",
+      "publisher": { "@id": "https://ahmad-khatib.com/blog/#person" },
+      "inLanguage": "ar"
+    },
+
     /* ===== WebPage entity ===== */
     {
       "@type": "WebPage",
-      "@id": "/posts/slug/#webpage",
+      "@id": "https://ahmad-khatib.com/posts/slug/#webpage",
       "url": "https://ahmad-khatib.com/posts/slug/",
       "name": "اختبار المقال التجريبي",
       "inLanguage": "ar",
       "isPartOf": { "@id": "https://ahmad-khatib.com/blog/#website" },
-      "breadcrumb": { "@id": "/posts/slug/#breadcrumb" },
-      "primaryImageOfPage": { "@id": "/assets/img/posts/ahmad-al-khatib-banner.webp#primaryimage" },
+      "breadcrumb": { "@id": "https://ahmad-khatib.com/posts/slug/#breadcrumb" },
+      "primaryImageOfPage": { "@id": "https://ahmad-khatib.com/assets/img/posts/ahmad-al-khatib-banner.webp#primaryimage" },
       "description": "",
-      "mainEntity": { "@id": "/posts/slug/#blogposting" },
+      "mainEntity": { "@id": "https://ahmad-khatib.com/posts/slug/#blogposting" },
       "potentialAction": [
         { "@type": "ReadAction", "target": ["https://ahmad-khatib.com/posts/slug/"] },
         { "@type": "CommentAction", "target": ["https://ahmad-khatib.com/posts/slug/#comments"] }
@@ -59,7 +69,7 @@
     /* ===== Breadcrumb ===== */
     {
       "@type": "BreadcrumbList",
-      "@id": "/posts/slug/#breadcrumb",
+      "@id": "https://ahmad-khatib.com/posts/slug/#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -97,16 +107,16 @@
     /* ===== BlogPosting entity ===== */
     {
       "@type": "BlogPosting",
-      "@id": "/posts/slug/#blogposting",
+      "@id": "https://ahmad-khatib.com/posts/slug/#blogposting",
       "headline": "اختبار المقال التجريبي",
       "description": "",
-      "image": { "@id": "/assets/img/posts/ahmad-al-khatib-banner.webp#primaryimage" },
+      "image": { "@id": "https://ahmad-khatib.com/assets/img/posts/ahmad-al-khatib-banner.webp#primaryimage" },
       "author": { "@id": "https://ahmad-khatib.com/blog/#person" },
       "publisher": { "@id": "https://ahmad-khatib.com/blog/#person" },
       "dateCreated": "2025-08-22T10:00:00+03:00",
       "datePublished": "2025-08-22T10:00:00+03:00",
-      "dateModified": "2025-08-23T12:31:57+03:00",
-      "mainEntityOfPage": { "@id": "/posts/slug/#webpage" },
+      "dateModified": "2025-08-23T15:23:32+03:00",
+      "mainEntityOfPage": { "@id": "https://ahmad-khatib.com/posts/slug/#webpage" },
       "mainEntity": { "@id": "https://ahmad-khatib.com/blog/#blog" },
       "isPartOf": { "@id": "https://ahmad-khatib.com/blog/#blog" },
       "articleSection": "تقنية",
@@ -114,8 +124,7 @@
       "keywords": [
         
         
-        
-        
+               
           "اختبار", 
         
           "SEO", 
@@ -124,11 +133,7 @@
         
           "تقنية", 
         
-          "برمجة", 
-        
-          "تجربة", 
-        
-          "JSON-LD"
+          "برمجة"
         
       ],
       "wordCount": "10",
@@ -163,15 +168,17 @@
           "مقالة تعليمية"
         
       ],
+      
       "contentLocation": { "@type": "Place", "name": "Dubai" }
+      
     },
 
     /* ===== ImageObject for post main image ===== */
     {
       "@type": "ImageObject",
-      "@id": "/assets/img/posts/ahmad-al-khatib-banner.webp#primaryimage",
-      "url": "/assets/img/posts/ahmad-al-khatib-banner.webp",
-      "contentUrl": "/assets/img/posts/ahmad-al-khatib-banner.webp",
+      "@id": "https://ahmad-khatib.com/assets/img/posts/ahmad-al-khatib-banner.webp#primaryimage",
+      "url": "https://ahmad-khatib.com/assets/img/posts/ahmad-al-khatib-banner.webp",
+      "contentUrl": "https://ahmad-khatib.com/assets/img/posts/ahmad-al-khatib-banner.webp",
       "width": "1200",
       "height": "630"
     },
@@ -182,7 +189,7 @@
       "@id": "https://ahmad-khatib.com/blog/#person",
       "name": "أحمد الخطيب",
       "url": "https://ahmad-khatib.com",
-      "image": { "@type": "ImageObject", "url": "assets/img/ahmad-al-khatib-profile-picture.webp" },
+      "image": { "@type": "ImageObject", "url": "https://ahmad-khatib.comassets/img/ahmad-al-khatib-profile-picture.webp" },
       "jobTitle": "كاتب رأي ومؤلف، ناشط اجتماعي وسياسي، ورائد أعمال",
       "sameAs": [
         
@@ -217,7 +224,6 @@
       "url": "https://ahmad-khatib.com/blog/",
       "publisher": { "@id": "https://ahmad-khatib.com/blog/#person" }
     }
-
   ]
 }
 </script>
@@ -865,7 +871,7 @@
 
 <time
   
-  data-ts="1755941517"
+  data-ts="1755951812"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"

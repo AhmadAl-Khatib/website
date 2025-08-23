@@ -38,18 +38,28 @@
   "@context": "https://schema.org",
   "@graph": [
 
+    /* ===== WebSite entity ===== */
+    {
+      "@type": "WebSite",
+      "@id": "https://ahmad-khatib.com/blog/#website",
+      "url": "https://ahmad-khatib.com/blog/",
+      "name": "أحمد الخطيب",
+      "publisher": { "@id": "https://ahmad-khatib.com/blog/#person" },
+      "inLanguage": "ar"
+    },
+
     /* ===== WebPage entity ===== */
     {
       "@type": "WebPage",
-      "@id": "/posts/text-and-typography/#webpage",
+      "@id": "https://ahmad-khatib.com/posts/text-and-typography/#webpage",
       "url": "https://ahmad-khatib.com/posts/text-and-typography/",
       "name": "Text and Typography",
       "inLanguage": "ar",
       "isPartOf": { "@id": "https://ahmad-khatib.com/blog/#website" },
-      "breadcrumb": { "@id": "/posts/text-and-typography/#breadcrumb" },
-      "primaryImageOfPage": { "@id": "{"path"=>"/commons/devices-mockup.png", "lqip"=>"data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA", "alt"=>"Responsive rendering of Chirpy theme on multiple devices."}#primaryimage" },
+      "breadcrumb": { "@id": "https://ahmad-khatib.com/posts/text-and-typography/#breadcrumb" },
+      "primaryImageOfPage": { "@id": "https://ahmad-khatib.com{"path"=>"/commons/devices-mockup.png", "lqip"=>"data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA", "alt"=>"Responsive rendering of Chirpy theme on multiple devices."}#primaryimage" },
       "description": "Examples of text, typography, math equations, diagrams, flowcharts, pictures, videos, and more.",
-      "mainEntity": { "@id": "/posts/text-and-typography/#blogposting" },
+      "mainEntity": { "@id": "https://ahmad-khatib.com/posts/text-and-typography/#blogposting" },
       "potentialAction": [
         { "@type": "ReadAction", "target": ["https://ahmad-khatib.com/posts/text-and-typography/"] },
         { "@type": "CommentAction", "target": ["https://ahmad-khatib.com/posts/text-and-typography/#comments"] }
@@ -59,7 +69,7 @@
     /* ===== Breadcrumb ===== */
     {
       "@type": "BreadcrumbList",
-      "@id": "/posts/text-and-typography/#breadcrumb",
+      "@id": "https://ahmad-khatib.com/posts/text-and-typography/#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -97,16 +107,16 @@
     /* ===== BlogPosting entity ===== */
     {
       "@type": "BlogPosting",
-      "@id": "/posts/text-and-typography/#blogposting",
+      "@id": "https://ahmad-khatib.com/posts/text-and-typography/#blogposting",
       "headline": "Text and Typography",
       "description": "Examples of text, typography, math equations, diagrams, flowcharts, pictures, videos, and more.",
-      "image": { "@id": "{"path"=>"/commons/devices-mockup.png", "lqip"=>"data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA", "alt"=>"Responsive rendering of Chirpy theme on multiple devices."}#primaryimage" },
+      "image": { "@id": "https://ahmad-khatib.com{"path"=>"/commons/devices-mockup.png", "lqip"=>"data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA", "alt"=>"Responsive rendering of Chirpy theme on multiple devices."}#primaryimage" },
       "author": { "@id": "https://ahmad-khatib.com/blog/#person" },
       "publisher": { "@id": "https://ahmad-khatib.com/blog/#person" },
       "dateCreated": "2019-08-08T06:33:00+03:00",
       "datePublished": "2019-08-08T06:33:00+03:00",
-      "dateModified": "2025-08-23T12:31:57+03:00",
-      "mainEntityOfPage": { "@id": "/posts/text-and-typography/#webpage" },
+      "dateModified": "2025-08-23T15:23:32+03:00",
+      "mainEntityOfPage": { "@id": "https://ahmad-khatib.com/posts/text-and-typography/#webpage" },
       "mainEntity": { "@id": "https://ahmad-khatib.com/blog/#blog" },
       "isPartOf": { "@id": "https://ahmad-khatib.com/blog/#blog" },
       "articleSection": "Blogging",
@@ -114,8 +124,7 @@
       "keywords": [
         
         
-        
-        
+               
           "typography", 
         
           "Blogging", 
@@ -147,15 +156,15 @@
           "Demo"
         
       ],
-      "contentLocation": { "@type": "Place", "name": "" }
+      
     },
 
     /* ===== ImageObject for post main image ===== */
     {
       "@type": "ImageObject",
-      "@id": "{"path"=>"/commons/devices-mockup.png", "lqip"=>"data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA", "alt"=>"Responsive rendering of Chirpy theme on multiple devices."}#primaryimage",
-      "url": "{"path"=>"/commons/devices-mockup.png", "lqip"=>"data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA", "alt"=>"Responsive rendering of Chirpy theme on multiple devices."}",
-      "contentUrl": "{"path"=>"/commons/devices-mockup.png", "lqip"=>"data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA", "alt"=>"Responsive rendering of Chirpy theme on multiple devices."}",
+      "@id": "https://ahmad-khatib.com{"path"=>"/commons/devices-mockup.png", "lqip"=>"data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA", "alt"=>"Responsive rendering of Chirpy theme on multiple devices."}#primaryimage",
+      "url": "https://ahmad-khatib.com{"path"=>"/commons/devices-mockup.png", "lqip"=>"data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA", "alt"=>"Responsive rendering of Chirpy theme on multiple devices."}",
+      "contentUrl": "https://ahmad-khatib.com{"path"=>"/commons/devices-mockup.png", "lqip"=>"data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA", "alt"=>"Responsive rendering of Chirpy theme on multiple devices."}",
       "width": "1200",
       "height": "630"
     },
@@ -166,7 +175,7 @@
       "@id": "https://ahmad-khatib.com/blog/#person",
       "name": "أحمد الخطيب",
       "url": "https://ahmad-khatib.com",
-      "image": { "@type": "ImageObject", "url": "assets/img/ahmad-al-khatib-profile-picture.webp" },
+      "image": { "@type": "ImageObject", "url": "https://ahmad-khatib.comassets/img/ahmad-al-khatib-profile-picture.webp" },
       "jobTitle": "كاتب رأي ومؤلف، ناشط اجتماعي وسياسي، ورائد أعمال",
       "sameAs": [
         
@@ -201,7 +210,6 @@
       "url": "https://ahmad-khatib.com/blog/",
       "publisher": { "@id": "https://ahmad-khatib.com/blog/#person" }
     }
-
   ]
 }
 </script>
@@ -1739,7 +1747,7 @@
 
 <time
   
-  data-ts="1755941517"
+  data-ts="1755951812"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
@@ -1772,7 +1780,7 @@
           <em>
             
               
-                <a href="https://github.com/cotes2020/">Cotes Chung</a>
+                
                 
               
             
