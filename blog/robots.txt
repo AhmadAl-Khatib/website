@@ -1,5 +1,1 @@
-User-agent: *
-
-Disallow: /norobots/
-
 Sitemap: https://ahmad-khatib.com/blog/sitemap.xml
