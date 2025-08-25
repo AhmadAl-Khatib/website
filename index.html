@@ -47,51 +47,137 @@
 
   <!-- JSON-LD -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
+   {
+    "@context": "https://schema.org",
+    "@graph": [
       {
-        "@type":"WebSite",
-        "@id":"https://ahmad-khatib.com/#website",
-        "url":"https://ahmad-khatib.com/",
-        "name":"Ahmad Al Khatib",
-        "inLanguage":"ar",
-        "publisher":{"@id":"https://ahmad-khatib.com/#person"},
-        "potentialAction":{
-          "@type":"SearchAction",
-          "target":"https://ahmad-khatib.com/?s={search_term_string}",
-          "query-input":"required name=search_term_string"
-        }
-      },
-      {
-        "@type":"WebPage",
-        "@id":"https://ahmad-khatib.com/#webpage",
-        "url":"https://ahmad-khatib.com/",
-        "name":"الصفحة الرئيسية",
-        "inLanguage":"ar",
-        "isPartOf":{"@id":"https://ahmad-khatib.com/#website"},
-        "primaryImageOfPage":{
-          "@type":"ImageObject",
-          "url":"https://ahmad-khatib.com/assets/img/about-ahmad-al-khatib.webp"
-        },
-        "breadcrumb":{"@id":"https://ahmad-khatib.com/#breadcrumb"}
-      },
-      {
-        "@type":"BreadcrumbList",
-        "@id":"https://ahmad-khatib.com/#breadcrumb",
-        "itemListElement":[
-          {"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://ahmad-khatib.com/"},
-          {"@type":"ListItem","position":2,"name":"السيرة الذاتية","item":"https://ahmad-khatib.com/about/"}
+        "@type": "WebSite",
+        "@id": "https://ahmad-khatib.com/#website",
+        "url": "https://ahmad-khatib.com/",
+        "name": "أحمد الخطيب",
+        "alternateName": "Ahmad Al Khatib",
+        "inLanguage": "ar",
+        "description": "الموقع الرسمي لأحمد الخطيب - كاتب رأي ومؤلف، ناشط اجتماعي وسياسي، ورائد أعمال.",
+        "publisher": { "@id": "https://ahmad-khatib.com/#person" },
+        "hasPart": [
+          {
+            "@type": "AboutPage",
+            "@id": "https://ahmad-khatib.com/about/#webpage",
+            "url": "https://ahmad-khatib.com/about/",
+            "name": "السيرة الذاتية",
+            "alternateName": "About Ahmad Al Khatib",
+            "inLanguage": "ar",
+            "alternatePage": [
+              {
+                "@type": "AboutPage",
+                "url": "https://ahmad-khatib.com/en/about/",
+                "inLanguage": "en",
+                "name": "About Ahmad Al Khatib"
+              }
+            ]
+          },
+          {
+            "@type": "Blog",
+            "@id": "https://ahmad-khatib.com/blog/#blog",
+            "url": "https://ahmad-khatib.com/blog/",
+            "name": "مدونة أحمد الخطيب",
+            "inLanguage": "ar",
+            "publisher": { "@id": "https://ahmad-khatib.com/#person" }
+          },
+          {
+            "@type": "Book",
+            "@id": "https://ahmad-khatib.com/books/learn-python-in-less-than-a-week-arabic-edition/#book",
+            "url": "https://ahmad-khatib.com/books/learn-python-in-less-than-a-week-arabic-edition/",
+            "name": "تعلم بايثون بأقل من أسبوع - النسخة العربية",
+            "alternateName": "Learn Python in Less Than a Week - Arabic Edition",
+            "inLanguage": "ar",
+            "author": { "@id": "https://ahmad-khatib.com/#person" },
+            "mainEntityOfPage": { "@id": "https://ahmad-khatib.com/books/learn-python-in-less-than-a-week-arabic-edition/#webpage" },
+            "workTranslation": {
+              "@type": "Book",
+              "url": "https://ahmad-khatib.com/en/books/learn-python-in-less-than-a-week/",
+              "inLanguage": "en",
+              "name": "Learn Python in Less Than a Week - English Edition"
+            }
+          }
+        ],
+        "potentialAction": [
+          {
+            "@type": "ReadAction",
+            "target": "https://ahmad-khatib.com/blog/",
+            "name": "قراءة أحدث مقالات أحمد الخطيب"
+          },
+          {
+            "@type": "ViewAction",
+            "target": "https://ahmad-khatib.com/books/learn-python-in-less-than-a-week-arabic-edition/",
+            "name": "عرض أحدث كتاب لأحمد الخطيب"
+          },
+          {
+            "@type": "FollowAction",
+            "target": [
+              "https://twitter.com/alkhatib_ahmad1",
+              "https://www.instagram.com/alkhatib_ahmad1/",
+              "https://www.facebook.com/ahmad.khatib.9237244"
+            ],
+            "name": "متابعة أحمد الخطيب على وسائل التواصل الاجتماعي"
+          }
         ]
       },
       {
-        "@type":"Person",
-        "@id":"https://ahmad-khatib.com/#person",
-        "name":"أحمد الخطيب",
-        "url":"https://ahmad-khatib.com/",
-        "image":"https://ahmad-khatib.com/assets/img/about-ahmad-al-khatib.webp",
-        "jobTitle":"كاتب رأي ومؤلف، ناشط اجتماعي وسياسي، ورائد أعمال",
-        "sameAs":[
+        "@type": "WebPage",
+        "@id": "https://ahmad-khatib.com/#webpage",
+        "url": "https://ahmad-khatib.com/",
+        "name": "الصفحة الرئيسية",
+        "alternateName": "Home Page",
+        "inLanguage": "ar",
+        "description": "الصفحة الرئيسية للموقع الرسمي لأحمد الخطيب.",
+        "isPartOf": { "@id": "https://ahmad-khatib.com/#website" },
+        "mainEntityOfPage": { "@id": "https://ahmad-khatib.com/#webpage" },
+        "datePublished": "2025-08-25T00:00:00+03:00",
+        "dateModified": "2025-08-25T17:45:00+03:00",
+        "publisher": { "@id": "https://ahmad-khatib.com/#person" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://ahmad-khatib.com/assets/img/about-ahmad-al-khatib.webp",
+          "width": 1200,
+          "height": 675,
+          "caption": "أحمد الخطيب - صورة تعريفية",
+          "representativeOfPage": true
+        },
+        "breadcrumb": { "@id": "https://ahmad-khatib.com/#breadcrumb" },
+        "alternatePage": [
+          {
+            "@type": "WebPage",
+            "url": "https://ahmad-khatib.com/en/",
+            "inLanguage": "en",
+            "name": "Home Page"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://ahmad-khatib.com/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "الرئيسية",
+            "item": "https://ahmad-khatib.com/"
+          }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://ahmad-khatib.com/#person",
+        "name": "أحمد الخطيب",
+        "alternateName": [
+          "Ahmad Al Khatib",
+          "Ahmad Abdelkader Al-Khatib"
+        ],
+        "url": "https://ahmad-khatib.com/",
+        "image": "https://ahmad-khatib.com/assets/img/about-ahmad-al-khatib.webp",
+        "jobTitle": "كاتب رأي ومؤلف، ناشط اجتماعي وسياسي، ورائد أعمال",
+        "sameAs": [
           "https://ahmad-khatib.com/",
           "https://ahmad-khatib.com/blog/",
           "https://www.linkedin.com/in/alkhatibahmad/",
@@ -104,6 +190,34 @@
           "https://www.snapchat.com/add/alkhatib_ahmad1",
           "https://www.amazon.com/author/ahmadalkhatib/",
           "https://www.goodreads.com/author/show/981744.Ahmad_Al_Khatib/"
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://ahmad-khatib.com/#hreflang",
+        "name": "Language Alternates",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "url": "https://ahmad-khatib.com/",
+            "name": "Arabic",
+            "alternateName": "ar"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "url": "https://ahmad-khatib.com/en/",
+            "name": "English",
+            "alternateName": "en"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "url": "https://ahmad-khatib.com/",
+            "name": "Default",
+            "alternateName": "x-default"
+          }
         ]
       }
     ]
@@ -815,6 +929,7 @@ window.onload = function() {
     
 </body>
 </html>
+
 
 
 
