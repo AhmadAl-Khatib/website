@@ -51,7 +51,7 @@
 
   <!-- JSON-LD -->
   <script type="application/ld+json">
-   {
+  {
     "@context": "https://schema.org",
     "@graph": [
       {
@@ -145,28 +145,15 @@
           "url": "https://ahmad-khatib.com/assets/img/about-ahmad-al-khatib.webp",
           "width": 1200,
           "height": 675,
-          "caption": "أحمد الخطيب - صورة تعريفية",
+          "caption": "صورة أحمد الخطيب",
           "representativeOfPage": true
         },
-        "breadcrumb": { "@id": "https://ahmad-khatib.com/#breadcrumb" },
         "alternatePage": [
           {
             "@type": "WebPage",
             "url": "https://ahmad-khatib.com/en/",
             "inLanguage": "en",
-            "name": "Home Page"
-          }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://ahmad-khatib.com/#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "الرئيسية",
-            "item": "https://ahmad-khatib.com/"
+            "name": "Ahmad Al Khatib – Home"
           }
         ]
       },
@@ -174,27 +161,21 @@
         "@type": "Person",
         "@id": "https://ahmad-khatib.com/#person",
         "name": "أحمد الخطيب",
-        "alternateName": [
-          "Ahmad Al Khatib",
-          "Ahmad Abdelkader Al-Khatib"
-        ],
-        "url": "https://ahmad-khatib.com/",
-        "image": "https://ahmad-khatib.com/assets/img/about-ahmad-al-khatib.webp",
         "jobTitle": "كاتب رأي ومؤلف، ناشط اجتماعي وسياسي، ورائد أعمال",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://ahmad-khatib.com/assets/img/avatar.webp",
+          "width": 400,
+          "height": 400
+        },
         "sameAs": [
-          "https://ahmad-khatib.com/",
-          "https://ahmad-khatib.com/blog/",
-          "https://www.linkedin.com/in/alkhatibahmad/",
           "https://twitter.com/alkhatib_ahmad1",
-          "https://github.com/AhmadAl-Khatib",
-          "https://www.facebook.com/ahmad.khatib.9237244",
-          "https://www.instagram.com/alkhatib_ahmad1/",
-          "https://www.youtube.com/@alkhatib_ahmad1",
-          "https://www.tiktok.com/@alkhatib_ahmad1",
-          "https://www.snapchat.com/add/alkhatib_ahmad1",
-          "https://www.amazon.com/author/ahmadalkhatib/",
-          "https://www.goodreads.com/author/show/981744.Ahmad_Al_Khatib/"
-        ]
+          "https://www.linkedin.com/in/ahmadalkhatib",
+          "https://ahmad-khatib.com/about/"
+        ],
+        "mainEntityOfPage": {
+          "@id": "https://ahmad-khatib.com/#webpage"
+        }
       },
       {
         "@type": "ItemList",
@@ -227,7 +208,6 @@
     ]
   }
   </script>
-    
   <style>
   /* Apply Tajawal to the whole site */
   html, body {
@@ -933,6 +913,7 @@ window.onload = function() {
     
 </body>
 </html>
+
 
 
 
