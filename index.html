@@ -71,14 +71,15 @@
             "name": "السيرة الذاتية",
             "alternateName": "About Ahmad Al Khatib",
             "inLanguage": "ar",
-            "alternatePage": [
-              {
-                "@type": "AboutPage",
-                "url": "https://ahmad-khatib.com/en/about/",
-                "inLanguage": "en",
-                "name": "About Ahmad Al Khatib"
-              }
-            ]
+            "isPartOf": { "@id": "https://ahmad-khatib.com/#website" }
+          },
+          {
+            "@type": "AboutPage",
+            "@id": "https://ahmad-khatib.com/en/about/#webpage",
+            "url": "https://ahmad-khatib.com/en/about/",
+            "name": "About Ahmad Al Khatib",
+            "inLanguage": "en",
+            "isPartOf": { "@id": "https://ahmad-khatib.com/#website" }
           },
           {
             "@type": "Blog",
@@ -96,9 +97,12 @@
             "alternateName": "Learn Python in Less Than a Week - Arabic Edition",
             "inLanguage": "ar",
             "author": { "@id": "https://ahmad-khatib.com/#person" },
-            "mainEntityOfPage": { "@id": "https://ahmad-khatib.com/books/learn-python-in-less-than-a-week-arabic-edition/#webpage" },
-            "workTranslation": {
+            "mainEntityOfPage": {
+              "@id": "https://ahmad-khatib.com/books/learn-python-in-less-than-a-week-arabic-edition/#webpage"
+            },
+            "translationOfWork": {
               "@type": "Book",
+              "@id": "https://ahmad-khatib.com/en/books/learn-python-in-less-than-a-week/#book",
               "url": "https://ahmad-khatib.com/en/books/learn-python-in-less-than-a-week/",
               "inLanguage": "en",
               "name": "Learn Python in Less Than a Week - English Edition"
@@ -108,22 +112,37 @@
         "potentialAction": [
           {
             "@type": "ReadAction",
-            "target": "https://ahmad-khatib.com/blog/",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://ahmad-khatib.com/blog/"
+            },
             "name": "قراءة أحدث مقالات أحمد الخطيب"
           },
           {
             "@type": "ViewAction",
-            "target": "https://ahmad-khatib.com/books/learn-python-in-less-than-a-week-arabic-edition/",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://ahmad-khatib.com/books/learn-python-in-less-than-a-week-arabic-edition/"
+            },
             "name": "عرض أحدث كتاب لأحمد الخطيب"
           },
           {
             "@type": "FollowAction",
+            "name": "متابعة أحمد الخطيب على وسائل التواصل الاجتماعي",
             "target": [
-              "https://twitter.com/alkhatib_ahmad1",
-              "https://www.instagram.com/alkhatib_ahmad1/",
-              "https://www.facebook.com/ahmad.khatib.9237244"
-            ],
-            "name": "متابعة أحمد الخطيب على وسائل التواصل الاجتماعي"
+              {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://twitter.com/alkhatib_ahmad1"
+              },
+              {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.instagram.com/alkhatib_ahmad1/"
+              },
+              {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.facebook.com/ahmad.khatib.9237244"
+              }
+            ]
           }
         ]
       },
@@ -138,7 +157,7 @@
         "isPartOf": { "@id": "https://ahmad-khatib.com/#website" },
         "mainEntityOfPage": { "@id": "https://ahmad-khatib.com/#webpage" },
         "datePublished": "2025-08-25T00:00:00+03:00",
-        "dateModified": "2025-08-29T12:27:00+03:00",
+        "dateModified": "2025-08-29T00:37:00+03:00",
         "publisher": { "@id": "https://ahmad-khatib.com/#person" },
         "primaryImageOfPage": {
           "@type": "ImageObject",
@@ -147,15 +166,7 @@
           "height": 675,
           "caption": "صورة أحمد الخطيب",
           "representativeOfPage": true
-        },
-        "alternatePage": [
-          {
-            "@type": "WebPage",
-            "url": "https://ahmad-khatib.com/en/",
-            "inLanguage": "en",
-            "name": "Ahmad Al Khatib – Home"
-          }
-        ]
+        }
       },
       {
         "@type": "Person",
@@ -183,9 +194,7 @@
           "https://www.amazon.com/author/ahmadalkhatib/",
           "https://www.goodreads.com/author/show/981744.Ahmad_Al_Khatib/"
         ],
-        "mainEntityOfPage": {
-          "@id": "https://ahmad-khatib.com/#webpage"
-        }
+        "mainEntityOfPage": { "@id": "https://ahmad-khatib.com/#webpage" }
       },
       {
         "@type": "ItemList",
@@ -923,6 +932,7 @@ window.onload = function() {
     
 </body>
 </html>
+
 
 
 
