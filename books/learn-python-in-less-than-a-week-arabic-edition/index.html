@@ -74,21 +74,32 @@
           "representativeOfPage": true
         },
         "breadcrumb": { "@id": "https://ahmad-khatib.com/books/learn-python-in-less-than-a-week-arabic-edition/#breadcrumb" },
-        "alternatePage": [
-          {
-            "@type": "WebPage",
-            "url": "https://ahmad-khatib.com/en/books/learn-python-in-less-than-a-week/",
-            "inLanguage": "en",
-            "name": "Learn Python in Less Than a Week - English Edition"
-          }
-        ]
+        "hasPart": {
+          "@type": "WebPage",
+          "@id": "https://ahmad-khatib.com/en/books/learn-python-in-less-than-a-week/#webpage",
+          "url": "https://ahmad-khatib.com/en/books/learn-python-in-less-than-a-week/",
+          "inLanguage": "en",
+          "name": "Learn Python in Less Than a Week - English Edition",
+          "mainEntityOfPage": { "@id": "https://ahmad-khatib.com/en/books/learn-python-in-less-than-a-week/#webpage" },
+          "isPartOf": { "@id": "https://ahmad-khatib.com/#website" }
+        }
       },
       {
         "@type": "BreadcrumbList",
         "@id": "https://ahmad-khatib.com/books/learn-python-in-less-than-a-week-arabic-edition/#breadcrumb",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://ahmad-khatib.com/" },
-          { "@type": "ListItem", "position": 2, "name": "تعلم بايثون بأقل من أسبوع - النسخة العربية", "item": "https://ahmad-khatib.com/books/learn-python-in-less-than-a-week-arabic-edition/" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "الرئيسية",
+            "item": "https://ahmad-khatib.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "تعلم بايثون بأقل من أسبوع - النسخة العربية",
+            "item": "https://ahmad-khatib.com/books/learn-python-in-less-than-a-week-arabic-edition/"
+          }
         ]
       },
       {
@@ -100,7 +111,12 @@
         "description": "كتاب مبسط وعملي لتعلم لغة بايثون للمبتدئين باللغة العربية، مع أمثلة وتمارين عملية لتسريع التعلم.",
         "author": { "@id": "https://ahmad-khatib.com/#person" },
         "mainEntityOfPage": { "@id": "https://ahmad-khatib.com/books/learn-python-in-less-than-a-week-arabic-edition/#webpage" },
-        "image": "https://ahmad-khatib.com/assets/img/book/learn-python-in-less-than-a-week-arabic-edition-banner.webp",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://ahmad-khatib.com/assets/img/book/learn-python-in-less-than-a-week-arabic-edition-banner.webp",
+          "width": 1200,
+          "height": 675
+        },
         "identifier": "ASIN:B0FJ8Y6G7K",
         "bookFormat": "https://schema.org/EBook",
         "sameAs": "https://www.amazon.com/dp/B0FJ8Y6G7K",
@@ -111,21 +127,28 @@
           "availability": "https://schema.org/InStock",
           "url": "https://www.amazon.com/dp/B0FJ8Y6G7K"
         },
-        "workTranslation": {
+        "translationOfWork": {
           "@type": "Book",
-          "name": "Learn Python in Less Than a Week - English Edition",
+          "@id": "https://ahmad-khatib.com/en/books/learn-python-in-less-than-a-week/#book",
+          "url": "https://ahmad-khatib.com/en/books/learn-python-in-less-than-a-week/",
           "inLanguage": "en",
-          "url": "https://ahmad-khatib.com/en/books/learn-python-in-less-than-a-week/"
+          "name": "Learn Python in Less Than a Week - English Edition"
         },
         "potentialAction": [
           {
             "@type": "ReadAction",
-            "target": "https://www.amazon.com/dp/B0FJ8Y6G7K",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://www.amazon.com/dp/B0FJ8Y6G7K"
+            },
             "name": "قراءة كتاب تعلم بايثون بأقل من أسبوع - النسخة العربية"
           },
           {
             "@type": "BuyAction",
-            "target": "https://www.amazon.com/dp/B0FJ8Y6G7K",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://www.amazon.com/dp/B0FJ8Y6G7K"
+            },
             "name": "شراء كتاب تعلم بايثون بأقل من أسبوع - النسخة العربية"
           }
         ]
