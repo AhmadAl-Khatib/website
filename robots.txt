@@ -4,7 +4,6 @@ Disallow: /under-development/
 Disallow: /en/under-development/
 Disallow: /thank-you/
 Disallow: /en/thank-you/
-Disallow: /en/python-beginners-course/a
 
 # Allow assets
 Allow: /assets/
@@ -13,3 +12,4 @@ Allow: /assets/
 # Crawl-delay: 2
 
 Sitemap: https://ahmad-khatib.com/sitemap.xml
+Sitemap: https://ahmad-khatib.com/blog/sitemap.xml
