@@ -786,45 +786,57 @@
         </div>
     </section>
 
-    <section id="contact">
+  <section id="contact">
     <div class="container">
-        <div class="row">
-            <div class="title">
-                <h2 class="wow fadeInDown animated" data-wow-delay="0.2s" data-wow-duration="1s">تواصل معي</h2>
-                <p class="visually-hidden">تواصل مع أحمد الخطيب – كاتب ومؤلف، ناشط، ورائد أعمال</p>
-            </div>
+      <div class="row">
+        <div class="title">
+          <h2 class="wow fadeInDown animated" data-wow-delay="0.2s" data-wow-duration="1s">تواصل معي</h2>
+          <p class="visually-hidden">تواصل مع أحمد الخطيب – كاتب ومؤلف، ناشط، ورائد أعمال</p>
         </div>
-        
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 wow fadeIn animated" data-wow-delay="0.4s" data-wow-duration="1s">
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="de295fe7-572f-4985-a155-6660698defd5">
-                    
-                    <div class="ajax-hidden">
-                        <div class="col-xs-12 col-sm-6 col-md-6 form-group wow fadeInLeft animated" data-wow-delay="0.6s" data-wow-duration="1s">
-                            <label for="name" class="sr-only">Name</label> 
-                            <input type="text" placeholder="Name" name="name" class="form-control" id="name" required="" autocomplete="name">
-                        </div>
-                        
-                        <div data-wow-delay="0.8s" class="col-xs-12 col-sm-6 col-md-6 form-group wow fadeInRight animated" data-wow-duration="1s">
-                            <label for="email" class="sr-only">Email</label>
-                            <input type="email" placeholder="E-mail" name="email" class="form-control" id="email" required="" autocomplete="email">
-                        </div>
-                        
-                        <div data-wow-delay="1.0s" class="col-xs-12 col-sm-12 col-md-12 form-group wow fadeInUp animated" data-wow-duration="1s">
-                            <label for="description" class="sr-only">Message</label>
-                            <textarea placeholder="Message" rows="7" name="message" id="description" class="form-control" required=""></textarea>
-                        </div>
-                        
-                        <button data-wow-delay="1.2s" class="btn btn-sm btn-block wow fadeIn animated" type="submit" data-wow-duration="1s">أرسل</button>
-                    </div>
-                    
-                    <div class="ajax-response"></div>
-                </form>
+      </div>
+  
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 wow fadeIn animated" data-wow-delay="0.4s" data-wow-duration="1s">
+          
+          <!-- Pageclip form -->
+          <form action="https://send.pageclip.co/6WC15ancQrXJwfYTnTixxXC437WOJ8ld"
+                class="pageclip-form"
+                method="post"
+                data-pageclip-redirect="thankyou.html">
+            
+            <div class="ajax-hidden">
+              <div class="col-xs-12 col-sm-6 col-md-6 form-group wow fadeInLeft animated" data-wow-delay="0.6s" data-wow-duration="1s">
+                <label for="name" class="sr-only">Name</label> 
+                <input type="text" placeholder="Name" name="name" class="form-control" id="name" required autocomplete="name">
+              </div>
+  
+              <div class="col-xs-12 col-sm-6 col-md-6 form-group wow fadeInRight animated" data-wow-delay="0.8s" data-wow-duration="1s">
+                <label for="email" class="sr-only">Email</label>
+                <input type="email" placeholder="E-mail" name="email" class="form-control" id="email" required autocomplete="email">
+              </div>
+  
+              <div class="col-xs-12 col-sm-12 col-md-12 form-group wow fadeInUp animated" data-wow-delay="1.0s" data-wow-duration="1s">
+                <label for="description" class="sr-only">Message</label>
+                <textarea placeholder="Message" rows="7" name="message" id="description" class="form-control" required></textarea>
+              </div>
+  
+              <!-- Submit button with spinner -->
+              <button data-wow-delay="1.2s" class="btn btn-sm btn-block wow fadeIn animated pageclip-form__submit" type="submit" data-wow-duration="1s">
+                <span>أرسل</span>
+              </button>
             </div>
+  
+            <div class="ajax-response"></div>
+          </form>
+          <!-- End Pageclip form -->
+  
         </div>
+      </div>
     </div>
-    </section>
+  </section>
+  
+<!-- Pageclip script for spinner -->
+<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 
 <footer id="footer" dir="rtl">
   <div class="container">
